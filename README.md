@@ -40,10 +40,12 @@ If you want to create an open62541 Android-OPC-UA-Client on your own, here are s
 
 This project uses the open62541.c and open62541.h of the open62541 OPC UA implementation. These files are licensed under the
 Mozilla Public License Version 2.0, see https://github.com/open62541/open62541 for further information.
-The other parts of the project are licensed under the Creative Commons Zero License (CC0 license) - see the [LICENSE.md](LICENSE.md) file for details
+The other parts of the project are licensed under the Mozilla Public License Version 2.0 as well - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
 This project is based on two User guides:
 * The Android Studio User guide for adding C and C++ Code to an Android project (https://developer.android.com/studio/projects/add-native-code)
 * The open62541 Tutorial (https://open62541.org/doc/0.3/tutorials.html)
+
+The development of an Android OPC UA Client using open62541 was supported by the research project  “Recycling   4.0” (digitalizationas the key to the Advanced Circular Economy using the example of innovative vehicle systems) which is funded by the European Regional Development Fund (EFRE | ZW 6-85017297) and managed by the Project Management Agency NBank. 
