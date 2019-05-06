@@ -1,3 +1,6 @@
+/* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. */
+
 package com.example.androidopcuaclient;
 
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +9,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Used to load the 'native-lib' library on application startup.
+    // Used to load the libraries on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("simple-client-lib");
+        System.loadLibrary("open62541-lib");
     }
 
     @Override
@@ -16,14 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Example of a call to a native method
         TextView tv = findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        //Call the native method
+        tv.setText(getDateTime());
+
     }
 
     /**
-     * A native method that is implemented by the 'native-lib' native library,
+     * A native method that is implemented by the 'simple-client-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    public native String getDateTime();
 }

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+ ~This work is licensed under a Creative Commons CCZero 1.0 Universal License.
+ ~See http://creativecommons.org/publicdomain/zero/1.0/ for more information. */
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidopcuaclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"

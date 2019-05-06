@@ -10,14 +10,22 @@ cmake_minimum_required(VERSION 3.4.1)
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
-add_library( # Sets the name of the library.
-        native-lib
+include_directories(src/main/cpp/)
 
-        # Sets the library as a shared library.
+
+add_library(
+        open62541-lib
         SHARED
+        open62541.c
+)
 
-        # Provides a relative path to your source file(s).
-        native-lib.cpp)
+
+add_library(
+        simple-client-lib
+        SHARED
+        simple_client.c
+)
+
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
@@ -32,13 +40,11 @@ find_library( # Sets the name of the path variable.
         # you want CMake to locate.
         log)
 
-# Specifies libraries CMake should link to your target library. You
-# can link multiple libraries, such as libraries you define in this
-# build script, prebuilt third-party libraries, or system libraries.
-
 target_link_libraries( # Specifies the target library.
-        native-lib
+        simple-client-lib
+        open62541-lib
 
         # Links the target library to the log library
         # included in the NDK.
-        ${log-lib})
+        ${log-lib} )
+
