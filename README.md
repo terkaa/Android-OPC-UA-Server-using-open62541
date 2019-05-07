@@ -1,5 +1,5 @@
 # Android-OPC-UA-Client-using-open62541
-An introduction on how to use the open62541 implementation for creating an OPC UA client on an Android phone. 
+An introduction on how to use the open62541 implementation for creating an OPC UA client with Android Studio. 
 
 ### Prerequisites
 
