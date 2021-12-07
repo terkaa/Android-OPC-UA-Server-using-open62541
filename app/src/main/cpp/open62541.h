@@ -76,7 +76,7 @@ extern "C" {
 # include <stdint.h>
 # include <stdbool.h> /* C99 Boolean */
 # if defined(_WRS_KERNEL)
-# define UINT32_C(x) ((x) + (UINT32_MAX - UINT32_MAX)) 
+# define UINT32_C(x) ((x) + (UINT32_MAX - UINT32_MAX))
 # endif
 #else
 # if !defined(__bool_true_false_are_defined)
@@ -332,35 +332,35 @@ extern "C" {
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/deps/ms_stdint.h" ***********************************/
 
 // ISO C9x  compliant stdint.h for Microsoft Visual Studio
-// Based on ISO/IEC 9899:TC2 Committee draft (May 6, 2005) WG14/N1124 
-// 
+// Based on ISO/IEC 9899:TC2 Committee draft (May 6, 2005) WG14/N1124
+//
 //  Copyright (c) 2006-2013 Alexander Chemeris
-// 
+//
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
-// 
+//
 //   1. Redistributions of source code must retain the above copyright notice,
 //      this list of conditions and the following disclaimer.
-// 
+//
 //   2. Redistributions in binary form must reproduce the above copyright
 //      notice, this list of conditions and the following disclaimer in the
 //      documentation and/or other materials provided with the distribution.
-// 
+//
 //   3. Neither the name of the product nor the names of its contributors may
 //      be used to endorse or promote products derived from this software
 //      without specific prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
 // WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
 // EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
 // PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
-// OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+// OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
 // WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 // OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 // ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-// 
+//
 ///////////////////////////////////////////////////////////////////////////////
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1600 // [
@@ -406,19 +406,19 @@ extern "C" {
 // realize that, e.g. char has the same size as __int8
 // so we give up on __intX for them.
 #if (_MSC_VER < 1300)
-   typedef signed char       int8_t;
-   typedef signed short      int16_t;
-   typedef signed int        int32_t;
-   typedef unsigned char     uint8_t;
-   typedef unsigned short    uint16_t;
-   typedef unsigned int      uint32_t;
+typedef signed char       int8_t;
+typedef signed short      int16_t;
+typedef signed int        int32_t;
+typedef unsigned char     uint8_t;
+typedef unsigned short    uint16_t;
+typedef unsigned int      uint32_t;
 #else
-   typedef signed __int8     int8_t;
-   typedef signed __int16    int16_t;
-   typedef signed __int32    int32_t;
-   typedef unsigned __int8   uint8_t;
-   typedef unsigned __int16  uint16_t;
-   typedef unsigned __int32  uint32_t;
+typedef signed __int8     int8_t;
+typedef signed __int16    int16_t;
+typedef signed __int32    int32_t;
+typedef unsigned __int8   uint8_t;
+typedef unsigned __int16  uint16_t;
+typedef unsigned __int32  uint32_t;
 #endif
 typedef signed __int64       int64_t;
 typedef unsigned __int64     uint64_t;
@@ -446,11 +446,11 @@ typedef uint64_t  uint_fast64_t;
 
 // 7.18.1.4 Integer types capable of holding object pointers
 #ifdef _WIN64 // [
-   typedef signed __int64    intptr_t;
-   typedef unsigned __int64  uintptr_t;
+typedef signed __int64    intptr_t;
+typedef unsigned __int64  uintptr_t;
 #else // _WIN64 ][
-   typedef _W64 signed int   intptr_t;
-   typedef _W64 unsigned int uintptr_t;
+typedef _W64 signed int   intptr_t;
+typedef _W64 unsigned int uintptr_t;
 #endif // _WIN64 ]
 
 // 7.18.1.5 Greatest-width integer types
@@ -590,7 +590,7 @@ typedef uint64_t  uintmax_t;
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2016-2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2016 (c) Sten Grüner
@@ -617,28 +617,28 @@ extern "C" {
  * the node type. Possible attributes are as follows: */
 
 typedef enum {
-    UA_ATTRIBUTEID_NODEID                  = 1,
-    UA_ATTRIBUTEID_NODECLASS               = 2,
-    UA_ATTRIBUTEID_BROWSENAME              = 3,
-    UA_ATTRIBUTEID_DISPLAYNAME             = 4,
-    UA_ATTRIBUTEID_DESCRIPTION             = 5,
-    UA_ATTRIBUTEID_WRITEMASK               = 6,
-    UA_ATTRIBUTEID_USERWRITEMASK           = 7,
-    UA_ATTRIBUTEID_ISABSTRACT              = 8,
-    UA_ATTRIBUTEID_SYMMETRIC               = 9,
-    UA_ATTRIBUTEID_INVERSENAME             = 10,
-    UA_ATTRIBUTEID_CONTAINSNOLOOPS         = 11,
-    UA_ATTRIBUTEID_EVENTNOTIFIER           = 12,
-    UA_ATTRIBUTEID_VALUE                   = 13,
-    UA_ATTRIBUTEID_DATATYPE                = 14,
-    UA_ATTRIBUTEID_VALUERANK               = 15,
-    UA_ATTRIBUTEID_ARRAYDIMENSIONS         = 16,
-    UA_ATTRIBUTEID_ACCESSLEVEL             = 17,
-    UA_ATTRIBUTEID_USERACCESSLEVEL         = 18,
-    UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL = 19,
-    UA_ATTRIBUTEID_HISTORIZING             = 20,
-    UA_ATTRIBUTEID_EXECUTABLE              = 21,
-    UA_ATTRIBUTEID_USEREXECUTABLE          = 22
+UA_ATTRIBUTEID_NODEID                  = 1,
+UA_ATTRIBUTEID_NODECLASS               = 2,
+UA_ATTRIBUTEID_BROWSENAME              = 3,
+UA_ATTRIBUTEID_DISPLAYNAME             = 4,
+UA_ATTRIBUTEID_DESCRIPTION             = 5,
+UA_ATTRIBUTEID_WRITEMASK               = 6,
+UA_ATTRIBUTEID_USERWRITEMASK           = 7,
+UA_ATTRIBUTEID_ISABSTRACT              = 8,
+UA_ATTRIBUTEID_SYMMETRIC               = 9,
+UA_ATTRIBUTEID_INVERSENAME             = 10,
+UA_ATTRIBUTEID_CONTAINSNOLOOPS         = 11,
+UA_ATTRIBUTEID_EVENTNOTIFIER           = 12,
+UA_ATTRIBUTEID_VALUE                   = 13,
+UA_ATTRIBUTEID_DATATYPE                = 14,
+UA_ATTRIBUTEID_VALUERANK               = 15,
+UA_ATTRIBUTEID_ARRAYDIMENSIONS         = 16,
+UA_ATTRIBUTEID_ACCESSLEVEL             = 17,
+UA_ATTRIBUTEID_USERACCESSLEVEL         = 18,
+UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL = 19,
+UA_ATTRIBUTEID_HISTORIZING             = 20,
+UA_ATTRIBUTEID_EXECUTABLE              = 21,
+UA_ATTRIBUTEID_USEREXECUTABLE          = 22
 } UA_AttributeId;
 
 /**
@@ -2245,7 +2245,7 @@ typedef enum {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2014 (c) Leon Urbas
  *    Copyright 2014, 2016-2017 (c) Florian Palm
@@ -2392,8 +2392,8 @@ UA_StatusCode_name(UA_StatusCode code);
  * ^^^^^^
  * A sequence of Unicode characters. Strings are just an array of UA_Byte. */
 typedef struct {
-    size_t length; /* The length of the string */
-    UA_Byte *data; /* The content (not null-terminated) */
+size_t length; /* The length of the string */
+UA_Byte *data; /* The content (not null-terminated) */
 } UA_String;
 
 /* Copies the content on the heap. Returns a null-string when alloc fails */
@@ -2409,8 +2409,8 @@ UA_EXPORT extern const UA_String UA_STRING_NULL;
  * of the char-array. */
 static UA_INLINE UA_String
 UA_STRING(char *chars) {
-    UA_String str; str.length = strlen(chars);
-    str.data = (UA_Byte*)chars; return str;
+UA_String str; str.length = strlen(chars);
+str.data = (UA_Byte*)chars; return str;
 }
 
 #define UA_STRING_ALLOC(CHARS) UA_String_fromChars(CHARS)
@@ -2449,15 +2449,15 @@ UA_DateTime UA_EXPORT UA_DateTime_nowMonotonic(void);
 
 /* Represents a Datetime as a structure */
 typedef struct UA_DateTimeStruct {
-    UA_UInt16 nanoSec;
-    UA_UInt16 microSec;
-    UA_UInt16 milliSec;
-    UA_UInt16 sec;
-    UA_UInt16 min;
-    UA_UInt16 hour;
-    UA_UInt16 day;
-    UA_UInt16 month;
-    UA_UInt16 year;
+UA_UInt16 nanoSec;
+UA_UInt16 microSec;
+UA_UInt16 milliSec;
+UA_UInt16 sec;
+UA_UInt16 min;
+UA_UInt16 hour;
+UA_UInt16 day;
+UA_UInt16 month;
+UA_UInt16 year;
 } UA_DateTimeStruct;
 
 UA_DateTimeStruct UA_EXPORT UA_DateTime_toStruct(UA_DateTime t);
@@ -2472,12 +2472,12 @@ UA_DateTimeStruct UA_EXPORT UA_DateTime_toStruct(UA_DateTime t);
 
 static UA_INLINE UA_Int64
 UA_DateTime_toUnixTime(UA_DateTime date) {
-    return (date - UA_DATETIME_UNIX_EPOCH) / UA_DATETIME_SEC;
+return (date - UA_DATETIME_UNIX_EPOCH) / UA_DATETIME_SEC;
 }
 
 static UA_INLINE UA_DateTime
 UA_DateTime_fromUnixTime(UA_Int64 unixDate) {
-    return (unixDate * UA_DATETIME_SEC) + UA_DATETIME_UNIX_EPOCH;
+return (unixDate * UA_DATETIME_SEC) + UA_DATETIME_UNIX_EPOCH;
 }
 
 /**
@@ -2485,10 +2485,10 @@ UA_DateTime_fromUnixTime(UA_Int64 unixDate) {
  * ^^^^
  * A 16 byte value that can be used as a globally unique identifier. */
 typedef struct {
-    UA_UInt32 data1;
-    UA_UInt16 data2;
-    UA_UInt16 data3;
-    UA_Byte   data4[8];
+UA_UInt32 data1;
+UA_UInt16 data2;
+UA_UInt16 data3;
+UA_Byte   data4[8];
 } UA_Guid;
 
 UA_Boolean UA_EXPORT UA_Guid_equal(const UA_Guid *g1, const UA_Guid *g2);
@@ -2503,9 +2503,9 @@ typedef UA_String UA_ByteString;
 
 static UA_INLINE UA_Boolean
 UA_ByteString_equal(const UA_ByteString *string1,
-                    const UA_ByteString *string2) {
-    return UA_String_equal((const UA_String*)string1,
-                           (const UA_String*)string2);
+const UA_ByteString *string2) {
+return UA_String_equal((const UA_String*)string1,
+(const UA_String*)string2);
 }
 
 /* Allocates memory of size length for the bytestring.
@@ -2517,14 +2517,14 @@ UA_EXPORT extern const UA_ByteString UA_BYTESTRING_NULL;
 
 static UA_INLINE UA_ByteString
 UA_BYTESTRING(char *chars) {
-    UA_ByteString str; str.length = strlen(chars);
-    str.data = (UA_Byte*)chars; return str;
+UA_ByteString str; str.length = strlen(chars);
+str.data = (UA_Byte*)chars; return str;
 }
 
 static UA_INLINE UA_ByteString
 UA_BYTESTRING_ALLOC(const char *chars) {
-    UA_String str = UA_String_fromChars(chars); UA_ByteString bstr;
-    bstr.length = str.length; bstr.data = str.data; return bstr;
+UA_String str = UA_String_fromChars(chars); UA_ByteString bstr;
+bstr.length = str.length; bstr.data = str.data; return bstr;
 }
 
 /**
@@ -2540,23 +2540,23 @@ typedef UA_String UA_XmlElement;
  * ^^^^^^
  * An identifier for a node in the address space of an OPC UA Server. */
 enum UA_NodeIdType {
-    UA_NODEIDTYPE_NUMERIC    = 0, /* In the binary encoding, this can also
+UA_NODEIDTYPE_NUMERIC    = 0, /* In the binary encoding, this can also
                                      become 1 or 2 (2byte and 4byte encoding of
                                      small numeric nodeids) */
-    UA_NODEIDTYPE_STRING     = 3,
-    UA_NODEIDTYPE_GUID       = 4,
-    UA_NODEIDTYPE_BYTESTRING = 5
+UA_NODEIDTYPE_STRING     = 3,
+UA_NODEIDTYPE_GUID       = 4,
+UA_NODEIDTYPE_BYTESTRING = 5
 };
 
 typedef struct {
-    UA_UInt16 namespaceIndex;
-    enum UA_NodeIdType identifierType;
-    union {
-        UA_UInt32     numeric;
-        UA_String     string;
-        UA_Guid       guid;
-        UA_ByteString byteString;
-    } identifier;
+UA_UInt16 namespaceIndex;
+enum UA_NodeIdType identifierType;
+union {
+UA_UInt32     numeric;
+UA_String     string;
+UA_Guid       guid;
+UA_ByteString byteString;
+} identifier;
 } UA_NodeId;
 
 UA_EXPORT extern const UA_NodeId UA_NODEID_NULL;
@@ -2571,44 +2571,44 @@ UA_UInt32 UA_EXPORT UA_NodeId_hash(const UA_NodeId *n);
 /** The following functions are shorthand for creating NodeIds. */
 static UA_INLINE UA_NodeId
 UA_NODEID_NUMERIC(UA_UInt16 nsIndex, UA_UInt32 identifier) {
-    UA_NodeId id; id.namespaceIndex = nsIndex;
-    id.identifierType = UA_NODEIDTYPE_NUMERIC;
-    id.identifier.numeric = identifier; return id;
+UA_NodeId id; id.namespaceIndex = nsIndex;
+id.identifierType = UA_NODEIDTYPE_NUMERIC;
+id.identifier.numeric = identifier; return id;
 }
 
 static UA_INLINE UA_NodeId
 UA_NODEID_STRING(UA_UInt16 nsIndex, char *chars) {
-    UA_NodeId id; id.namespaceIndex = nsIndex;
-    id.identifierType = UA_NODEIDTYPE_STRING;
-    id.identifier.string = UA_STRING(chars); return id;
+UA_NodeId id; id.namespaceIndex = nsIndex;
+id.identifierType = UA_NODEIDTYPE_STRING;
+id.identifier.string = UA_STRING(chars); return id;
 }
 
 static UA_INLINE UA_NodeId
 UA_NODEID_STRING_ALLOC(UA_UInt16 nsIndex, const char *chars) {
-    UA_NodeId id; id.namespaceIndex = nsIndex;
-    id.identifierType = UA_NODEIDTYPE_STRING;
-    id.identifier.string = UA_STRING_ALLOC(chars); return id;
+UA_NodeId id; id.namespaceIndex = nsIndex;
+id.identifierType = UA_NODEIDTYPE_STRING;
+id.identifier.string = UA_STRING_ALLOC(chars); return id;
 }
 
 static UA_INLINE UA_NodeId
 UA_NODEID_GUID(UA_UInt16 nsIndex, UA_Guid guid) {
-    UA_NodeId id; id.namespaceIndex = nsIndex;
-    id.identifierType = UA_NODEIDTYPE_GUID;
-    id.identifier.guid = guid; return id;
+UA_NodeId id; id.namespaceIndex = nsIndex;
+id.identifierType = UA_NODEIDTYPE_GUID;
+id.identifier.guid = guid; return id;
 }
 
 static UA_INLINE UA_NodeId
 UA_NODEID_BYTESTRING(UA_UInt16 nsIndex, char *chars) {
-    UA_NodeId id; id.namespaceIndex = nsIndex;
-    id.identifierType = UA_NODEIDTYPE_BYTESTRING;
-    id.identifier.byteString = UA_BYTESTRING(chars); return id;
+UA_NodeId id; id.namespaceIndex = nsIndex;
+id.identifierType = UA_NODEIDTYPE_BYTESTRING;
+id.identifier.byteString = UA_BYTESTRING(chars); return id;
 }
 
 static UA_INLINE UA_NodeId
 UA_NODEID_BYTESTRING_ALLOC(UA_UInt16 nsIndex, const char *chars) {
-    UA_NodeId id; id.namespaceIndex = nsIndex;
-    id.identifierType = UA_NODEIDTYPE_BYTESTRING;
-    id.identifier.byteString = UA_BYTESTRING_ALLOC(chars); return id;
+UA_NodeId id; id.namespaceIndex = nsIndex;
+id.identifierType = UA_NODEIDTYPE_BYTESTRING;
+id.identifier.byteString = UA_BYTESTRING_ALLOC(chars); return id;
 }
 
 /**
@@ -2616,51 +2616,51 @@ UA_NODEID_BYTESTRING_ALLOC(UA_UInt16 nsIndex, const char *chars) {
  * ^^^^^^^^^^^^^^
  * A NodeId that allows the namespace URI to be specified instead of an index. */
 typedef struct {
-    UA_NodeId nodeId;
-    UA_String namespaceUri;
-    UA_UInt32 serverIndex;
+UA_NodeId nodeId;
+UA_String namespaceUri;
+UA_UInt32 serverIndex;
 } UA_ExpandedNodeId;
 
 UA_Boolean UA_EXPORT UA_ExpandedNodeId_equal(const UA_ExpandedNodeId *n1,
-                                             const UA_ExpandedNodeId *n2);
+const UA_ExpandedNodeId *n2);
 
 UA_EXPORT extern const UA_ExpandedNodeId UA_EXPANDEDNODEID_NULL;
 
 /** The following functions are shorthand for creating ExpandedNodeIds. */
 static UA_INLINE UA_ExpandedNodeId
 UA_EXPANDEDNODEID_NUMERIC(UA_UInt16 nsIndex, UA_UInt32 identifier) {
-    UA_ExpandedNodeId id; id.nodeId = UA_NODEID_NUMERIC(nsIndex, identifier);
-    id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
+UA_ExpandedNodeId id; id.nodeId = UA_NODEID_NUMERIC(nsIndex, identifier);
+id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
 }
 
 static UA_INLINE UA_ExpandedNodeId
 UA_EXPANDEDNODEID_STRING(UA_UInt16 nsIndex, char *chars) {
-    UA_ExpandedNodeId id; id.nodeId = UA_NODEID_STRING(nsIndex, chars);
-    id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
+UA_ExpandedNodeId id; id.nodeId = UA_NODEID_STRING(nsIndex, chars);
+id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
 }
 
 static UA_INLINE UA_ExpandedNodeId
 UA_EXPANDEDNODEID_STRING_ALLOC(UA_UInt16 nsIndex, const char *chars) {
-    UA_ExpandedNodeId id; id.nodeId = UA_NODEID_STRING_ALLOC(nsIndex, chars);
-    id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
+UA_ExpandedNodeId id; id.nodeId = UA_NODEID_STRING_ALLOC(nsIndex, chars);
+id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
 }
 
 static UA_INLINE UA_ExpandedNodeId
 UA_EXPANDEDNODEID_STRING_GUID(UA_UInt16 nsIndex, UA_Guid guid) {
-    UA_ExpandedNodeId id; id.nodeId = UA_NODEID_GUID(nsIndex, guid);
-    id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
+UA_ExpandedNodeId id; id.nodeId = UA_NODEID_GUID(nsIndex, guid);
+id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
 }
 
 static UA_INLINE UA_ExpandedNodeId
 UA_EXPANDEDNODEID_BYTESTRING(UA_UInt16 nsIndex, char *chars) {
-    UA_ExpandedNodeId id; id.nodeId = UA_NODEID_BYTESTRING(nsIndex, chars);
-    id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
+UA_ExpandedNodeId id; id.nodeId = UA_NODEID_BYTESTRING(nsIndex, chars);
+id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
 }
 
 static UA_INLINE UA_ExpandedNodeId
 UA_EXPANDEDNODEID_BYTESTRING_ALLOC(UA_UInt16 nsIndex, const char *chars) {
-    UA_ExpandedNodeId id; id.nodeId = UA_NODEID_BYTESTRING_ALLOC(nsIndex, chars);
-    id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
+UA_ExpandedNodeId id; id.nodeId = UA_NODEID_BYTESTRING_ALLOC(nsIndex, chars);
+id.serverIndex = 0; id.namespaceUri = UA_STRING_NULL; return id;
 }
 
 /**
@@ -2670,50 +2670,50 @@ UA_EXPANDEDNODEID_BYTESTRING_ALLOC(UA_UInt16 nsIndex, const char *chars) {
  * ^^^^^^^^^^^^^
  * A name qualified by a namespace. */
 typedef struct {
-    UA_UInt16 namespaceIndex;
-    UA_String name;
+UA_UInt16 namespaceIndex;
+UA_String name;
 } UA_QualifiedName;
 
 static UA_INLINE UA_Boolean
 UA_QualifiedName_isNull(const UA_QualifiedName *q) {
-    return (q->namespaceIndex == 0 && q->name.length == 0);
+return (q->namespaceIndex == 0 && q->name.length == 0);
 }
 
 static UA_INLINE UA_QualifiedName
 UA_QUALIFIEDNAME(UA_UInt16 nsIndex, char *chars) {
-    UA_QualifiedName qn; qn.namespaceIndex = nsIndex;
-    qn.name = UA_STRING(chars); return qn;
+UA_QualifiedName qn; qn.namespaceIndex = nsIndex;
+qn.name = UA_STRING(chars); return qn;
 }
 
 static UA_INLINE UA_QualifiedName
 UA_QUALIFIEDNAME_ALLOC(UA_UInt16 nsIndex, const char *chars) {
-    UA_QualifiedName qn; qn.namespaceIndex = nsIndex;
-    qn.name = UA_STRING_ALLOC(chars); return qn;
+UA_QualifiedName qn; qn.namespaceIndex = nsIndex;
+qn.name = UA_STRING_ALLOC(chars); return qn;
 }
 
 UA_Boolean UA_EXPORT
 UA_QualifiedName_equal(const UA_QualifiedName *qn1,
-                       const UA_QualifiedName *qn2);
+const UA_QualifiedName *qn2);
 
 /**
  * LocalizedText
  * ^^^^^^^^^^^^^
  * Human readable text with an optional locale identifier. */
 typedef struct {
-    UA_String locale;
-    UA_String text;
+UA_String locale;
+UA_String text;
 } UA_LocalizedText;
 
 static UA_INLINE UA_LocalizedText
 UA_LOCALIZEDTEXT(char *locale, char *text) {
-    UA_LocalizedText lt; lt.locale = UA_STRING(locale);
-    lt.text = UA_STRING(text); return lt;
+UA_LocalizedText lt; lt.locale = UA_STRING(locale);
+lt.text = UA_STRING(text); return lt;
 }
 
 static UA_INLINE UA_LocalizedText
 UA_LOCALIZEDTEXT_ALLOC(const char *locale, const char *text) {
-    UA_LocalizedText lt; lt.locale = UA_STRING_ALLOC(locale);
-    lt.text = UA_STRING_ALLOC(text); return lt;
+UA_LocalizedText lt; lt.locale = UA_STRING_ALLOC(locale);
+lt.text = UA_STRING_ALLOC(text); return lt;
 }
 
 /**
@@ -2728,13 +2728,13 @@ UA_LOCALIZEDTEXT_ALLOC(const char *locale, const char *text) {
  * index and the comma separates dimensions. A single value indicates a range
  * with a single element (min==max). */
 typedef struct {
-    UA_UInt32 min;
-    UA_UInt32 max;
+UA_UInt32 min;
+UA_UInt32 max;
 } UA_NumericRangeDimension;
 
 typedef struct  {
-    size_t dimensionsSize;
-    UA_NumericRangeDimension *dimensions;
+size_t dimensionsSize;
+UA_NumericRangeDimension *dimensions;
 } UA_NumericRange;
 
 /**
@@ -2778,20 +2778,20 @@ typedef struct UA_DataType UA_DataType;
 #define UA_EMPTY_ARRAY_SENTINEL ((void*)0x01)
 
 typedef enum {
-    UA_VARIANT_DATA,          /* The data has the same lifecycle as the
+UA_VARIANT_DATA,          /* The data has the same lifecycle as the
                                  variant */
-    UA_VARIANT_DATA_NODELETE /* The data is "borrowed" by the variant and
+UA_VARIANT_DATA_NODELETE /* The data is "borrowed" by the variant and
                                  shall not be deleted at the end of the
                                  variant's lifecycle. */
 } UA_VariantStorageType;
 
 typedef struct {
-    const UA_DataType *type;      /* The data type description */
-    UA_VariantStorageType storageType;
-    size_t arrayLength;           /* The number of elements in the data array */
-    void *data;                   /* Points to the scalar or array data */
-    size_t arrayDimensionsSize;   /* The number of dimensions */
-    UA_UInt32 *arrayDimensions;   /* The length of each dimension */
+const UA_DataType *type;      /* The data type description */
+UA_VariantStorageType storageType;
+size_t arrayLength;           /* The number of elements in the data array */
+void *data;                   /* Points to the scalar or array data */
+size_t arrayDimensionsSize;   /* The number of dimensions */
+UA_UInt32 *arrayDimensions;   /* The length of each dimension */
 } UA_Variant;
 
 /* Returns true if the variant has no value defined (contains neither an array
@@ -2801,7 +2801,7 @@ typedef struct {
  * @return Is the variant empty */
 static UA_INLINE UA_Boolean
 UA_Variant_isEmpty(const UA_Variant *v) {
-    return v->type == NULL;
+return v->type == NULL;
 }
 
 /* Returns true if the variant contains a scalar value. Note that empty variants
@@ -2811,7 +2811,7 @@ UA_Variant_isEmpty(const UA_Variant *v) {
  * @return Does the variant contain a scalar value */
 static UA_INLINE UA_Boolean
 UA_Variant_isScalar(const UA_Variant *v) {
-    return (v->arrayLength == 0 && v->data > UA_EMPTY_ARRAY_SENTINEL);
+return (v->arrayLength == 0 && v->data > UA_EMPTY_ARRAY_SENTINEL);
 }
 
 /* Returns true if the variant contains a scalar value of the given type.
@@ -2821,7 +2821,7 @@ UA_Variant_isScalar(const UA_Variant *v) {
  * @return Does the variant contain a scalar value of the given type */
 static UA_INLINE UA_Boolean
 UA_Variant_hasScalarType(const UA_Variant *v, const UA_DataType *type) {
-    return UA_Variant_isScalar(v) && type == v->type;
+return UA_Variant_isScalar(v) && type == v->type;
 }
 
 /* Returns true if the variant contains an array of the given type.
@@ -2831,7 +2831,7 @@ UA_Variant_hasScalarType(const UA_Variant *v, const UA_DataType *type) {
  * @return Does the variant contain an array of the given type */
 static UA_INLINE UA_Boolean
 UA_Variant_hasArrayType(const UA_Variant *v, const UA_DataType *type) {
-    return (!UA_Variant_isScalar(v)) && type == v->type;
+return (!UA_Variant_isScalar(v)) && type == v->type;
 }
 
 /* Set the variant to a scalar value that already resides in memory. The value
@@ -2842,7 +2842,7 @@ UA_Variant_hasArrayType(const UA_Variant *v, const UA_DataType *type) {
  * @param type The datatype of the value in question */
 void UA_EXPORT
 UA_Variant_setScalar(UA_Variant *v, void * UA_RESTRICT p,
-                     const UA_DataType *type);
+const UA_DataType *type);
 
 /* Set the variant to a scalar value that is copied from an existing variable.
  * @param v The variant
@@ -2851,7 +2851,7 @@ UA_Variant_setScalar(UA_Variant *v, void * UA_RESTRICT p,
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Variant_setScalarCopy(UA_Variant *v, const void *p,
-                         const UA_DataType *type);
+const UA_DataType *type);
 
 /* Set the variant to an array that already resides in memory. The array takes
  * on the lifecycle of the variant and is deleted with it.
@@ -2862,7 +2862,7 @@ UA_Variant_setScalarCopy(UA_Variant *v, const void *p,
  * @param type The datatype of the array */
 void UA_EXPORT
 UA_Variant_setArray(UA_Variant *v, void * UA_RESTRICT array,
-                    size_t arraySize, const UA_DataType *type);
+size_t arraySize, const UA_DataType *type);
 
 /* Set the variant to an array that is copied from an existing array.
  *
@@ -2873,7 +2873,7 @@ UA_Variant_setArray(UA_Variant *v, void * UA_RESTRICT array,
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Variant_setArrayCopy(UA_Variant *v, const void *array,
-                        size_t arraySize, const UA_DataType *type);
+size_t arraySize, const UA_DataType *type);
 
 /* Copy the variant, but use only a subset of the (multidimensional) array into
  * a variant. Returns an error code if the variant is not an array or if the
@@ -2885,7 +2885,7 @@ UA_Variant_setArrayCopy(UA_Variant *v, const void *array,
  * @return Returns UA_STATUSCODE_GOOD or an error code */
 UA_StatusCode UA_EXPORT
 UA_Variant_copyRange(const UA_Variant *src, UA_Variant *dst,
-                     const UA_NumericRange range);
+const UA_NumericRange range);
 
 /* Insert a range of data into an existing variant. The data array can't be
  * reused afterwards if it contains types without a fixed size (e.g. strings)
@@ -2899,7 +2899,7 @@ UA_Variant_copyRange(const UA_Variant *src, UA_Variant *dst,
  * @return Returns UA_STATUSCODE_GOOD or an error code */
 UA_StatusCode UA_EXPORT
 UA_Variant_setRange(UA_Variant *v, void * UA_RESTRICT array,
-                    size_t arraySize, const UA_NumericRange range);
+size_t arraySize, const UA_NumericRange range);
 
 /* Deep-copy a range of data into an existing variant.
  *
@@ -2911,7 +2911,7 @@ UA_Variant_setRange(UA_Variant *v, void * UA_RESTRICT array,
  * @return Returns UA_STATUSCODE_GOOD or an error code */
 UA_StatusCode UA_EXPORT
 UA_Variant_setRangeCopy(UA_Variant *v, const void *array,
-                        size_t arraySize, const UA_NumericRange range);
+size_t arraySize, const UA_NumericRange range);
 
 /**
  * .. _extensionobject:
@@ -2924,27 +2924,27 @@ UA_Variant_setRangeCopy(UA_Variant *v, const void *array,
  * are described. If the received data type is unknown, the encoded string and
  * target NodeId is stored instead of the decoded value. */
 typedef enum {
-    UA_EXTENSIONOBJECT_ENCODED_NOBODY     = 0,
-    UA_EXTENSIONOBJECT_ENCODED_BYTESTRING = 1,
-    UA_EXTENSIONOBJECT_ENCODED_XML        = 2,
-    UA_EXTENSIONOBJECT_DECODED            = 3,
-    UA_EXTENSIONOBJECT_DECODED_NODELETE   = 4 /* Don't delete the content
+UA_EXTENSIONOBJECT_ENCODED_NOBODY     = 0,
+UA_EXTENSIONOBJECT_ENCODED_BYTESTRING = 1,
+UA_EXTENSIONOBJECT_ENCODED_XML        = 2,
+UA_EXTENSIONOBJECT_DECODED            = 3,
+UA_EXTENSIONOBJECT_DECODED_NODELETE   = 4 /* Don't delete the content
                                                  together with the
                                                  ExtensionObject */
 } UA_ExtensionObjectEncoding;
 
 typedef struct {
-    UA_ExtensionObjectEncoding encoding;
-    union {
-        struct {
-            UA_NodeId typeId;   /* The nodeid of the datatype */
-            UA_ByteString body; /* The bytestring of the encoded data */
-        } encoded;
-        struct {
-            const UA_DataType *type;
-            void *data;
-        } decoded;
-    } content;
+UA_ExtensionObjectEncoding encoding;
+union {
+struct {
+UA_NodeId typeId;   /* The nodeid of the datatype */
+UA_ByteString body; /* The bytestring of the encoded data */
+} encoded;
+struct {
+const UA_DataType *type;
+void *data;
+} decoded;
+} content;
 } UA_ExtensionObject;
 
 /**
@@ -2954,18 +2954,18 @@ typedef struct {
  * ^^^^^^^^^
  * A data value with an associated status code and timestamps. */
 typedef struct {
-    UA_Boolean    hasValue             : 1;
-    UA_Boolean    hasStatus            : 1;
-    UA_Boolean    hasSourceTimestamp   : 1;
-    UA_Boolean    hasServerTimestamp   : 1;
-    UA_Boolean    hasSourcePicoseconds : 1;
-    UA_Boolean    hasServerPicoseconds : 1;
-    UA_Variant    value;
-    UA_StatusCode status;
-    UA_DateTime   sourceTimestamp;
-    UA_UInt16     sourcePicoseconds;
-    UA_DateTime   serverTimestamp;
-    UA_UInt16     serverPicoseconds;
+UA_Boolean    hasValue             : 1;
+UA_Boolean    hasStatus            : 1;
+UA_Boolean    hasSourceTimestamp   : 1;
+UA_Boolean    hasServerTimestamp   : 1;
+UA_Boolean    hasSourcePicoseconds : 1;
+UA_Boolean    hasServerPicoseconds : 1;
+UA_Variant    value;
+UA_StatusCode status;
+UA_DateTime   sourceTimestamp;
+UA_UInt16     sourcePicoseconds;
+UA_DateTime   serverTimestamp;
+UA_UInt16     serverPicoseconds;
 } UA_DataValue;
 
 /**
@@ -2974,20 +2974,20 @@ typedef struct {
  * A structure that contains detailed error and diagnostic information
  * associated with a StatusCode. */
 typedef struct UA_DiagnosticInfo {
-    UA_Boolean    hasSymbolicId          : 1;
-    UA_Boolean    hasNamespaceUri        : 1;
-    UA_Boolean    hasLocalizedText       : 1;
-    UA_Boolean    hasLocale              : 1;
-    UA_Boolean    hasAdditionalInfo      : 1;
-    UA_Boolean    hasInnerStatusCode     : 1;
-    UA_Boolean    hasInnerDiagnosticInfo : 1;
-    UA_Int32      symbolicId;
-    UA_Int32      namespaceUri;
-    UA_Int32      localizedText;
-    UA_Int32      locale;
-    UA_String     additionalInfo;
-    UA_StatusCode innerStatusCode;
-    struct UA_DiagnosticInfo *innerDiagnosticInfo;
+UA_Boolean    hasSymbolicId          : 1;
+UA_Boolean    hasNamespaceUri        : 1;
+UA_Boolean    hasLocalizedText       : 1;
+UA_Boolean    hasLocale              : 1;
+UA_Boolean    hasAdditionalInfo      : 1;
+UA_Boolean    hasInnerStatusCode     : 1;
+UA_Boolean    hasInnerDiagnosticInfo : 1;
+UA_Int32      symbolicId;
+UA_Int32      namespaceUri;
+UA_Int32      localizedText;
+UA_Int32      locale;
+UA_String     additionalInfo;
+UA_StatusCode innerStatusCode;
+struct UA_DiagnosticInfo *innerDiagnosticInfo;
 } UA_DiagnosticInfo;
 
 /**
@@ -3018,40 +3018,40 @@ typedef struct UA_DiagnosticInfo {
 
 typedef struct {
 #ifdef UA_ENABLE_TYPENAMES
-    const char *memberName;
+const char *memberName;
 #endif
-    UA_UInt16 memberTypeIndex;    /* Index of the member in the array of data
+UA_UInt16 memberTypeIndex;    /* Index of the member in the array of data
                                      types */
-    UA_Byte   padding;            /* How much padding is there before this
+UA_Byte   padding;            /* How much padding is there before this
                                      member element? For arrays this is the
                                      padding before the size_t length member.
                                      (No padding between size_t and the
                                      following ptr.) */
-    UA_Boolean namespaceZero : 1; /* The type of the member is defined in
+UA_Boolean namespaceZero : 1; /* The type of the member is defined in
                                      namespace zero. In this implementation,
                                      types from custom namespace may contain
                                      members from the same namespace or
                                      namespace zero only.*/
-    UA_Boolean isArray       : 1; /* The member is an array */
+UA_Boolean isArray       : 1; /* The member is an array */
 } UA_DataTypeMember;
 
 struct UA_DataType {
 #ifdef UA_ENABLE_TYPENAMES
-    const char *typeName;
+const char *typeName;
 #endif
-    UA_NodeId  typeId;           /* The nodeid of the type */
-    UA_UInt16  memSize;          /* Size of the struct in memory */
-    UA_UInt16  typeIndex;        /* Index of the type in the datatypetable */
-    UA_Byte    membersSize;      /* How many members does the type have? */
-    UA_Boolean builtin      : 1; /* The type is "builtin" and has dedicated de-
+UA_NodeId  typeId;           /* The nodeid of the type */
+UA_UInt16  memSize;          /* Size of the struct in memory */
+UA_UInt16  typeIndex;        /* Index of the type in the datatypetable */
+UA_Byte    membersSize;      /* How many members does the type have? */
+UA_Boolean builtin      : 1; /* The type is "builtin" and has dedicated de-
                                     and encoding functions */
-    UA_Boolean pointerFree  : 1; /* The type (and its members) contains no
+UA_Boolean pointerFree  : 1; /* The type (and its members) contains no
                                     pointers that need to be freed */
-    UA_Boolean overlayable  : 1; /* The type has the identical memory layout in
+UA_Boolean overlayable  : 1; /* The type has the identical memory layout in
                                     memory and on the binary stream. */
-    UA_UInt16  binaryEncodingId; /* NodeId of datatype when encoded as binary */
-    //UA_UInt16  xmlEncodingId;  /* NodeId of datatype when encoded as XML */
-    UA_DataTypeMember *members;
+UA_UInt16  binaryEncodingId; /* NodeId of datatype when encoded as binary */
+//UA_UInt16  xmlEncodingId;  /* NodeId of datatype when encoded as XML */
+UA_DataTypeMember *members;
 };
 
 /* Test if the data type is a numeric builtin data type. This includes Boolean,
@@ -3093,7 +3093,7 @@ void UA_EXPORT * UA_new(const UA_DataType *type) UA_FUNC_ATTR_MALLOC;
  * @param type The datatype description */
 static UA_INLINE void
 UA_init(void *p, const UA_DataType *type) {
-    memset(p, 0, type->memSize);
+memset(p, 0, type->memSize);
 }
 
 /* Copies the content of two variables. If copying fails (e.g. because no memory
@@ -3151,7 +3151,7 @@ void UA_EXPORT * UA_Array_new(size_t size, const UA_DataType *type) UA_FUNC_ATTR
  * @return Returns UA_STATUSCODE_GOOD or UA_STATUSCODE_BADOUTOFMEMORY */
 UA_StatusCode UA_EXPORT
 UA_Array_copy(const void *src, size_t size, void **dst,
-              const UA_DataType *type) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+const UA_DataType *type) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
 /* Deletes an array.
  *
@@ -3189,21 +3189,21 @@ UA_Guid UA_EXPORT UA_Guid_random(void);     /* no cryptographic entropy */
  * releases of open62541. */
 
 typedef struct {
-    UA_StatusCode code;      /* The numeric value of the StatusCode */
-    const char* name;        /* The symbolic name */
-    const char* explanation; /* Short message explaining the StatusCode */
+UA_StatusCode code;      /* The numeric value of the StatusCode */
+const char* name;        /* The symbolic name */
+const char* explanation; /* Short message explaining the StatusCode */
 } UA_StatusCodeDescription;
 
 UA_EXPORT extern const UA_StatusCodeDescription statusCodeExplanation_default;
 
 UA_DEPRECATED static UA_INLINE const UA_StatusCodeDescription *
 UA_StatusCode_description(UA_StatusCode code) {
-    return &statusCodeExplanation_default;
+return &statusCodeExplanation_default;
 }
 
 UA_DEPRECATED static UA_INLINE const char *
 UA_StatusCode_explanation(UA_StatusCode code) {
-    return statusCodeExplanation_default.name;
+return statusCodeExplanation_default.name;
 }
 
 UA_DEPRECATED UA_String
@@ -3212,7 +3212,7 @@ UA_DateTime_toString(UA_DateTime t);
 /* The old DateTime conversion macros */
 UA_DEPRECATED static UA_INLINE double
 deprecatedDateTimeMultiple(double multiple) {
-    return multiple;
+return multiple;
 }
 
 #define UA_USEC_TO_DATETIME deprecatedDateTimeMultiple((UA_Double)UA_DATETIME_USEC)
@@ -3405,8 +3405,8 @@ extern UA_EXPORT const UA_DataType UA_TYPES[UA_TYPES_COUNT];
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  * A software certificate with a digital signature. */
 typedef struct {
-    UA_ByteString certificateData;
-    UA_ByteString signature;
+UA_ByteString certificateData;
+UA_ByteString signature;
 } UA_SignedSoftwareCertificate;
 
 #define UA_TYPES_SIGNEDSOFTWARECERTIFICATE 25
@@ -3416,8 +3416,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId affected;
-    UA_NodeId affectedType;
+UA_NodeId affected;
+UA_NodeId affectedType;
 } UA_SemanticChangeStructureDataType;
 
 #define UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE 26
@@ -3427,8 +3427,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_StatusCode status;
-    UA_DiagnosticInfo diagnosticInfo;
+UA_StatusCode status;
+UA_DiagnosticInfo diagnosticInfo;
 } UA_StatusChangeNotification;
 
 #define UA_TYPES_STATUSCHANGENOTIFICATION 27
@@ -3438,8 +3438,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * The target of the translated path. */
 typedef struct {
-    UA_ExpandedNodeId targetId;
-    UA_UInt32 remainingPathIndex;
+UA_ExpandedNodeId targetId;
+UA_UInt32 remainingPathIndex;
 } UA_BrowsePathTarget;
 
 #define UA_TYPES_BROWSEPATHTARGET 28
@@ -3449,13 +3449,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  * The attributes for a view node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Boolean containsNoLoops;
-    UA_Byte eventNotifier;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Boolean containsNoLoops;
+UA_Byte eventNotifier;
 } UA_ViewAttributes;
 
 #define UA_TYPES_VIEWATTRIBUTES 29
@@ -3465,13 +3465,13 @@ typedef struct {
  * ^^^^^^^^^^^^^
  * The header passed with every server request. */
 typedef struct {
-    UA_NodeId authenticationToken;
-    UA_DateTime timestamp;
-    UA_UInt32 requestHandle;
-    UA_UInt32 returnDiagnostics;
-    UA_String auditEntryId;
-    UA_UInt32 timeoutHint;
-    UA_ExtensionObject additionalHeader;
+UA_NodeId authenticationToken;
+UA_DateTime timestamp;
+UA_UInt32 requestHandle;
+UA_UInt32 returnDiagnostics;
+UA_String auditEntryId;
+UA_UInt32 timeoutHint;
+UA_ExtensionObject additionalHeader;
 } UA_RequestHeader;
 
 #define UA_TYPES_REQUESTHEADER 30
@@ -3481,10 +3481,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_StatusCode statusCode;
-    UA_Double revisedSamplingInterval;
-    UA_UInt32 revisedQueueSize;
-    UA_ExtensionObject filterResult;
+UA_StatusCode statusCode;
+UA_Double revisedSamplingInterval;
+UA_UInt32 revisedQueueSize;
+UA_ExtensionObject filterResult;
 } UA_MonitoredItemModifyResult;
 
 #define UA_TYPES_MONITOREDITEMMODIFYRESULT 31
@@ -3494,7 +3494,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 index;
+UA_UInt32 index;
 } UA_ElementOperand;
 
 #define UA_TYPES_ELEMENTOPERAND 32
@@ -3504,7 +3504,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  * Closes a secure channel. */
 typedef struct {
-    UA_RequestHeader requestHeader;
+UA_RequestHeader requestHeader;
 } UA_CloseSecureChannelRequest;
 
 #define UA_TYPES_CLOSESECURECHANNELREQUEST 33
@@ -3514,8 +3514,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  * A result of an add node operation. */
 typedef struct {
-    UA_StatusCode statusCode;
-    UA_NodeId addedNodeId;
+UA_StatusCode statusCode;
+UA_NodeId addedNodeId;
 } UA_AddNodesResult;
 
 #define UA_TYPES_ADDNODESRESULT 34
@@ -3525,20 +3525,20 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  * The attributes for a variable node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Variant value;
-    UA_NodeId dataType;
-    UA_Int32 valueRank;
-    size_t arrayDimensionsSize;
-    UA_UInt32 *arrayDimensions;
-    UA_Byte accessLevel;
-    UA_Byte userAccessLevel;
-    UA_Double minimumSamplingInterval;
-    UA_Boolean historizing;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Variant value;
+UA_NodeId dataType;
+UA_Int32 valueRank;
+size_t arrayDimensionsSize;
+UA_UInt32 *arrayDimensions;
+UA_Byte accessLevel;
+UA_Byte userAccessLevel;
+UA_Double minimumSamplingInterval;
+UA_Boolean historizing;
 } UA_VariableAttributes;
 
 #define UA_TYPES_VARIABLEATTRIBUTES 35
@@ -3548,10 +3548,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 sequenceNumber;
-    UA_DateTime publishTime;
-    size_t notificationDataSize;
-    UA_ExtensionObject *notificationData;
+UA_UInt32 sequenceNumber;
+UA_DateTime publishTime;
+size_t notificationDataSize;
+UA_ExtensionObject *notificationData;
 } UA_NotificationMessage;
 
 #define UA_TYPES_NOTIFICATIONMESSAGE 36
@@ -3561,11 +3561,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 startingRecordId;
-    UA_UInt32 maxRecordsToReturn;
-    size_t serverCapabilityFilterSize;
-    UA_String *serverCapabilityFilter;
+UA_RequestHeader requestHeader;
+UA_UInt32 startingRecordId;
+UA_UInt32 maxRecordsToReturn;
+size_t serverCapabilityFilterSize;
+UA_String *serverCapabilityFilter;
 } UA_FindServersOnNetworkRequest;
 
 #define UA_TYPES_FINDSERVERSONNETWORKREQUEST 37
@@ -3575,9 +3575,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 clientHandle;
-    size_t eventFieldsSize;
-    UA_Variant *eventFields;
+UA_UInt32 clientHandle;
+size_t eventFieldsSize;
+UA_Variant *eventFields;
 } UA_EventFieldList;
 
 #define UA_TYPES_EVENTFIELDLIST 38
@@ -3587,10 +3587,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  */
 typedef enum {
-    UA_MONITORINGMODE_DISABLED = 0,
-    UA_MONITORINGMODE_SAMPLING = 1,
-    UA_MONITORINGMODE_REPORTING = 2,
-    __UA_MONITORINGMODE_FORCE32BIT = 0x7fffffff
+UA_MONITORINGMODE_DISABLED = 0,
+UA_MONITORINGMODE_SAMPLING = 1,
+UA_MONITORINGMODE_REPORTING = 2,
+__UA_MONITORINGMODE_FORCE32BIT = 0x7fffffff
 } UA_MonitoringMode;
 UA_STATIC_ASSERT(sizeof(UA_MonitoringMode) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -3601,9 +3601,9 @@ UA_STATIC_ASSERT(sizeof(UA_MonitoringMode) == sizeof(UA_Int32), enum_must_be_32b
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  * The discovery information needed for mDNS registration. */
 typedef struct {
-    UA_String mdnsServerName;
-    size_t serverCapabilitiesSize;
-    UA_String *serverCapabilities;
+UA_String mdnsServerName;
+size_t serverCapabilitiesSize;
+UA_String *serverCapabilities;
 } UA_MdnsDiscoveryConfiguration;
 
 #define UA_TYPES_MDNSDISCOVERYCONFIGURATION 40
@@ -3613,13 +3613,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_StatusCode statusCode;
-    size_t inputArgumentResultsSize;
-    UA_StatusCode *inputArgumentResults;
-    size_t inputArgumentDiagnosticInfosSize;
-    UA_DiagnosticInfo *inputArgumentDiagnosticInfos;
-    size_t outputArgumentsSize;
-    UA_Variant *outputArguments;
+UA_StatusCode statusCode;
+size_t inputArgumentResultsSize;
+UA_StatusCode *inputArgumentResults;
+size_t inputArgumentDiagnosticInfosSize;
+UA_DiagnosticInfo *inputArgumentDiagnosticInfos;
+size_t outputArgumentsSize;
+UA_Variant *outputArguments;
 } UA_CallMethodResult;
 
 #define UA_TYPES_CALLMETHODRESULT 41
@@ -3629,11 +3629,11 @@ typedef struct {
  * ^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_StatusCode statusCode;
-    size_t dataStatusCodesSize;
-    UA_StatusCode *dataStatusCodes;
-    size_t dataDiagnosticInfosSize;
-    UA_DiagnosticInfo *dataDiagnosticInfos;
+UA_StatusCode statusCode;
+size_t dataStatusCodesSize;
+UA_StatusCode *dataStatusCodes;
+size_t dataDiagnosticInfosSize;
+UA_DiagnosticInfo *dataDiagnosticInfos;
 } UA_ParsingResult;
 
 #define UA_TYPES_PARSINGRESULT 42
@@ -3643,10 +3643,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  * An element in a relative path. */
 typedef struct {
-    UA_NodeId referenceTypeId;
-    UA_Boolean isInverse;
-    UA_Boolean includeSubtypes;
-    UA_QualifiedName targetName;
+UA_NodeId referenceTypeId;
+UA_Boolean isInverse;
+UA_Boolean includeSubtypes;
+UA_QualifiedName targetName;
 } UA_RelativePathElement;
 
 #define UA_TYPES_RELATIVEPATHELEMENT 43
@@ -3656,11 +3656,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  * The directions of the references to return. */
 typedef enum {
-    UA_BROWSEDIRECTION_FORWARD = 0,
-    UA_BROWSEDIRECTION_INVERSE = 1,
-    UA_BROWSEDIRECTION_BOTH = 2,
-    UA_BROWSEDIRECTION_INVALID = 3,
-    __UA_BROWSEDIRECTION_FORCE32BIT = 0x7fffffff
+UA_BROWSEDIRECTION_FORWARD = 0,
+UA_BROWSEDIRECTION_INVERSE = 1,
+UA_BROWSEDIRECTION_BOTH = 2,
+UA_BROWSEDIRECTION_INVALID = 3,
+__UA_BROWSEDIRECTION_FORCE32BIT = 0x7fffffff
 } UA_BrowseDirection;
 UA_STATIC_ASSERT(sizeof(UA_BrowseDirection) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -3671,10 +3671,10 @@ UA_STATIC_ASSERT(sizeof(UA_BrowseDirection) == sizeof(UA_Int32), enum_must_be_32
  * ^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId objectId;
-    UA_NodeId methodId;
-    size_t inputArgumentsSize;
-    UA_Variant *inputArguments;
+UA_NodeId objectId;
+UA_NodeId methodId;
+size_t inputArgumentsSize;
+UA_Variant *inputArguments;
 } UA_CallMethodRequest;
 
 #define UA_TYPES_CALLMETHODREQUEST 45
@@ -3684,13 +3684,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  */
 typedef enum {
-    UA_REDUNDANCYSUPPORT_NONE = 0,
-    UA_REDUNDANCYSUPPORT_COLD = 1,
-    UA_REDUNDANCYSUPPORT_WARM = 2,
-    UA_REDUNDANCYSUPPORT_HOT = 3,
-    UA_REDUNDANCYSUPPORT_TRANSPARENT = 4,
-    UA_REDUNDANCYSUPPORT_HOTANDMIRRORED = 5,
-    __UA_REDUNDANCYSUPPORT_FORCE32BIT = 0x7fffffff
+UA_REDUNDANCYSUPPORT_NONE = 0,
+UA_REDUNDANCYSUPPORT_COLD = 1,
+UA_REDUNDANCYSUPPORT_WARM = 2,
+UA_REDUNDANCYSUPPORT_HOT = 3,
+UA_REDUNDANCYSUPPORT_TRANSPARENT = 4,
+UA_REDUNDANCYSUPPORT_HOTANDMIRRORED = 5,
+__UA_REDUNDANCYSUPPORT_FORCE32BIT = 0x7fffffff
 } UA_RedundancySupport;
 UA_STATIC_ASSERT(sizeof(UA_RedundancySupport) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -3701,8 +3701,8 @@ UA_STATIC_ASSERT(sizeof(UA_RedundancySupport) == sizeof(UA_Int32), enum_must_be_
  * ^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    size_t eventsSize;
-    UA_EventFieldList *events;
+size_t eventsSize;
+UA_EventFieldList *events;
 } UA_EventNotificationList;
 
 #define UA_TYPES_EVENTNOTIFICATIONLIST 47
@@ -3712,9 +3712,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  * Unregisters one or more previously registered nodes. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t nodesToUnregisterSize;
-    UA_NodeId *nodesToUnregister;
+UA_RequestHeader requestHeader;
+size_t nodesToUnregisterSize;
+UA_NodeId *nodesToUnregister;
 } UA_UnregisterNodesRequest;
 
 #define UA_TYPES_UNREGISTERNODESREQUEST 48
@@ -3724,11 +3724,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_StatusCode statusCode;
-    size_t operandStatusCodesSize;
-    UA_StatusCode *operandStatusCodes;
-    size_t operandDiagnosticInfosSize;
-    UA_DiagnosticInfo *operandDiagnosticInfos;
+UA_StatusCode statusCode;
+size_t operandStatusCodesSize;
+UA_StatusCode *operandStatusCodes;
+size_t operandDiagnosticInfosSize;
+UA_DiagnosticInfo *operandDiagnosticInfos;
 } UA_ContentFilterElementResult;
 
 #define UA_TYPES_CONTENTFILTERELEMENTRESULT 49
@@ -3738,11 +3738,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId typeDefinitionId;
-    size_t browsePathSize;
-    UA_QualifiedName *browsePath;
-    UA_UInt32 attributeId;
-    UA_String indexRange;
+UA_NodeId typeDefinitionId;
+size_t browsePathSize;
+UA_QualifiedName *browsePath;
+UA_UInt32 attributeId;
+UA_String indexRange;
 } UA_SimpleAttributeOperand;
 
 #define UA_TYPES_SIMPLEATTRIBUTEOPERAND 50
@@ -3752,7 +3752,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_Variant value;
+UA_Variant value;
 } UA_LiteralOperand;
 
 #define UA_TYPES_LITERALOPERAND 51
@@ -3762,10 +3762,10 @@ typedef struct {
  * ^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ExpandedNodeId nodeId;
-    UA_ExpandedNodeId typeDefinitionNode;
-    size_t valuesSize;
-    UA_Variant *values;
+UA_ExpandedNodeId nodeId;
+UA_ExpandedNodeId typeDefinitionNode;
+size_t valuesSize;
+UA_Variant *values;
 } UA_QueryDataSet;
 
 #define UA_TYPES_QUERYDATASET 52
@@ -3775,7 +3775,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  * A token representing an anonymous user. */
 typedef struct {
-    UA_String policyId;
+UA_String policyId;
 } UA_AnonymousIdentityToken;
 
 #define UA_TYPES_ANONYMOUSIDENTITYTOKEN 53
@@ -3785,10 +3785,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_Boolean publishingEnabled;
-    size_t subscriptionIdsSize;
-    UA_UInt32 *subscriptionIds;
+UA_RequestHeader requestHeader;
+UA_Boolean publishingEnabled;
+size_t subscriptionIdsSize;
+UA_UInt32 *subscriptionIds;
 } UA_SetPublishingModeRequest;
 
 #define UA_TYPES_SETPUBLISHINGMODEREQUEST 54
@@ -3798,11 +3798,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_StatusCode statusCode;
-    UA_UInt32 monitoredItemId;
-    UA_Double revisedSamplingInterval;
-    UA_UInt32 revisedQueueSize;
-    UA_ExtensionObject filterResult;
+UA_StatusCode statusCode;
+UA_UInt32 monitoredItemId;
+UA_Double revisedSamplingInterval;
+UA_UInt32 revisedQueueSize;
+UA_ExtensionObject filterResult;
 } UA_MonitoredItemCreateResult;
 
 #define UA_TYPES_MONITOREDITEMCREATERESULT 55
@@ -3812,12 +3812,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  */
 typedef enum {
-    UA_TIMESTAMPSTORETURN_SOURCE = 0,
-    UA_TIMESTAMPSTORETURN_SERVER = 1,
-    UA_TIMESTAMPSTORETURN_BOTH = 2,
-    UA_TIMESTAMPSTORETURN_NEITHER = 3,
-    UA_TIMESTAMPSTORETURN_INVALID = 4,
-    __UA_TIMESTAMPSTORETURN_FORCE32BIT = 0x7fffffff
+UA_TIMESTAMPSTORETURN_SOURCE = 0,
+UA_TIMESTAMPSTORETURN_SERVER = 1,
+UA_TIMESTAMPSTORETURN_BOTH = 2,
+UA_TIMESTAMPSTORETURN_NEITHER = 3,
+UA_TIMESTAMPSTORETURN_INVALID = 4,
+__UA_TIMESTAMPSTORETURN_FORCE32BIT = 0x7fffffff
 } UA_TimestampsToReturn;
 UA_STATIC_ASSERT(sizeof(UA_TimestampsToReturn) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -3828,9 +3828,9 @@ UA_STATIC_ASSERT(sizeof(UA_TimestampsToReturn) == sizeof(UA_Int32), enum_must_be
  * ^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t methodsToCallSize;
-    UA_CallMethodRequest *methodsToCall;
+UA_RequestHeader requestHeader;
+size_t methodsToCallSize;
+UA_CallMethodRequest *methodsToCall;
 } UA_CallRequest;
 
 #define UA_TYPES_CALLREQUEST 57
@@ -3840,13 +3840,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * The attributes for a method node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Boolean executable;
-    UA_Boolean userExecutable;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Boolean executable;
+UA_Boolean userExecutable;
 } UA_MethodAttributes;
 
 #define UA_TYPES_METHODATTRIBUTES 58
@@ -3856,11 +3856,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * A request to delete a node from the server address space. */
 typedef struct {
-    UA_NodeId sourceNodeId;
-    UA_NodeId referenceTypeId;
-    UA_Boolean isForward;
-    UA_ExpandedNodeId targetNodeId;
-    UA_Boolean deleteBidirectional;
+UA_NodeId sourceNodeId;
+UA_NodeId referenceTypeId;
+UA_Boolean isForward;
+UA_ExpandedNodeId targetNodeId;
+UA_Boolean deleteBidirectional;
 } UA_DeleteReferencesItem;
 
 #define UA_TYPES_DELETEREFERENCESITEM 59
@@ -3870,10 +3870,10 @@ typedef struct {
  * ^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId nodeId;
-    UA_UInt32 attributeId;
-    UA_String indexRange;
-    UA_DataValue value;
+UA_NodeId nodeId;
+UA_UInt32 attributeId;
+UA_String indexRange;
+UA_DataValue value;
 } UA_WriteValue;
 
 #define UA_TYPES_WRITEVALUE 60
@@ -3883,42 +3883,42 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  * The bits used to specify default attributes for a new node. */
 typedef enum {
-    UA_NODEATTRIBUTESMASK_NONE = 0,
-    UA_NODEATTRIBUTESMASK_ACCESSLEVEL = 1,
-    UA_NODEATTRIBUTESMASK_ARRAYDIMENSIONS = 2,
-    UA_NODEATTRIBUTESMASK_BROWSENAME = 4,
-    UA_NODEATTRIBUTESMASK_CONTAINSNOLOOPS = 8,
-    UA_NODEATTRIBUTESMASK_DATATYPE = 16,
-    UA_NODEATTRIBUTESMASK_DESCRIPTION = 32,
-    UA_NODEATTRIBUTESMASK_DISPLAYNAME = 64,
-    UA_NODEATTRIBUTESMASK_EVENTNOTIFIER = 128,
-    UA_NODEATTRIBUTESMASK_EXECUTABLE = 256,
-    UA_NODEATTRIBUTESMASK_HISTORIZING = 512,
-    UA_NODEATTRIBUTESMASK_INVERSENAME = 1024,
-    UA_NODEATTRIBUTESMASK_ISABSTRACT = 2048,
-    UA_NODEATTRIBUTESMASK_MINIMUMSAMPLINGINTERVAL = 4096,
-    UA_NODEATTRIBUTESMASK_NODECLASS = 8192,
-    UA_NODEATTRIBUTESMASK_NODEID = 16384,
-    UA_NODEATTRIBUTESMASK_SYMMETRIC = 32768,
-    UA_NODEATTRIBUTESMASK_USERACCESSLEVEL = 65536,
-    UA_NODEATTRIBUTESMASK_USEREXECUTABLE = 131072,
-    UA_NODEATTRIBUTESMASK_USERWRITEMASK = 262144,
-    UA_NODEATTRIBUTESMASK_VALUERANK = 524288,
-    UA_NODEATTRIBUTESMASK_WRITEMASK = 1048576,
-    UA_NODEATTRIBUTESMASK_VALUE = 2097152,
-    UA_NODEATTRIBUTESMASK_DATATYPEDEFINITION = 4194304,
-    UA_NODEATTRIBUTESMASK_ROLEPERMISSIONS = 8388608,
-    UA_NODEATTRIBUTESMASK_ACCESSRESTRICTIONS = 16777216,
-    UA_NODEATTRIBUTESMASK_ALL = 33554431,
-    UA_NODEATTRIBUTESMASK_BASENODE = 26501220,
-    UA_NODEATTRIBUTESMASK_OBJECT = 26501348,
-    UA_NODEATTRIBUTESMASK_OBJECTTYPE = 26503268,
-    UA_NODEATTRIBUTESMASK_VARIABLE = 26571383,
-    UA_NODEATTRIBUTESMASK_VARIABLETYPE = 28600438,
-    UA_NODEATTRIBUTESMASK_METHOD = 26632548,
-    UA_NODEATTRIBUTESMASK_REFERENCETYPE = 26537060,
-    UA_NODEATTRIBUTESMASK_VIEW = 26501356,
-    __UA_NODEATTRIBUTESMASK_FORCE32BIT = 0x7fffffff
+UA_NODEATTRIBUTESMASK_NONE = 0,
+UA_NODEATTRIBUTESMASK_ACCESSLEVEL = 1,
+UA_NODEATTRIBUTESMASK_ARRAYDIMENSIONS = 2,
+UA_NODEATTRIBUTESMASK_BROWSENAME = 4,
+UA_NODEATTRIBUTESMASK_CONTAINSNOLOOPS = 8,
+UA_NODEATTRIBUTESMASK_DATATYPE = 16,
+UA_NODEATTRIBUTESMASK_DESCRIPTION = 32,
+UA_NODEATTRIBUTESMASK_DISPLAYNAME = 64,
+UA_NODEATTRIBUTESMASK_EVENTNOTIFIER = 128,
+UA_NODEATTRIBUTESMASK_EXECUTABLE = 256,
+UA_NODEATTRIBUTESMASK_HISTORIZING = 512,
+UA_NODEATTRIBUTESMASK_INVERSENAME = 1024,
+UA_NODEATTRIBUTESMASK_ISABSTRACT = 2048,
+UA_NODEATTRIBUTESMASK_MINIMUMSAMPLINGINTERVAL = 4096,
+UA_NODEATTRIBUTESMASK_NODECLASS = 8192,
+UA_NODEATTRIBUTESMASK_NODEID = 16384,
+UA_NODEATTRIBUTESMASK_SYMMETRIC = 32768,
+UA_NODEATTRIBUTESMASK_USERACCESSLEVEL = 65536,
+UA_NODEATTRIBUTESMASK_USEREXECUTABLE = 131072,
+UA_NODEATTRIBUTESMASK_USERWRITEMASK = 262144,
+UA_NODEATTRIBUTESMASK_VALUERANK = 524288,
+UA_NODEATTRIBUTESMASK_WRITEMASK = 1048576,
+UA_NODEATTRIBUTESMASK_VALUE = 2097152,
+UA_NODEATTRIBUTESMASK_DATATYPEDEFINITION = 4194304,
+UA_NODEATTRIBUTESMASK_ROLEPERMISSIONS = 8388608,
+UA_NODEATTRIBUTESMASK_ACCESSRESTRICTIONS = 16777216,
+UA_NODEATTRIBUTESMASK_ALL = 33554431,
+UA_NODEATTRIBUTESMASK_BASENODE = 26501220,
+UA_NODEATTRIBUTESMASK_OBJECT = 26501348,
+UA_NODEATTRIBUTESMASK_OBJECTTYPE = 26503268,
+UA_NODEATTRIBUTESMASK_VARIABLE = 26571383,
+UA_NODEATTRIBUTESMASK_VARIABLETYPE = 28600438,
+UA_NODEATTRIBUTESMASK_METHOD = 26632548,
+UA_NODEATTRIBUTESMASK_REFERENCETYPE = 26537060,
+UA_NODEATTRIBUTESMASK_VIEW = 26501356,
+__UA_NODEATTRIBUTESMASK_FORCE32BIT = 0x7fffffff
 } UA_NodeAttributesMask;
 UA_STATIC_ASSERT(sizeof(UA_NodeAttributesMask) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -3929,11 +3929,11 @@ UA_STATIC_ASSERT(sizeof(UA_NodeAttributesMask) == sizeof(UA_Int32), enum_must_be
  * ^^^^^^^^^^^^^^^^^^^
  * The type of security to use on a message. */
 typedef enum {
-    UA_MESSAGESECURITYMODE_INVALID = 0,
-    UA_MESSAGESECURITYMODE_NONE = 1,
-    UA_MESSAGESECURITYMODE_SIGN = 2,
-    UA_MESSAGESECURITYMODE_SIGNANDENCRYPT = 3,
-    __UA_MESSAGESECURITYMODE_FORCE32BIT = 0x7fffffff
+UA_MESSAGESECURITYMODE_INVALID = 0,
+UA_MESSAGESECURITYMODE_NONE = 1,
+UA_MESSAGESECURITYMODE_SIGN = 2,
+UA_MESSAGESECURITYMODE_SIGNANDENCRYPT = 3,
+__UA_MESSAGESECURITYMODE_FORCE32BIT = 0x7fffffff
 } UA_MessageSecurityMode;
 UA_STATIC_ASSERT(sizeof(UA_MessageSecurityMode) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -3944,11 +3944,11 @@ UA_STATIC_ASSERT(sizeof(UA_MessageSecurityMode) == sizeof(UA_Int32), enum_must_b
  * ^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 clientHandle;
-    UA_Double samplingInterval;
-    UA_ExtensionObject filter;
-    UA_UInt32 queueSize;
-    UA_Boolean discardOldest;
+UA_UInt32 clientHandle;
+UA_Double samplingInterval;
+UA_ExtensionObject filter;
+UA_UInt32 queueSize;
+UA_Boolean discardOldest;
 } UA_MonitoringParameters;
 
 #define UA_TYPES_MONITORINGPARAMETERS 63
@@ -3958,9 +3958,9 @@ typedef struct {
  * ^^^^^^^^^^^^^
  * Specifies a reference which belongs to a node. */
 typedef struct {
-    UA_NodeId referenceTypeId;
-    UA_Boolean isInverse;
-    UA_ExpandedNodeId targetId;
+UA_NodeId referenceTypeId;
+UA_Boolean isInverse;
+UA_ExpandedNodeId targetId;
 } UA_ReferenceNode;
 
 #define UA_TYPES_REFERENCENODE 64
@@ -3970,12 +3970,12 @@ typedef struct {
  * ^^^^^^^^
  * An argument for a method. */
 typedef struct {
-    UA_String name;
-    UA_NodeId dataType;
-    UA_Int32 valueRank;
-    size_t arrayDimensionsSize;
-    UA_UInt32 *arrayDimensions;
-    UA_LocalizedText description;
+UA_String name;
+UA_NodeId dataType;
+UA_Int32 valueRank;
+size_t arrayDimensionsSize;
+UA_UInt32 *arrayDimensions;
+UA_LocalizedText description;
 } UA_Argument;
 
 #define UA_TYPES_ARGUMENT 65
@@ -3985,10 +3985,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * The token that identifies a set of keys for an active secure channel. */
 typedef struct {
-    UA_UInt32 channelId;
-    UA_UInt32 tokenId;
-    UA_DateTime createdAt;
-    UA_UInt32 revisedLifetime;
+UA_UInt32 channelId;
+UA_UInt32 tokenId;
+UA_DateTime createdAt;
+UA_UInt32 revisedLifetime;
 } UA_ChannelSecurityToken;
 
 #define UA_TYPES_CHANNELSECURITYTOKEN 66
@@ -3998,7 +3998,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  * A base type for a user identity token. */
 typedef struct {
-    UA_String policyId;
+UA_String policyId;
 } UA_UserIdentityToken;
 
 #define UA_TYPES_USERIDENTITYTOKEN 67
@@ -4008,8 +4008,8 @@ typedef struct {
  * ^^^^^^^^^^^^^
  * A digital signature. */
 typedef struct {
-    UA_String algorithm;
-    UA_ByteString signature;
+UA_String algorithm;
+UA_ByteString signature;
 } UA_SignatureData;
 
 #define UA_TYPES_SIGNATUREDATA 68
@@ -4019,12 +4019,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * The attributes for an object type node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Boolean isAbstract;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Boolean isAbstract;
 } UA_ObjectTypeAttributes;
 
 #define UA_TYPES_OBJECTTYPEATTRIBUTES 69
@@ -4034,10 +4034,10 @@ typedef struct {
  * ^^^^^^^^^^^^
  */
 typedef enum {
-    UA_DEADBANDTYPE_NONE = 0,
-    UA_DEADBANDTYPE_ABSOLUTE = 1,
-    UA_DEADBANDTYPE_PERCENT = 2,
-    __UA_DEADBANDTYPE_FORCE32BIT = 0x7fffffff
+UA_DEADBANDTYPE_NONE = 0,
+UA_DEADBANDTYPE_ABSOLUTE = 1,
+UA_DEADBANDTYPE_PERCENT = 2,
+__UA_DEADBANDTYPE_FORCE32BIT = 0x7fffffff
 } UA_DeadbandType;
 UA_STATIC_ASSERT(sizeof(UA_DeadbandType) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4048,9 +4048,9 @@ UA_STATIC_ASSERT(sizeof(UA_DeadbandType) == sizeof(UA_Int32), enum_must_be_32bit
  * ^^^^^^^^^^^^^^^^^^^^^^^^
  * Indicates whether a token if being created or renewed. */
 typedef enum {
-    UA_SECURITYTOKENREQUESTTYPE_ISSUE = 0,
-    UA_SECURITYTOKENREQUESTTYPE_RENEW = 1,
-    __UA_SECURITYTOKENREQUESTTYPE_FORCE32BIT = 0x7fffffff
+UA_SECURITYTOKENREQUESTTYPE_ISSUE = 0,
+UA_SECURITYTOKENREQUESTTYPE_RENEW = 1,
+__UA_SECURITYTOKENREQUESTTYPE_FORCE32BIT = 0x7fffffff
 } UA_SecurityTokenRequestType;
 UA_STATIC_ASSERT(sizeof(UA_SecurityTokenRequestType) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4061,11 +4061,11 @@ UA_STATIC_ASSERT(sizeof(UA_SecurityTokenRequestType) == sizeof(UA_Int32), enum_m
  * ^^^^^^^^^^^^^^
  * The base attributes for all nodes. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
 } UA_NodeAttributes;
 
 #define UA_TYPES_NODEATTRIBUTES 72
@@ -4075,10 +4075,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  */
 typedef enum {
-    UA_DATACHANGETRIGGER_STATUS = 0,
-    UA_DATACHANGETRIGGER_STATUSVALUE = 1,
-    UA_DATACHANGETRIGGER_STATUSVALUETIMESTAMP = 2,
-    __UA_DATACHANGETRIGGER_FORCE32BIT = 0x7fffffff
+UA_DATACHANGETRIGGER_STATUS = 0,
+UA_DATACHANGETRIGGER_STATUSVALUE = 1,
+UA_DATACHANGETRIGGER_STATUSVALUETIMESTAMP = 2,
+__UA_DATACHANGETRIGGER_FORCE32BIT = 0x7fffffff
 } UA_DataChangeTrigger;
 UA_STATIC_ASSERT(sizeof(UA_DataChangeTrigger) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4089,12 +4089,12 @@ UA_STATIC_ASSERT(sizeof(UA_DataChangeTrigger) == sizeof(UA_Int32), enum_must_be_
  * ^^^^^^^^^
  */
 typedef struct {
-    UA_String productUri;
-    UA_String manufacturerName;
-    UA_String productName;
-    UA_String softwareVersion;
-    UA_String buildNumber;
-    UA_DateTime buildDate;
+UA_String productUri;
+UA_String manufacturerName;
+UA_String productName;
+UA_String softwareVersion;
+UA_String buildNumber;
+UA_DateTime buildDate;
 } UA_BuildInfo;
 
 #define UA_TYPES_BUILDINFO 74
@@ -4104,16 +4104,16 @@ typedef struct {
  * ^^^^^^^^^
  * A mask specifying the class of the node. */
 typedef enum {
-    UA_NODECLASS_UNSPECIFIED = 0,
-    UA_NODECLASS_OBJECT = 1,
-    UA_NODECLASS_VARIABLE = 2,
-    UA_NODECLASS_METHOD = 4,
-    UA_NODECLASS_OBJECTTYPE = 8,
-    UA_NODECLASS_VARIABLETYPE = 16,
-    UA_NODECLASS_REFERENCETYPE = 32,
-    UA_NODECLASS_DATATYPE = 64,
-    UA_NODECLASS_VIEW = 128,
-    __UA_NODECLASS_FORCE32BIT = 0x7fffffff
+UA_NODECLASS_UNSPECIFIED = 0,
+UA_NODECLASS_OBJECT = 1,
+UA_NODECLASS_VARIABLE = 2,
+UA_NODECLASS_METHOD = 4,
+UA_NODECLASS_OBJECTTYPE = 8,
+UA_NODECLASS_VARIABLETYPE = 16,
+UA_NODECLASS_REFERENCETYPE = 32,
+UA_NODECLASS_DATATYPE = 64,
+UA_NODECLASS_VIEW = 128,
+__UA_NODECLASS_FORCE32BIT = 0x7fffffff
 } UA_NodeClass;
 UA_STATIC_ASSERT(sizeof(UA_NodeClass) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4124,37 +4124,37 @@ UA_STATIC_ASSERT(sizeof(UA_NodeClass) == sizeof(UA_Int32), enum_must_be_32bit);
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId sessionId;
-    UA_UInt32 subscriptionId;
-    UA_Byte priority;
-    UA_Double publishingInterval;
-    UA_UInt32 maxKeepAliveCount;
-    UA_UInt32 maxLifetimeCount;
-    UA_UInt32 maxNotificationsPerPublish;
-    UA_Boolean publishingEnabled;
-    UA_UInt32 modifyCount;
-    UA_UInt32 enableCount;
-    UA_UInt32 disableCount;
-    UA_UInt32 republishRequestCount;
-    UA_UInt32 republishMessageRequestCount;
-    UA_UInt32 republishMessageCount;
-    UA_UInt32 transferRequestCount;
-    UA_UInt32 transferredToAltClientCount;
-    UA_UInt32 transferredToSameClientCount;
-    UA_UInt32 publishRequestCount;
-    UA_UInt32 dataChangeNotificationsCount;
-    UA_UInt32 eventNotificationsCount;
-    UA_UInt32 notificationsCount;
-    UA_UInt32 latePublishRequestCount;
-    UA_UInt32 currentKeepAliveCount;
-    UA_UInt32 currentLifetimeCount;
-    UA_UInt32 unacknowledgedMessageCount;
-    UA_UInt32 discardedMessageCount;
-    UA_UInt32 monitoredItemCount;
-    UA_UInt32 disabledMonitoredItemCount;
-    UA_UInt32 monitoringQueueOverflowCount;
-    UA_UInt32 nextSequenceNumber;
-    UA_UInt32 eventQueueOverFlowCount;
+UA_NodeId sessionId;
+UA_UInt32 subscriptionId;
+UA_Byte priority;
+UA_Double publishingInterval;
+UA_UInt32 maxKeepAliveCount;
+UA_UInt32 maxLifetimeCount;
+UA_UInt32 maxNotificationsPerPublish;
+UA_Boolean publishingEnabled;
+UA_UInt32 modifyCount;
+UA_UInt32 enableCount;
+UA_UInt32 disableCount;
+UA_UInt32 republishRequestCount;
+UA_UInt32 republishMessageRequestCount;
+UA_UInt32 republishMessageCount;
+UA_UInt32 transferRequestCount;
+UA_UInt32 transferredToAltClientCount;
+UA_UInt32 transferredToSameClientCount;
+UA_UInt32 publishRequestCount;
+UA_UInt32 dataChangeNotificationsCount;
+UA_UInt32 eventNotificationsCount;
+UA_UInt32 notificationsCount;
+UA_UInt32 latePublishRequestCount;
+UA_UInt32 currentKeepAliveCount;
+UA_UInt32 currentLifetimeCount;
+UA_UInt32 unacknowledgedMessageCount;
+UA_UInt32 discardedMessageCount;
+UA_UInt32 monitoredItemCount;
+UA_UInt32 disabledMonitoredItemCount;
+UA_UInt32 monitoringQueueOverflowCount;
+UA_UInt32 nextSequenceNumber;
+UA_UInt32 eventQueueOverFlowCount;
 } UA_SubscriptionDiagnosticsDataType;
 
 #define UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE 76
@@ -4172,8 +4172,8 @@ typedef void * UA_FilterOperand;
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 clientHandle;
-    UA_DataValue value;
+UA_UInt32 clientHandle;
+UA_DataValue value;
 } UA_MonitoredItemNotification;
 
 #define UA_TYPES_MONITOREDITEMNOTIFICATION 78
@@ -4183,8 +4183,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  * A request to delete a node to the server address space. */
 typedef struct {
-    UA_NodeId nodeId;
-    UA_Boolean deleteTargetReferences;
+UA_NodeId nodeId;
+UA_Boolean deleteTargetReferences;
 } UA_DeleteNodesItem;
 
 #define UA_TYPES_DELETENODESITEM 79
@@ -4194,9 +4194,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t subscriptionIdsSize;
-    UA_UInt32 *subscriptionIds;
+UA_RequestHeader requestHeader;
+size_t subscriptionIdsSize;
+UA_UInt32 *subscriptionIds;
 } UA_DeleteSubscriptionsRequest;
 
 #define UA_TYPES_DELETESUBSCRIPTIONSREQUEST 80
@@ -4206,8 +4206,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 subscriptionId;
-    UA_UInt32 sequenceNumber;
+UA_UInt32 subscriptionId;
+UA_UInt32 sequenceNumber;
 } UA_SubscriptionAcknowledgement;
 
 #define UA_TYPES_SUBSCRIPTIONACKNOWLEDGEMENT 81
@@ -4217,10 +4217,10 @@ typedef struct {
  * ^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId nodeId;
-    UA_UInt32 attributeId;
-    UA_String indexRange;
-    UA_QualifiedName dataEncoding;
+UA_NodeId nodeId;
+UA_UInt32 attributeId;
+UA_String indexRange;
+UA_QualifiedName dataEncoding;
 } UA_ReadValueId;
 
 #define UA_TYPES_READVALUEID 82
@@ -4230,12 +4230,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  * The attributes for a data type node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Boolean isAbstract;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Boolean isAbstract;
 } UA_DataTypeAttributes;
 
 #define UA_TYPES_DATATYPEATTRIBUTES 83
@@ -4245,13 +4245,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  * The header passed with every server response. */
 typedef struct {
-    UA_DateTime timestamp;
-    UA_UInt32 requestHandle;
-    UA_StatusCode serviceResult;
-    UA_DiagnosticInfo serviceDiagnostics;
-    size_t stringTableSize;
-    UA_String *stringTable;
-    UA_ExtensionObject additionalHeader;
+UA_DateTime timestamp;
+UA_UInt32 requestHandle;
+UA_StatusCode serviceResult;
+UA_DiagnosticInfo serviceDiagnostics;
+size_t stringTableSize;
+UA_String *stringTable;
+UA_ExtensionObject additionalHeader;
 } UA_ResponseHeader;
 
 #define UA_TYPES_RESPONSEHEADER 84
@@ -4261,10 +4261,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    size_t monitoredItemIdsSize;
-    UA_UInt32 *monitoredItemIds;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+size_t monitoredItemIdsSize;
+UA_UInt32 *monitoredItemIds;
 } UA_DeleteMonitoredItemsRequest;
 
 #define UA_TYPES_DELETEMONITOREDITEMSREQUEST 85
@@ -4274,9 +4274,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  * The view to browse. */
 typedef struct {
-    UA_NodeId viewId;
-    UA_DateTime timestamp;
-    UA_UInt32 viewVersion;
+UA_NodeId viewId;
+UA_DateTime timestamp;
+UA_UInt32 viewVersion;
 } UA_ViewDescription;
 
 #define UA_TYPES_VIEWDESCRIPTION 86
@@ -4286,11 +4286,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 recordId;
-    UA_String serverName;
-    UA_String discoveryUrl;
-    size_t serverCapabilitiesSize;
-    UA_String *serverCapabilities;
+UA_UInt32 recordId;
+UA_String serverName;
+UA_String discoveryUrl;
+size_t serverCapabilitiesSize;
+UA_String *serverCapabilities;
 } UA_ServerOnNetwork;
 
 #define UA_TYPES_SERVERONNETWORK 87
@@ -4300,11 +4300,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_DeleteMonitoredItemsResponse;
 
 #define UA_TYPES_DELETEMONITOREDITEMSRESPONSE 88
@@ -4314,10 +4314,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_DateTime lastCounterResetTime;
-    size_t serversSize;
-    UA_ServerOnNetwork *servers;
+UA_ResponseHeader responseHeader;
+UA_DateTime lastCounterResetTime;
+size_t serversSize;
+UA_ServerOnNetwork *servers;
 } UA_FindServersOnNetworkResponse;
 
 #define UA_TYPES_FINDSERVERSONNETWORKRESPONSE 89
@@ -4327,8 +4327,8 @@ typedef struct {
  * ^^^^^^^^^^^^
  * A relative path constructed from reference types and browse names. */
 typedef struct {
-    size_t elementsSize;
-    UA_RelativePathElement *elements;
+size_t elementsSize;
+UA_RelativePathElement *elements;
 } UA_RelativePath;
 
 #define UA_TYPES_RELATIVEPATH 90
@@ -4338,9 +4338,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * Registers one or more nodes for repeated use within a session. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t nodesToRegisterSize;
-    UA_NodeId *nodesToRegister;
+UA_RequestHeader requestHeader;
+size_t nodesToRegisterSize;
+UA_NodeId *nodesToRegister;
 } UA_RegisterNodesRequest;
 
 #define UA_TYPES_REGISTERNODESREQUEST 91
@@ -4350,11 +4350,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_Boolean useServerCapabilitiesDefaults;
-    UA_Boolean treatUncertainAsBad;
-    UA_Byte percentDataBad;
-    UA_Byte percentDataGood;
-    UA_Boolean useSlopedExtrapolation;
+UA_Boolean useServerCapabilitiesDefaults;
+UA_Boolean treatUncertainAsBad;
+UA_Byte percentDataBad;
+UA_Byte percentDataGood;
+UA_Boolean useSlopedExtrapolation;
 } UA_AggregateConfiguration;
 
 #define UA_TYPES_AGGREGATECONFIGURATION 92
@@ -4364,9 +4364,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  * Delete one or more nodes from the server address space. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t nodesToDeleteSize;
-    UA_DeleteNodesItem *nodesToDelete;
+UA_RequestHeader requestHeader;
+size_t nodesToDeleteSize;
+UA_DeleteNodesItem *nodesToDelete;
 } UA_DeleteNodesRequest;
 
 #define UA_TYPES_DELETENODESREQUEST 93
@@ -4376,16 +4376,16 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_UInt32 subscriptionId;
-    size_t availableSequenceNumbersSize;
-    UA_UInt32 *availableSequenceNumbers;
-    UA_Boolean moreNotifications;
-    UA_NotificationMessage notificationMessage;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+UA_UInt32 subscriptionId;
+size_t availableSequenceNumbersSize;
+UA_UInt32 *availableSequenceNumbers;
+UA_Boolean moreNotifications;
+UA_NotificationMessage notificationMessage;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_PublishResponse;
 
 #define UA_TYPES_PUBLISHRESPONSE 94
@@ -4395,8 +4395,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 monitoredItemId;
-    UA_MonitoringParameters requestedParameters;
+UA_UInt32 monitoredItemId;
+UA_MonitoringParameters requestedParameters;
 } UA_MonitoredItemModifyRequest;
 
 #define UA_TYPES_MONITOREDITEMMODIFYREQUEST 95
@@ -4406,8 +4406,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 totalCount;
-    UA_UInt32 errorCount;
+UA_UInt32 totalCount;
+UA_UInt32 errorCount;
 } UA_ServiceCounterDataType;
 
 #define UA_TYPES_SERVICECOUNTERDATATYPE 96
@@ -4417,9 +4417,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId affected;
-    UA_NodeId affectedType;
-    UA_Byte verb;
+UA_NodeId affected;
+UA_NodeId affectedType;
+UA_Byte verb;
 } UA_ModelChangeStructureDataType;
 
 #define UA_TYPES_MODELCHANGESTRUCTUREDATATYPE 97
@@ -4429,10 +4429,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^
  * A token representing a user identified by a user name and password. */
 typedef struct {
-    UA_String policyId;
-    UA_String userName;
-    UA_ByteString password;
-    UA_String encryptionAlgorithm;
+UA_String policyId;
+UA_String userName;
+UA_ByteString password;
+UA_String encryptionAlgorithm;
 } UA_UserNameIdentityToken;
 
 #define UA_TYPES_USERNAMEIDENTITYTOKEN 98
@@ -4442,11 +4442,11 @@ typedef struct {
  * ^^^^^^
  * The type of identifier used in a node id. */
 typedef enum {
-    UA_IDTYPE_NUMERIC = 0,
-    UA_IDTYPE_STRING = 1,
-    UA_IDTYPE_GUID = 2,
-    UA_IDTYPE_OPAQUE = 3,
-    __UA_IDTYPE_FORCE32BIT = 0x7fffffff
+UA_IDTYPE_NUMERIC = 0,
+UA_IDTYPE_STRING = 1,
+UA_IDTYPE_GUID = 2,
+UA_IDTYPE_OPAQUE = 3,
+__UA_IDTYPE_FORCE32BIT = 0x7fffffff
 } UA_IdType;
 UA_STATIC_ASSERT(sizeof(UA_IdType) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4457,11 +4457,11 @@ UA_STATIC_ASSERT(sizeof(UA_IdType) == sizeof(UA_Int32), enum_must_be_32bit);
  * ^^^^^^^^^^^^^
  * The possible user token types. */
 typedef enum {
-    UA_USERTOKENTYPE_ANONYMOUS = 0,
-    UA_USERTOKENTYPE_USERNAME = 1,
-    UA_USERTOKENTYPE_CERTIFICATE = 2,
-    UA_USERTOKENTYPE_ISSUEDTOKEN = 3,
-    __UA_USERTOKENTYPE_FORCE32BIT = 0x7fffffff
+UA_USERTOKENTYPE_ANONYMOUS = 0,
+UA_USERTOKENTYPE_USERNAME = 1,
+UA_USERTOKENTYPE_CERTIFICATE = 2,
+UA_USERTOKENTYPE_ISSUEDTOKEN = 3,
+__UA_USERTOKENTYPE_FORCE32BIT = 0x7fffffff
 } UA_UserTokenType;
 UA_STATIC_ASSERT(sizeof(UA_UserTokenType) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4472,15 +4472,15 @@ UA_STATIC_ASSERT(sizeof(UA_UserTokenType) == sizeof(UA_Int32), enum_must_be_32bi
  * ^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t addResultsSize;
-    UA_StatusCode *addResults;
-    size_t addDiagnosticInfosSize;
-    UA_DiagnosticInfo *addDiagnosticInfos;
-    size_t removeResultsSize;
-    UA_StatusCode *removeResults;
-    size_t removeDiagnosticInfosSize;
-    UA_DiagnosticInfo *removeDiagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t addResultsSize;
+UA_StatusCode *addResults;
+size_t addDiagnosticInfosSize;
+UA_DiagnosticInfo *addDiagnosticInfos;
+size_t removeResultsSize;
+UA_StatusCode *removeResults;
+size_t removeDiagnosticInfosSize;
+UA_DiagnosticInfo *removeDiagnosticInfos;
 } UA_SetTriggeringResponse;
 
 #define UA_TYPES_SETTRIGGERINGRESPONSE 101
@@ -4490,8 +4490,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_Int16 offset;
-    UA_Boolean daylightSavingInOffset;
+UA_Int16 offset;
+UA_Boolean daylightSavingInOffset;
 } UA_TimeZoneDataType;
 
 #define UA_TYPES_TIMEZONEDATATYPE 102
@@ -4501,14 +4501,14 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  * Activates a session with the server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_SignatureData clientSignature;
-    size_t clientSoftwareCertificatesSize;
-    UA_SignedSoftwareCertificate *clientSoftwareCertificates;
-    size_t localeIdsSize;
-    UA_String *localeIds;
-    UA_ExtensionObject userIdentityToken;
-    UA_SignatureData userTokenSignature;
+UA_RequestHeader requestHeader;
+UA_SignatureData clientSignature;
+size_t clientSoftwareCertificatesSize;
+UA_SignedSoftwareCertificate *clientSoftwareCertificates;
+size_t localeIdsSize;
+UA_String *localeIds;
+UA_ExtensionObject userIdentityToken;
+UA_SignatureData userTokenSignature;
 } UA_ActivateSessionRequest;
 
 #define UA_TYPES_ACTIVATESESSIONREQUEST 103
@@ -4518,10 +4518,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  * Creates a secure channel with a server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_UInt32 serverProtocolVersion;
-    UA_ChannelSecurityToken securityToken;
-    UA_ByteString serverNonce;
+UA_ResponseHeader responseHeader;
+UA_UInt32 serverProtocolVersion;
+UA_ChannelSecurityToken securityToken;
+UA_ByteString serverNonce;
 } UA_OpenSecureChannelResponse;
 
 #define UA_TYPES_OPENSECURECHANNELRESPONSE 104
@@ -4531,11 +4531,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  * The types of applications. */
 typedef enum {
-    UA_APPLICATIONTYPE_SERVER = 0,
-    UA_APPLICATIONTYPE_CLIENT = 1,
-    UA_APPLICATIONTYPE_CLIENTANDSERVER = 2,
-    UA_APPLICATIONTYPE_DISCOVERYSERVER = 3,
-    __UA_APPLICATIONTYPE_FORCE32BIT = 0x7fffffff
+UA_APPLICATIONTYPE_SERVER = 0,
+UA_APPLICATIONTYPE_CLIENT = 1,
+UA_APPLICATIONTYPE_CLIENTANDSERVER = 2,
+UA_APPLICATIONTYPE_DISCOVERYSERVER = 3,
+__UA_APPLICATIONTYPE_FORCE32BIT = 0x7fffffff
 } UA_ApplicationType;
 UA_STATIC_ASSERT(sizeof(UA_ApplicationType) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4546,15 +4546,15 @@ UA_STATIC_ASSERT(sizeof(UA_ApplicationType) == sizeof(UA_Int32), enum_must_be_32
  * ^^^^^^^^^^^
  */
 typedef enum {
-    UA_SERVERSTATE_RUNNING = 0,
-    UA_SERVERSTATE_FAILED = 1,
-    UA_SERVERSTATE_NOCONFIGURATION = 2,
-    UA_SERVERSTATE_SUSPENDED = 3,
-    UA_SERVERSTATE_SHUTDOWN = 4,
-    UA_SERVERSTATE_TEST = 5,
-    UA_SERVERSTATE_COMMUNICATIONFAULT = 6,
-    UA_SERVERSTATE_UNKNOWN = 7,
-    __UA_SERVERSTATE_FORCE32BIT = 0x7fffffff
+UA_SERVERSTATE_RUNNING = 0,
+UA_SERVERSTATE_FAILED = 1,
+UA_SERVERSTATE_NOCONFIGURATION = 2,
+UA_SERVERSTATE_SUSPENDED = 3,
+UA_SERVERSTATE_SHUTDOWN = 4,
+UA_SERVERSTATE_TEST = 5,
+UA_SERVERSTATE_COMMUNICATIONFAULT = 6,
+UA_SERVERSTATE_UNKNOWN = 7,
+__UA_SERVERSTATE_FORCE32BIT = 0x7fffffff
 } UA_ServerState;
 UA_STATIC_ASSERT(sizeof(UA_ServerState) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4565,10 +4565,10 @@ UA_STATIC_ASSERT(sizeof(UA_ServerState) == sizeof(UA_Int32), enum_must_be_32bit)
  * ^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t queryDataSetsSize;
-    UA_QueryDataSet *queryDataSets;
-    UA_ByteString revisedContinuationPoint;
+UA_ResponseHeader responseHeader;
+size_t queryDataSetsSize;
+UA_QueryDataSet *queryDataSets;
+UA_ByteString revisedContinuationPoint;
 } UA_QueryNextResponse;
 
 #define UA_TYPES_QUERYNEXTRESPONSE 107
@@ -4586,12 +4586,12 @@ typedef void * UA_DiscoveryConfiguration;
  * ^^^^^^^^^^^^^^^^^^^^^^^
  * Activates a session with the server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_ByteString serverNonce;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+UA_ByteString serverNonce;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_ActivateSessionResponse;
 
 #define UA_TYPES_ACTIVATESESSIONRESPONSE 109
@@ -4601,8 +4601,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    size_t endpointUrlListSize;
-    UA_String *endpointUrlList;
+size_t endpointUrlListSize;
+UA_String *endpointUrlList;
 } UA_EndpointUrlListDataType;
 
 #define UA_TYPES_ENDPOINTURLLISTDATATYPE 110
@@ -4612,25 +4612,25 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  */
 typedef enum {
-    UA_FILTEROPERATOR_EQUALS = 0,
-    UA_FILTEROPERATOR_ISNULL = 1,
-    UA_FILTEROPERATOR_GREATERTHAN = 2,
-    UA_FILTEROPERATOR_LESSTHAN = 3,
-    UA_FILTEROPERATOR_GREATERTHANOREQUAL = 4,
-    UA_FILTEROPERATOR_LESSTHANOREQUAL = 5,
-    UA_FILTEROPERATOR_LIKE = 6,
-    UA_FILTEROPERATOR_NOT = 7,
-    UA_FILTEROPERATOR_BETWEEN = 8,
-    UA_FILTEROPERATOR_INLIST = 9,
-    UA_FILTEROPERATOR_AND = 10,
-    UA_FILTEROPERATOR_OR = 11,
-    UA_FILTEROPERATOR_CAST = 12,
-    UA_FILTEROPERATOR_INVIEW = 13,
-    UA_FILTEROPERATOR_OFTYPE = 14,
-    UA_FILTEROPERATOR_RELATEDTO = 15,
-    UA_FILTEROPERATOR_BITWISEAND = 16,
-    UA_FILTEROPERATOR_BITWISEOR = 17,
-    __UA_FILTEROPERATOR_FORCE32BIT = 0x7fffffff
+UA_FILTEROPERATOR_EQUALS = 0,
+UA_FILTEROPERATOR_ISNULL = 1,
+UA_FILTEROPERATOR_GREATERTHAN = 2,
+UA_FILTEROPERATOR_LESSTHAN = 3,
+UA_FILTEROPERATOR_GREATERTHANOREQUAL = 4,
+UA_FILTEROPERATOR_LESSTHANOREQUAL = 5,
+UA_FILTEROPERATOR_LIKE = 6,
+UA_FILTEROPERATOR_NOT = 7,
+UA_FILTEROPERATOR_BETWEEN = 8,
+UA_FILTEROPERATOR_INLIST = 9,
+UA_FILTEROPERATOR_AND = 10,
+UA_FILTEROPERATOR_OR = 11,
+UA_FILTEROPERATOR_CAST = 12,
+UA_FILTEROPERATOR_INVIEW = 13,
+UA_FILTEROPERATOR_OFTYPE = 14,
+UA_FILTEROPERATOR_RELATEDTO = 15,
+UA_FILTEROPERATOR_BITWISEAND = 16,
+UA_FILTEROPERATOR_BITWISEOR = 17,
+__UA_FILTEROPERATOR_FORCE32BIT = 0x7fffffff
 } UA_FilterOperator;
 UA_STATIC_ASSERT(sizeof(UA_FilterOperator) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4641,9 +4641,9 @@ UA_STATIC_ASSERT(sizeof(UA_FilterOperator) == sizeof(UA_Int32), enum_must_be_32b
  * ^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_Boolean releaseContinuationPoint;
-    UA_ByteString continuationPoint;
+UA_RequestHeader requestHeader;
+UA_Boolean releaseContinuationPoint;
+UA_ByteString continuationPoint;
 } UA_QueryNextRequest;
 
 #define UA_TYPES_QUERYNEXTREQUEST 112
@@ -4653,11 +4653,11 @@ typedef struct {
  * ^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_WriteResponse;
 
 #define UA_TYPES_WRITERESPONSE 113
@@ -4667,10 +4667,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  * Continues one or more browse operations. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_Boolean releaseContinuationPoints;
-    size_t continuationPointsSize;
-    UA_ByteString *continuationPoints;
+UA_RequestHeader requestHeader;
+UA_Boolean releaseContinuationPoints;
+size_t continuationPointsSize;
+UA_ByteString *continuationPoints;
 } UA_BrowseNextRequest;
 
 #define UA_TYPES_BROWSENEXTREQUEST 114
@@ -4680,13 +4680,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_Double requestedPublishingInterval;
-    UA_UInt32 requestedLifetimeCount;
-    UA_UInt32 requestedMaxKeepAliveCount;
-    UA_UInt32 maxNotificationsPerPublish;
-    UA_Boolean publishingEnabled;
-    UA_Byte priority;
+UA_RequestHeader requestHeader;
+UA_Double requestedPublishingInterval;
+UA_UInt32 requestedLifetimeCount;
+UA_UInt32 requestedMaxKeepAliveCount;
+UA_UInt32 maxNotificationsPerPublish;
+UA_Boolean publishingEnabled;
+UA_Byte priority;
 } UA_CreateSubscriptionRequest;
 
 #define UA_TYPES_CREATESUBSCRIPTIONREQUEST 115
@@ -4696,17 +4696,17 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  * The attributes for a variable type node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Variant value;
-    UA_NodeId dataType;
-    UA_Int32 valueRank;
-    size_t arrayDimensionsSize;
-    UA_UInt32 *arrayDimensions;
-    UA_Boolean isAbstract;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Variant value;
+UA_NodeId dataType;
+UA_Int32 valueRank;
+size_t arrayDimensionsSize;
+UA_UInt32 *arrayDimensions;
+UA_Boolean isAbstract;
 } UA_VariableTypeAttributes;
 
 #define UA_TYPES_VARIABLETYPEATTRIBUTES 116
@@ -4716,9 +4716,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * The result of a translate opearation. */
 typedef struct {
-    UA_StatusCode statusCode;
-    size_t targetsSize;
-    UA_BrowsePathTarget *targets;
+UA_StatusCode statusCode;
+size_t targetsSize;
+UA_BrowsePathTarget *targets;
 } UA_BrowsePathResult;
 
 #define UA_TYPES_BROWSEPATHRESULT 117
@@ -4728,10 +4728,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_Double revisedPublishingInterval;
-    UA_UInt32 revisedLifetimeCount;
-    UA_UInt32 revisedMaxKeepAliveCount;
+UA_ResponseHeader responseHeader;
+UA_Double revisedPublishingInterval;
+UA_UInt32 revisedLifetimeCount;
+UA_UInt32 revisedMaxKeepAliveCount;
 } UA_ModifySubscriptionResponse;
 
 #define UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE 118
@@ -4741,9 +4741,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_String serverId;
-    UA_Byte serviceLevel;
-    UA_ServerState serverState;
+UA_String serverId;
+UA_Byte serviceLevel;
+UA_ServerState serverState;
 } UA_RedundantServerDataType;
 
 #define UA_TYPES_REDUNDANTSERVERDATATYPE 119
@@ -4753,9 +4753,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^
  * Registers one or more nodes for repeated use within a session. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t registeredNodeIdsSize;
-    UA_NodeId *registeredNodeIds;
+UA_ResponseHeader responseHeader;
+size_t registeredNodeIdsSize;
+UA_NodeId *registeredNodeIds;
 } UA_RegisterNodesResponse;
 
 #define UA_TYPES_REGISTERNODESRESPONSE 120
@@ -4765,8 +4765,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  * Closes a session with the server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_Boolean deleteSubscriptions;
+UA_RequestHeader requestHeader;
+UA_Boolean deleteSubscriptions;
 } UA_CloseSessionRequest;
 
 #define UA_TYPES_CLOSESESSIONREQUEST 121
@@ -4776,11 +4776,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_MonitoredItemModifyResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_MonitoredItemModifyResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_ModifyMonitoredItemsResponse;
 
 #define UA_TYPES_MODIFYMONITOREDITEMSRESPONSE 122
@@ -4790,13 +4790,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    UA_Double requestedPublishingInterval;
-    UA_UInt32 requestedLifetimeCount;
-    UA_UInt32 requestedMaxKeepAliveCount;
-    UA_UInt32 maxNotificationsPerPublish;
-    UA_Byte priority;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+UA_Double requestedPublishingInterval;
+UA_UInt32 requestedLifetimeCount;
+UA_UInt32 requestedMaxKeepAliveCount;
+UA_UInt32 maxNotificationsPerPublish;
+UA_Byte priority;
 } UA_ModifySubscriptionRequest;
 
 #define UA_TYPES_MODIFYSUBSCRIPTIONREQUEST 123
@@ -4806,18 +4806,18 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_UInt32 serverViewCount;
-    UA_UInt32 currentSessionCount;
-    UA_UInt32 cumulatedSessionCount;
-    UA_UInt32 securityRejectedSessionCount;
-    UA_UInt32 rejectedSessionCount;
-    UA_UInt32 sessionTimeoutCount;
-    UA_UInt32 sessionAbortCount;
-    UA_UInt32 currentSubscriptionCount;
-    UA_UInt32 cumulatedSubscriptionCount;
-    UA_UInt32 publishingIntervalCount;
-    UA_UInt32 securityRejectedRequestsCount;
-    UA_UInt32 rejectedRequestsCount;
+UA_UInt32 serverViewCount;
+UA_UInt32 currentSessionCount;
+UA_UInt32 cumulatedSessionCount;
+UA_UInt32 securityRejectedSessionCount;
+UA_UInt32 rejectedSessionCount;
+UA_UInt32 sessionTimeoutCount;
+UA_UInt32 sessionAbortCount;
+UA_UInt32 currentSubscriptionCount;
+UA_UInt32 cumulatedSubscriptionCount;
+UA_UInt32 publishingIntervalCount;
+UA_UInt32 securityRejectedRequestsCount;
+UA_UInt32 rejectedRequestsCount;
 } UA_ServerDiagnosticsSummaryDataType;
 
 #define UA_TYPES_SERVERDIAGNOSTICSSUMMARYDATATYPE 124
@@ -4827,11 +4827,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  * Describes a user token that can be used with a server. */
 typedef struct {
-    UA_String policyId;
-    UA_UserTokenType tokenType;
-    UA_String issuedTokenType;
-    UA_String issuerEndpointUrl;
-    UA_String securityPolicyUri;
+UA_String policyId;
+UA_UserTokenType tokenType;
+UA_String issuedTokenType;
+UA_String issuerEndpointUrl;
+UA_String securityPolicyUri;
 } UA_UserTokenPolicy;
 
 #define UA_TYPES_USERTOKENPOLICY 125
@@ -4841,14 +4841,14 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^
  * The attributes for a reference type node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Boolean isAbstract;
-    UA_Boolean symmetric;
-    UA_LocalizedText inverseName;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Boolean isAbstract;
+UA_Boolean symmetric;
+UA_LocalizedText inverseName;
 } UA_ReferenceTypeAttributes;
 
 #define UA_TYPES_REFERENCETYPEATTRIBUTES 126
@@ -4858,8 +4858,8 @@ typedef struct {
  * ^^^^^^^^^^
  * A request to translate a path into a node id. */
 typedef struct {
-    UA_NodeId startingNode;
-    UA_RelativePath relativePath;
+UA_NodeId startingNode;
+UA_RelativePath relativePath;
 } UA_BrowsePath;
 
 #define UA_TYPES_BROWSEPATH 127
@@ -4869,11 +4869,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    UA_MonitoringMode monitoringMode;
-    size_t monitoredItemIdsSize;
-    UA_UInt32 *monitoredItemIds;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+UA_MonitoringMode monitoringMode;
+size_t monitoredItemIdsSize;
+UA_UInt32 *monitoredItemIds;
 } UA_SetMonitoringModeRequest;
 
 #define UA_TYPES_SETMONITORINGMODEREQUEST 128
@@ -4883,7 +4883,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^
  * Unregisters one or more previously registered nodes. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
+UA_ResponseHeader responseHeader;
 } UA_UnregisterNodesResponse;
 
 #define UA_TYPES_UNREGISTERNODESRESPONSE 129
@@ -4893,9 +4893,9 @@ typedef struct {
  * ^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t nodesToWriteSize;
-    UA_WriteValue *nodesToWrite;
+UA_RequestHeader requestHeader;
+size_t nodesToWriteSize;
+UA_WriteValue *nodesToWrite;
 } UA_WriteRequest;
 
 #define UA_TYPES_WRITEREQUEST 130
@@ -4905,12 +4905,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * The attributes for an object node. */
 typedef struct {
-    UA_UInt32 specifiedAttributes;
-    UA_LocalizedText displayName;
-    UA_LocalizedText description;
-    UA_UInt32 writeMask;
-    UA_UInt32 userWriteMask;
-    UA_Byte eventNotifier;
+UA_UInt32 specifiedAttributes;
+UA_LocalizedText displayName;
+UA_LocalizedText description;
+UA_UInt32 writeMask;
+UA_UInt32 userWriteMask;
+UA_Byte eventNotifier;
 } UA_ObjectAttributes;
 
 #define UA_TYPES_OBJECTATTRIBUTES 131
@@ -4920,17 +4920,17 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * A bit mask which specifies what should be returned in a browse response. */
 typedef enum {
-    UA_BROWSERESULTMASK_NONE = 0,
-    UA_BROWSERESULTMASK_REFERENCETYPEID = 1,
-    UA_BROWSERESULTMASK_ISFORWARD = 2,
-    UA_BROWSERESULTMASK_NODECLASS = 4,
-    UA_BROWSERESULTMASK_BROWSENAME = 8,
-    UA_BROWSERESULTMASK_DISPLAYNAME = 16,
-    UA_BROWSERESULTMASK_TYPEDEFINITION = 32,
-    UA_BROWSERESULTMASK_ALL = 63,
-    UA_BROWSERESULTMASK_REFERENCETYPEINFO = 3,
-    UA_BROWSERESULTMASK_TARGETINFO = 60,
-    __UA_BROWSERESULTMASK_FORCE32BIT = 0x7fffffff
+UA_BROWSERESULTMASK_NONE = 0,
+UA_BROWSERESULTMASK_REFERENCETYPEID = 1,
+UA_BROWSERESULTMASK_ISFORWARD = 2,
+UA_BROWSERESULTMASK_NODECLASS = 4,
+UA_BROWSERESULTMASK_BROWSENAME = 8,
+UA_BROWSERESULTMASK_DISPLAYNAME = 16,
+UA_BROWSERESULTMASK_TYPEDEFINITION = 32,
+UA_BROWSERESULTMASK_ALL = 63,
+UA_BROWSERESULTMASK_REFERENCETYPEINFO = 3,
+UA_BROWSERESULTMASK_TARGETINFO = 60,
+__UA_BROWSERESULTMASK_FORCE32BIT = 0x7fffffff
 } UA_BrowseResultMask;
 UA_STATIC_ASSERT(sizeof(UA_BrowseResultMask) == sizeof(UA_Int32), enum_must_be_32bit);
 
@@ -4941,12 +4941,12 @@ UA_STATIC_ASSERT(sizeof(UA_BrowseResultMask) == sizeof(UA_Int32), enum_must_be_3
  * ^^^^^^^^^^^^^^^^^
  * A request to browse the the references from a node. */
 typedef struct {
-    UA_NodeId nodeId;
-    UA_BrowseDirection browseDirection;
-    UA_NodeId referenceTypeId;
-    UA_Boolean includeSubtypes;
-    UA_UInt32 nodeClassMask;
-    UA_UInt32 resultMask;
+UA_NodeId nodeId;
+UA_BrowseDirection browseDirection;
+UA_NodeId referenceTypeId;
+UA_Boolean includeSubtypes;
+UA_UInt32 nodeClassMask;
+UA_UInt32 resultMask;
 } UA_BrowseDescription;
 
 #define UA_TYPES_BROWSEDESCRIPTION 133
@@ -4956,13 +4956,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    UA_UInt32 triggeringItemId;
-    size_t linksToAddSize;
-    UA_UInt32 *linksToAdd;
-    size_t linksToRemoveSize;
-    UA_UInt32 *linksToRemove;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+UA_UInt32 triggeringItemId;
+size_t linksToAddSize;
+UA_UInt32 *linksToAdd;
+size_t linksToRemoveSize;
+UA_UInt32 *linksToRemove;
 } UA_SetTriggeringRequest;
 
 #define UA_TYPES_SETTRIGGERINGREQUEST 134
@@ -4972,16 +4972,16 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId sessionId;
-    UA_String clientUserIdOfSession;
-    size_t clientUserIdHistorySize;
-    UA_String *clientUserIdHistory;
-    UA_String authenticationMechanism;
-    UA_String encoding;
-    UA_String transportProtocol;
-    UA_MessageSecurityMode securityMode;
-    UA_String securityPolicyUri;
-    UA_ByteString clientCertificate;
+UA_NodeId sessionId;
+UA_String clientUserIdOfSession;
+size_t clientUserIdHistorySize;
+UA_String *clientUserIdHistory;
+UA_String authenticationMechanism;
+UA_String encoding;
+UA_String transportProtocol;
+UA_MessageSecurityMode securityMode;
+UA_String securityPolicyUri;
+UA_ByteString clientCertificate;
 } UA_SessionSecurityDiagnosticsDataType;
 
 #define UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE 135
@@ -4991,9 +4991,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    UA_UInt32 retransmitSequenceNumber;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+UA_UInt32 retransmitSequenceNumber;
 } UA_RepublishRequest;
 
 #define UA_TYPES_REPUBLISHREQUEST 136
@@ -5003,12 +5003,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  * Gets the endpoints used by the server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_String endpointUrl;
-    size_t localeIdsSize;
-    UA_String *localeIds;
-    size_t profileUrisSize;
-    UA_String *profileUris;
+UA_RequestHeader requestHeader;
+UA_String endpointUrl;
+size_t localeIdsSize;
+UA_String *localeIds;
+size_t profileUrisSize;
+UA_String *profileUris;
 } UA_GetEndpointsRequest;
 
 #define UA_TYPES_GETENDPOINTSREQUEST 137
@@ -5018,9 +5018,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t subscriptionAcknowledgementsSize;
-    UA_SubscriptionAcknowledgement *subscriptionAcknowledgements;
+UA_RequestHeader requestHeader;
+size_t subscriptionAcknowledgementsSize;
+UA_SubscriptionAcknowledgement *subscriptionAcknowledgements;
 } UA_PublishRequest;
 
 #define UA_TYPES_PUBLISHREQUEST 138
@@ -5030,11 +5030,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_DeleteSubscriptionsResponse;
 
 #define UA_TYPES_DELETESUBSCRIPTIONSRESPONSE 139
@@ -5044,11 +5044,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * Adds one or more nodes to the server address space. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_AddNodesResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_AddNodesResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_AddNodesResponse;
 
 #define UA_TYPES_ADDNODESRESPONSE 140
@@ -5058,10 +5058,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    size_t monitoredItemsSize;
-    UA_MonitoredItemNotification *monitoredItems;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+size_t monitoredItemsSize;
+UA_MonitoredItemNotification *monitoredItems;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_DataChangeNotification;
 
 #define UA_TYPES_DATACHANGENOTIFICATION 141
@@ -5071,7 +5071,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  * Closes a secure channel. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
+UA_ResponseHeader responseHeader;
 } UA_CloseSecureChannelResponse;
 
 #define UA_TYPES_CLOSESECURECHANNELRESPONSE 142
@@ -5081,11 +5081,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    UA_TimestampsToReturn timestampsToReturn;
-    size_t itemsToModifySize;
-    UA_MonitoredItemModifyRequest *itemsToModify;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+UA_TimestampsToReturn timestampsToReturn;
+size_t itemsToModifySize;
+UA_MonitoredItemModifyRequest *itemsToModify;
 } UA_ModifyMonitoredItemsRequest;
 
 #define UA_TYPES_MODIFYMONITOREDITEMSREQUEST 143
@@ -5095,11 +5095,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_SetMonitoringModeResponse;
 
 #define UA_TYPES_SETMONITORINGMODERESPONSE 144
@@ -5109,12 +5109,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  * Finds the servers known to the discovery server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_String endpointUrl;
-    size_t localeIdsSize;
-    UA_String *localeIds;
-    size_t serverUrisSize;
-    UA_String *serverUris;
+UA_RequestHeader requestHeader;
+UA_String endpointUrl;
+size_t localeIdsSize;
+UA_String *localeIds;
+size_t serverUrisSize;
+UA_String *serverUris;
 } UA_FindServersRequest;
 
 #define UA_TYPES_FINDSERVERSREQUEST 145
@@ -5124,13 +5124,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * The description of a reference. */
 typedef struct {
-    UA_NodeId referenceTypeId;
-    UA_Boolean isForward;
-    UA_ExpandedNodeId nodeId;
-    UA_QualifiedName browseName;
-    UA_LocalizedText displayName;
-    UA_NodeClass nodeClass;
-    UA_ExpandedNodeId typeDefinition;
+UA_NodeId referenceTypeId;
+UA_Boolean isForward;
+UA_ExpandedNodeId nodeId;
+UA_QualifiedName browseName;
+UA_LocalizedText displayName;
+UA_NodeClass nodeClass;
+UA_ExpandedNodeId typeDefinition;
 } UA_ReferenceDescription;
 
 #define UA_TYPES_REFERENCEDESCRIPTION 146
@@ -5140,11 +5140,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_SetPublishingModeResponse;
 
 #define UA_TYPES_SETPUBLISHINGMODERESPONSE 147
@@ -5154,10 +5154,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    size_t elementResultsSize;
-    UA_ContentFilterElementResult *elementResults;
-    size_t elementDiagnosticInfosSize;
-    UA_DiagnosticInfo *elementDiagnosticInfos;
+size_t elementResultsSize;
+UA_ContentFilterElementResult *elementResults;
+size_t elementDiagnosticInfosSize;
+UA_DiagnosticInfo *elementDiagnosticInfos;
 } UA_ContentFilterResult;
 
 #define UA_TYPES_CONTENTFILTERRESULT 148
@@ -5167,7 +5167,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  * Registers a server with the discovery server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
+UA_ResponseHeader responseHeader;
 } UA_RegisterServerResponse;
 
 #define UA_TYPES_REGISTERSERVERRESPONSE 149
@@ -5177,12 +5177,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  * A request to add a reference to the server address space. */
 typedef struct {
-    UA_NodeId sourceNodeId;
-    UA_NodeId referenceTypeId;
-    UA_Boolean isForward;
-    UA_String targetServerUri;
-    UA_ExpandedNodeId targetNodeId;
-    UA_NodeClass targetNodeClass;
+UA_NodeId sourceNodeId;
+UA_NodeId referenceTypeId;
+UA_Boolean isForward;
+UA_String targetServerUri;
+UA_ExpandedNodeId targetNodeId;
+UA_NodeClass targetNodeClass;
 } UA_AddReferencesItem;
 
 #define UA_TYPES_ADDREFERENCESITEM 150
@@ -5192,9 +5192,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RelativePath relativePath;
-    UA_UInt32 attributeId;
-    UA_String indexRange;
+UA_RelativePath relativePath;
+UA_UInt32 attributeId;
+UA_String indexRange;
 } UA_QueryDataDescription;
 
 #define UA_TYPES_QUERYDATADESCRIPTION 151
@@ -5204,11 +5204,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_UInt32 subscriptionId;
-    UA_Double revisedPublishingInterval;
-    UA_UInt32 revisedLifetimeCount;
-    UA_UInt32 revisedMaxKeepAliveCount;
+UA_ResponseHeader responseHeader;
+UA_UInt32 subscriptionId;
+UA_Double revisedPublishingInterval;
+UA_UInt32 revisedLifetimeCount;
+UA_UInt32 revisedMaxKeepAliveCount;
 } UA_CreateSubscriptionResponse;
 
 #define UA_TYPES_CREATESUBSCRIPTIONRESPONSE 152
@@ -5218,9 +5218,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_String serverUri;
-    size_t networkPathsSize;
-    UA_EndpointUrlListDataType *networkPaths;
+UA_String serverUri;
+size_t networkPathsSize;
+UA_EndpointUrlListDataType *networkPaths;
 } UA_NetworkGroupDataType;
 
 #define UA_TYPES_NETWORKGROUPDATATYPE 153
@@ -5230,11 +5230,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^
  * Delete one or more references from the server address space. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_DeleteReferencesResponse;
 
 #define UA_TYPES_DELETEREFERENCESRESPONSE 154
@@ -5244,11 +5244,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_MonitoredItemCreateResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_MonitoredItemCreateResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_CreateMonitoredItemsResponse;
 
 #define UA_TYPES_CREATEMONITOREDITEMSRESPONSE 155
@@ -5258,11 +5258,11 @@ typedef struct {
  * ^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_CallMethodResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_CallMethodResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_CallResponse;
 
 #define UA_TYPES_CALLRESPONSE 156
@@ -5272,11 +5272,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  * Delete one or more nodes from the server address space. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_DeleteNodesResponse;
 
 #define UA_TYPES_DELETENODESRESPONSE 157
@@ -5286,8 +5286,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_NotificationMessage notificationMessage;
+UA_ResponseHeader responseHeader;
+UA_NotificationMessage notificationMessage;
 } UA_RepublishResponse;
 
 #define UA_TYPES_REPUBLISHRESPONSE 158
@@ -5297,9 +5297,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ReadValueId itemToMonitor;
-    UA_MonitoringMode monitoringMode;
-    UA_MonitoringParameters requestedParameters;
+UA_ReadValueId itemToMonitor;
+UA_MonitoringMode monitoringMode;
+UA_MonitoringParameters requestedParameters;
 } UA_MonitoredItemCreateRequest;
 
 #define UA_TYPES_MONITOREDITEMCREATEREQUEST 159
@@ -5309,9 +5309,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^
  * Delete one or more references from the server address space. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t referencesToDeleteSize;
-    UA_DeleteReferencesItem *referencesToDelete;
+UA_RequestHeader requestHeader;
+size_t referencesToDeleteSize;
+UA_DeleteReferencesItem *referencesToDelete;
 } UA_DeleteReferencesRequest;
 
 #define UA_TYPES_DELETEREFERENCESREQUEST 160
@@ -5321,11 +5321,11 @@ typedef struct {
  * ^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_DataValue *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_DataValue *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_ReadResponse;
 
 #define UA_TYPES_READRESPONSE 161
@@ -5335,9 +5335,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * Adds one or more references to the server address space. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t referencesToAddSize;
-    UA_AddReferencesItem *referencesToAdd;
+UA_RequestHeader requestHeader;
+size_t referencesToAddSize;
+UA_AddReferencesItem *referencesToAdd;
 } UA_AddReferencesRequest;
 
 #define UA_TYPES_ADDREFERENCESREQUEST 162
@@ -5347,11 +5347,11 @@ typedef struct {
  * ^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_Double maxAge;
-    UA_TimestampsToReturn timestampsToReturn;
-    size_t nodesToReadSize;
-    UA_ReadValueId *nodesToRead;
+UA_RequestHeader requestHeader;
+UA_Double maxAge;
+UA_TimestampsToReturn timestampsToReturn;
+size_t nodesToReadSize;
+UA_ReadValueId *nodesToRead;
 } UA_ReadRequest;
 
 #define UA_TYPES_READREQUEST 163
@@ -5361,12 +5361,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^
  * Creates a secure channel with a server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 clientProtocolVersion;
-    UA_SecurityTokenRequestType requestType;
-    UA_MessageSecurityMode securityMode;
-    UA_ByteString clientNonce;
-    UA_UInt32 requestedLifetime;
+UA_RequestHeader requestHeader;
+UA_UInt32 clientProtocolVersion;
+UA_SecurityTokenRequestType requestType;
+UA_MessageSecurityMode securityMode;
+UA_ByteString clientNonce;
+UA_UInt32 requestedLifetime;
 } UA_OpenSecureChannelRequest;
 
 #define UA_TYPES_OPENSECURECHANNELREQUEST 164
@@ -5376,11 +5376,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t configurationResultsSize;
-    UA_StatusCode *configurationResults;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t configurationResultsSize;
+UA_StatusCode *configurationResults;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_RegisterServer2Response;
 
 #define UA_TYPES_REGISTERSERVER2RESPONSE 165
@@ -5390,13 +5390,13 @@ typedef struct {
  * ^^^^^^^^^^^^
  * A request to add a node to the server address space. */
 typedef struct {
-    UA_ExpandedNodeId parentNodeId;
-    UA_NodeId referenceTypeId;
-    UA_ExpandedNodeId requestedNewNodeId;
-    UA_QualifiedName browseName;
-    UA_NodeClass nodeClass;
-    UA_ExtensionObject nodeAttributes;
-    UA_ExpandedNodeId typeDefinition;
+UA_ExpandedNodeId parentNodeId;
+UA_NodeId referenceTypeId;
+UA_ExpandedNodeId requestedNewNodeId;
+UA_QualifiedName browseName;
+UA_NodeClass nodeClass;
+UA_ExtensionObject nodeAttributes;
+UA_ExpandedNodeId typeDefinition;
 } UA_AddNodesItem;
 
 #define UA_TYPES_ADDNODESITEM 166
@@ -5406,10 +5406,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ExpandedNodeId typeDefinitionNode;
-    UA_Boolean includeSubTypes;
-    size_t dataToReturnSize;
-    UA_QueryDataDescription *dataToReturn;
+UA_ExpandedNodeId typeDefinitionNode;
+UA_Boolean includeSubTypes;
+size_t dataToReturnSize;
+UA_QueryDataDescription *dataToReturn;
 } UA_NodeTypeDescription;
 
 #define UA_TYPES_NODETYPEDESCRIPTION 167
@@ -5419,12 +5419,12 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_DateTime startTime;
-    UA_DateTime currentTime;
-    UA_ServerState state;
-    UA_BuildInfo buildInfo;
-    UA_UInt32 secondsTillShutdown;
-    UA_LocalizedText shutdownReason;
+UA_DateTime startTime;
+UA_DateTime currentTime;
+UA_ServerState state;
+UA_BuildInfo buildInfo;
+UA_UInt32 secondsTillShutdown;
+UA_LocalizedText shutdownReason;
 } UA_ServerStatusDataType;
 
 #define UA_TYPES_SERVERSTATUSDATATYPE 168
@@ -5434,11 +5434,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId nodeId;
-    UA_String alias;
-    UA_RelativePath browsePath;
-    UA_UInt32 attributeId;
-    UA_String indexRange;
+UA_NodeId nodeId;
+UA_String alias;
+UA_RelativePath browsePath;
+UA_UInt32 attributeId;
+UA_String indexRange;
 } UA_AttributeOperand;
 
 #define UA_TYPES_ATTRIBUTEOPERAND 169
@@ -5448,11 +5448,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^
  * Adds one or more references to the server address space. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_StatusCode *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_StatusCode *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_AddReferencesResponse;
 
 #define UA_TYPES_ADDREFERENCESRESPONSE 170
@@ -5462,11 +5462,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    size_t selectClauseResultsSize;
-    UA_StatusCode *selectClauseResults;
-    size_t selectClauseDiagnosticInfosSize;
-    UA_DiagnosticInfo *selectClauseDiagnosticInfos;
-    UA_ContentFilterResult whereClauseResult;
+size_t selectClauseResultsSize;
+UA_StatusCode *selectClauseResults;
+size_t selectClauseDiagnosticInfosSize;
+UA_DiagnosticInfo *selectClauseDiagnosticInfos;
+UA_ContentFilterResult whereClauseResult;
 } UA_EventFilterResult;
 
 #define UA_TYPES_EVENTFILTERRESULT 171
@@ -5476,11 +5476,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  * Translates one or more paths in the server address space. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_BrowsePathResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_BrowsePathResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_TranslateBrowsePathsToNodeIdsResponse;
 
 #define UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE 172
@@ -5490,9 +5490,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_DataChangeTrigger trigger;
-    UA_UInt32 deadbandType;
-    UA_Double deadbandValue;
+UA_DataChangeTrigger trigger;
+UA_UInt32 deadbandType;
+UA_Double deadbandValue;
 } UA_DataChangeFilter;
 
 #define UA_TYPES_DATACHANGEFILTER 173
@@ -5502,9 +5502,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_FilterOperator filterOperator;
-    size_t filterOperandsSize;
-    UA_ExtensionObject *filterOperands;
+UA_FilterOperator filterOperator;
+size_t filterOperandsSize;
+UA_ExtensionObject *filterOperands;
 } UA_ContentFilterElement;
 
 #define UA_TYPES_CONTENTFILTERELEMENT 174
@@ -5514,9 +5514,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  * Translates one or more paths in the server address space. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t browsePathsSize;
-    UA_BrowsePath *browsePaths;
+UA_RequestHeader requestHeader;
+size_t browsePathsSize;
+UA_BrowsePath *browsePaths;
 } UA_TranslateBrowsePathsToNodeIdsRequest;
 
 #define UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST 175
@@ -5526,7 +5526,7 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * Closes a session with the server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
+UA_ResponseHeader responseHeader;
 } UA_CloseSessionResponse;
 
 #define UA_TYPES_CLOSESESSIONRESPONSE 176
@@ -5536,14 +5536,14 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  * Describes an application and how to find it. */
 typedef struct {
-    UA_String applicationUri;
-    UA_String productUri;
-    UA_LocalizedText applicationName;
-    UA_ApplicationType applicationType;
-    UA_String gatewayServerUri;
-    UA_String discoveryProfileUri;
-    size_t discoveryUrlsSize;
-    UA_String *discoveryUrls;
+UA_String applicationUri;
+UA_String productUri;
+UA_LocalizedText applicationName;
+UA_ApplicationType applicationType;
+UA_String gatewayServerUri;
+UA_String discoveryProfileUri;
+size_t discoveryUrlsSize;
+UA_String *discoveryUrls;
 } UA_ApplicationDescription;
 
 #define UA_TYPES_APPLICATIONDESCRIPTION 177
@@ -5553,50 +5553,50 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_NodeId sessionId;
-    UA_String sessionName;
-    UA_ApplicationDescription clientDescription;
-    UA_String serverUri;
-    UA_String endpointUrl;
-    size_t localeIdsSize;
-    UA_String *localeIds;
-    UA_Double actualSessionTimeout;
-    UA_UInt32 maxResponseMessageSize;
-    UA_DateTime clientConnectionTime;
-    UA_DateTime clientLastContactTime;
-    UA_UInt32 currentSubscriptionsCount;
-    UA_UInt32 currentMonitoredItemsCount;
-    UA_UInt32 currentPublishRequestsInQueue;
-    UA_ServiceCounterDataType totalRequestCount;
-    UA_UInt32 unauthorizedRequestCount;
-    UA_ServiceCounterDataType readCount;
-    UA_ServiceCounterDataType historyReadCount;
-    UA_ServiceCounterDataType writeCount;
-    UA_ServiceCounterDataType historyUpdateCount;
-    UA_ServiceCounterDataType callCount;
-    UA_ServiceCounterDataType createMonitoredItemsCount;
-    UA_ServiceCounterDataType modifyMonitoredItemsCount;
-    UA_ServiceCounterDataType setMonitoringModeCount;
-    UA_ServiceCounterDataType setTriggeringCount;
-    UA_ServiceCounterDataType deleteMonitoredItemsCount;
-    UA_ServiceCounterDataType createSubscriptionCount;
-    UA_ServiceCounterDataType modifySubscriptionCount;
-    UA_ServiceCounterDataType setPublishingModeCount;
-    UA_ServiceCounterDataType publishCount;
-    UA_ServiceCounterDataType republishCount;
-    UA_ServiceCounterDataType transferSubscriptionsCount;
-    UA_ServiceCounterDataType deleteSubscriptionsCount;
-    UA_ServiceCounterDataType addNodesCount;
-    UA_ServiceCounterDataType addReferencesCount;
-    UA_ServiceCounterDataType deleteNodesCount;
-    UA_ServiceCounterDataType deleteReferencesCount;
-    UA_ServiceCounterDataType browseCount;
-    UA_ServiceCounterDataType browseNextCount;
-    UA_ServiceCounterDataType translateBrowsePathsToNodeIdsCount;
-    UA_ServiceCounterDataType queryFirstCount;
-    UA_ServiceCounterDataType queryNextCount;
-    UA_ServiceCounterDataType registerNodesCount;
-    UA_ServiceCounterDataType unregisterNodesCount;
+UA_NodeId sessionId;
+UA_String sessionName;
+UA_ApplicationDescription clientDescription;
+UA_String serverUri;
+UA_String endpointUrl;
+size_t localeIdsSize;
+UA_String *localeIds;
+UA_Double actualSessionTimeout;
+UA_UInt32 maxResponseMessageSize;
+UA_DateTime clientConnectionTime;
+UA_DateTime clientLastContactTime;
+UA_UInt32 currentSubscriptionsCount;
+UA_UInt32 currentMonitoredItemsCount;
+UA_UInt32 currentPublishRequestsInQueue;
+UA_ServiceCounterDataType totalRequestCount;
+UA_UInt32 unauthorizedRequestCount;
+UA_ServiceCounterDataType readCount;
+UA_ServiceCounterDataType historyReadCount;
+UA_ServiceCounterDataType writeCount;
+UA_ServiceCounterDataType historyUpdateCount;
+UA_ServiceCounterDataType callCount;
+UA_ServiceCounterDataType createMonitoredItemsCount;
+UA_ServiceCounterDataType modifyMonitoredItemsCount;
+UA_ServiceCounterDataType setMonitoringModeCount;
+UA_ServiceCounterDataType setTriggeringCount;
+UA_ServiceCounterDataType deleteMonitoredItemsCount;
+UA_ServiceCounterDataType createSubscriptionCount;
+UA_ServiceCounterDataType modifySubscriptionCount;
+UA_ServiceCounterDataType setPublishingModeCount;
+UA_ServiceCounterDataType publishCount;
+UA_ServiceCounterDataType republishCount;
+UA_ServiceCounterDataType transferSubscriptionsCount;
+UA_ServiceCounterDataType deleteSubscriptionsCount;
+UA_ServiceCounterDataType addNodesCount;
+UA_ServiceCounterDataType addReferencesCount;
+UA_ServiceCounterDataType deleteNodesCount;
+UA_ServiceCounterDataType deleteReferencesCount;
+UA_ServiceCounterDataType browseCount;
+UA_ServiceCounterDataType browseNextCount;
+UA_ServiceCounterDataType translateBrowsePathsToNodeIdsCount;
+UA_ServiceCounterDataType queryFirstCount;
+UA_ServiceCounterDataType queryNextCount;
+UA_ServiceCounterDataType registerNodesCount;
+UA_ServiceCounterDataType unregisterNodesCount;
 } UA_SessionDiagnosticsDataType;
 
 #define UA_TYPES_SESSIONDIAGNOSTICSDATATYPE 178
@@ -5606,7 +5606,7 @@ typedef struct {
  * ^^^^^^^^^^^^
  * The response returned by all services when there is a service level error. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
+UA_ResponseHeader responseHeader;
 } UA_ServiceFault;
 
 #define UA_TYPES_SERVICEFAULT 179
@@ -5616,16 +5616,16 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^
  * The information required to register a server with a discovery server. */
 typedef struct {
-    UA_String serverUri;
-    UA_String productUri;
-    size_t serverNamesSize;
-    UA_LocalizedText *serverNames;
-    UA_ApplicationType serverType;
-    UA_String gatewayServerUri;
-    size_t discoveryUrlsSize;
-    UA_String *discoveryUrls;
-    UA_String semaphoreFilePath;
-    UA_Boolean isOnline;
+UA_String serverUri;
+UA_String productUri;
+size_t serverNamesSize;
+UA_LocalizedText *serverNames;
+UA_ApplicationType serverType;
+UA_String gatewayServerUri;
+size_t discoveryUrlsSize;
+UA_String *discoveryUrls;
+UA_String semaphoreFilePath;
+UA_Boolean isOnline;
 } UA_RegisteredServer;
 
 #define UA_TYPES_REGISTEREDSERVER 180
@@ -5635,10 +5635,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_DateTime startTime;
-    UA_NodeId aggregateType;
-    UA_Double processingInterval;
-    UA_AggregateConfiguration aggregateConfiguration;
+UA_DateTime startTime;
+UA_NodeId aggregateType;
+UA_Double processingInterval;
+UA_AggregateConfiguration aggregateConfiguration;
 } UA_AggregateFilter;
 
 #define UA_TYPES_AGGREGATEFILTER 181
@@ -5648,8 +5648,8 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^
  * Registers a server with the discovery server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_RegisteredServer server;
+UA_RequestHeader requestHeader;
+UA_RegisteredServer server;
 } UA_RegisterServerRequest;
 
 #define UA_TYPES_REGISTERSERVERREQUEST 182
@@ -5659,15 +5659,15 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  * The description of a endpoint that can be used to access a server. */
 typedef struct {
-    UA_String endpointUrl;
-    UA_ApplicationDescription server;
-    UA_ByteString serverCertificate;
-    UA_MessageSecurityMode securityMode;
-    UA_String securityPolicyUri;
-    size_t userIdentityTokensSize;
-    UA_UserTokenPolicy *userIdentityTokens;
-    UA_String transportProfileUri;
-    UA_Byte securityLevel;
+UA_String endpointUrl;
+UA_ApplicationDescription server;
+UA_ByteString serverCertificate;
+UA_MessageSecurityMode securityMode;
+UA_String securityPolicyUri;
+size_t userIdentityTokensSize;
+UA_UserTokenPolicy *userIdentityTokens;
+UA_String transportProfileUri;
+UA_Byte securityLevel;
 } UA_EndpointDescription;
 
 #define UA_TYPES_ENDPOINTDESCRIPTION 183
@@ -5677,11 +5677,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_UInt32 subscriptionId;
-    UA_TimestampsToReturn timestampsToReturn;
-    size_t itemsToCreateSize;
-    UA_MonitoredItemCreateRequest *itemsToCreate;
+UA_RequestHeader requestHeader;
+UA_UInt32 subscriptionId;
+UA_TimestampsToReturn timestampsToReturn;
+size_t itemsToCreateSize;
+UA_MonitoredItemCreateRequest *itemsToCreate;
 } UA_CreateMonitoredItemsRequest;
 
 #define UA_TYPES_CREATEMONITOREDITEMSREQUEST 184
@@ -5691,8 +5691,8 @@ typedef struct {
  * ^^^^^^^^^^^^^
  */
 typedef struct {
-    size_t elementsSize;
-    UA_ContentFilterElement *elements;
+size_t elementsSize;
+UA_ContentFilterElement *elements;
 } UA_ContentFilter;
 
 #define UA_TYPES_CONTENTFILTER 185
@@ -5702,15 +5702,15 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t queryDataSetsSize;
-    UA_QueryDataSet *queryDataSets;
-    UA_ByteString continuationPoint;
-    size_t parsingResultsSize;
-    UA_ParsingResult *parsingResults;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
-    UA_ContentFilterResult filterResult;
+UA_ResponseHeader responseHeader;
+size_t queryDataSetsSize;
+UA_QueryDataSet *queryDataSets;
+UA_ByteString continuationPoint;
+size_t parsingResultsSize;
+UA_ParsingResult *parsingResults;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
+UA_ContentFilterResult filterResult;
 } UA_QueryFirstResponse;
 
 #define UA_TYPES_QUERYFIRSTRESPONSE 186
@@ -5720,9 +5720,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^
  * Adds one or more nodes to the server address space. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    size_t nodesToAddSize;
-    UA_AddNodesItem *nodesToAdd;
+UA_RequestHeader requestHeader;
+size_t nodesToAddSize;
+UA_AddNodesItem *nodesToAdd;
 } UA_AddNodesRequest;
 
 #define UA_TYPES_ADDNODESREQUEST 187
@@ -5732,11 +5732,11 @@ typedef struct {
  * ^^^^^^^^^^^^^
  * Browse the references for one or more nodes from the server address space. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_ViewDescription view;
-    UA_UInt32 requestedMaxReferencesPerNode;
-    size_t nodesToBrowseSize;
-    UA_BrowseDescription *nodesToBrowse;
+UA_RequestHeader requestHeader;
+UA_ViewDescription view;
+UA_UInt32 requestedMaxReferencesPerNode;
+size_t nodesToBrowseSize;
+UA_BrowseDescription *nodesToBrowse;
 } UA_BrowseRequest;
 
 #define UA_TYPES_BROWSEREQUEST 188
@@ -5746,10 +5746,10 @@ typedef struct {
  * ^^^^^^^^^^^^
  * The result of a browse operation. */
 typedef struct {
-    UA_StatusCode statusCode;
-    UA_ByteString continuationPoint;
-    size_t referencesSize;
-    UA_ReferenceDescription *references;
+UA_StatusCode statusCode;
+UA_ByteString continuationPoint;
+size_t referencesSize;
+UA_ReferenceDescription *references;
 } UA_BrowseResult;
 
 #define UA_TYPES_BROWSERESULT 189
@@ -5759,10 +5759,10 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_RegisteredServer server;
-    size_t discoveryConfigurationSize;
-    UA_ExtensionObject *discoveryConfiguration;
+UA_RequestHeader requestHeader;
+UA_RegisteredServer server;
+size_t discoveryConfigurationSize;
+UA_ExtensionObject *discoveryConfiguration;
 } UA_RegisterServer2Request;
 
 #define UA_TYPES_REGISTERSERVER2REQUEST 190
@@ -5772,15 +5772,15 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * Creates a new session with the server. */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_ApplicationDescription clientDescription;
-    UA_String serverUri;
-    UA_String endpointUrl;
-    UA_String sessionName;
-    UA_ByteString clientNonce;
-    UA_ByteString clientCertificate;
-    UA_Double requestedSessionTimeout;
-    UA_UInt32 maxResponseMessageSize;
+UA_RequestHeader requestHeader;
+UA_ApplicationDescription clientDescription;
+UA_String serverUri;
+UA_String endpointUrl;
+UA_String sessionName;
+UA_ByteString clientNonce;
+UA_ByteString clientCertificate;
+UA_Double requestedSessionTimeout;
+UA_UInt32 maxResponseMessageSize;
 } UA_CreateSessionRequest;
 
 #define UA_TYPES_CREATESESSIONREQUEST 191
@@ -5790,9 +5790,9 @@ typedef struct {
  * ^^^^^^^^^^^
  */
 typedef struct {
-    size_t selectClausesSize;
-    UA_SimpleAttributeOperand *selectClauses;
-    UA_ContentFilter whereClause;
+size_t selectClausesSize;
+UA_SimpleAttributeOperand *selectClauses;
+UA_ContentFilter whereClause;
 } UA_EventFilter;
 
 #define UA_TYPES_EVENTFILTER 192
@@ -5802,9 +5802,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^
  * Gets the endpoints used by the server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t endpointsSize;
-    UA_EndpointDescription *endpoints;
+UA_ResponseHeader responseHeader;
+size_t endpointsSize;
+UA_EndpointDescription *endpoints;
 } UA_GetEndpointsResponse;
 
 #define UA_TYPES_GETENDPOINTSRESPONSE 193
@@ -5814,9 +5814,9 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^
  * Finds the servers known to the discovery server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t serversSize;
-    UA_ApplicationDescription *servers;
+UA_ResponseHeader responseHeader;
+size_t serversSize;
+UA_ApplicationDescription *servers;
 } UA_FindServersResponse;
 
 #define UA_TYPES_FINDSERVERSRESPONSE 194
@@ -5826,11 +5826,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^
  * Continues one or more browse operations. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_BrowseResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_BrowseResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_BrowseNextResponse;
 
 #define UA_TYPES_BROWSENEXTRESPONSE 195
@@ -5840,11 +5840,11 @@ typedef struct {
  * ^^^^^^^^^^^^^^
  * Browse the references for one or more nodes from the server address space. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    size_t resultsSize;
-    UA_BrowseResult *results;
-    size_t diagnosticInfosSize;
-    UA_DiagnosticInfo *diagnosticInfos;
+UA_ResponseHeader responseHeader;
+size_t resultsSize;
+UA_BrowseResult *results;
+size_t diagnosticInfosSize;
+UA_DiagnosticInfo *diagnosticInfos;
 } UA_BrowseResponse;
 
 #define UA_TYPES_BROWSERESPONSE 196
@@ -5854,18 +5854,18 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^^^^^
  * Creates a new session with the server. */
 typedef struct {
-    UA_ResponseHeader responseHeader;
-    UA_NodeId sessionId;
-    UA_NodeId authenticationToken;
-    UA_Double revisedSessionTimeout;
-    UA_ByteString serverNonce;
-    UA_ByteString serverCertificate;
-    size_t serverEndpointsSize;
-    UA_EndpointDescription *serverEndpoints;
-    size_t serverSoftwareCertificatesSize;
-    UA_SignedSoftwareCertificate *serverSoftwareCertificates;
-    UA_SignatureData serverSignature;
-    UA_UInt32 maxRequestMessageSize;
+UA_ResponseHeader responseHeader;
+UA_NodeId sessionId;
+UA_NodeId authenticationToken;
+UA_Double revisedSessionTimeout;
+UA_ByteString serverNonce;
+UA_ByteString serverCertificate;
+size_t serverEndpointsSize;
+UA_EndpointDescription *serverEndpoints;
+size_t serverSoftwareCertificatesSize;
+UA_SignedSoftwareCertificate *serverSoftwareCertificates;
+UA_SignatureData serverSignature;
+UA_UInt32 maxRequestMessageSize;
 } UA_CreateSessionResponse;
 
 #define UA_TYPES_CREATESESSIONRESPONSE 197
@@ -5875,13 +5875,13 @@ typedef struct {
  * ^^^^^^^^^^^^^^^^^
  */
 typedef struct {
-    UA_RequestHeader requestHeader;
-    UA_ViewDescription view;
-    size_t nodeTypesSize;
-    UA_NodeTypeDescription *nodeTypes;
-    UA_ContentFilter filter;
-    UA_UInt32 maxDataSetsToReturn;
-    UA_UInt32 maxReferencesToReturn;
+UA_RequestHeader requestHeader;
+UA_ViewDescription view;
+size_t nodeTypesSize;
+UA_NodeTypeDescription *nodeTypes;
+UA_ContentFilter filter;
+UA_UInt32 maxDataSetsToReturn;
+UA_UInt32 maxReferencesToReturn;
 } UA_QueryFirstRequest;
 
 #define UA_TYPES_QUERYFIRSTREQUEST 198
@@ -5936,18 +5936,18 @@ extern "C" {
 /* Boolean */
 static UA_INLINE void
 UA_Boolean_init(UA_Boolean *p) {
-    memset(p, 0, sizeof(UA_Boolean));
+memset(p, 0, sizeof(UA_Boolean));
 }
 
 static UA_INLINE UA_Boolean *
 UA_Boolean_new(void) {
-    return (UA_Boolean*)UA_new(&UA_TYPES[UA_TYPES_BOOLEAN]);
+return (UA_Boolean*)UA_new(&UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Boolean_copy(const UA_Boolean *src, UA_Boolean *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -5955,24 +5955,24 @@ UA_Boolean_deleteMembers(UA_Boolean *p) { }
 
 static UA_INLINE void
 UA_Boolean_delete(UA_Boolean *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 /* SByte */
 static UA_INLINE void
 UA_SByte_init(UA_SByte *p) {
-    memset(p, 0, sizeof(UA_SByte));
+memset(p, 0, sizeof(UA_SByte));
 }
 
 static UA_INLINE UA_SByte *
 UA_SByte_new(void) {
-    return (UA_SByte*)UA_new(&UA_TYPES[UA_TYPES_SBYTE]);
+return (UA_SByte*)UA_new(&UA_TYPES[UA_TYPES_SBYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SByte_copy(const UA_SByte *src, UA_SByte *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -5980,24 +5980,24 @@ UA_SByte_deleteMembers(UA_SByte *p) { }
 
 static UA_INLINE void
 UA_SByte_delete(UA_SByte *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SBYTE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SBYTE]);
 }
 
 /* Byte */
 static UA_INLINE void
 UA_Byte_init(UA_Byte *p) {
-    memset(p, 0, sizeof(UA_Byte));
+memset(p, 0, sizeof(UA_Byte));
 }
 
 static UA_INLINE UA_Byte *
 UA_Byte_new(void) {
-    return (UA_Byte*)UA_new(&UA_TYPES[UA_TYPES_BYTE]);
+return (UA_Byte*)UA_new(&UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Byte_copy(const UA_Byte *src, UA_Byte *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6005,24 +6005,24 @@ UA_Byte_deleteMembers(UA_Byte *p) { }
 
 static UA_INLINE void
 UA_Byte_delete(UA_Byte *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BYTE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BYTE]);
 }
 
 /* Int16 */
 static UA_INLINE void
 UA_Int16_init(UA_Int16 *p) {
-    memset(p, 0, sizeof(UA_Int16));
+memset(p, 0, sizeof(UA_Int16));
 }
 
 static UA_INLINE UA_Int16 *
 UA_Int16_new(void) {
-    return (UA_Int16*)UA_new(&UA_TYPES[UA_TYPES_INT16]);
+return (UA_Int16*)UA_new(&UA_TYPES[UA_TYPES_INT16]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Int16_copy(const UA_Int16 *src, UA_Int16 *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6030,24 +6030,24 @@ UA_Int16_deleteMembers(UA_Int16 *p) { }
 
 static UA_INLINE void
 UA_Int16_delete(UA_Int16 *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_INT16]);
+UA_delete(p, &UA_TYPES[UA_TYPES_INT16]);
 }
 
 /* UInt16 */
 static UA_INLINE void
 UA_UInt16_init(UA_UInt16 *p) {
-    memset(p, 0, sizeof(UA_UInt16));
+memset(p, 0, sizeof(UA_UInt16));
 }
 
 static UA_INLINE UA_UInt16 *
 UA_UInt16_new(void) {
-    return (UA_UInt16*)UA_new(&UA_TYPES[UA_TYPES_UINT16]);
+return (UA_UInt16*)UA_new(&UA_TYPES[UA_TYPES_UINT16]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UInt16_copy(const UA_UInt16 *src, UA_UInt16 *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6055,24 +6055,24 @@ UA_UInt16_deleteMembers(UA_UInt16 *p) { }
 
 static UA_INLINE void
 UA_UInt16_delete(UA_UInt16 *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_UINT16]);
+UA_delete(p, &UA_TYPES[UA_TYPES_UINT16]);
 }
 
 /* Int32 */
 static UA_INLINE void
 UA_Int32_init(UA_Int32 *p) {
-    memset(p, 0, sizeof(UA_Int32));
+memset(p, 0, sizeof(UA_Int32));
 }
 
 static UA_INLINE UA_Int32 *
 UA_Int32_new(void) {
-    return (UA_Int32*)UA_new(&UA_TYPES[UA_TYPES_INT32]);
+return (UA_Int32*)UA_new(&UA_TYPES[UA_TYPES_INT32]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Int32_copy(const UA_Int32 *src, UA_Int32 *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6080,24 +6080,24 @@ UA_Int32_deleteMembers(UA_Int32 *p) { }
 
 static UA_INLINE void
 UA_Int32_delete(UA_Int32 *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_INT32]);
+UA_delete(p, &UA_TYPES[UA_TYPES_INT32]);
 }
 
 /* UInt32 */
 static UA_INLINE void
 UA_UInt32_init(UA_UInt32 *p) {
-    memset(p, 0, sizeof(UA_UInt32));
+memset(p, 0, sizeof(UA_UInt32));
 }
 
 static UA_INLINE UA_UInt32 *
 UA_UInt32_new(void) {
-    return (UA_UInt32*)UA_new(&UA_TYPES[UA_TYPES_UINT32]);
+return (UA_UInt32*)UA_new(&UA_TYPES[UA_TYPES_UINT32]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UInt32_copy(const UA_UInt32 *src, UA_UInt32 *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6105,24 +6105,24 @@ UA_UInt32_deleteMembers(UA_UInt32 *p) { }
 
 static UA_INLINE void
 UA_UInt32_delete(UA_UInt32 *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_UINT32]);
+UA_delete(p, &UA_TYPES[UA_TYPES_UINT32]);
 }
 
 /* Int64 */
 static UA_INLINE void
 UA_Int64_init(UA_Int64 *p) {
-    memset(p, 0, sizeof(UA_Int64));
+memset(p, 0, sizeof(UA_Int64));
 }
 
 static UA_INLINE UA_Int64 *
 UA_Int64_new(void) {
-    return (UA_Int64*)UA_new(&UA_TYPES[UA_TYPES_INT64]);
+return (UA_Int64*)UA_new(&UA_TYPES[UA_TYPES_INT64]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Int64_copy(const UA_Int64 *src, UA_Int64 *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6130,24 +6130,24 @@ UA_Int64_deleteMembers(UA_Int64 *p) { }
 
 static UA_INLINE void
 UA_Int64_delete(UA_Int64 *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_INT64]);
+UA_delete(p, &UA_TYPES[UA_TYPES_INT64]);
 }
 
 /* UInt64 */
 static UA_INLINE void
 UA_UInt64_init(UA_UInt64 *p) {
-    memset(p, 0, sizeof(UA_UInt64));
+memset(p, 0, sizeof(UA_UInt64));
 }
 
 static UA_INLINE UA_UInt64 *
 UA_UInt64_new(void) {
-    return (UA_UInt64*)UA_new(&UA_TYPES[UA_TYPES_UINT64]);
+return (UA_UInt64*)UA_new(&UA_TYPES[UA_TYPES_UINT64]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UInt64_copy(const UA_UInt64 *src, UA_UInt64 *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6155,24 +6155,24 @@ UA_UInt64_deleteMembers(UA_UInt64 *p) { }
 
 static UA_INLINE void
 UA_UInt64_delete(UA_UInt64 *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_UINT64]);
+UA_delete(p, &UA_TYPES[UA_TYPES_UINT64]);
 }
 
 /* Float */
 static UA_INLINE void
 UA_Float_init(UA_Float *p) {
-    memset(p, 0, sizeof(UA_Float));
+memset(p, 0, sizeof(UA_Float));
 }
 
 static UA_INLINE UA_Float *
 UA_Float_new(void) {
-    return (UA_Float*)UA_new(&UA_TYPES[UA_TYPES_FLOAT]);
+return (UA_Float*)UA_new(&UA_TYPES[UA_TYPES_FLOAT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Float_copy(const UA_Float *src, UA_Float *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6180,24 +6180,24 @@ UA_Float_deleteMembers(UA_Float *p) { }
 
 static UA_INLINE void
 UA_Float_delete(UA_Float *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FLOAT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FLOAT]);
 }
 
 /* Double */
 static UA_INLINE void
 UA_Double_init(UA_Double *p) {
-    memset(p, 0, sizeof(UA_Double));
+memset(p, 0, sizeof(UA_Double));
 }
 
 static UA_INLINE UA_Double *
 UA_Double_new(void) {
-    return (UA_Double*)UA_new(&UA_TYPES[UA_TYPES_DOUBLE]);
+return (UA_Double*)UA_new(&UA_TYPES[UA_TYPES_DOUBLE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Double_copy(const UA_Double *src, UA_Double *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6205,50 +6205,50 @@ UA_Double_deleteMembers(UA_Double *p) { }
 
 static UA_INLINE void
 UA_Double_delete(UA_Double *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DOUBLE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DOUBLE]);
 }
 
 /* String */
 static UA_INLINE void
 UA_String_init(UA_String *p) {
-    memset(p, 0, sizeof(UA_String));
+memset(p, 0, sizeof(UA_String));
 }
 
 static UA_INLINE UA_String *
 UA_String_new(void) {
-    return (UA_String*)UA_new(&UA_TYPES[UA_TYPES_STRING]);
+return (UA_String*)UA_new(&UA_TYPES[UA_TYPES_STRING]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_String_copy(const UA_String *src, UA_String *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_STRING]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_STRING]);
 }
 
 static UA_INLINE void
 UA_String_deleteMembers(UA_String *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_STRING]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_STRING]);
 }
 
 static UA_INLINE void
 UA_String_delete(UA_String *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_STRING]);
+UA_delete(p, &UA_TYPES[UA_TYPES_STRING]);
 }
 
 /* DateTime */
 static UA_INLINE void
 UA_DateTime_init(UA_DateTime *p) {
-    memset(p, 0, sizeof(UA_DateTime));
+memset(p, 0, sizeof(UA_DateTime));
 }
 
 static UA_INLINE UA_DateTime *
 UA_DateTime_new(void) {
-    return (UA_DateTime*)UA_new(&UA_TYPES[UA_TYPES_DATETIME]);
+return (UA_DateTime*)UA_new(&UA_TYPES[UA_TYPES_DATETIME]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DateTime_copy(const UA_DateTime *src, UA_DateTime *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6256,24 +6256,24 @@ UA_DateTime_deleteMembers(UA_DateTime *p) { }
 
 static UA_INLINE void
 UA_DateTime_delete(UA_DateTime *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DATETIME]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DATETIME]);
 }
 
 /* Guid */
 static UA_INLINE void
 UA_Guid_init(UA_Guid *p) {
-    memset(p, 0, sizeof(UA_Guid));
+memset(p, 0, sizeof(UA_Guid));
 }
 
 static UA_INLINE UA_Guid *
 UA_Guid_new(void) {
-    return (UA_Guid*)UA_new(&UA_TYPES[UA_TYPES_GUID]);
+return (UA_Guid*)UA_new(&UA_TYPES[UA_TYPES_GUID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Guid_copy(const UA_Guid *src, UA_Guid *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6281,128 +6281,128 @@ UA_Guid_deleteMembers(UA_Guid *p) { }
 
 static UA_INLINE void
 UA_Guid_delete(UA_Guid *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_GUID]);
+UA_delete(p, &UA_TYPES[UA_TYPES_GUID]);
 }
 
 /* ByteString */
 static UA_INLINE void
 UA_ByteString_init(UA_ByteString *p) {
-    memset(p, 0, sizeof(UA_ByteString));
+memset(p, 0, sizeof(UA_ByteString));
 }
 
 static UA_INLINE UA_ByteString *
 UA_ByteString_new(void) {
-    return (UA_ByteString*)UA_new(&UA_TYPES[UA_TYPES_BYTESTRING]);
+return (UA_ByteString*)UA_new(&UA_TYPES[UA_TYPES_BYTESTRING]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ByteString_copy(const UA_ByteString *src, UA_ByteString *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BYTESTRING]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BYTESTRING]);
 }
 
 static UA_INLINE void
 UA_ByteString_deleteMembers(UA_ByteString *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BYTESTRING]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BYTESTRING]);
 }
 
 static UA_INLINE void
 UA_ByteString_delete(UA_ByteString *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BYTESTRING]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BYTESTRING]);
 }
 
 /* XmlElement */
 static UA_INLINE void
 UA_XmlElement_init(UA_XmlElement *p) {
-    memset(p, 0, sizeof(UA_XmlElement));
+memset(p, 0, sizeof(UA_XmlElement));
 }
 
 static UA_INLINE UA_XmlElement *
 UA_XmlElement_new(void) {
-    return (UA_XmlElement*)UA_new(&UA_TYPES[UA_TYPES_XMLELEMENT]);
+return (UA_XmlElement*)UA_new(&UA_TYPES[UA_TYPES_XMLELEMENT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_XmlElement_copy(const UA_XmlElement *src, UA_XmlElement *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_XMLELEMENT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_XMLELEMENT]);
 }
 
 static UA_INLINE void
 UA_XmlElement_deleteMembers(UA_XmlElement *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_XMLELEMENT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_XMLELEMENT]);
 }
 
 static UA_INLINE void
 UA_XmlElement_delete(UA_XmlElement *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_XMLELEMENT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_XMLELEMENT]);
 }
 
 /* NodeId */
 static UA_INLINE void
 UA_NodeId_init(UA_NodeId *p) {
-    memset(p, 0, sizeof(UA_NodeId));
+memset(p, 0, sizeof(UA_NodeId));
 }
 
 static UA_INLINE UA_NodeId *
 UA_NodeId_new(void) {
-    return (UA_NodeId*)UA_new(&UA_TYPES[UA_TYPES_NODEID]);
+return (UA_NodeId*)UA_new(&UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NodeId_copy(const UA_NodeId *src, UA_NodeId *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NODEID]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE void
 UA_NodeId_deleteMembers(UA_NodeId *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NODEID]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE void
 UA_NodeId_delete(UA_NodeId *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NODEID]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 /* ExpandedNodeId */
 static UA_INLINE void
 UA_ExpandedNodeId_init(UA_ExpandedNodeId *p) {
-    memset(p, 0, sizeof(UA_ExpandedNodeId));
+memset(p, 0, sizeof(UA_ExpandedNodeId));
 }
 
 static UA_INLINE UA_ExpandedNodeId *
 UA_ExpandedNodeId_new(void) {
-    return (UA_ExpandedNodeId*)UA_new(&UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
+return (UA_ExpandedNodeId*)UA_new(&UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ExpandedNodeId_copy(const UA_ExpandedNodeId *src, UA_ExpandedNodeId *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
 }
 
 static UA_INLINE void
 UA_ExpandedNodeId_deleteMembers(UA_ExpandedNodeId *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
 }
 
 static UA_INLINE void
 UA_ExpandedNodeId_delete(UA_ExpandedNodeId *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
+UA_delete(p, &UA_TYPES[UA_TYPES_EXPANDEDNODEID]);
 }
 
 /* StatusCode */
 static UA_INLINE void
 UA_StatusCode_init(UA_StatusCode *p) {
-    memset(p, 0, sizeof(UA_StatusCode));
+memset(p, 0, sizeof(UA_StatusCode));
 }
 
 static UA_INLINE UA_StatusCode *
 UA_StatusCode_new(void) {
-    return (UA_StatusCode*)UA_new(&UA_TYPES[UA_TYPES_STATUSCODE]);
+return (UA_StatusCode*)UA_new(&UA_TYPES[UA_TYPES_STATUSCODE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_StatusCode_copy(const UA_StatusCode *src, UA_StatusCode *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6410,362 +6410,362 @@ UA_StatusCode_deleteMembers(UA_StatusCode *p) { }
 
 static UA_INLINE void
 UA_StatusCode_delete(UA_StatusCode *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_STATUSCODE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_STATUSCODE]);
 }
 
 /* QualifiedName */
 static UA_INLINE void
 UA_QualifiedName_init(UA_QualifiedName *p) {
-    memset(p, 0, sizeof(UA_QualifiedName));
+memset(p, 0, sizeof(UA_QualifiedName));
 }
 
 static UA_INLINE UA_QualifiedName *
 UA_QualifiedName_new(void) {
-    return (UA_QualifiedName*)UA_new(&UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
+return (UA_QualifiedName*)UA_new(&UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QualifiedName_copy(const UA_QualifiedName *src, UA_QualifiedName *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
 }
 
 static UA_INLINE void
 UA_QualifiedName_deleteMembers(UA_QualifiedName *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
 }
 
 static UA_INLINE void
 UA_QualifiedName_delete(UA_QualifiedName *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
 }
 
 /* LocalizedText */
 static UA_INLINE void
 UA_LocalizedText_init(UA_LocalizedText *p) {
-    memset(p, 0, sizeof(UA_LocalizedText));
+memset(p, 0, sizeof(UA_LocalizedText));
 }
 
 static UA_INLINE UA_LocalizedText *
 UA_LocalizedText_new(void) {
-    return (UA_LocalizedText*)UA_new(&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+return (UA_LocalizedText*)UA_new(&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_LocalizedText_copy(const UA_LocalizedText *src, UA_LocalizedText *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE void
 UA_LocalizedText_deleteMembers(UA_LocalizedText *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE void
 UA_LocalizedText_delete(UA_LocalizedText *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 /* ExtensionObject */
 static UA_INLINE void
 UA_ExtensionObject_init(UA_ExtensionObject *p) {
-    memset(p, 0, sizeof(UA_ExtensionObject));
+memset(p, 0, sizeof(UA_ExtensionObject));
 }
 
 static UA_INLINE UA_ExtensionObject *
 UA_ExtensionObject_new(void) {
-    return (UA_ExtensionObject*)UA_new(&UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
+return (UA_ExtensionObject*)UA_new(&UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ExtensionObject_copy(const UA_ExtensionObject *src, UA_ExtensionObject *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
 }
 
 static UA_INLINE void
 UA_ExtensionObject_deleteMembers(UA_ExtensionObject *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
 }
 
 static UA_INLINE void
 UA_ExtensionObject_delete(UA_ExtensionObject *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_EXTENSIONOBJECT]);
 }
 
 /* DataValue */
 static UA_INLINE void
 UA_DataValue_init(UA_DataValue *p) {
-    memset(p, 0, sizeof(UA_DataValue));
+memset(p, 0, sizeof(UA_DataValue));
 }
 
 static UA_INLINE UA_DataValue *
 UA_DataValue_new(void) {
-    return (UA_DataValue*)UA_new(&UA_TYPES[UA_TYPES_DATAVALUE]);
+return (UA_DataValue*)UA_new(&UA_TYPES[UA_TYPES_DATAVALUE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DataValue_copy(const UA_DataValue *src, UA_DataValue *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DATAVALUE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DATAVALUE]);
 }
 
 static UA_INLINE void
 UA_DataValue_deleteMembers(UA_DataValue *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DATAVALUE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DATAVALUE]);
 }
 
 static UA_INLINE void
 UA_DataValue_delete(UA_DataValue *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DATAVALUE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DATAVALUE]);
 }
 
 /* Variant */
 static UA_INLINE void
 UA_Variant_init(UA_Variant *p) {
-    memset(p, 0, sizeof(UA_Variant));
+memset(p, 0, sizeof(UA_Variant));
 }
 
 static UA_INLINE UA_Variant *
 UA_Variant_new(void) {
-    return (UA_Variant*)UA_new(&UA_TYPES[UA_TYPES_VARIANT]);
+return (UA_Variant*)UA_new(&UA_TYPES[UA_TYPES_VARIANT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Variant_copy(const UA_Variant *src, UA_Variant *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VARIANT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VARIANT]);
 }
 
 static UA_INLINE void
 UA_Variant_deleteMembers(UA_Variant *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VARIANT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VARIANT]);
 }
 
 static UA_INLINE void
 UA_Variant_delete(UA_Variant *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_VARIANT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_VARIANT]);
 }
 
 /* DiagnosticInfo */
 static UA_INLINE void
 UA_DiagnosticInfo_init(UA_DiagnosticInfo *p) {
-    memset(p, 0, sizeof(UA_DiagnosticInfo));
+memset(p, 0, sizeof(UA_DiagnosticInfo));
 }
 
 static UA_INLINE UA_DiagnosticInfo *
 UA_DiagnosticInfo_new(void) {
-    return (UA_DiagnosticInfo*)UA_new(&UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
+return (UA_DiagnosticInfo*)UA_new(&UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DiagnosticInfo_copy(const UA_DiagnosticInfo *src, UA_DiagnosticInfo *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
 }
 
 static UA_INLINE void
 UA_DiagnosticInfo_deleteMembers(UA_DiagnosticInfo *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
 }
 
 static UA_INLINE void
 UA_DiagnosticInfo_delete(UA_DiagnosticInfo *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DIAGNOSTICINFO]);
 }
 
 /* SignedSoftwareCertificate */
 static UA_INLINE void
 UA_SignedSoftwareCertificate_init(UA_SignedSoftwareCertificate *p) {
-    memset(p, 0, sizeof(UA_SignedSoftwareCertificate));
+memset(p, 0, sizeof(UA_SignedSoftwareCertificate));
 }
 
 static UA_INLINE UA_SignedSoftwareCertificate *
 UA_SignedSoftwareCertificate_new(void) {
-    return (UA_SignedSoftwareCertificate*)UA_new(&UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
+return (UA_SignedSoftwareCertificate*)UA_new(&UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SignedSoftwareCertificate_copy(const UA_SignedSoftwareCertificate *src, UA_SignedSoftwareCertificate *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
 }
 
 static UA_INLINE void
 UA_SignedSoftwareCertificate_deleteMembers(UA_SignedSoftwareCertificate *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
 }
 
 static UA_INLINE void
 UA_SignedSoftwareCertificate_delete(UA_SignedSoftwareCertificate *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SIGNEDSOFTWARECERTIFICATE]);
 }
 
 /* SemanticChangeStructureDataType */
 static UA_INLINE void
 UA_SemanticChangeStructureDataType_init(UA_SemanticChangeStructureDataType *p) {
-    memset(p, 0, sizeof(UA_SemanticChangeStructureDataType));
+memset(p, 0, sizeof(UA_SemanticChangeStructureDataType));
 }
 
 static UA_INLINE UA_SemanticChangeStructureDataType *
 UA_SemanticChangeStructureDataType_new(void) {
-    return (UA_SemanticChangeStructureDataType*)UA_new(&UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
+return (UA_SemanticChangeStructureDataType*)UA_new(&UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SemanticChangeStructureDataType_copy(const UA_SemanticChangeStructureDataType *src, UA_SemanticChangeStructureDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SemanticChangeStructureDataType_deleteMembers(UA_SemanticChangeStructureDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SemanticChangeStructureDataType_delete(UA_SemanticChangeStructureDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SEMANTICCHANGESTRUCTUREDATATYPE]);
 }
 
 /* StatusChangeNotification */
 static UA_INLINE void
 UA_StatusChangeNotification_init(UA_StatusChangeNotification *p) {
-    memset(p, 0, sizeof(UA_StatusChangeNotification));
+memset(p, 0, sizeof(UA_StatusChangeNotification));
 }
 
 static UA_INLINE UA_StatusChangeNotification *
 UA_StatusChangeNotification_new(void) {
-    return (UA_StatusChangeNotification*)UA_new(&UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
+return (UA_StatusChangeNotification*)UA_new(&UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_StatusChangeNotification_copy(const UA_StatusChangeNotification *src, UA_StatusChangeNotification *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
 }
 
 static UA_INLINE void
 UA_StatusChangeNotification_deleteMembers(UA_StatusChangeNotification *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
 }
 
 static UA_INLINE void
 UA_StatusChangeNotification_delete(UA_StatusChangeNotification *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_STATUSCHANGENOTIFICATION]);
 }
 
 /* BrowsePathTarget */
 static UA_INLINE void
 UA_BrowsePathTarget_init(UA_BrowsePathTarget *p) {
-    memset(p, 0, sizeof(UA_BrowsePathTarget));
+memset(p, 0, sizeof(UA_BrowsePathTarget));
 }
 
 static UA_INLINE UA_BrowsePathTarget *
 UA_BrowsePathTarget_new(void) {
-    return (UA_BrowsePathTarget*)UA_new(&UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
+return (UA_BrowsePathTarget*)UA_new(&UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowsePathTarget_copy(const UA_BrowsePathTarget *src, UA_BrowsePathTarget *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
 }
 
 static UA_INLINE void
 UA_BrowsePathTarget_deleteMembers(UA_BrowsePathTarget *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
 }
 
 static UA_INLINE void
 UA_BrowsePathTarget_delete(UA_BrowsePathTarget *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEPATHTARGET]);
 }
 
 /* ViewAttributes */
 static UA_INLINE void
 UA_ViewAttributes_init(UA_ViewAttributes *p) {
-    memset(p, 0, sizeof(UA_ViewAttributes));
+memset(p, 0, sizeof(UA_ViewAttributes));
 }
 
 static UA_INLINE UA_ViewAttributes *
 UA_ViewAttributes_new(void) {
-    return (UA_ViewAttributes*)UA_new(&UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
+return (UA_ViewAttributes*)UA_new(&UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ViewAttributes_copy(const UA_ViewAttributes *src, UA_ViewAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ViewAttributes_deleteMembers(UA_ViewAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ViewAttributes_delete(UA_ViewAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_VIEWATTRIBUTES]);
 }
 
 /* RequestHeader */
 static UA_INLINE void
 UA_RequestHeader_init(UA_RequestHeader *p) {
-    memset(p, 0, sizeof(UA_RequestHeader));
+memset(p, 0, sizeof(UA_RequestHeader));
 }
 
 static UA_INLINE UA_RequestHeader *
 UA_RequestHeader_new(void) {
-    return (UA_RequestHeader*)UA_new(&UA_TYPES[UA_TYPES_REQUESTHEADER]);
+return (UA_RequestHeader*)UA_new(&UA_TYPES[UA_TYPES_REQUESTHEADER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RequestHeader_copy(const UA_RequestHeader *src, UA_RequestHeader *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REQUESTHEADER]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REQUESTHEADER]);
 }
 
 static UA_INLINE void
 UA_RequestHeader_deleteMembers(UA_RequestHeader *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REQUESTHEADER]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REQUESTHEADER]);
 }
 
 static UA_INLINE void
 UA_RequestHeader_delete(UA_RequestHeader *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REQUESTHEADER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REQUESTHEADER]);
 }
 
 /* MonitoredItemModifyResult */
 static UA_INLINE void
 UA_MonitoredItemModifyResult_init(UA_MonitoredItemModifyResult *p) {
-    memset(p, 0, sizeof(UA_MonitoredItemModifyResult));
+memset(p, 0, sizeof(UA_MonitoredItemModifyResult));
 }
 
 static UA_INLINE UA_MonitoredItemModifyResult *
 UA_MonitoredItemModifyResult_new(void) {
-    return (UA_MonitoredItemModifyResult*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
+return (UA_MonitoredItemModifyResult*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoredItemModifyResult_copy(const UA_MonitoredItemModifyResult *src, UA_MonitoredItemModifyResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemModifyResult_deleteMembers(UA_MonitoredItemModifyResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemModifyResult_delete(UA_MonitoredItemModifyResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYRESULT]);
 }
 
 /* ElementOperand */
 static UA_INLINE void
 UA_ElementOperand_init(UA_ElementOperand *p) {
-    memset(p, 0, sizeof(UA_ElementOperand));
+memset(p, 0, sizeof(UA_ElementOperand));
 }
 
 static UA_INLINE UA_ElementOperand *
 UA_ElementOperand_new(void) {
-    return (UA_ElementOperand*)UA_new(&UA_TYPES[UA_TYPES_ELEMENTOPERAND]);
+return (UA_ElementOperand*)UA_new(&UA_TYPES[UA_TYPES_ELEMENTOPERAND]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ElementOperand_copy(const UA_ElementOperand *src, UA_ElementOperand *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6773,180 +6773,180 @@ UA_ElementOperand_deleteMembers(UA_ElementOperand *p) { }
 
 static UA_INLINE void
 UA_ElementOperand_delete(UA_ElementOperand *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ELEMENTOPERAND]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ELEMENTOPERAND]);
 }
 
 /* CloseSecureChannelRequest */
 static UA_INLINE void
 UA_CloseSecureChannelRequest_init(UA_CloseSecureChannelRequest *p) {
-    memset(p, 0, sizeof(UA_CloseSecureChannelRequest));
+memset(p, 0, sizeof(UA_CloseSecureChannelRequest));
 }
 
 static UA_INLINE UA_CloseSecureChannelRequest *
 UA_CloseSecureChannelRequest_new(void) {
-    return (UA_CloseSecureChannelRequest*)UA_new(&UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
+return (UA_CloseSecureChannelRequest*)UA_new(&UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CloseSecureChannelRequest_copy(const UA_CloseSecureChannelRequest *src, UA_CloseSecureChannelRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
 }
 
 static UA_INLINE void
 UA_CloseSecureChannelRequest_deleteMembers(UA_CloseSecureChannelRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
 }
 
 static UA_INLINE void
 UA_CloseSecureChannelRequest_delete(UA_CloseSecureChannelRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELREQUEST]);
 }
 
 /* AddNodesResult */
 static UA_INLINE void
 UA_AddNodesResult_init(UA_AddNodesResult *p) {
-    memset(p, 0, sizeof(UA_AddNodesResult));
+memset(p, 0, sizeof(UA_AddNodesResult));
 }
 
 static UA_INLINE UA_AddNodesResult *
 UA_AddNodesResult_new(void) {
-    return (UA_AddNodesResult*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESRESULT]);
+return (UA_AddNodesResult*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddNodesResult_copy(const UA_AddNodesResult *src, UA_AddNodesResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESRESULT]);
 }
 
 static UA_INLINE void
 UA_AddNodesResult_deleteMembers(UA_AddNodesResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESRESULT]);
 }
 
 static UA_INLINE void
 UA_AddNodesResult_delete(UA_AddNodesResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESRESULT]);
 }
 
 /* VariableAttributes */
 static UA_INLINE void
 UA_VariableAttributes_init(UA_VariableAttributes *p) {
-    memset(p, 0, sizeof(UA_VariableAttributes));
+memset(p, 0, sizeof(UA_VariableAttributes));
 }
 
 static UA_INLINE UA_VariableAttributes *
 UA_VariableAttributes_new(void) {
-    return (UA_VariableAttributes*)UA_new(&UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
+return (UA_VariableAttributes*)UA_new(&UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_VariableAttributes_copy(const UA_VariableAttributes *src, UA_VariableAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_VariableAttributes_deleteMembers(UA_VariableAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_VariableAttributes_delete(UA_VariableAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES]);
 }
 
 /* NotificationMessage */
 static UA_INLINE void
 UA_NotificationMessage_init(UA_NotificationMessage *p) {
-    memset(p, 0, sizeof(UA_NotificationMessage));
+memset(p, 0, sizeof(UA_NotificationMessage));
 }
 
 static UA_INLINE UA_NotificationMessage *
 UA_NotificationMessage_new(void) {
-    return (UA_NotificationMessage*)UA_new(&UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
+return (UA_NotificationMessage*)UA_new(&UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NotificationMessage_copy(const UA_NotificationMessage *src, UA_NotificationMessage *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
 }
 
 static UA_INLINE void
 UA_NotificationMessage_deleteMembers(UA_NotificationMessage *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
 }
 
 static UA_INLINE void
 UA_NotificationMessage_delete(UA_NotificationMessage *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NOTIFICATIONMESSAGE]);
 }
 
 /* FindServersOnNetworkRequest */
 static UA_INLINE void
 UA_FindServersOnNetworkRequest_init(UA_FindServersOnNetworkRequest *p) {
-    memset(p, 0, sizeof(UA_FindServersOnNetworkRequest));
+memset(p, 0, sizeof(UA_FindServersOnNetworkRequest));
 }
 
 static UA_INLINE UA_FindServersOnNetworkRequest *
 UA_FindServersOnNetworkRequest_new(void) {
-    return (UA_FindServersOnNetworkRequest*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
+return (UA_FindServersOnNetworkRequest*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_FindServersOnNetworkRequest_copy(const UA_FindServersOnNetworkRequest *src, UA_FindServersOnNetworkRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
 }
 
 static UA_INLINE void
 UA_FindServersOnNetworkRequest_deleteMembers(UA_FindServersOnNetworkRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
 }
 
 static UA_INLINE void
 UA_FindServersOnNetworkRequest_delete(UA_FindServersOnNetworkRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKREQUEST]);
 }
 
 /* EventFieldList */
 static UA_INLINE void
 UA_EventFieldList_init(UA_EventFieldList *p) {
-    memset(p, 0, sizeof(UA_EventFieldList));
+memset(p, 0, sizeof(UA_EventFieldList));
 }
 
 static UA_INLINE UA_EventFieldList *
 UA_EventFieldList_new(void) {
-    return (UA_EventFieldList*)UA_new(&UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
+return (UA_EventFieldList*)UA_new(&UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_EventFieldList_copy(const UA_EventFieldList *src, UA_EventFieldList *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
 }
 
 static UA_INLINE void
 UA_EventFieldList_deleteMembers(UA_EventFieldList *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
 }
 
 static UA_INLINE void
 UA_EventFieldList_delete(UA_EventFieldList *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_EVENTFIELDLIST]);
 }
 
 /* MonitoringMode */
 static UA_INLINE void
 UA_MonitoringMode_init(UA_MonitoringMode *p) {
-    memset(p, 0, sizeof(UA_MonitoringMode));
+memset(p, 0, sizeof(UA_MonitoringMode));
 }
 
 static UA_INLINE UA_MonitoringMode *
 UA_MonitoringMode_new(void) {
-    return (UA_MonitoringMode*)UA_new(&UA_TYPES[UA_TYPES_MONITORINGMODE]);
+return (UA_MonitoringMode*)UA_new(&UA_TYPES[UA_TYPES_MONITORINGMODE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoringMode_copy(const UA_MonitoringMode *src, UA_MonitoringMode *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -6954,128 +6954,128 @@ UA_MonitoringMode_deleteMembers(UA_MonitoringMode *p) { }
 
 static UA_INLINE void
 UA_MonitoringMode_delete(UA_MonitoringMode *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITORINGMODE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITORINGMODE]);
 }
 
 /* MdnsDiscoveryConfiguration */
 static UA_INLINE void
 UA_MdnsDiscoveryConfiguration_init(UA_MdnsDiscoveryConfiguration *p) {
-    memset(p, 0, sizeof(UA_MdnsDiscoveryConfiguration));
+memset(p, 0, sizeof(UA_MdnsDiscoveryConfiguration));
 }
 
 static UA_INLINE UA_MdnsDiscoveryConfiguration *
 UA_MdnsDiscoveryConfiguration_new(void) {
-    return (UA_MdnsDiscoveryConfiguration*)UA_new(&UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
+return (UA_MdnsDiscoveryConfiguration*)UA_new(&UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MdnsDiscoveryConfiguration_copy(const UA_MdnsDiscoveryConfiguration *src, UA_MdnsDiscoveryConfiguration *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
 }
 
 static UA_INLINE void
 UA_MdnsDiscoveryConfiguration_deleteMembers(UA_MdnsDiscoveryConfiguration *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
 }
 
 static UA_INLINE void
 UA_MdnsDiscoveryConfiguration_delete(UA_MdnsDiscoveryConfiguration *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MDNSDISCOVERYCONFIGURATION]);
 }
 
 /* CallMethodResult */
 static UA_INLINE void
 UA_CallMethodResult_init(UA_CallMethodResult *p) {
-    memset(p, 0, sizeof(UA_CallMethodResult));
+memset(p, 0, sizeof(UA_CallMethodResult));
 }
 
 static UA_INLINE UA_CallMethodResult *
 UA_CallMethodResult_new(void) {
-    return (UA_CallMethodResult*)UA_new(&UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
+return (UA_CallMethodResult*)UA_new(&UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CallMethodResult_copy(const UA_CallMethodResult *src, UA_CallMethodResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
 }
 
 static UA_INLINE void
 UA_CallMethodResult_deleteMembers(UA_CallMethodResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
 }
 
 static UA_INLINE void
 UA_CallMethodResult_delete(UA_CallMethodResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CALLMETHODRESULT]);
 }
 
 /* ParsingResult */
 static UA_INLINE void
 UA_ParsingResult_init(UA_ParsingResult *p) {
-    memset(p, 0, sizeof(UA_ParsingResult));
+memset(p, 0, sizeof(UA_ParsingResult));
 }
 
 static UA_INLINE UA_ParsingResult *
 UA_ParsingResult_new(void) {
-    return (UA_ParsingResult*)UA_new(&UA_TYPES[UA_TYPES_PARSINGRESULT]);
+return (UA_ParsingResult*)UA_new(&UA_TYPES[UA_TYPES_PARSINGRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ParsingResult_copy(const UA_ParsingResult *src, UA_ParsingResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_PARSINGRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_PARSINGRESULT]);
 }
 
 static UA_INLINE void
 UA_ParsingResult_deleteMembers(UA_ParsingResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_PARSINGRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_PARSINGRESULT]);
 }
 
 static UA_INLINE void
 UA_ParsingResult_delete(UA_ParsingResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_PARSINGRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_PARSINGRESULT]);
 }
 
 /* RelativePathElement */
 static UA_INLINE void
 UA_RelativePathElement_init(UA_RelativePathElement *p) {
-    memset(p, 0, sizeof(UA_RelativePathElement));
+memset(p, 0, sizeof(UA_RelativePathElement));
 }
 
 static UA_INLINE UA_RelativePathElement *
 UA_RelativePathElement_new(void) {
-    return (UA_RelativePathElement*)UA_new(&UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
+return (UA_RelativePathElement*)UA_new(&UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RelativePathElement_copy(const UA_RelativePathElement *src, UA_RelativePathElement *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
 }
 
 static UA_INLINE void
 UA_RelativePathElement_deleteMembers(UA_RelativePathElement *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
 }
 
 static UA_INLINE void
 UA_RelativePathElement_delete(UA_RelativePathElement *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_RELATIVEPATHELEMENT]);
 }
 
 /* BrowseDirection */
 static UA_INLINE void
 UA_BrowseDirection_init(UA_BrowseDirection *p) {
-    memset(p, 0, sizeof(UA_BrowseDirection));
+memset(p, 0, sizeof(UA_BrowseDirection));
 }
 
 static UA_INLINE UA_BrowseDirection *
 UA_BrowseDirection_new(void) {
-    return (UA_BrowseDirection*)UA_new(&UA_TYPES[UA_TYPES_BROWSEDIRECTION]);
+return (UA_BrowseDirection*)UA_new(&UA_TYPES[UA_TYPES_BROWSEDIRECTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseDirection_copy(const UA_BrowseDirection *src, UA_BrowseDirection *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7083,50 +7083,50 @@ UA_BrowseDirection_deleteMembers(UA_BrowseDirection *p) { }
 
 static UA_INLINE void
 UA_BrowseDirection_delete(UA_BrowseDirection *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEDIRECTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEDIRECTION]);
 }
 
 /* CallMethodRequest */
 static UA_INLINE void
 UA_CallMethodRequest_init(UA_CallMethodRequest *p) {
-    memset(p, 0, sizeof(UA_CallMethodRequest));
+memset(p, 0, sizeof(UA_CallMethodRequest));
 }
 
 static UA_INLINE UA_CallMethodRequest *
 UA_CallMethodRequest_new(void) {
-    return (UA_CallMethodRequest*)UA_new(&UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
+return (UA_CallMethodRequest*)UA_new(&UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CallMethodRequest_copy(const UA_CallMethodRequest *src, UA_CallMethodRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
 }
 
 static UA_INLINE void
 UA_CallMethodRequest_deleteMembers(UA_CallMethodRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
 }
 
 static UA_INLINE void
 UA_CallMethodRequest_delete(UA_CallMethodRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CALLMETHODREQUEST]);
 }
 
 /* RedundancySupport */
 static UA_INLINE void
 UA_RedundancySupport_init(UA_RedundancySupport *p) {
-    memset(p, 0, sizeof(UA_RedundancySupport));
+memset(p, 0, sizeof(UA_RedundancySupport));
 }
 
 static UA_INLINE UA_RedundancySupport *
 UA_RedundancySupport_new(void) {
-    return (UA_RedundancySupport*)UA_new(&UA_TYPES[UA_TYPES_REDUNDANCYSUPPORT]);
+return (UA_RedundancySupport*)UA_new(&UA_TYPES[UA_TYPES_REDUNDANCYSUPPORT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RedundancySupport_copy(const UA_RedundancySupport *src, UA_RedundancySupport *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7134,258 +7134,258 @@ UA_RedundancySupport_deleteMembers(UA_RedundancySupport *p) { }
 
 static UA_INLINE void
 UA_RedundancySupport_delete(UA_RedundancySupport *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REDUNDANCYSUPPORT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REDUNDANCYSUPPORT]);
 }
 
 /* EventNotificationList */
 static UA_INLINE void
 UA_EventNotificationList_init(UA_EventNotificationList *p) {
-    memset(p, 0, sizeof(UA_EventNotificationList));
+memset(p, 0, sizeof(UA_EventNotificationList));
 }
 
 static UA_INLINE UA_EventNotificationList *
 UA_EventNotificationList_new(void) {
-    return (UA_EventNotificationList*)UA_new(&UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
+return (UA_EventNotificationList*)UA_new(&UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_EventNotificationList_copy(const UA_EventNotificationList *src, UA_EventNotificationList *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
 }
 
 static UA_INLINE void
 UA_EventNotificationList_deleteMembers(UA_EventNotificationList *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
 }
 
 static UA_INLINE void
 UA_EventNotificationList_delete(UA_EventNotificationList *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_EVENTNOTIFICATIONLIST]);
 }
 
 /* UnregisterNodesRequest */
 static UA_INLINE void
 UA_UnregisterNodesRequest_init(UA_UnregisterNodesRequest *p) {
-    memset(p, 0, sizeof(UA_UnregisterNodesRequest));
+memset(p, 0, sizeof(UA_UnregisterNodesRequest));
 }
 
 static UA_INLINE UA_UnregisterNodesRequest *
 UA_UnregisterNodesRequest_new(void) {
-    return (UA_UnregisterNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
+return (UA_UnregisterNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UnregisterNodesRequest_copy(const UA_UnregisterNodesRequest *src, UA_UnregisterNodesRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_UnregisterNodesRequest_deleteMembers(UA_UnregisterNodesRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_UnregisterNodesRequest_delete(UA_UnregisterNodesRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST]);
 }
 
 /* ContentFilterElementResult */
 static UA_INLINE void
 UA_ContentFilterElementResult_init(UA_ContentFilterElementResult *p) {
-    memset(p, 0, sizeof(UA_ContentFilterElementResult));
+memset(p, 0, sizeof(UA_ContentFilterElementResult));
 }
 
 static UA_INLINE UA_ContentFilterElementResult *
 UA_ContentFilterElementResult_new(void) {
-    return (UA_ContentFilterElementResult*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
+return (UA_ContentFilterElementResult*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ContentFilterElementResult_copy(const UA_ContentFilterElementResult *src, UA_ContentFilterElementResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
 }
 
 static UA_INLINE void
 UA_ContentFilterElementResult_deleteMembers(UA_ContentFilterElementResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
 }
 
 static UA_INLINE void
 UA_ContentFilterElementResult_delete(UA_ContentFilterElementResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENTRESULT]);
 }
 
 /* SimpleAttributeOperand */
 static UA_INLINE void
 UA_SimpleAttributeOperand_init(UA_SimpleAttributeOperand *p) {
-    memset(p, 0, sizeof(UA_SimpleAttributeOperand));
+memset(p, 0, sizeof(UA_SimpleAttributeOperand));
 }
 
 static UA_INLINE UA_SimpleAttributeOperand *
 UA_SimpleAttributeOperand_new(void) {
-    return (UA_SimpleAttributeOperand*)UA_new(&UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
+return (UA_SimpleAttributeOperand*)UA_new(&UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SimpleAttributeOperand_copy(const UA_SimpleAttributeOperand *src, UA_SimpleAttributeOperand *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
 }
 
 static UA_INLINE void
 UA_SimpleAttributeOperand_deleteMembers(UA_SimpleAttributeOperand *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
 }
 
 static UA_INLINE void
 UA_SimpleAttributeOperand_delete(UA_SimpleAttributeOperand *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SIMPLEATTRIBUTEOPERAND]);
 }
 
 /* LiteralOperand */
 static UA_INLINE void
 UA_LiteralOperand_init(UA_LiteralOperand *p) {
-    memset(p, 0, sizeof(UA_LiteralOperand));
+memset(p, 0, sizeof(UA_LiteralOperand));
 }
 
 static UA_INLINE UA_LiteralOperand *
 UA_LiteralOperand_new(void) {
-    return (UA_LiteralOperand*)UA_new(&UA_TYPES[UA_TYPES_LITERALOPERAND]);
+return (UA_LiteralOperand*)UA_new(&UA_TYPES[UA_TYPES_LITERALOPERAND]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_LiteralOperand_copy(const UA_LiteralOperand *src, UA_LiteralOperand *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_LITERALOPERAND]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_LITERALOPERAND]);
 }
 
 static UA_INLINE void
 UA_LiteralOperand_deleteMembers(UA_LiteralOperand *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_LITERALOPERAND]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_LITERALOPERAND]);
 }
 
 static UA_INLINE void
 UA_LiteralOperand_delete(UA_LiteralOperand *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_LITERALOPERAND]);
+UA_delete(p, &UA_TYPES[UA_TYPES_LITERALOPERAND]);
 }
 
 /* QueryDataSet */
 static UA_INLINE void
 UA_QueryDataSet_init(UA_QueryDataSet *p) {
-    memset(p, 0, sizeof(UA_QueryDataSet));
+memset(p, 0, sizeof(UA_QueryDataSet));
 }
 
 static UA_INLINE UA_QueryDataSet *
 UA_QueryDataSet_new(void) {
-    return (UA_QueryDataSet*)UA_new(&UA_TYPES[UA_TYPES_QUERYDATASET]);
+return (UA_QueryDataSet*)UA_new(&UA_TYPES[UA_TYPES_QUERYDATASET]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QueryDataSet_copy(const UA_QueryDataSet *src, UA_QueryDataSet *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYDATASET]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYDATASET]);
 }
 
 static UA_INLINE void
 UA_QueryDataSet_deleteMembers(UA_QueryDataSet *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYDATASET]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYDATASET]);
 }
 
 static UA_INLINE void
 UA_QueryDataSet_delete(UA_QueryDataSet *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUERYDATASET]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUERYDATASET]);
 }
 
 /* AnonymousIdentityToken */
 static UA_INLINE void
 UA_AnonymousIdentityToken_init(UA_AnonymousIdentityToken *p) {
-    memset(p, 0, sizeof(UA_AnonymousIdentityToken));
+memset(p, 0, sizeof(UA_AnonymousIdentityToken));
 }
 
 static UA_INLINE UA_AnonymousIdentityToken *
 UA_AnonymousIdentityToken_new(void) {
-    return (UA_AnonymousIdentityToken*)UA_new(&UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
+return (UA_AnonymousIdentityToken*)UA_new(&UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AnonymousIdentityToken_copy(const UA_AnonymousIdentityToken *src, UA_AnonymousIdentityToken *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
 }
 
 static UA_INLINE void
 UA_AnonymousIdentityToken_deleteMembers(UA_AnonymousIdentityToken *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
 }
 
 static UA_INLINE void
 UA_AnonymousIdentityToken_delete(UA_AnonymousIdentityToken *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ANONYMOUSIDENTITYTOKEN]);
 }
 
 /* SetPublishingModeRequest */
 static UA_INLINE void
 UA_SetPublishingModeRequest_init(UA_SetPublishingModeRequest *p) {
-    memset(p, 0, sizeof(UA_SetPublishingModeRequest));
+memset(p, 0, sizeof(UA_SetPublishingModeRequest));
 }
 
 static UA_INLINE UA_SetPublishingModeRequest *
 UA_SetPublishingModeRequest_new(void) {
-    return (UA_SetPublishingModeRequest*)UA_new(&UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
+return (UA_SetPublishingModeRequest*)UA_new(&UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SetPublishingModeRequest_copy(const UA_SetPublishingModeRequest *src, UA_SetPublishingModeRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
 }
 
 static UA_INLINE void
 UA_SetPublishingModeRequest_deleteMembers(UA_SetPublishingModeRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
 }
 
 static UA_INLINE void
 UA_SetPublishingModeRequest_delete(UA_SetPublishingModeRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST]);
 }
 
 /* MonitoredItemCreateResult */
 static UA_INLINE void
 UA_MonitoredItemCreateResult_init(UA_MonitoredItemCreateResult *p) {
-    memset(p, 0, sizeof(UA_MonitoredItemCreateResult));
+memset(p, 0, sizeof(UA_MonitoredItemCreateResult));
 }
 
 static UA_INLINE UA_MonitoredItemCreateResult *
 UA_MonitoredItemCreateResult_new(void) {
-    return (UA_MonitoredItemCreateResult*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
+return (UA_MonitoredItemCreateResult*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoredItemCreateResult_copy(const UA_MonitoredItemCreateResult *src, UA_MonitoredItemCreateResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemCreateResult_deleteMembers(UA_MonitoredItemCreateResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemCreateResult_delete(UA_MonitoredItemCreateResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATERESULT]);
 }
 
 /* TimestampsToReturn */
 static UA_INLINE void
 UA_TimestampsToReturn_init(UA_TimestampsToReturn *p) {
-    memset(p, 0, sizeof(UA_TimestampsToReturn));
+memset(p, 0, sizeof(UA_TimestampsToReturn));
 }
 
 static UA_INLINE UA_TimestampsToReturn *
 UA_TimestampsToReturn_new(void) {
-    return (UA_TimestampsToReturn*)UA_new(&UA_TYPES[UA_TYPES_TIMESTAMPSTORETURN]);
+return (UA_TimestampsToReturn*)UA_new(&UA_TYPES[UA_TYPES_TIMESTAMPSTORETURN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_TimestampsToReturn_copy(const UA_TimestampsToReturn *src, UA_TimestampsToReturn *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7393,128 +7393,128 @@ UA_TimestampsToReturn_deleteMembers(UA_TimestampsToReturn *p) { }
 
 static UA_INLINE void
 UA_TimestampsToReturn_delete(UA_TimestampsToReturn *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_TIMESTAMPSTORETURN]);
+UA_delete(p, &UA_TYPES[UA_TYPES_TIMESTAMPSTORETURN]);
 }
 
 /* CallRequest */
 static UA_INLINE void
 UA_CallRequest_init(UA_CallRequest *p) {
-    memset(p, 0, sizeof(UA_CallRequest));
+memset(p, 0, sizeof(UA_CallRequest));
 }
 
 static UA_INLINE UA_CallRequest *
 UA_CallRequest_new(void) {
-    return (UA_CallRequest*)UA_new(&UA_TYPES[UA_TYPES_CALLREQUEST]);
+return (UA_CallRequest*)UA_new(&UA_TYPES[UA_TYPES_CALLREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CallRequest_copy(const UA_CallRequest *src, UA_CallRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLREQUEST]);
 }
 
 static UA_INLINE void
 UA_CallRequest_deleteMembers(UA_CallRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLREQUEST]);
 }
 
 static UA_INLINE void
 UA_CallRequest_delete(UA_CallRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CALLREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CALLREQUEST]);
 }
 
 /* MethodAttributes */
 static UA_INLINE void
 UA_MethodAttributes_init(UA_MethodAttributes *p) {
-    memset(p, 0, sizeof(UA_MethodAttributes));
+memset(p, 0, sizeof(UA_MethodAttributes));
 }
 
 static UA_INLINE UA_MethodAttributes *
 UA_MethodAttributes_new(void) {
-    return (UA_MethodAttributes*)UA_new(&UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
+return (UA_MethodAttributes*)UA_new(&UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MethodAttributes_copy(const UA_MethodAttributes *src, UA_MethodAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_MethodAttributes_deleteMembers(UA_MethodAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_MethodAttributes_delete(UA_MethodAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_METHODATTRIBUTES]);
 }
 
 /* DeleteReferencesItem */
 static UA_INLINE void
 UA_DeleteReferencesItem_init(UA_DeleteReferencesItem *p) {
-    memset(p, 0, sizeof(UA_DeleteReferencesItem));
+memset(p, 0, sizeof(UA_DeleteReferencesItem));
 }
 
 static UA_INLINE UA_DeleteReferencesItem *
 UA_DeleteReferencesItem_new(void) {
-    return (UA_DeleteReferencesItem*)UA_new(&UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
+return (UA_DeleteReferencesItem*)UA_new(&UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteReferencesItem_copy(const UA_DeleteReferencesItem *src, UA_DeleteReferencesItem *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
 }
 
 static UA_INLINE void
 UA_DeleteReferencesItem_deleteMembers(UA_DeleteReferencesItem *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
 }
 
 static UA_INLINE void
 UA_DeleteReferencesItem_delete(UA_DeleteReferencesItem *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESITEM]);
 }
 
 /* WriteValue */
 static UA_INLINE void
 UA_WriteValue_init(UA_WriteValue *p) {
-    memset(p, 0, sizeof(UA_WriteValue));
+memset(p, 0, sizeof(UA_WriteValue));
 }
 
 static UA_INLINE UA_WriteValue *
 UA_WriteValue_new(void) {
-    return (UA_WriteValue*)UA_new(&UA_TYPES[UA_TYPES_WRITEVALUE]);
+return (UA_WriteValue*)UA_new(&UA_TYPES[UA_TYPES_WRITEVALUE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_WriteValue_copy(const UA_WriteValue *src, UA_WriteValue *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_WRITEVALUE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_WRITEVALUE]);
 }
 
 static UA_INLINE void
 UA_WriteValue_deleteMembers(UA_WriteValue *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_WRITEVALUE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_WRITEVALUE]);
 }
 
 static UA_INLINE void
 UA_WriteValue_delete(UA_WriteValue *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_WRITEVALUE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_WRITEVALUE]);
 }
 
 /* NodeAttributesMask */
 static UA_INLINE void
 UA_NodeAttributesMask_init(UA_NodeAttributesMask *p) {
-    memset(p, 0, sizeof(UA_NodeAttributesMask));
+memset(p, 0, sizeof(UA_NodeAttributesMask));
 }
 
 static UA_INLINE UA_NodeAttributesMask *
 UA_NodeAttributesMask_new(void) {
-    return (UA_NodeAttributesMask*)UA_new(&UA_TYPES[UA_TYPES_NODEATTRIBUTESMASK]);
+return (UA_NodeAttributesMask*)UA_new(&UA_TYPES[UA_TYPES_NODEATTRIBUTESMASK]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NodeAttributesMask_copy(const UA_NodeAttributesMask *src, UA_NodeAttributesMask *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7522,24 +7522,24 @@ UA_NodeAttributesMask_deleteMembers(UA_NodeAttributesMask *p) { }
 
 static UA_INLINE void
 UA_NodeAttributesMask_delete(UA_NodeAttributesMask *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NODEATTRIBUTESMASK]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NODEATTRIBUTESMASK]);
 }
 
 /* MessageSecurityMode */
 static UA_INLINE void
 UA_MessageSecurityMode_init(UA_MessageSecurityMode *p) {
-    memset(p, 0, sizeof(UA_MessageSecurityMode));
+memset(p, 0, sizeof(UA_MessageSecurityMode));
 }
 
 static UA_INLINE UA_MessageSecurityMode *
 UA_MessageSecurityMode_new(void) {
-    return (UA_MessageSecurityMode*)UA_new(&UA_TYPES[UA_TYPES_MESSAGESECURITYMODE]);
+return (UA_MessageSecurityMode*)UA_new(&UA_TYPES[UA_TYPES_MESSAGESECURITYMODE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MessageSecurityMode_copy(const UA_MessageSecurityMode *src, UA_MessageSecurityMode *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7547,102 +7547,102 @@ UA_MessageSecurityMode_deleteMembers(UA_MessageSecurityMode *p) { }
 
 static UA_INLINE void
 UA_MessageSecurityMode_delete(UA_MessageSecurityMode *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MESSAGESECURITYMODE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MESSAGESECURITYMODE]);
 }
 
 /* MonitoringParameters */
 static UA_INLINE void
 UA_MonitoringParameters_init(UA_MonitoringParameters *p) {
-    memset(p, 0, sizeof(UA_MonitoringParameters));
+memset(p, 0, sizeof(UA_MonitoringParameters));
 }
 
 static UA_INLINE UA_MonitoringParameters *
 UA_MonitoringParameters_new(void) {
-    return (UA_MonitoringParameters*)UA_new(&UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
+return (UA_MonitoringParameters*)UA_new(&UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoringParameters_copy(const UA_MonitoringParameters *src, UA_MonitoringParameters *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
 }
 
 static UA_INLINE void
 UA_MonitoringParameters_deleteMembers(UA_MonitoringParameters *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
 }
 
 static UA_INLINE void
 UA_MonitoringParameters_delete(UA_MonitoringParameters *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITORINGPARAMETERS]);
 }
 
 /* ReferenceNode */
 static UA_INLINE void
 UA_ReferenceNode_init(UA_ReferenceNode *p) {
-    memset(p, 0, sizeof(UA_ReferenceNode));
+memset(p, 0, sizeof(UA_ReferenceNode));
 }
 
 static UA_INLINE UA_ReferenceNode *
 UA_ReferenceNode_new(void) {
-    return (UA_ReferenceNode*)UA_new(&UA_TYPES[UA_TYPES_REFERENCENODE]);
+return (UA_ReferenceNode*)UA_new(&UA_TYPES[UA_TYPES_REFERENCENODE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ReferenceNode_copy(const UA_ReferenceNode *src, UA_ReferenceNode *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REFERENCENODE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REFERENCENODE]);
 }
 
 static UA_INLINE void
 UA_ReferenceNode_deleteMembers(UA_ReferenceNode *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REFERENCENODE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REFERENCENODE]);
 }
 
 static UA_INLINE void
 UA_ReferenceNode_delete(UA_ReferenceNode *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REFERENCENODE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REFERENCENODE]);
 }
 
 /* Argument */
 static UA_INLINE void
 UA_Argument_init(UA_Argument *p) {
-    memset(p, 0, sizeof(UA_Argument));
+memset(p, 0, sizeof(UA_Argument));
 }
 
 static UA_INLINE UA_Argument *
 UA_Argument_new(void) {
-    return (UA_Argument*)UA_new(&UA_TYPES[UA_TYPES_ARGUMENT]);
+return (UA_Argument*)UA_new(&UA_TYPES[UA_TYPES_ARGUMENT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Argument_copy(const UA_Argument *src, UA_Argument *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ARGUMENT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ARGUMENT]);
 }
 
 static UA_INLINE void
 UA_Argument_deleteMembers(UA_Argument *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ARGUMENT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ARGUMENT]);
 }
 
 static UA_INLINE void
 UA_Argument_delete(UA_Argument *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ARGUMENT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ARGUMENT]);
 }
 
 /* ChannelSecurityToken */
 static UA_INLINE void
 UA_ChannelSecurityToken_init(UA_ChannelSecurityToken *p) {
-    memset(p, 0, sizeof(UA_ChannelSecurityToken));
+memset(p, 0, sizeof(UA_ChannelSecurityToken));
 }
 
 static UA_INLINE UA_ChannelSecurityToken *
 UA_ChannelSecurityToken_new(void) {
-    return (UA_ChannelSecurityToken*)UA_new(&UA_TYPES[UA_TYPES_CHANNELSECURITYTOKEN]);
+return (UA_ChannelSecurityToken*)UA_new(&UA_TYPES[UA_TYPES_CHANNELSECURITYTOKEN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ChannelSecurityToken_copy(const UA_ChannelSecurityToken *src, UA_ChannelSecurityToken *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7650,102 +7650,102 @@ UA_ChannelSecurityToken_deleteMembers(UA_ChannelSecurityToken *p) { }
 
 static UA_INLINE void
 UA_ChannelSecurityToken_delete(UA_ChannelSecurityToken *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CHANNELSECURITYTOKEN]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CHANNELSECURITYTOKEN]);
 }
 
 /* UserIdentityToken */
 static UA_INLINE void
 UA_UserIdentityToken_init(UA_UserIdentityToken *p) {
-    memset(p, 0, sizeof(UA_UserIdentityToken));
+memset(p, 0, sizeof(UA_UserIdentityToken));
 }
 
 static UA_INLINE UA_UserIdentityToken *
 UA_UserIdentityToken_new(void) {
-    return (UA_UserIdentityToken*)UA_new(&UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
+return (UA_UserIdentityToken*)UA_new(&UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UserIdentityToken_copy(const UA_UserIdentityToken *src, UA_UserIdentityToken *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
 }
 
 static UA_INLINE void
 UA_UserIdentityToken_deleteMembers(UA_UserIdentityToken *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
 }
 
 static UA_INLINE void
 UA_UserIdentityToken_delete(UA_UserIdentityToken *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
+UA_delete(p, &UA_TYPES[UA_TYPES_USERIDENTITYTOKEN]);
 }
 
 /* SignatureData */
 static UA_INLINE void
 UA_SignatureData_init(UA_SignatureData *p) {
-    memset(p, 0, sizeof(UA_SignatureData));
+memset(p, 0, sizeof(UA_SignatureData));
 }
 
 static UA_INLINE UA_SignatureData *
 UA_SignatureData_new(void) {
-    return (UA_SignatureData*)UA_new(&UA_TYPES[UA_TYPES_SIGNATUREDATA]);
+return (UA_SignatureData*)UA_new(&UA_TYPES[UA_TYPES_SIGNATUREDATA]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SignatureData_copy(const UA_SignatureData *src, UA_SignatureData *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SIGNATUREDATA]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SIGNATUREDATA]);
 }
 
 static UA_INLINE void
 UA_SignatureData_deleteMembers(UA_SignatureData *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SIGNATUREDATA]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SIGNATUREDATA]);
 }
 
 static UA_INLINE void
 UA_SignatureData_delete(UA_SignatureData *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SIGNATUREDATA]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SIGNATUREDATA]);
 }
 
 /* ObjectTypeAttributes */
 static UA_INLINE void
 UA_ObjectTypeAttributes_init(UA_ObjectTypeAttributes *p) {
-    memset(p, 0, sizeof(UA_ObjectTypeAttributes));
+memset(p, 0, sizeof(UA_ObjectTypeAttributes));
 }
 
 static UA_INLINE UA_ObjectTypeAttributes *
 UA_ObjectTypeAttributes_new(void) {
-    return (UA_ObjectTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
+return (UA_ObjectTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ObjectTypeAttributes_copy(const UA_ObjectTypeAttributes *src, UA_ObjectTypeAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ObjectTypeAttributes_deleteMembers(UA_ObjectTypeAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ObjectTypeAttributes_delete(UA_ObjectTypeAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES]);
 }
 
 /* DeadbandType */
 static UA_INLINE void
 UA_DeadbandType_init(UA_DeadbandType *p) {
-    memset(p, 0, sizeof(UA_DeadbandType));
+memset(p, 0, sizeof(UA_DeadbandType));
 }
 
 static UA_INLINE UA_DeadbandType *
 UA_DeadbandType_new(void) {
-    return (UA_DeadbandType*)UA_new(&UA_TYPES[UA_TYPES_DEADBANDTYPE]);
+return (UA_DeadbandType*)UA_new(&UA_TYPES[UA_TYPES_DEADBANDTYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeadbandType_copy(const UA_DeadbandType *src, UA_DeadbandType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7753,24 +7753,24 @@ UA_DeadbandType_deleteMembers(UA_DeadbandType *p) { }
 
 static UA_INLINE void
 UA_DeadbandType_delete(UA_DeadbandType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DEADBANDTYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DEADBANDTYPE]);
 }
 
 /* SecurityTokenRequestType */
 static UA_INLINE void
 UA_SecurityTokenRequestType_init(UA_SecurityTokenRequestType *p) {
-    memset(p, 0, sizeof(UA_SecurityTokenRequestType));
+memset(p, 0, sizeof(UA_SecurityTokenRequestType));
 }
 
 static UA_INLINE UA_SecurityTokenRequestType *
 UA_SecurityTokenRequestType_new(void) {
-    return (UA_SecurityTokenRequestType*)UA_new(&UA_TYPES[UA_TYPES_SECURITYTOKENREQUESTTYPE]);
+return (UA_SecurityTokenRequestType*)UA_new(&UA_TYPES[UA_TYPES_SECURITYTOKENREQUESTTYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SecurityTokenRequestType_copy(const UA_SecurityTokenRequestType *src, UA_SecurityTokenRequestType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7778,50 +7778,50 @@ UA_SecurityTokenRequestType_deleteMembers(UA_SecurityTokenRequestType *p) { }
 
 static UA_INLINE void
 UA_SecurityTokenRequestType_delete(UA_SecurityTokenRequestType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SECURITYTOKENREQUESTTYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SECURITYTOKENREQUESTTYPE]);
 }
 
 /* NodeAttributes */
 static UA_INLINE void
 UA_NodeAttributes_init(UA_NodeAttributes *p) {
-    memset(p, 0, sizeof(UA_NodeAttributes));
+memset(p, 0, sizeof(UA_NodeAttributes));
 }
 
 static UA_INLINE UA_NodeAttributes *
 UA_NodeAttributes_new(void) {
-    return (UA_NodeAttributes*)UA_new(&UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
+return (UA_NodeAttributes*)UA_new(&UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NodeAttributes_copy(const UA_NodeAttributes *src, UA_NodeAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_NodeAttributes_deleteMembers(UA_NodeAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_NodeAttributes_delete(UA_NodeAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NODEATTRIBUTES]);
 }
 
 /* DataChangeTrigger */
 static UA_INLINE void
 UA_DataChangeTrigger_init(UA_DataChangeTrigger *p) {
-    memset(p, 0, sizeof(UA_DataChangeTrigger));
+memset(p, 0, sizeof(UA_DataChangeTrigger));
 }
 
 static UA_INLINE UA_DataChangeTrigger *
 UA_DataChangeTrigger_new(void) {
-    return (UA_DataChangeTrigger*)UA_new(&UA_TYPES[UA_TYPES_DATACHANGETRIGGER]);
+return (UA_DataChangeTrigger*)UA_new(&UA_TYPES[UA_TYPES_DATACHANGETRIGGER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DataChangeTrigger_copy(const UA_DataChangeTrigger *src, UA_DataChangeTrigger *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7829,50 +7829,50 @@ UA_DataChangeTrigger_deleteMembers(UA_DataChangeTrigger *p) { }
 
 static UA_INLINE void
 UA_DataChangeTrigger_delete(UA_DataChangeTrigger *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DATACHANGETRIGGER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DATACHANGETRIGGER]);
 }
 
 /* BuildInfo */
 static UA_INLINE void
 UA_BuildInfo_init(UA_BuildInfo *p) {
-    memset(p, 0, sizeof(UA_BuildInfo));
+memset(p, 0, sizeof(UA_BuildInfo));
 }
 
 static UA_INLINE UA_BuildInfo *
 UA_BuildInfo_new(void) {
-    return (UA_BuildInfo*)UA_new(&UA_TYPES[UA_TYPES_BUILDINFO]);
+return (UA_BuildInfo*)UA_new(&UA_TYPES[UA_TYPES_BUILDINFO]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BuildInfo_copy(const UA_BuildInfo *src, UA_BuildInfo *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BUILDINFO]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BUILDINFO]);
 }
 
 static UA_INLINE void
 UA_BuildInfo_deleteMembers(UA_BuildInfo *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BUILDINFO]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BUILDINFO]);
 }
 
 static UA_INLINE void
 UA_BuildInfo_delete(UA_BuildInfo *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BUILDINFO]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BUILDINFO]);
 }
 
 /* NodeClass */
 static UA_INLINE void
 UA_NodeClass_init(UA_NodeClass *p) {
-    memset(p, 0, sizeof(UA_NodeClass));
+memset(p, 0, sizeof(UA_NodeClass));
 }
 
 static UA_INLINE UA_NodeClass *
 UA_NodeClass_new(void) {
-    return (UA_NodeClass*)UA_new(&UA_TYPES[UA_TYPES_NODECLASS]);
+return (UA_NodeClass*)UA_new(&UA_TYPES[UA_TYPES_NODECLASS]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NodeClass_copy(const UA_NodeClass *src, UA_NodeClass *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7880,50 +7880,50 @@ UA_NodeClass_deleteMembers(UA_NodeClass *p) { }
 
 static UA_INLINE void
 UA_NodeClass_delete(UA_NodeClass *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NODECLASS]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NODECLASS]);
 }
 
 /* SubscriptionDiagnosticsDataType */
 static UA_INLINE void
 UA_SubscriptionDiagnosticsDataType_init(UA_SubscriptionDiagnosticsDataType *p) {
-    memset(p, 0, sizeof(UA_SubscriptionDiagnosticsDataType));
+memset(p, 0, sizeof(UA_SubscriptionDiagnosticsDataType));
 }
 
 static UA_INLINE UA_SubscriptionDiagnosticsDataType *
 UA_SubscriptionDiagnosticsDataType_new(void) {
-    return (UA_SubscriptionDiagnosticsDataType*)UA_new(&UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
+return (UA_SubscriptionDiagnosticsDataType*)UA_new(&UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SubscriptionDiagnosticsDataType_copy(const UA_SubscriptionDiagnosticsDataType *src, UA_SubscriptionDiagnosticsDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SubscriptionDiagnosticsDataType_deleteMembers(UA_SubscriptionDiagnosticsDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SubscriptionDiagnosticsDataType_delete(UA_SubscriptionDiagnosticsDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SUBSCRIPTIONDIAGNOSTICSDATATYPE]);
 }
 
 /* FilterOperand */
 static UA_INLINE void
 UA_FilterOperand_init(UA_FilterOperand *p) {
-    memset(p, 0, sizeof(UA_FilterOperand));
+memset(p, 0, sizeof(UA_FilterOperand));
 }
 
 static UA_INLINE UA_FilterOperand *
 UA_FilterOperand_new(void) {
-    return (UA_FilterOperand*)UA_new(&UA_TYPES[UA_TYPES_FILTEROPERAND]);
+return (UA_FilterOperand*)UA_new(&UA_TYPES[UA_TYPES_FILTEROPERAND]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_FilterOperand_copy(const UA_FilterOperand *src, UA_FilterOperand *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -7931,102 +7931,102 @@ UA_FilterOperand_deleteMembers(UA_FilterOperand *p) { }
 
 static UA_INLINE void
 UA_FilterOperand_delete(UA_FilterOperand *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FILTEROPERAND]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FILTEROPERAND]);
 }
 
 /* MonitoredItemNotification */
 static UA_INLINE void
 UA_MonitoredItemNotification_init(UA_MonitoredItemNotification *p) {
-    memset(p, 0, sizeof(UA_MonitoredItemNotification));
+memset(p, 0, sizeof(UA_MonitoredItemNotification));
 }
 
 static UA_INLINE UA_MonitoredItemNotification *
 UA_MonitoredItemNotification_new(void) {
-    return (UA_MonitoredItemNotification*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
+return (UA_MonitoredItemNotification*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoredItemNotification_copy(const UA_MonitoredItemNotification *src, UA_MonitoredItemNotification *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemNotification_deleteMembers(UA_MonitoredItemNotification *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemNotification_delete(UA_MonitoredItemNotification *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMNOTIFICATION]);
 }
 
 /* DeleteNodesItem */
 static UA_INLINE void
 UA_DeleteNodesItem_init(UA_DeleteNodesItem *p) {
-    memset(p, 0, sizeof(UA_DeleteNodesItem));
+memset(p, 0, sizeof(UA_DeleteNodesItem));
 }
 
 static UA_INLINE UA_DeleteNodesItem *
 UA_DeleteNodesItem_new(void) {
-    return (UA_DeleteNodesItem*)UA_new(&UA_TYPES[UA_TYPES_DELETENODESITEM]);
+return (UA_DeleteNodesItem*)UA_new(&UA_TYPES[UA_TYPES_DELETENODESITEM]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteNodesItem_copy(const UA_DeleteNodesItem *src, UA_DeleteNodesItem *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETENODESITEM]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETENODESITEM]);
 }
 
 static UA_INLINE void
 UA_DeleteNodesItem_deleteMembers(UA_DeleteNodesItem *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETENODESITEM]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETENODESITEM]);
 }
 
 static UA_INLINE void
 UA_DeleteNodesItem_delete(UA_DeleteNodesItem *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETENODESITEM]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETENODESITEM]);
 }
 
 /* DeleteSubscriptionsRequest */
 static UA_INLINE void
 UA_DeleteSubscriptionsRequest_init(UA_DeleteSubscriptionsRequest *p) {
-    memset(p, 0, sizeof(UA_DeleteSubscriptionsRequest));
+memset(p, 0, sizeof(UA_DeleteSubscriptionsRequest));
 }
 
 static UA_INLINE UA_DeleteSubscriptionsRequest *
 UA_DeleteSubscriptionsRequest_new(void) {
-    return (UA_DeleteSubscriptionsRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
+return (UA_DeleteSubscriptionsRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteSubscriptionsRequest_copy(const UA_DeleteSubscriptionsRequest *src, UA_DeleteSubscriptionsRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteSubscriptionsRequest_deleteMembers(UA_DeleteSubscriptionsRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteSubscriptionsRequest_delete(UA_DeleteSubscriptionsRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSREQUEST]);
 }
 
 /* SubscriptionAcknowledgement */
 static UA_INLINE void
 UA_SubscriptionAcknowledgement_init(UA_SubscriptionAcknowledgement *p) {
-    memset(p, 0, sizeof(UA_SubscriptionAcknowledgement));
+memset(p, 0, sizeof(UA_SubscriptionAcknowledgement));
 }
 
 static UA_INLINE UA_SubscriptionAcknowledgement *
 UA_SubscriptionAcknowledgement_new(void) {
-    return (UA_SubscriptionAcknowledgement*)UA_new(&UA_TYPES[UA_TYPES_SUBSCRIPTIONACKNOWLEDGEMENT]);
+return (UA_SubscriptionAcknowledgement*)UA_new(&UA_TYPES[UA_TYPES_SUBSCRIPTIONACKNOWLEDGEMENT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SubscriptionAcknowledgement_copy(const UA_SubscriptionAcknowledgement *src, UA_SubscriptionAcknowledgement *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8034,284 +8034,284 @@ UA_SubscriptionAcknowledgement_deleteMembers(UA_SubscriptionAcknowledgement *p) 
 
 static UA_INLINE void
 UA_SubscriptionAcknowledgement_delete(UA_SubscriptionAcknowledgement *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SUBSCRIPTIONACKNOWLEDGEMENT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SUBSCRIPTIONACKNOWLEDGEMENT]);
 }
 
 /* ReadValueId */
 static UA_INLINE void
 UA_ReadValueId_init(UA_ReadValueId *p) {
-    memset(p, 0, sizeof(UA_ReadValueId));
+memset(p, 0, sizeof(UA_ReadValueId));
 }
 
 static UA_INLINE UA_ReadValueId *
 UA_ReadValueId_new(void) {
-    return (UA_ReadValueId*)UA_new(&UA_TYPES[UA_TYPES_READVALUEID]);
+return (UA_ReadValueId*)UA_new(&UA_TYPES[UA_TYPES_READVALUEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ReadValueId_copy(const UA_ReadValueId *src, UA_ReadValueId *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_READVALUEID]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_READVALUEID]);
 }
 
 static UA_INLINE void
 UA_ReadValueId_deleteMembers(UA_ReadValueId *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_READVALUEID]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_READVALUEID]);
 }
 
 static UA_INLINE void
 UA_ReadValueId_delete(UA_ReadValueId *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_READVALUEID]);
+UA_delete(p, &UA_TYPES[UA_TYPES_READVALUEID]);
 }
 
 /* DataTypeAttributes */
 static UA_INLINE void
 UA_DataTypeAttributes_init(UA_DataTypeAttributes *p) {
-    memset(p, 0, sizeof(UA_DataTypeAttributes));
+memset(p, 0, sizeof(UA_DataTypeAttributes));
 }
 
 static UA_INLINE UA_DataTypeAttributes *
 UA_DataTypeAttributes_new(void) {
-    return (UA_DataTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
+return (UA_DataTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DataTypeAttributes_copy(const UA_DataTypeAttributes *src, UA_DataTypeAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_DataTypeAttributes_deleteMembers(UA_DataTypeAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_DataTypeAttributes_delete(UA_DataTypeAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES]);
 }
 
 /* ResponseHeader */
 static UA_INLINE void
 UA_ResponseHeader_init(UA_ResponseHeader *p) {
-    memset(p, 0, sizeof(UA_ResponseHeader));
+memset(p, 0, sizeof(UA_ResponseHeader));
 }
 
 static UA_INLINE UA_ResponseHeader *
 UA_ResponseHeader_new(void) {
-    return (UA_ResponseHeader*)UA_new(&UA_TYPES[UA_TYPES_RESPONSEHEADER]);
+return (UA_ResponseHeader*)UA_new(&UA_TYPES[UA_TYPES_RESPONSEHEADER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ResponseHeader_copy(const UA_ResponseHeader *src, UA_ResponseHeader *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_RESPONSEHEADER]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_RESPONSEHEADER]);
 }
 
 static UA_INLINE void
 UA_ResponseHeader_deleteMembers(UA_ResponseHeader *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_RESPONSEHEADER]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_RESPONSEHEADER]);
 }
 
 static UA_INLINE void
 UA_ResponseHeader_delete(UA_ResponseHeader *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_RESPONSEHEADER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_RESPONSEHEADER]);
 }
 
 /* DeleteMonitoredItemsRequest */
 static UA_INLINE void
 UA_DeleteMonitoredItemsRequest_init(UA_DeleteMonitoredItemsRequest *p) {
-    memset(p, 0, sizeof(UA_DeleteMonitoredItemsRequest));
+memset(p, 0, sizeof(UA_DeleteMonitoredItemsRequest));
 }
 
 static UA_INLINE UA_DeleteMonitoredItemsRequest *
 UA_DeleteMonitoredItemsRequest_new(void) {
-    return (UA_DeleteMonitoredItemsRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
+return (UA_DeleteMonitoredItemsRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteMonitoredItemsRequest_copy(const UA_DeleteMonitoredItemsRequest *src, UA_DeleteMonitoredItemsRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteMonitoredItemsRequest_deleteMembers(UA_DeleteMonitoredItemsRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteMonitoredItemsRequest_delete(UA_DeleteMonitoredItemsRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSREQUEST]);
 }
 
 /* ViewDescription */
 static UA_INLINE void
 UA_ViewDescription_init(UA_ViewDescription *p) {
-    memset(p, 0, sizeof(UA_ViewDescription));
+memset(p, 0, sizeof(UA_ViewDescription));
 }
 
 static UA_INLINE UA_ViewDescription *
 UA_ViewDescription_new(void) {
-    return (UA_ViewDescription*)UA_new(&UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
+return (UA_ViewDescription*)UA_new(&UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ViewDescription_copy(const UA_ViewDescription *src, UA_ViewDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_ViewDescription_deleteMembers(UA_ViewDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_ViewDescription_delete(UA_ViewDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_VIEWDESCRIPTION]);
 }
 
 /* ServerOnNetwork */
 static UA_INLINE void
 UA_ServerOnNetwork_init(UA_ServerOnNetwork *p) {
-    memset(p, 0, sizeof(UA_ServerOnNetwork));
+memset(p, 0, sizeof(UA_ServerOnNetwork));
 }
 
 static UA_INLINE UA_ServerOnNetwork *
 UA_ServerOnNetwork_new(void) {
-    return (UA_ServerOnNetwork*)UA_new(&UA_TYPES[UA_TYPES_SERVERONNETWORK]);
+return (UA_ServerOnNetwork*)UA_new(&UA_TYPES[UA_TYPES_SERVERONNETWORK]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ServerOnNetwork_copy(const UA_ServerOnNetwork *src, UA_ServerOnNetwork *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SERVERONNETWORK]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SERVERONNETWORK]);
 }
 
 static UA_INLINE void
 UA_ServerOnNetwork_deleteMembers(UA_ServerOnNetwork *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SERVERONNETWORK]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SERVERONNETWORK]);
 }
 
 static UA_INLINE void
 UA_ServerOnNetwork_delete(UA_ServerOnNetwork *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SERVERONNETWORK]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SERVERONNETWORK]);
 }
 
 /* DeleteMonitoredItemsResponse */
 static UA_INLINE void
 UA_DeleteMonitoredItemsResponse_init(UA_DeleteMonitoredItemsResponse *p) {
-    memset(p, 0, sizeof(UA_DeleteMonitoredItemsResponse));
+memset(p, 0, sizeof(UA_DeleteMonitoredItemsResponse));
 }
 
 static UA_INLINE UA_DeleteMonitoredItemsResponse *
 UA_DeleteMonitoredItemsResponse_new(void) {
-    return (UA_DeleteMonitoredItemsResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
+return (UA_DeleteMonitoredItemsResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteMonitoredItemsResponse_copy(const UA_DeleteMonitoredItemsResponse *src, UA_DeleteMonitoredItemsResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteMonitoredItemsResponse_deleteMembers(UA_DeleteMonitoredItemsResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteMonitoredItemsResponse_delete(UA_DeleteMonitoredItemsResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETEMONITOREDITEMSRESPONSE]);
 }
 
 /* FindServersOnNetworkResponse */
 static UA_INLINE void
 UA_FindServersOnNetworkResponse_init(UA_FindServersOnNetworkResponse *p) {
-    memset(p, 0, sizeof(UA_FindServersOnNetworkResponse));
+memset(p, 0, sizeof(UA_FindServersOnNetworkResponse));
 }
 
 static UA_INLINE UA_FindServersOnNetworkResponse *
 UA_FindServersOnNetworkResponse_new(void) {
-    return (UA_FindServersOnNetworkResponse*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
+return (UA_FindServersOnNetworkResponse*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_FindServersOnNetworkResponse_copy(const UA_FindServersOnNetworkResponse *src, UA_FindServersOnNetworkResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
 }
 
 static UA_INLINE void
 UA_FindServersOnNetworkResponse_deleteMembers(UA_FindServersOnNetworkResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
 }
 
 static UA_INLINE void
 UA_FindServersOnNetworkResponse_delete(UA_FindServersOnNetworkResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSONNETWORKRESPONSE]);
 }
 
 /* RelativePath */
 static UA_INLINE void
 UA_RelativePath_init(UA_RelativePath *p) {
-    memset(p, 0, sizeof(UA_RelativePath));
+memset(p, 0, sizeof(UA_RelativePath));
 }
 
 static UA_INLINE UA_RelativePath *
 UA_RelativePath_new(void) {
-    return (UA_RelativePath*)UA_new(&UA_TYPES[UA_TYPES_RELATIVEPATH]);
+return (UA_RelativePath*)UA_new(&UA_TYPES[UA_TYPES_RELATIVEPATH]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RelativePath_copy(const UA_RelativePath *src, UA_RelativePath *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_RELATIVEPATH]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_RELATIVEPATH]);
 }
 
 static UA_INLINE void
 UA_RelativePath_deleteMembers(UA_RelativePath *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_RELATIVEPATH]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_RELATIVEPATH]);
 }
 
 static UA_INLINE void
 UA_RelativePath_delete(UA_RelativePath *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_RELATIVEPATH]);
+UA_delete(p, &UA_TYPES[UA_TYPES_RELATIVEPATH]);
 }
 
 /* RegisterNodesRequest */
 static UA_INLINE void
 UA_RegisterNodesRequest_init(UA_RegisterNodesRequest *p) {
-    memset(p, 0, sizeof(UA_RegisterNodesRequest));
+memset(p, 0, sizeof(UA_RegisterNodesRequest));
 }
 
 static UA_INLINE UA_RegisterNodesRequest *
 UA_RegisterNodesRequest_new(void) {
-    return (UA_RegisterNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
+return (UA_RegisterNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisterNodesRequest_copy(const UA_RegisterNodesRequest *src, UA_RegisterNodesRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_RegisterNodesRequest_deleteMembers(UA_RegisterNodesRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_RegisterNodesRequest_delete(UA_RegisterNodesRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST]);
 }
 
 /* AggregateConfiguration */
 static UA_INLINE void
 UA_AggregateConfiguration_init(UA_AggregateConfiguration *p) {
-    memset(p, 0, sizeof(UA_AggregateConfiguration));
+memset(p, 0, sizeof(UA_AggregateConfiguration));
 }
 
 static UA_INLINE UA_AggregateConfiguration *
 UA_AggregateConfiguration_new(void) {
-    return (UA_AggregateConfiguration*)UA_new(&UA_TYPES[UA_TYPES_AGGREGATECONFIGURATION]);
+return (UA_AggregateConfiguration*)UA_new(&UA_TYPES[UA_TYPES_AGGREGATECONFIGURATION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AggregateConfiguration_copy(const UA_AggregateConfiguration *src, UA_AggregateConfiguration *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8319,102 +8319,102 @@ UA_AggregateConfiguration_deleteMembers(UA_AggregateConfiguration *p) { }
 
 static UA_INLINE void
 UA_AggregateConfiguration_delete(UA_AggregateConfiguration *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_AGGREGATECONFIGURATION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_AGGREGATECONFIGURATION]);
 }
 
 /* DeleteNodesRequest */
 static UA_INLINE void
 UA_DeleteNodesRequest_init(UA_DeleteNodesRequest *p) {
-    memset(p, 0, sizeof(UA_DeleteNodesRequest));
+memset(p, 0, sizeof(UA_DeleteNodesRequest));
 }
 
 static UA_INLINE UA_DeleteNodesRequest *
 UA_DeleteNodesRequest_new(void) {
-    return (UA_DeleteNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
+return (UA_DeleteNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteNodesRequest_copy(const UA_DeleteNodesRequest *src, UA_DeleteNodesRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteNodesRequest_deleteMembers(UA_DeleteNodesRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteNodesRequest_delete(UA_DeleteNodesRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETENODESREQUEST]);
 }
 
 /* PublishResponse */
 static UA_INLINE void
 UA_PublishResponse_init(UA_PublishResponse *p) {
-    memset(p, 0, sizeof(UA_PublishResponse));
+memset(p, 0, sizeof(UA_PublishResponse));
 }
 
 static UA_INLINE UA_PublishResponse *
 UA_PublishResponse_new(void) {
-    return (UA_PublishResponse*)UA_new(&UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
+return (UA_PublishResponse*)UA_new(&UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_PublishResponse_copy(const UA_PublishResponse *src, UA_PublishResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
 }
 
 static UA_INLINE void
 UA_PublishResponse_deleteMembers(UA_PublishResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
 }
 
 static UA_INLINE void
 UA_PublishResponse_delete(UA_PublishResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_PUBLISHRESPONSE]);
 }
 
 /* MonitoredItemModifyRequest */
 static UA_INLINE void
 UA_MonitoredItemModifyRequest_init(UA_MonitoredItemModifyRequest *p) {
-    memset(p, 0, sizeof(UA_MonitoredItemModifyRequest));
+memset(p, 0, sizeof(UA_MonitoredItemModifyRequest));
 }
 
 static UA_INLINE UA_MonitoredItemModifyRequest *
 UA_MonitoredItemModifyRequest_new(void) {
-    return (UA_MonitoredItemModifyRequest*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
+return (UA_MonitoredItemModifyRequest*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoredItemModifyRequest_copy(const UA_MonitoredItemModifyRequest *src, UA_MonitoredItemModifyRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemModifyRequest_deleteMembers(UA_MonitoredItemModifyRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemModifyRequest_delete(UA_MonitoredItemModifyRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMMODIFYREQUEST]);
 }
 
 /* ServiceCounterDataType */
 static UA_INLINE void
 UA_ServiceCounterDataType_init(UA_ServiceCounterDataType *p) {
-    memset(p, 0, sizeof(UA_ServiceCounterDataType));
+memset(p, 0, sizeof(UA_ServiceCounterDataType));
 }
 
 static UA_INLINE UA_ServiceCounterDataType *
 UA_ServiceCounterDataType_new(void) {
-    return (UA_ServiceCounterDataType*)UA_new(&UA_TYPES[UA_TYPES_SERVICECOUNTERDATATYPE]);
+return (UA_ServiceCounterDataType*)UA_new(&UA_TYPES[UA_TYPES_SERVICECOUNTERDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ServiceCounterDataType_copy(const UA_ServiceCounterDataType *src, UA_ServiceCounterDataType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8422,76 +8422,76 @@ UA_ServiceCounterDataType_deleteMembers(UA_ServiceCounterDataType *p) { }
 
 static UA_INLINE void
 UA_ServiceCounterDataType_delete(UA_ServiceCounterDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SERVICECOUNTERDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SERVICECOUNTERDATATYPE]);
 }
 
 /* ModelChangeStructureDataType */
 static UA_INLINE void
 UA_ModelChangeStructureDataType_init(UA_ModelChangeStructureDataType *p) {
-    memset(p, 0, sizeof(UA_ModelChangeStructureDataType));
+memset(p, 0, sizeof(UA_ModelChangeStructureDataType));
 }
 
 static UA_INLINE UA_ModelChangeStructureDataType *
 UA_ModelChangeStructureDataType_new(void) {
-    return (UA_ModelChangeStructureDataType*)UA_new(&UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
+return (UA_ModelChangeStructureDataType*)UA_new(&UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ModelChangeStructureDataType_copy(const UA_ModelChangeStructureDataType *src, UA_ModelChangeStructureDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
 }
 
 static UA_INLINE void
 UA_ModelChangeStructureDataType_deleteMembers(UA_ModelChangeStructureDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
 }
 
 static UA_INLINE void
 UA_ModelChangeStructureDataType_delete(UA_ModelChangeStructureDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MODELCHANGESTRUCTUREDATATYPE]);
 }
 
 /* UserNameIdentityToken */
 static UA_INLINE void
 UA_UserNameIdentityToken_init(UA_UserNameIdentityToken *p) {
-    memset(p, 0, sizeof(UA_UserNameIdentityToken));
+memset(p, 0, sizeof(UA_UserNameIdentityToken));
 }
 
 static UA_INLINE UA_UserNameIdentityToken *
 UA_UserNameIdentityToken_new(void) {
-    return (UA_UserNameIdentityToken*)UA_new(&UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
+return (UA_UserNameIdentityToken*)UA_new(&UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UserNameIdentityToken_copy(const UA_UserNameIdentityToken *src, UA_UserNameIdentityToken *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
 }
 
 static UA_INLINE void
 UA_UserNameIdentityToken_deleteMembers(UA_UserNameIdentityToken *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
 }
 
 static UA_INLINE void
 UA_UserNameIdentityToken_delete(UA_UserNameIdentityToken *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
+UA_delete(p, &UA_TYPES[UA_TYPES_USERNAMEIDENTITYTOKEN]);
 }
 
 /* IdType */
 static UA_INLINE void
 UA_IdType_init(UA_IdType *p) {
-    memset(p, 0, sizeof(UA_IdType));
+memset(p, 0, sizeof(UA_IdType));
 }
 
 static UA_INLINE UA_IdType *
 UA_IdType_new(void) {
-    return (UA_IdType*)UA_new(&UA_TYPES[UA_TYPES_IDTYPE]);
+return (UA_IdType*)UA_new(&UA_TYPES[UA_TYPES_IDTYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_IdType_copy(const UA_IdType *src, UA_IdType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8499,24 +8499,24 @@ UA_IdType_deleteMembers(UA_IdType *p) { }
 
 static UA_INLINE void
 UA_IdType_delete(UA_IdType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_IDTYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_IDTYPE]);
 }
 
 /* UserTokenType */
 static UA_INLINE void
 UA_UserTokenType_init(UA_UserTokenType *p) {
-    memset(p, 0, sizeof(UA_UserTokenType));
+memset(p, 0, sizeof(UA_UserTokenType));
 }
 
 static UA_INLINE UA_UserTokenType *
 UA_UserTokenType_new(void) {
-    return (UA_UserTokenType*)UA_new(&UA_TYPES[UA_TYPES_USERTOKENTYPE]);
+return (UA_UserTokenType*)UA_new(&UA_TYPES[UA_TYPES_USERTOKENTYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UserTokenType_copy(const UA_UserTokenType *src, UA_UserTokenType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8524,50 +8524,50 @@ UA_UserTokenType_deleteMembers(UA_UserTokenType *p) { }
 
 static UA_INLINE void
 UA_UserTokenType_delete(UA_UserTokenType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_USERTOKENTYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_USERTOKENTYPE]);
 }
 
 /* SetTriggeringResponse */
 static UA_INLINE void
 UA_SetTriggeringResponse_init(UA_SetTriggeringResponse *p) {
-    memset(p, 0, sizeof(UA_SetTriggeringResponse));
+memset(p, 0, sizeof(UA_SetTriggeringResponse));
 }
 
 static UA_INLINE UA_SetTriggeringResponse *
 UA_SetTriggeringResponse_new(void) {
-    return (UA_SetTriggeringResponse*)UA_new(&UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
+return (UA_SetTriggeringResponse*)UA_new(&UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SetTriggeringResponse_copy(const UA_SetTriggeringResponse *src, UA_SetTriggeringResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
 }
 
 static UA_INLINE void
 UA_SetTriggeringResponse_deleteMembers(UA_SetTriggeringResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
 }
 
 static UA_INLINE void
 UA_SetTriggeringResponse_delete(UA_SetTriggeringResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
 }
 
 /* TimeZoneDataType */
 static UA_INLINE void
 UA_TimeZoneDataType_init(UA_TimeZoneDataType *p) {
-    memset(p, 0, sizeof(UA_TimeZoneDataType));
+memset(p, 0, sizeof(UA_TimeZoneDataType));
 }
 
 static UA_INLINE UA_TimeZoneDataType *
 UA_TimeZoneDataType_new(void) {
-    return (UA_TimeZoneDataType*)UA_new(&UA_TYPES[UA_TYPES_TIMEZONEDATATYPE]);
+return (UA_TimeZoneDataType*)UA_new(&UA_TYPES[UA_TYPES_TIMEZONEDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_TimeZoneDataType_copy(const UA_TimeZoneDataType *src, UA_TimeZoneDataType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8575,76 +8575,76 @@ UA_TimeZoneDataType_deleteMembers(UA_TimeZoneDataType *p) { }
 
 static UA_INLINE void
 UA_TimeZoneDataType_delete(UA_TimeZoneDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_TIMEZONEDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_TIMEZONEDATATYPE]);
 }
 
 /* ActivateSessionRequest */
 static UA_INLINE void
 UA_ActivateSessionRequest_init(UA_ActivateSessionRequest *p) {
-    memset(p, 0, sizeof(UA_ActivateSessionRequest));
+memset(p, 0, sizeof(UA_ActivateSessionRequest));
 }
 
 static UA_INLINE UA_ActivateSessionRequest *
 UA_ActivateSessionRequest_new(void) {
-    return (UA_ActivateSessionRequest*)UA_new(&UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
+return (UA_ActivateSessionRequest*)UA_new(&UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ActivateSessionRequest_copy(const UA_ActivateSessionRequest *src, UA_ActivateSessionRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_ActivateSessionRequest_deleteMembers(UA_ActivateSessionRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_ActivateSessionRequest_delete(UA_ActivateSessionRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONREQUEST]);
 }
 
 /* OpenSecureChannelResponse */
 static UA_INLINE void
 UA_OpenSecureChannelResponse_init(UA_OpenSecureChannelResponse *p) {
-    memset(p, 0, sizeof(UA_OpenSecureChannelResponse));
+memset(p, 0, sizeof(UA_OpenSecureChannelResponse));
 }
 
 static UA_INLINE UA_OpenSecureChannelResponse *
 UA_OpenSecureChannelResponse_new(void) {
-    return (UA_OpenSecureChannelResponse*)UA_new(&UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
+return (UA_OpenSecureChannelResponse*)UA_new(&UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_OpenSecureChannelResponse_copy(const UA_OpenSecureChannelResponse *src, UA_OpenSecureChannelResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
 }
 
 static UA_INLINE void
 UA_OpenSecureChannelResponse_deleteMembers(UA_OpenSecureChannelResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
 }
 
 static UA_INLINE void
 UA_OpenSecureChannelResponse_delete(UA_OpenSecureChannelResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELRESPONSE]);
 }
 
 /* ApplicationType */
 static UA_INLINE void
 UA_ApplicationType_init(UA_ApplicationType *p) {
-    memset(p, 0, sizeof(UA_ApplicationType));
+memset(p, 0, sizeof(UA_ApplicationType));
 }
 
 static UA_INLINE UA_ApplicationType *
 UA_ApplicationType_new(void) {
-    return (UA_ApplicationType*)UA_new(&UA_TYPES[UA_TYPES_APPLICATIONTYPE]);
+return (UA_ApplicationType*)UA_new(&UA_TYPES[UA_TYPES_APPLICATIONTYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ApplicationType_copy(const UA_ApplicationType *src, UA_ApplicationType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8652,24 +8652,24 @@ UA_ApplicationType_deleteMembers(UA_ApplicationType *p) { }
 
 static UA_INLINE void
 UA_ApplicationType_delete(UA_ApplicationType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_APPLICATIONTYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_APPLICATIONTYPE]);
 }
 
 /* ServerState */
 static UA_INLINE void
 UA_ServerState_init(UA_ServerState *p) {
-    memset(p, 0, sizeof(UA_ServerState));
+memset(p, 0, sizeof(UA_ServerState));
 }
 
 static UA_INLINE UA_ServerState *
 UA_ServerState_new(void) {
-    return (UA_ServerState*)UA_new(&UA_TYPES[UA_TYPES_SERVERSTATE]);
+return (UA_ServerState*)UA_new(&UA_TYPES[UA_TYPES_SERVERSTATE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ServerState_copy(const UA_ServerState *src, UA_ServerState *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8677,50 +8677,50 @@ UA_ServerState_deleteMembers(UA_ServerState *p) { }
 
 static UA_INLINE void
 UA_ServerState_delete(UA_ServerState *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SERVERSTATE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SERVERSTATE]);
 }
 
 /* QueryNextResponse */
 static UA_INLINE void
 UA_QueryNextResponse_init(UA_QueryNextResponse *p) {
-    memset(p, 0, sizeof(UA_QueryNextResponse));
+memset(p, 0, sizeof(UA_QueryNextResponse));
 }
 
 static UA_INLINE UA_QueryNextResponse *
 UA_QueryNextResponse_new(void) {
-    return (UA_QueryNextResponse*)UA_new(&UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
+return (UA_QueryNextResponse*)UA_new(&UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QueryNextResponse_copy(const UA_QueryNextResponse *src, UA_QueryNextResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
 }
 
 static UA_INLINE void
 UA_QueryNextResponse_deleteMembers(UA_QueryNextResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
 }
 
 static UA_INLINE void
 UA_QueryNextResponse_delete(UA_QueryNextResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUERYNEXTRESPONSE]);
 }
 
 /* DiscoveryConfiguration */
 static UA_INLINE void
 UA_DiscoveryConfiguration_init(UA_DiscoveryConfiguration *p) {
-    memset(p, 0, sizeof(UA_DiscoveryConfiguration));
+memset(p, 0, sizeof(UA_DiscoveryConfiguration));
 }
 
 static UA_INLINE UA_DiscoveryConfiguration *
 UA_DiscoveryConfiguration_new(void) {
-    return (UA_DiscoveryConfiguration*)UA_new(&UA_TYPES[UA_TYPES_DISCOVERYCONFIGURATION]);
+return (UA_DiscoveryConfiguration*)UA_new(&UA_TYPES[UA_TYPES_DISCOVERYCONFIGURATION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DiscoveryConfiguration_copy(const UA_DiscoveryConfiguration *src, UA_DiscoveryConfiguration *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8728,76 +8728,76 @@ UA_DiscoveryConfiguration_deleteMembers(UA_DiscoveryConfiguration *p) { }
 
 static UA_INLINE void
 UA_DiscoveryConfiguration_delete(UA_DiscoveryConfiguration *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DISCOVERYCONFIGURATION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DISCOVERYCONFIGURATION]);
 }
 
 /* ActivateSessionResponse */
 static UA_INLINE void
 UA_ActivateSessionResponse_init(UA_ActivateSessionResponse *p) {
-    memset(p, 0, sizeof(UA_ActivateSessionResponse));
+memset(p, 0, sizeof(UA_ActivateSessionResponse));
 }
 
 static UA_INLINE UA_ActivateSessionResponse *
 UA_ActivateSessionResponse_new(void) {
-    return (UA_ActivateSessionResponse*)UA_new(&UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
+return (UA_ActivateSessionResponse*)UA_new(&UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ActivateSessionResponse_copy(const UA_ActivateSessionResponse *src, UA_ActivateSessionResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ActivateSessionResponse_deleteMembers(UA_ActivateSessionResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ActivateSessionResponse_delete(UA_ActivateSessionResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ACTIVATESESSIONRESPONSE]);
 }
 
 /* EndpointUrlListDataType */
 static UA_INLINE void
 UA_EndpointUrlListDataType_init(UA_EndpointUrlListDataType *p) {
-    memset(p, 0, sizeof(UA_EndpointUrlListDataType));
+memset(p, 0, sizeof(UA_EndpointUrlListDataType));
 }
 
 static UA_INLINE UA_EndpointUrlListDataType *
 UA_EndpointUrlListDataType_new(void) {
-    return (UA_EndpointUrlListDataType*)UA_new(&UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
+return (UA_EndpointUrlListDataType*)UA_new(&UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_EndpointUrlListDataType_copy(const UA_EndpointUrlListDataType *src, UA_EndpointUrlListDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
 }
 
 static UA_INLINE void
 UA_EndpointUrlListDataType_deleteMembers(UA_EndpointUrlListDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
 }
 
 static UA_INLINE void
 UA_EndpointUrlListDataType_delete(UA_EndpointUrlListDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ENDPOINTURLLISTDATATYPE]);
 }
 
 /* FilterOperator */
 static UA_INLINE void
 UA_FilterOperator_init(UA_FilterOperator *p) {
-    memset(p, 0, sizeof(UA_FilterOperator));
+memset(p, 0, sizeof(UA_FilterOperator));
 }
 
 static UA_INLINE UA_FilterOperator *
 UA_FilterOperator_new(void) {
-    return (UA_FilterOperator*)UA_new(&UA_TYPES[UA_TYPES_FILTEROPERATOR]);
+return (UA_FilterOperator*)UA_new(&UA_TYPES[UA_TYPES_FILTEROPERATOR]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_FilterOperator_copy(const UA_FilterOperator *src, UA_FilterOperator *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -8805,336 +8805,336 @@ UA_FilterOperator_deleteMembers(UA_FilterOperator *p) { }
 
 static UA_INLINE void
 UA_FilterOperator_delete(UA_FilterOperator *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FILTEROPERATOR]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FILTEROPERATOR]);
 }
 
 /* QueryNextRequest */
 static UA_INLINE void
 UA_QueryNextRequest_init(UA_QueryNextRequest *p) {
-    memset(p, 0, sizeof(UA_QueryNextRequest));
+memset(p, 0, sizeof(UA_QueryNextRequest));
 }
 
 static UA_INLINE UA_QueryNextRequest *
 UA_QueryNextRequest_new(void) {
-    return (UA_QueryNextRequest*)UA_new(&UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
+return (UA_QueryNextRequest*)UA_new(&UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QueryNextRequest_copy(const UA_QueryNextRequest *src, UA_QueryNextRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
 }
 
 static UA_INLINE void
 UA_QueryNextRequest_deleteMembers(UA_QueryNextRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
 }
 
 static UA_INLINE void
 UA_QueryNextRequest_delete(UA_QueryNextRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUERYNEXTREQUEST]);
 }
 
 /* WriteResponse */
 static UA_INLINE void
 UA_WriteResponse_init(UA_WriteResponse *p) {
-    memset(p, 0, sizeof(UA_WriteResponse));
+memset(p, 0, sizeof(UA_WriteResponse));
 }
 
 static UA_INLINE UA_WriteResponse *
 UA_WriteResponse_new(void) {
-    return (UA_WriteResponse*)UA_new(&UA_TYPES[UA_TYPES_WRITERESPONSE]);
+return (UA_WriteResponse*)UA_new(&UA_TYPES[UA_TYPES_WRITERESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_WriteResponse_copy(const UA_WriteResponse *src, UA_WriteResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
 }
 
 static UA_INLINE void
 UA_WriteResponse_deleteMembers(UA_WriteResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
 }
 
 static UA_INLINE void
 UA_WriteResponse_delete(UA_WriteResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
 }
 
 /* BrowseNextRequest */
 static UA_INLINE void
 UA_BrowseNextRequest_init(UA_BrowseNextRequest *p) {
-    memset(p, 0, sizeof(UA_BrowseNextRequest));
+memset(p, 0, sizeof(UA_BrowseNextRequest));
 }
 
 static UA_INLINE UA_BrowseNextRequest *
 UA_BrowseNextRequest_new(void) {
-    return (UA_BrowseNextRequest*)UA_new(&UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
+return (UA_BrowseNextRequest*)UA_new(&UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseNextRequest_copy(const UA_BrowseNextRequest *src, UA_BrowseNextRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
 }
 
 static UA_INLINE void
 UA_BrowseNextRequest_deleteMembers(UA_BrowseNextRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
 }
 
 static UA_INLINE void
 UA_BrowseNextRequest_delete(UA_BrowseNextRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST]);
 }
 
 /* CreateSubscriptionRequest */
 static UA_INLINE void
 UA_CreateSubscriptionRequest_init(UA_CreateSubscriptionRequest *p) {
-    memset(p, 0, sizeof(UA_CreateSubscriptionRequest));
+memset(p, 0, sizeof(UA_CreateSubscriptionRequest));
 }
 
 static UA_INLINE UA_CreateSubscriptionRequest *
 UA_CreateSubscriptionRequest_new(void) {
-    return (UA_CreateSubscriptionRequest*)UA_new(&UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
+return (UA_CreateSubscriptionRequest*)UA_new(&UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CreateSubscriptionRequest_copy(const UA_CreateSubscriptionRequest *src, UA_CreateSubscriptionRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_CreateSubscriptionRequest_deleteMembers(UA_CreateSubscriptionRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_CreateSubscriptionRequest_delete(UA_CreateSubscriptionRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONREQUEST]);
 }
 
 /* VariableTypeAttributes */
 static UA_INLINE void
 UA_VariableTypeAttributes_init(UA_VariableTypeAttributes *p) {
-    memset(p, 0, sizeof(UA_VariableTypeAttributes));
+memset(p, 0, sizeof(UA_VariableTypeAttributes));
 }
 
 static UA_INLINE UA_VariableTypeAttributes *
 UA_VariableTypeAttributes_new(void) {
-    return (UA_VariableTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
+return (UA_VariableTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_VariableTypeAttributes_copy(const UA_VariableTypeAttributes *src, UA_VariableTypeAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_VariableTypeAttributes_deleteMembers(UA_VariableTypeAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_VariableTypeAttributes_delete(UA_VariableTypeAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES]);
 }
 
 /* BrowsePathResult */
 static UA_INLINE void
 UA_BrowsePathResult_init(UA_BrowsePathResult *p) {
-    memset(p, 0, sizeof(UA_BrowsePathResult));
+memset(p, 0, sizeof(UA_BrowsePathResult));
 }
 
 static UA_INLINE UA_BrowsePathResult *
 UA_BrowsePathResult_new(void) {
-    return (UA_BrowsePathResult*)UA_new(&UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
+return (UA_BrowsePathResult*)UA_new(&UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowsePathResult_copy(const UA_BrowsePathResult *src, UA_BrowsePathResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
 }
 
 static UA_INLINE void
 UA_BrowsePathResult_deleteMembers(UA_BrowsePathResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
 }
 
 static UA_INLINE void
 UA_BrowsePathResult_delete(UA_BrowsePathResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEPATHRESULT]);
 }
 
 /* ModifySubscriptionResponse */
 static UA_INLINE void
 UA_ModifySubscriptionResponse_init(UA_ModifySubscriptionResponse *p) {
-    memset(p, 0, sizeof(UA_ModifySubscriptionResponse));
+memset(p, 0, sizeof(UA_ModifySubscriptionResponse));
 }
 
 static UA_INLINE UA_ModifySubscriptionResponse *
 UA_ModifySubscriptionResponse_new(void) {
-    return (UA_ModifySubscriptionResponse*)UA_new(&UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
+return (UA_ModifySubscriptionResponse*)UA_new(&UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ModifySubscriptionResponse_copy(const UA_ModifySubscriptionResponse *src, UA_ModifySubscriptionResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ModifySubscriptionResponse_deleteMembers(UA_ModifySubscriptionResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ModifySubscriptionResponse_delete(UA_ModifySubscriptionResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONRESPONSE]);
 }
 
 /* RedundantServerDataType */
 static UA_INLINE void
 UA_RedundantServerDataType_init(UA_RedundantServerDataType *p) {
-    memset(p, 0, sizeof(UA_RedundantServerDataType));
+memset(p, 0, sizeof(UA_RedundantServerDataType));
 }
 
 static UA_INLINE UA_RedundantServerDataType *
 UA_RedundantServerDataType_new(void) {
-    return (UA_RedundantServerDataType*)UA_new(&UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
+return (UA_RedundantServerDataType*)UA_new(&UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RedundantServerDataType_copy(const UA_RedundantServerDataType *src, UA_RedundantServerDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
 }
 
 static UA_INLINE void
 UA_RedundantServerDataType_deleteMembers(UA_RedundantServerDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
 }
 
 static UA_INLINE void
 UA_RedundantServerDataType_delete(UA_RedundantServerDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REDUNDANTSERVERDATATYPE]);
 }
 
 /* RegisterNodesResponse */
 static UA_INLINE void
 UA_RegisterNodesResponse_init(UA_RegisterNodesResponse *p) {
-    memset(p, 0, sizeof(UA_RegisterNodesResponse));
+memset(p, 0, sizeof(UA_RegisterNodesResponse));
 }
 
 static UA_INLINE UA_RegisterNodesResponse *
 UA_RegisterNodesResponse_new(void) {
-    return (UA_RegisterNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
+return (UA_RegisterNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisterNodesResponse_copy(const UA_RegisterNodesResponse *src, UA_RegisterNodesResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_RegisterNodesResponse_deleteMembers(UA_RegisterNodesResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_RegisterNodesResponse_delete(UA_RegisterNodesResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
 }
 
 /* CloseSessionRequest */
 static UA_INLINE void
 UA_CloseSessionRequest_init(UA_CloseSessionRequest *p) {
-    memset(p, 0, sizeof(UA_CloseSessionRequest));
+memset(p, 0, sizeof(UA_CloseSessionRequest));
 }
 
 static UA_INLINE UA_CloseSessionRequest *
 UA_CloseSessionRequest_new(void) {
-    return (UA_CloseSessionRequest*)UA_new(&UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
+return (UA_CloseSessionRequest*)UA_new(&UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CloseSessionRequest_copy(const UA_CloseSessionRequest *src, UA_CloseSessionRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_CloseSessionRequest_deleteMembers(UA_CloseSessionRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_CloseSessionRequest_delete(UA_CloseSessionRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESESSIONREQUEST]);
 }
 
 /* ModifyMonitoredItemsResponse */
 static UA_INLINE void
 UA_ModifyMonitoredItemsResponse_init(UA_ModifyMonitoredItemsResponse *p) {
-    memset(p, 0, sizeof(UA_ModifyMonitoredItemsResponse));
+memset(p, 0, sizeof(UA_ModifyMonitoredItemsResponse));
 }
 
 static UA_INLINE UA_ModifyMonitoredItemsResponse *
 UA_ModifyMonitoredItemsResponse_new(void) {
-    return (UA_ModifyMonitoredItemsResponse*)UA_new(&UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
+return (UA_ModifyMonitoredItemsResponse*)UA_new(&UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ModifyMonitoredItemsResponse_copy(const UA_ModifyMonitoredItemsResponse *src, UA_ModifyMonitoredItemsResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ModifyMonitoredItemsResponse_deleteMembers(UA_ModifyMonitoredItemsResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ModifyMonitoredItemsResponse_delete(UA_ModifyMonitoredItemsResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
 }
 
 /* ModifySubscriptionRequest */
 static UA_INLINE void
 UA_ModifySubscriptionRequest_init(UA_ModifySubscriptionRequest *p) {
-    memset(p, 0, sizeof(UA_ModifySubscriptionRequest));
+memset(p, 0, sizeof(UA_ModifySubscriptionRequest));
 }
 
 static UA_INLINE UA_ModifySubscriptionRequest *
 UA_ModifySubscriptionRequest_new(void) {
-    return (UA_ModifySubscriptionRequest*)UA_new(&UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
+return (UA_ModifySubscriptionRequest*)UA_new(&UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ModifySubscriptionRequest_copy(const UA_ModifySubscriptionRequest *src, UA_ModifySubscriptionRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_ModifySubscriptionRequest_deleteMembers(UA_ModifySubscriptionRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_ModifySubscriptionRequest_delete(UA_ModifySubscriptionRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYSUBSCRIPTIONREQUEST]);
 }
 
 /* ServerDiagnosticsSummaryDataType */
 static UA_INLINE void
 UA_ServerDiagnosticsSummaryDataType_init(UA_ServerDiagnosticsSummaryDataType *p) {
-    memset(p, 0, sizeof(UA_ServerDiagnosticsSummaryDataType));
+memset(p, 0, sizeof(UA_ServerDiagnosticsSummaryDataType));
 }
 
 static UA_INLINE UA_ServerDiagnosticsSummaryDataType *
 UA_ServerDiagnosticsSummaryDataType_new(void) {
-    return (UA_ServerDiagnosticsSummaryDataType*)UA_new(&UA_TYPES[UA_TYPES_SERVERDIAGNOSTICSSUMMARYDATATYPE]);
+return (UA_ServerDiagnosticsSummaryDataType*)UA_new(&UA_TYPES[UA_TYPES_SERVERDIAGNOSTICSSUMMARYDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ServerDiagnosticsSummaryDataType_copy(const UA_ServerDiagnosticsSummaryDataType *src, UA_ServerDiagnosticsSummaryDataType *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -9142,206 +9142,206 @@ UA_ServerDiagnosticsSummaryDataType_deleteMembers(UA_ServerDiagnosticsSummaryDat
 
 static UA_INLINE void
 UA_ServerDiagnosticsSummaryDataType_delete(UA_ServerDiagnosticsSummaryDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SERVERDIAGNOSTICSSUMMARYDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SERVERDIAGNOSTICSSUMMARYDATATYPE]);
 }
 
 /* UserTokenPolicy */
 static UA_INLINE void
 UA_UserTokenPolicy_init(UA_UserTokenPolicy *p) {
-    memset(p, 0, sizeof(UA_UserTokenPolicy));
+memset(p, 0, sizeof(UA_UserTokenPolicy));
 }
 
 static UA_INLINE UA_UserTokenPolicy *
 UA_UserTokenPolicy_new(void) {
-    return (UA_UserTokenPolicy*)UA_new(&UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
+return (UA_UserTokenPolicy*)UA_new(&UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UserTokenPolicy_copy(const UA_UserTokenPolicy *src, UA_UserTokenPolicy *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
 }
 
 static UA_INLINE void
 UA_UserTokenPolicy_deleteMembers(UA_UserTokenPolicy *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
 }
 
 static UA_INLINE void
 UA_UserTokenPolicy_delete(UA_UserTokenPolicy *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
+UA_delete(p, &UA_TYPES[UA_TYPES_USERTOKENPOLICY]);
 }
 
 /* ReferenceTypeAttributes */
 static UA_INLINE void
 UA_ReferenceTypeAttributes_init(UA_ReferenceTypeAttributes *p) {
-    memset(p, 0, sizeof(UA_ReferenceTypeAttributes));
+memset(p, 0, sizeof(UA_ReferenceTypeAttributes));
 }
 
 static UA_INLINE UA_ReferenceTypeAttributes *
 UA_ReferenceTypeAttributes_new(void) {
-    return (UA_ReferenceTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
+return (UA_ReferenceTypeAttributes*)UA_new(&UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ReferenceTypeAttributes_copy(const UA_ReferenceTypeAttributes *src, UA_ReferenceTypeAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ReferenceTypeAttributes_deleteMembers(UA_ReferenceTypeAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ReferenceTypeAttributes_delete(UA_ReferenceTypeAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES]);
 }
 
 /* BrowsePath */
 static UA_INLINE void
 UA_BrowsePath_init(UA_BrowsePath *p) {
-    memset(p, 0, sizeof(UA_BrowsePath));
+memset(p, 0, sizeof(UA_BrowsePath));
 }
 
 static UA_INLINE UA_BrowsePath *
 UA_BrowsePath_new(void) {
-    return (UA_BrowsePath*)UA_new(&UA_TYPES[UA_TYPES_BROWSEPATH]);
+return (UA_BrowsePath*)UA_new(&UA_TYPES[UA_TYPES_BROWSEPATH]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowsePath_copy(const UA_BrowsePath *src, UA_BrowsePath *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEPATH]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEPATH]);
 }
 
 static UA_INLINE void
 UA_BrowsePath_deleteMembers(UA_BrowsePath *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEPATH]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEPATH]);
 }
 
 static UA_INLINE void
 UA_BrowsePath_delete(UA_BrowsePath *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEPATH]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEPATH]);
 }
 
 /* SetMonitoringModeRequest */
 static UA_INLINE void
 UA_SetMonitoringModeRequest_init(UA_SetMonitoringModeRequest *p) {
-    memset(p, 0, sizeof(UA_SetMonitoringModeRequest));
+memset(p, 0, sizeof(UA_SetMonitoringModeRequest));
 }
 
 static UA_INLINE UA_SetMonitoringModeRequest *
 UA_SetMonitoringModeRequest_new(void) {
-    return (UA_SetMonitoringModeRequest*)UA_new(&UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
+return (UA_SetMonitoringModeRequest*)UA_new(&UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SetMonitoringModeRequest_copy(const UA_SetMonitoringModeRequest *src, UA_SetMonitoringModeRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
 }
 
 static UA_INLINE void
 UA_SetMonitoringModeRequest_deleteMembers(UA_SetMonitoringModeRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
 }
 
 static UA_INLINE void
 UA_SetMonitoringModeRequest_delete(UA_SetMonitoringModeRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST]);
 }
 
 /* UnregisterNodesResponse */
 static UA_INLINE void
 UA_UnregisterNodesResponse_init(UA_UnregisterNodesResponse *p) {
-    memset(p, 0, sizeof(UA_UnregisterNodesResponse));
+memset(p, 0, sizeof(UA_UnregisterNodesResponse));
 }
 
 static UA_INLINE UA_UnregisterNodesResponse *
 UA_UnregisterNodesResponse_new(void) {
-    return (UA_UnregisterNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
+return (UA_UnregisterNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_UnregisterNodesResponse_copy(const UA_UnregisterNodesResponse *src, UA_UnregisterNodesResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_UnregisterNodesResponse_deleteMembers(UA_UnregisterNodesResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_UnregisterNodesResponse_delete(UA_UnregisterNodesResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
 }
 
 /* WriteRequest */
 static UA_INLINE void
 UA_WriteRequest_init(UA_WriteRequest *p) {
-    memset(p, 0, sizeof(UA_WriteRequest));
+memset(p, 0, sizeof(UA_WriteRequest));
 }
 
 static UA_INLINE UA_WriteRequest *
 UA_WriteRequest_new(void) {
-    return (UA_WriteRequest*)UA_new(&UA_TYPES[UA_TYPES_WRITEREQUEST]);
+return (UA_WriteRequest*)UA_new(&UA_TYPES[UA_TYPES_WRITEREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_WriteRequest_copy(const UA_WriteRequest *src, UA_WriteRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_WRITEREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_WRITEREQUEST]);
 }
 
 static UA_INLINE void
 UA_WriteRequest_deleteMembers(UA_WriteRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_WRITEREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_WRITEREQUEST]);
 }
 
 static UA_INLINE void
 UA_WriteRequest_delete(UA_WriteRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_WRITEREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_WRITEREQUEST]);
 }
 
 /* ObjectAttributes */
 static UA_INLINE void
 UA_ObjectAttributes_init(UA_ObjectAttributes *p) {
-    memset(p, 0, sizeof(UA_ObjectAttributes));
+memset(p, 0, sizeof(UA_ObjectAttributes));
 }
 
 static UA_INLINE UA_ObjectAttributes *
 UA_ObjectAttributes_new(void) {
-    return (UA_ObjectAttributes*)UA_new(&UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
+return (UA_ObjectAttributes*)UA_new(&UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ObjectAttributes_copy(const UA_ObjectAttributes *src, UA_ObjectAttributes *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ObjectAttributes_deleteMembers(UA_ObjectAttributes *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
 }
 
 static UA_INLINE void
 UA_ObjectAttributes_delete(UA_ObjectAttributes *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
+UA_delete(p, &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES]);
 }
 
 /* BrowseResultMask */
 static UA_INLINE void
 UA_BrowseResultMask_init(UA_BrowseResultMask *p) {
-    memset(p, 0, sizeof(UA_BrowseResultMask));
+memset(p, 0, sizeof(UA_BrowseResultMask));
 }
 
 static UA_INLINE UA_BrowseResultMask *
 UA_BrowseResultMask_new(void) {
-    return (UA_BrowseResultMask*)UA_new(&UA_TYPES[UA_TYPES_BROWSERESULTMASK]);
+return (UA_BrowseResultMask*)UA_new(&UA_TYPES[UA_TYPES_BROWSERESULTMASK]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseResultMask_copy(const UA_BrowseResultMask *src, UA_BrowseResultMask *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -9349,1064 +9349,1064 @@ UA_BrowseResultMask_deleteMembers(UA_BrowseResultMask *p) { }
 
 static UA_INLINE void
 UA_BrowseResultMask_delete(UA_BrowseResultMask *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSERESULTMASK]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSERESULTMASK]);
 }
 
 /* BrowseDescription */
 static UA_INLINE void
 UA_BrowseDescription_init(UA_BrowseDescription *p) {
-    memset(p, 0, sizeof(UA_BrowseDescription));
+memset(p, 0, sizeof(UA_BrowseDescription));
 }
 
 static UA_INLINE UA_BrowseDescription *
 UA_BrowseDescription_new(void) {
-    return (UA_BrowseDescription*)UA_new(&UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
+return (UA_BrowseDescription*)UA_new(&UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseDescription_copy(const UA_BrowseDescription *src, UA_BrowseDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_BrowseDescription_deleteMembers(UA_BrowseDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_BrowseDescription_delete(UA_BrowseDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEDESCRIPTION]);
 }
 
 /* SetTriggeringRequest */
 static UA_INLINE void
 UA_SetTriggeringRequest_init(UA_SetTriggeringRequest *p) {
-    memset(p, 0, sizeof(UA_SetTriggeringRequest));
+memset(p, 0, sizeof(UA_SetTriggeringRequest));
 }
 
 static UA_INLINE UA_SetTriggeringRequest *
 UA_SetTriggeringRequest_new(void) {
-    return (UA_SetTriggeringRequest*)UA_new(&UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
+return (UA_SetTriggeringRequest*)UA_new(&UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SetTriggeringRequest_copy(const UA_SetTriggeringRequest *src, UA_SetTriggeringRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
 }
 
 static UA_INLINE void
 UA_SetTriggeringRequest_deleteMembers(UA_SetTriggeringRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
 }
 
 static UA_INLINE void
 UA_SetTriggeringRequest_delete(UA_SetTriggeringRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST]);
 }
 
 /* SessionSecurityDiagnosticsDataType */
 static UA_INLINE void
 UA_SessionSecurityDiagnosticsDataType_init(UA_SessionSecurityDiagnosticsDataType *p) {
-    memset(p, 0, sizeof(UA_SessionSecurityDiagnosticsDataType));
+memset(p, 0, sizeof(UA_SessionSecurityDiagnosticsDataType));
 }
 
 static UA_INLINE UA_SessionSecurityDiagnosticsDataType *
 UA_SessionSecurityDiagnosticsDataType_new(void) {
-    return (UA_SessionSecurityDiagnosticsDataType*)UA_new(&UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
+return (UA_SessionSecurityDiagnosticsDataType*)UA_new(&UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SessionSecurityDiagnosticsDataType_copy(const UA_SessionSecurityDiagnosticsDataType *src, UA_SessionSecurityDiagnosticsDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SessionSecurityDiagnosticsDataType_deleteMembers(UA_SessionSecurityDiagnosticsDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SessionSecurityDiagnosticsDataType_delete(UA_SessionSecurityDiagnosticsDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SESSIONSECURITYDIAGNOSTICSDATATYPE]);
 }
 
 /* RepublishRequest */
 static UA_INLINE void
 UA_RepublishRequest_init(UA_RepublishRequest *p) {
-    memset(p, 0, sizeof(UA_RepublishRequest));
+memset(p, 0, sizeof(UA_RepublishRequest));
 }
 
 static UA_INLINE UA_RepublishRequest *
 UA_RepublishRequest_new(void) {
-    return (UA_RepublishRequest*)UA_new(&UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
+return (UA_RepublishRequest*)UA_new(&UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RepublishRequest_copy(const UA_RepublishRequest *src, UA_RepublishRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
 }
 
 static UA_INLINE void
 UA_RepublishRequest_deleteMembers(UA_RepublishRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
 }
 
 static UA_INLINE void
 UA_RepublishRequest_delete(UA_RepublishRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REPUBLISHREQUEST]);
 }
 
 /* GetEndpointsRequest */
 static UA_INLINE void
 UA_GetEndpointsRequest_init(UA_GetEndpointsRequest *p) {
-    memset(p, 0, sizeof(UA_GetEndpointsRequest));
+memset(p, 0, sizeof(UA_GetEndpointsRequest));
 }
 
 static UA_INLINE UA_GetEndpointsRequest *
 UA_GetEndpointsRequest_new(void) {
-    return (UA_GetEndpointsRequest*)UA_new(&UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
+return (UA_GetEndpointsRequest*)UA_new(&UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_GetEndpointsRequest_copy(const UA_GetEndpointsRequest *src, UA_GetEndpointsRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
 }
 
 static UA_INLINE void
 UA_GetEndpointsRequest_deleteMembers(UA_GetEndpointsRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
 }
 
 static UA_INLINE void
 UA_GetEndpointsRequest_delete(UA_GetEndpointsRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_GETENDPOINTSREQUEST]);
 }
 
 /* PublishRequest */
 static UA_INLINE void
 UA_PublishRequest_init(UA_PublishRequest *p) {
-    memset(p, 0, sizeof(UA_PublishRequest));
+memset(p, 0, sizeof(UA_PublishRequest));
 }
 
 static UA_INLINE UA_PublishRequest *
 UA_PublishRequest_new(void) {
-    return (UA_PublishRequest*)UA_new(&UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
+return (UA_PublishRequest*)UA_new(&UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_PublishRequest_copy(const UA_PublishRequest *src, UA_PublishRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
 }
 
 static UA_INLINE void
 UA_PublishRequest_deleteMembers(UA_PublishRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
 }
 
 static UA_INLINE void
 UA_PublishRequest_delete(UA_PublishRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_PUBLISHREQUEST]);
 }
 
 /* DeleteSubscriptionsResponse */
 static UA_INLINE void
 UA_DeleteSubscriptionsResponse_init(UA_DeleteSubscriptionsResponse *p) {
-    memset(p, 0, sizeof(UA_DeleteSubscriptionsResponse));
+memset(p, 0, sizeof(UA_DeleteSubscriptionsResponse));
 }
 
 static UA_INLINE UA_DeleteSubscriptionsResponse *
 UA_DeleteSubscriptionsResponse_new(void) {
-    return (UA_DeleteSubscriptionsResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
+return (UA_DeleteSubscriptionsResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteSubscriptionsResponse_copy(const UA_DeleteSubscriptionsResponse *src, UA_DeleteSubscriptionsResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteSubscriptionsResponse_deleteMembers(UA_DeleteSubscriptionsResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteSubscriptionsResponse_delete(UA_DeleteSubscriptionsResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETESUBSCRIPTIONSRESPONSE]);
 }
 
 /* AddNodesResponse */
 static UA_INLINE void
 UA_AddNodesResponse_init(UA_AddNodesResponse *p) {
-    memset(p, 0, sizeof(UA_AddNodesResponse));
+memset(p, 0, sizeof(UA_AddNodesResponse));
 }
 
 static UA_INLINE UA_AddNodesResponse *
 UA_AddNodesResponse_new(void) {
-    return (UA_AddNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
+return (UA_AddNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddNodesResponse_copy(const UA_AddNodesResponse *src, UA_AddNodesResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_AddNodesResponse_deleteMembers(UA_AddNodesResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_AddNodesResponse_delete(UA_AddNodesResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
 }
 
 /* DataChangeNotification */
 static UA_INLINE void
 UA_DataChangeNotification_init(UA_DataChangeNotification *p) {
-    memset(p, 0, sizeof(UA_DataChangeNotification));
+memset(p, 0, sizeof(UA_DataChangeNotification));
 }
 
 static UA_INLINE UA_DataChangeNotification *
 UA_DataChangeNotification_new(void) {
-    return (UA_DataChangeNotification*)UA_new(&UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
+return (UA_DataChangeNotification*)UA_new(&UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DataChangeNotification_copy(const UA_DataChangeNotification *src, UA_DataChangeNotification *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
 }
 
 static UA_INLINE void
 UA_DataChangeNotification_deleteMembers(UA_DataChangeNotification *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
 }
 
 static UA_INLINE void
 UA_DataChangeNotification_delete(UA_DataChangeNotification *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DATACHANGENOTIFICATION]);
 }
 
 /* CloseSecureChannelResponse */
 static UA_INLINE void
 UA_CloseSecureChannelResponse_init(UA_CloseSecureChannelResponse *p) {
-    memset(p, 0, sizeof(UA_CloseSecureChannelResponse));
+memset(p, 0, sizeof(UA_CloseSecureChannelResponse));
 }
 
 static UA_INLINE UA_CloseSecureChannelResponse *
 UA_CloseSecureChannelResponse_new(void) {
-    return (UA_CloseSecureChannelResponse*)UA_new(&UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
+return (UA_CloseSecureChannelResponse*)UA_new(&UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CloseSecureChannelResponse_copy(const UA_CloseSecureChannelResponse *src, UA_CloseSecureChannelResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CloseSecureChannelResponse_deleteMembers(UA_CloseSecureChannelResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CloseSecureChannelResponse_delete(UA_CloseSecureChannelResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESECURECHANNELRESPONSE]);
 }
 
 /* ModifyMonitoredItemsRequest */
 static UA_INLINE void
 UA_ModifyMonitoredItemsRequest_init(UA_ModifyMonitoredItemsRequest *p) {
-    memset(p, 0, sizeof(UA_ModifyMonitoredItemsRequest));
+memset(p, 0, sizeof(UA_ModifyMonitoredItemsRequest));
 }
 
 static UA_INLINE UA_ModifyMonitoredItemsRequest *
 UA_ModifyMonitoredItemsRequest_new(void) {
-    return (UA_ModifyMonitoredItemsRequest*)UA_new(&UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
+return (UA_ModifyMonitoredItemsRequest*)UA_new(&UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ModifyMonitoredItemsRequest_copy(const UA_ModifyMonitoredItemsRequest *src, UA_ModifyMonitoredItemsRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE void
 UA_ModifyMonitoredItemsRequest_deleteMembers(UA_ModifyMonitoredItemsRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE void
 UA_ModifyMonitoredItemsRequest_delete(UA_ModifyMonitoredItemsRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST]);
 }
 
 /* SetMonitoringModeResponse */
 static UA_INLINE void
 UA_SetMonitoringModeResponse_init(UA_SetMonitoringModeResponse *p) {
-    memset(p, 0, sizeof(UA_SetMonitoringModeResponse));
+memset(p, 0, sizeof(UA_SetMonitoringModeResponse));
 }
 
 static UA_INLINE UA_SetMonitoringModeResponse *
 UA_SetMonitoringModeResponse_new(void) {
-    return (UA_SetMonitoringModeResponse*)UA_new(&UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
+return (UA_SetMonitoringModeResponse*)UA_new(&UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SetMonitoringModeResponse_copy(const UA_SetMonitoringModeResponse *src, UA_SetMonitoringModeResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
 }
 
 static UA_INLINE void
 UA_SetMonitoringModeResponse_deleteMembers(UA_SetMonitoringModeResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
 }
 
 static UA_INLINE void
 UA_SetMonitoringModeResponse_delete(UA_SetMonitoringModeResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
 }
 
 /* FindServersRequest */
 static UA_INLINE void
 UA_FindServersRequest_init(UA_FindServersRequest *p) {
-    memset(p, 0, sizeof(UA_FindServersRequest));
+memset(p, 0, sizeof(UA_FindServersRequest));
 }
 
 static UA_INLINE UA_FindServersRequest *
 UA_FindServersRequest_new(void) {
-    return (UA_FindServersRequest*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
+return (UA_FindServersRequest*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_FindServersRequest_copy(const UA_FindServersRequest *src, UA_FindServersRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
 }
 
 static UA_INLINE void
 UA_FindServersRequest_deleteMembers(UA_FindServersRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
 }
 
 static UA_INLINE void
 UA_FindServersRequest_delete(UA_FindServersRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSREQUEST]);
 }
 
 /* ReferenceDescription */
 static UA_INLINE void
 UA_ReferenceDescription_init(UA_ReferenceDescription *p) {
-    memset(p, 0, sizeof(UA_ReferenceDescription));
+memset(p, 0, sizeof(UA_ReferenceDescription));
 }
 
 static UA_INLINE UA_ReferenceDescription *
 UA_ReferenceDescription_new(void) {
-    return (UA_ReferenceDescription*)UA_new(&UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
+return (UA_ReferenceDescription*)UA_new(&UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ReferenceDescription_copy(const UA_ReferenceDescription *src, UA_ReferenceDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_ReferenceDescription_deleteMembers(UA_ReferenceDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_ReferenceDescription_delete(UA_ReferenceDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REFERENCEDESCRIPTION]);
 }
 
 /* SetPublishingModeResponse */
 static UA_INLINE void
 UA_SetPublishingModeResponse_init(UA_SetPublishingModeResponse *p) {
-    memset(p, 0, sizeof(UA_SetPublishingModeResponse));
+memset(p, 0, sizeof(UA_SetPublishingModeResponse));
 }
 
 static UA_INLINE UA_SetPublishingModeResponse *
 UA_SetPublishingModeResponse_new(void) {
-    return (UA_SetPublishingModeResponse*)UA_new(&UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
+return (UA_SetPublishingModeResponse*)UA_new(&UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SetPublishingModeResponse_copy(const UA_SetPublishingModeResponse *src, UA_SetPublishingModeResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
 }
 
 static UA_INLINE void
 UA_SetPublishingModeResponse_deleteMembers(UA_SetPublishingModeResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
 }
 
 static UA_INLINE void
 UA_SetPublishingModeResponse_delete(UA_SetPublishingModeResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
 }
 
 /* ContentFilterResult */
 static UA_INLINE void
 UA_ContentFilterResult_init(UA_ContentFilterResult *p) {
-    memset(p, 0, sizeof(UA_ContentFilterResult));
+memset(p, 0, sizeof(UA_ContentFilterResult));
 }
 
 static UA_INLINE UA_ContentFilterResult *
 UA_ContentFilterResult_new(void) {
-    return (UA_ContentFilterResult*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
+return (UA_ContentFilterResult*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ContentFilterResult_copy(const UA_ContentFilterResult *src, UA_ContentFilterResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
 }
 
 static UA_INLINE void
 UA_ContentFilterResult_deleteMembers(UA_ContentFilterResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
 }
 
 static UA_INLINE void
 UA_ContentFilterResult_delete(UA_ContentFilterResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTERRESULT]);
 }
 
 /* RegisterServerResponse */
 static UA_INLINE void
 UA_RegisterServerResponse_init(UA_RegisterServerResponse *p) {
-    memset(p, 0, sizeof(UA_RegisterServerResponse));
+memset(p, 0, sizeof(UA_RegisterServerResponse));
 }
 
 static UA_INLINE UA_RegisterServerResponse *
 UA_RegisterServerResponse_new(void) {
-    return (UA_RegisterServerResponse*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
+return (UA_RegisterServerResponse*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisterServerResponse_copy(const UA_RegisterServerResponse *src, UA_RegisterServerResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
 }
 
 static UA_INLINE void
 UA_RegisterServerResponse_deleteMembers(UA_RegisterServerResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
 }
 
 static UA_INLINE void
 UA_RegisterServerResponse_delete(UA_RegisterServerResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVERRESPONSE]);
 }
 
 /* AddReferencesItem */
 static UA_INLINE void
 UA_AddReferencesItem_init(UA_AddReferencesItem *p) {
-    memset(p, 0, sizeof(UA_AddReferencesItem));
+memset(p, 0, sizeof(UA_AddReferencesItem));
 }
 
 static UA_INLINE UA_AddReferencesItem *
 UA_AddReferencesItem_new(void) {
-    return (UA_AddReferencesItem*)UA_new(&UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
+return (UA_AddReferencesItem*)UA_new(&UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddReferencesItem_copy(const UA_AddReferencesItem *src, UA_AddReferencesItem *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
 }
 
 static UA_INLINE void
 UA_AddReferencesItem_deleteMembers(UA_AddReferencesItem *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
 }
 
 static UA_INLINE void
 UA_AddReferencesItem_delete(UA_AddReferencesItem *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDREFERENCESITEM]);
 }
 
 /* QueryDataDescription */
 static UA_INLINE void
 UA_QueryDataDescription_init(UA_QueryDataDescription *p) {
-    memset(p, 0, sizeof(UA_QueryDataDescription));
+memset(p, 0, sizeof(UA_QueryDataDescription));
 }
 
 static UA_INLINE UA_QueryDataDescription *
 UA_QueryDataDescription_new(void) {
-    return (UA_QueryDataDescription*)UA_new(&UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
+return (UA_QueryDataDescription*)UA_new(&UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QueryDataDescription_copy(const UA_QueryDataDescription *src, UA_QueryDataDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_QueryDataDescription_deleteMembers(UA_QueryDataDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_QueryDataDescription_delete(UA_QueryDataDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUERYDATADESCRIPTION]);
 }
 
 /* CreateSubscriptionResponse */
 static UA_INLINE void
 UA_CreateSubscriptionResponse_init(UA_CreateSubscriptionResponse *p) {
-    memset(p, 0, sizeof(UA_CreateSubscriptionResponse));
+memset(p, 0, sizeof(UA_CreateSubscriptionResponse));
 }
 
 static UA_INLINE UA_CreateSubscriptionResponse *
 UA_CreateSubscriptionResponse_new(void) {
-    return (UA_CreateSubscriptionResponse*)UA_new(&UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
+return (UA_CreateSubscriptionResponse*)UA_new(&UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CreateSubscriptionResponse_copy(const UA_CreateSubscriptionResponse *src, UA_CreateSubscriptionResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CreateSubscriptionResponse_deleteMembers(UA_CreateSubscriptionResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CreateSubscriptionResponse_delete(UA_CreateSubscriptionResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CREATESUBSCRIPTIONRESPONSE]);
 }
 
 /* NetworkGroupDataType */
 static UA_INLINE void
 UA_NetworkGroupDataType_init(UA_NetworkGroupDataType *p) {
-    memset(p, 0, sizeof(UA_NetworkGroupDataType));
+memset(p, 0, sizeof(UA_NetworkGroupDataType));
 }
 
 static UA_INLINE UA_NetworkGroupDataType *
 UA_NetworkGroupDataType_new(void) {
-    return (UA_NetworkGroupDataType*)UA_new(&UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
+return (UA_NetworkGroupDataType*)UA_new(&UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NetworkGroupDataType_copy(const UA_NetworkGroupDataType *src, UA_NetworkGroupDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
 }
 
 static UA_INLINE void
 UA_NetworkGroupDataType_deleteMembers(UA_NetworkGroupDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
 }
 
 static UA_INLINE void
 UA_NetworkGroupDataType_delete(UA_NetworkGroupDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NETWORKGROUPDATATYPE]);
 }
 
 /* DeleteReferencesResponse */
 static UA_INLINE void
 UA_DeleteReferencesResponse_init(UA_DeleteReferencesResponse *p) {
-    memset(p, 0, sizeof(UA_DeleteReferencesResponse));
+memset(p, 0, sizeof(UA_DeleteReferencesResponse));
 }
 
 static UA_INLINE UA_DeleteReferencesResponse *
 UA_DeleteReferencesResponse_new(void) {
-    return (UA_DeleteReferencesResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
+return (UA_DeleteReferencesResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteReferencesResponse_copy(const UA_DeleteReferencesResponse *src, UA_DeleteReferencesResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteReferencesResponse_deleteMembers(UA_DeleteReferencesResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteReferencesResponse_delete(UA_DeleteReferencesResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
 }
 
 /* CreateMonitoredItemsResponse */
 static UA_INLINE void
 UA_CreateMonitoredItemsResponse_init(UA_CreateMonitoredItemsResponse *p) {
-    memset(p, 0, sizeof(UA_CreateMonitoredItemsResponse));
+memset(p, 0, sizeof(UA_CreateMonitoredItemsResponse));
 }
 
 static UA_INLINE UA_CreateMonitoredItemsResponse *
 UA_CreateMonitoredItemsResponse_new(void) {
-    return (UA_CreateMonitoredItemsResponse*)UA_new(&UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
+return (UA_CreateMonitoredItemsResponse*)UA_new(&UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CreateMonitoredItemsResponse_copy(const UA_CreateMonitoredItemsResponse *src, UA_CreateMonitoredItemsResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CreateMonitoredItemsResponse_deleteMembers(UA_CreateMonitoredItemsResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CreateMonitoredItemsResponse_delete(UA_CreateMonitoredItemsResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSRESPONSE]);
 }
 
 /* CallResponse */
 static UA_INLINE void
 UA_CallResponse_init(UA_CallResponse *p) {
-    memset(p, 0, sizeof(UA_CallResponse));
+memset(p, 0, sizeof(UA_CallResponse));
 }
 
 static UA_INLINE UA_CallResponse *
 UA_CallResponse_new(void) {
-    return (UA_CallResponse*)UA_new(&UA_TYPES[UA_TYPES_CALLRESPONSE]);
+return (UA_CallResponse*)UA_new(&UA_TYPES[UA_TYPES_CALLRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CallResponse_copy(const UA_CallResponse *src, UA_CallResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CallResponse_deleteMembers(UA_CallResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CallResponse_delete(UA_CallResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
 }
 
 /* DeleteNodesResponse */
 static UA_INLINE void
 UA_DeleteNodesResponse_init(UA_DeleteNodesResponse *p) {
-    memset(p, 0, sizeof(UA_DeleteNodesResponse));
+memset(p, 0, sizeof(UA_DeleteNodesResponse));
 }
 
 static UA_INLINE UA_DeleteNodesResponse *
 UA_DeleteNodesResponse_new(void) {
-    return (UA_DeleteNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
+return (UA_DeleteNodesResponse*)UA_new(&UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteNodesResponse_copy(const UA_DeleteNodesResponse *src, UA_DeleteNodesResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteNodesResponse_deleteMembers(UA_DeleteNodesResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_DeleteNodesResponse_delete(UA_DeleteNodesResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
 }
 
 /* RepublishResponse */
 static UA_INLINE void
 UA_RepublishResponse_init(UA_RepublishResponse *p) {
-    memset(p, 0, sizeof(UA_RepublishResponse));
+memset(p, 0, sizeof(UA_RepublishResponse));
 }
 
 static UA_INLINE UA_RepublishResponse *
 UA_RepublishResponse_new(void) {
-    return (UA_RepublishResponse*)UA_new(&UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
+return (UA_RepublishResponse*)UA_new(&UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RepublishResponse_copy(const UA_RepublishResponse *src, UA_RepublishResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
 }
 
 static UA_INLINE void
 UA_RepublishResponse_deleteMembers(UA_RepublishResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
 }
 
 static UA_INLINE void
 UA_RepublishResponse_delete(UA_RepublishResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REPUBLISHRESPONSE]);
 }
 
 /* MonitoredItemCreateRequest */
 static UA_INLINE void
 UA_MonitoredItemCreateRequest_init(UA_MonitoredItemCreateRequest *p) {
-    memset(p, 0, sizeof(UA_MonitoredItemCreateRequest));
+memset(p, 0, sizeof(UA_MonitoredItemCreateRequest));
 }
 
 static UA_INLINE UA_MonitoredItemCreateRequest *
 UA_MonitoredItemCreateRequest_new(void) {
-    return (UA_MonitoredItemCreateRequest*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
+return (UA_MonitoredItemCreateRequest*)UA_new(&UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_MonitoredItemCreateRequest_copy(const UA_MonitoredItemCreateRequest *src, UA_MonitoredItemCreateRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemCreateRequest_deleteMembers(UA_MonitoredItemCreateRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
 }
 
 static UA_INLINE void
 UA_MonitoredItemCreateRequest_delete(UA_MonitoredItemCreateRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_MONITOREDITEMCREATEREQUEST]);
 }
 
 /* DeleteReferencesRequest */
 static UA_INLINE void
 UA_DeleteReferencesRequest_init(UA_DeleteReferencesRequest *p) {
-    memset(p, 0, sizeof(UA_DeleteReferencesRequest));
+memset(p, 0, sizeof(UA_DeleteReferencesRequest));
 }
 
 static UA_INLINE UA_DeleteReferencesRequest *
 UA_DeleteReferencesRequest_new(void) {
-    return (UA_DeleteReferencesRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
+return (UA_DeleteReferencesRequest*)UA_new(&UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DeleteReferencesRequest_copy(const UA_DeleteReferencesRequest *src, UA_DeleteReferencesRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteReferencesRequest_deleteMembers(UA_DeleteReferencesRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
 }
 
 static UA_INLINE void
 UA_DeleteReferencesRequest_delete(UA_DeleteReferencesRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST]);
 }
 
 /* ReadResponse */
 static UA_INLINE void
 UA_ReadResponse_init(UA_ReadResponse *p) {
-    memset(p, 0, sizeof(UA_ReadResponse));
+memset(p, 0, sizeof(UA_ReadResponse));
 }
 
 static UA_INLINE UA_ReadResponse *
 UA_ReadResponse_new(void) {
-    return (UA_ReadResponse*)UA_new(&UA_TYPES[UA_TYPES_READRESPONSE]);
+return (UA_ReadResponse*)UA_new(&UA_TYPES[UA_TYPES_READRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ReadResponse_copy(const UA_ReadResponse *src, UA_ReadResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_READRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_READRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ReadResponse_deleteMembers(UA_ReadResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_READRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_READRESPONSE]);
 }
 
 static UA_INLINE void
 UA_ReadResponse_delete(UA_ReadResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_READRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_READRESPONSE]);
 }
 
 /* AddReferencesRequest */
 static UA_INLINE void
 UA_AddReferencesRequest_init(UA_AddReferencesRequest *p) {
-    memset(p, 0, sizeof(UA_AddReferencesRequest));
+memset(p, 0, sizeof(UA_AddReferencesRequest));
 }
 
 static UA_INLINE UA_AddReferencesRequest *
 UA_AddReferencesRequest_new(void) {
-    return (UA_AddReferencesRequest*)UA_new(&UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
+return (UA_AddReferencesRequest*)UA_new(&UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddReferencesRequest_copy(const UA_AddReferencesRequest *src, UA_AddReferencesRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
 }
 
 static UA_INLINE void
 UA_AddReferencesRequest_deleteMembers(UA_AddReferencesRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
 }
 
 static UA_INLINE void
 UA_AddReferencesRequest_delete(UA_AddReferencesRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST]);
 }
 
 /* ReadRequest */
 static UA_INLINE void
 UA_ReadRequest_init(UA_ReadRequest *p) {
-    memset(p, 0, sizeof(UA_ReadRequest));
+memset(p, 0, sizeof(UA_ReadRequest));
 }
 
 static UA_INLINE UA_ReadRequest *
 UA_ReadRequest_new(void) {
-    return (UA_ReadRequest*)UA_new(&UA_TYPES[UA_TYPES_READREQUEST]);
+return (UA_ReadRequest*)UA_new(&UA_TYPES[UA_TYPES_READREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ReadRequest_copy(const UA_ReadRequest *src, UA_ReadRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_READREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_READREQUEST]);
 }
 
 static UA_INLINE void
 UA_ReadRequest_deleteMembers(UA_ReadRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_READREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_READREQUEST]);
 }
 
 static UA_INLINE void
 UA_ReadRequest_delete(UA_ReadRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_READREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_READREQUEST]);
 }
 
 /* OpenSecureChannelRequest */
 static UA_INLINE void
 UA_OpenSecureChannelRequest_init(UA_OpenSecureChannelRequest *p) {
-    memset(p, 0, sizeof(UA_OpenSecureChannelRequest));
+memset(p, 0, sizeof(UA_OpenSecureChannelRequest));
 }
 
 static UA_INLINE UA_OpenSecureChannelRequest *
 UA_OpenSecureChannelRequest_new(void) {
-    return (UA_OpenSecureChannelRequest*)UA_new(&UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
+return (UA_OpenSecureChannelRequest*)UA_new(&UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_OpenSecureChannelRequest_copy(const UA_OpenSecureChannelRequest *src, UA_OpenSecureChannelRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
 }
 
 static UA_INLINE void
 UA_OpenSecureChannelRequest_deleteMembers(UA_OpenSecureChannelRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
 }
 
 static UA_INLINE void
 UA_OpenSecureChannelRequest_delete(UA_OpenSecureChannelRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_OPENSECURECHANNELREQUEST]);
 }
 
 /* RegisterServer2Response */
 static UA_INLINE void
 UA_RegisterServer2Response_init(UA_RegisterServer2Response *p) {
-    memset(p, 0, sizeof(UA_RegisterServer2Response));
+memset(p, 0, sizeof(UA_RegisterServer2Response));
 }
 
 static UA_INLINE UA_RegisterServer2Response *
 UA_RegisterServer2Response_new(void) {
-    return (UA_RegisterServer2Response*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
+return (UA_RegisterServer2Response*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisterServer2Response_copy(const UA_RegisterServer2Response *src, UA_RegisterServer2Response *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
 }
 
 static UA_INLINE void
 UA_RegisterServer2Response_deleteMembers(UA_RegisterServer2Response *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
 }
 
 static UA_INLINE void
 UA_RegisterServer2Response_delete(UA_RegisterServer2Response *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2RESPONSE]);
 }
 
 /* AddNodesItem */
 static UA_INLINE void
 UA_AddNodesItem_init(UA_AddNodesItem *p) {
-    memset(p, 0, sizeof(UA_AddNodesItem));
+memset(p, 0, sizeof(UA_AddNodesItem));
 }
 
 static UA_INLINE UA_AddNodesItem *
 UA_AddNodesItem_new(void) {
-    return (UA_AddNodesItem*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESITEM]);
+return (UA_AddNodesItem*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESITEM]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddNodesItem_copy(const UA_AddNodesItem *src, UA_AddNodesItem *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESITEM]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESITEM]);
 }
 
 static UA_INLINE void
 UA_AddNodesItem_deleteMembers(UA_AddNodesItem *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESITEM]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESITEM]);
 }
 
 static UA_INLINE void
 UA_AddNodesItem_delete(UA_AddNodesItem *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESITEM]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESITEM]);
 }
 
 /* NodeTypeDescription */
 static UA_INLINE void
 UA_NodeTypeDescription_init(UA_NodeTypeDescription *p) {
-    memset(p, 0, sizeof(UA_NodeTypeDescription));
+memset(p, 0, sizeof(UA_NodeTypeDescription));
 }
 
 static UA_INLINE UA_NodeTypeDescription *
 UA_NodeTypeDescription_new(void) {
-    return (UA_NodeTypeDescription*)UA_new(&UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
+return (UA_NodeTypeDescription*)UA_new(&UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_NodeTypeDescription_copy(const UA_NodeTypeDescription *src, UA_NodeTypeDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_NodeTypeDescription_deleteMembers(UA_NodeTypeDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_NodeTypeDescription_delete(UA_NodeTypeDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_NODETYPEDESCRIPTION]);
 }
 
 /* ServerStatusDataType */
 static UA_INLINE void
 UA_ServerStatusDataType_init(UA_ServerStatusDataType *p) {
-    memset(p, 0, sizeof(UA_ServerStatusDataType));
+memset(p, 0, sizeof(UA_ServerStatusDataType));
 }
 
 static UA_INLINE UA_ServerStatusDataType *
 UA_ServerStatusDataType_new(void) {
-    return (UA_ServerStatusDataType*)UA_new(&UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
+return (UA_ServerStatusDataType*)UA_new(&UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ServerStatusDataType_copy(const UA_ServerStatusDataType *src, UA_ServerStatusDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_ServerStatusDataType_deleteMembers(UA_ServerStatusDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_ServerStatusDataType_delete(UA_ServerStatusDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SERVERSTATUSDATATYPE]);
 }
 
 /* AttributeOperand */
 static UA_INLINE void
 UA_AttributeOperand_init(UA_AttributeOperand *p) {
-    memset(p, 0, sizeof(UA_AttributeOperand));
+memset(p, 0, sizeof(UA_AttributeOperand));
 }
 
 static UA_INLINE UA_AttributeOperand *
 UA_AttributeOperand_new(void) {
-    return (UA_AttributeOperand*)UA_new(&UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
+return (UA_AttributeOperand*)UA_new(&UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AttributeOperand_copy(const UA_AttributeOperand *src, UA_AttributeOperand *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
 }
 
 static UA_INLINE void
 UA_AttributeOperand_deleteMembers(UA_AttributeOperand *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
 }
 
 static UA_INLINE void
 UA_AttributeOperand_delete(UA_AttributeOperand *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ATTRIBUTEOPERAND]);
 }
 
 /* AddReferencesResponse */
 static UA_INLINE void
 UA_AddReferencesResponse_init(UA_AddReferencesResponse *p) {
-    memset(p, 0, sizeof(UA_AddReferencesResponse));
+memset(p, 0, sizeof(UA_AddReferencesResponse));
 }
 
 static UA_INLINE UA_AddReferencesResponse *
 UA_AddReferencesResponse_new(void) {
-    return (UA_AddReferencesResponse*)UA_new(&UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
+return (UA_AddReferencesResponse*)UA_new(&UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddReferencesResponse_copy(const UA_AddReferencesResponse *src, UA_AddReferencesResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_AddReferencesResponse_deleteMembers(UA_AddReferencesResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
 }
 
 static UA_INLINE void
 UA_AddReferencesResponse_delete(UA_AddReferencesResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
 }
 
 /* EventFilterResult */
 static UA_INLINE void
 UA_EventFilterResult_init(UA_EventFilterResult *p) {
-    memset(p, 0, sizeof(UA_EventFilterResult));
+memset(p, 0, sizeof(UA_EventFilterResult));
 }
 
 static UA_INLINE UA_EventFilterResult *
 UA_EventFilterResult_new(void) {
-    return (UA_EventFilterResult*)UA_new(&UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
+return (UA_EventFilterResult*)UA_new(&UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_EventFilterResult_copy(const UA_EventFilterResult *src, UA_EventFilterResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
 }
 
 static UA_INLINE void
 UA_EventFilterResult_deleteMembers(UA_EventFilterResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
 }
 
 static UA_INLINE void
 UA_EventFilterResult_delete(UA_EventFilterResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_EVENTFILTERRESULT]);
 }
 
 /* TranslateBrowsePathsToNodeIdsResponse */
 static UA_INLINE void
 UA_TranslateBrowsePathsToNodeIdsResponse_init(UA_TranslateBrowsePathsToNodeIdsResponse *p) {
-    memset(p, 0, sizeof(UA_TranslateBrowsePathsToNodeIdsResponse));
+memset(p, 0, sizeof(UA_TranslateBrowsePathsToNodeIdsResponse));
 }
 
 static UA_INLINE UA_TranslateBrowsePathsToNodeIdsResponse *
 UA_TranslateBrowsePathsToNodeIdsResponse_new(void) {
-    return (UA_TranslateBrowsePathsToNodeIdsResponse*)UA_new(&UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
+return (UA_TranslateBrowsePathsToNodeIdsResponse*)UA_new(&UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_TranslateBrowsePathsToNodeIdsResponse_copy(const UA_TranslateBrowsePathsToNodeIdsResponse *src, UA_TranslateBrowsePathsToNodeIdsResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_TranslateBrowsePathsToNodeIdsResponse_deleteMembers(UA_TranslateBrowsePathsToNodeIdsResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_TranslateBrowsePathsToNodeIdsResponse_delete(UA_TranslateBrowsePathsToNodeIdsResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
 }
 
 /* DataChangeFilter */
 static UA_INLINE void
 UA_DataChangeFilter_init(UA_DataChangeFilter *p) {
-    memset(p, 0, sizeof(UA_DataChangeFilter));
+memset(p, 0, sizeof(UA_DataChangeFilter));
 }
 
 static UA_INLINE UA_DataChangeFilter *
 UA_DataChangeFilter_new(void) {
-    return (UA_DataChangeFilter*)UA_new(&UA_TYPES[UA_TYPES_DATACHANGEFILTER]);
+return (UA_DataChangeFilter*)UA_new(&UA_TYPES[UA_TYPES_DATACHANGEFILTER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_DataChangeFilter_copy(const UA_DataChangeFilter *src, UA_DataChangeFilter *dst) {
-    *dst = *src;
-    return UA_STATUSCODE_GOOD;
+*dst = *src;
+return UA_STATUSCODE_GOOD;
 }
 
 static UA_INLINE void
@@ -10414,657 +10414,657 @@ UA_DataChangeFilter_deleteMembers(UA_DataChangeFilter *p) { }
 
 static UA_INLINE void
 UA_DataChangeFilter_delete(UA_DataChangeFilter *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_DATACHANGEFILTER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_DATACHANGEFILTER]);
 }
 
 /* ContentFilterElement */
 static UA_INLINE void
 UA_ContentFilterElement_init(UA_ContentFilterElement *p) {
-    memset(p, 0, sizeof(UA_ContentFilterElement));
+memset(p, 0, sizeof(UA_ContentFilterElement));
 }
 
 static UA_INLINE UA_ContentFilterElement *
 UA_ContentFilterElement_new(void) {
-    return (UA_ContentFilterElement*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
+return (UA_ContentFilterElement*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ContentFilterElement_copy(const UA_ContentFilterElement *src, UA_ContentFilterElement *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
 }
 
 static UA_INLINE void
 UA_ContentFilterElement_deleteMembers(UA_ContentFilterElement *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
 }
 
 static UA_INLINE void
 UA_ContentFilterElement_delete(UA_ContentFilterElement *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTERELEMENT]);
 }
 
 /* TranslateBrowsePathsToNodeIdsRequest */
 static UA_INLINE void
 UA_TranslateBrowsePathsToNodeIdsRequest_init(UA_TranslateBrowsePathsToNodeIdsRequest *p) {
-    memset(p, 0, sizeof(UA_TranslateBrowsePathsToNodeIdsRequest));
+memset(p, 0, sizeof(UA_TranslateBrowsePathsToNodeIdsRequest));
 }
 
 static UA_INLINE UA_TranslateBrowsePathsToNodeIdsRequest *
 UA_TranslateBrowsePathsToNodeIdsRequest_new(void) {
-    return (UA_TranslateBrowsePathsToNodeIdsRequest*)UA_new(&UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
+return (UA_TranslateBrowsePathsToNodeIdsRequest*)UA_new(&UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_TranslateBrowsePathsToNodeIdsRequest_copy(const UA_TranslateBrowsePathsToNodeIdsRequest *src, UA_TranslateBrowsePathsToNodeIdsRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
 }
 
 static UA_INLINE void
 UA_TranslateBrowsePathsToNodeIdsRequest_deleteMembers(UA_TranslateBrowsePathsToNodeIdsRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
 }
 
 static UA_INLINE void
 UA_TranslateBrowsePathsToNodeIdsRequest_delete(UA_TranslateBrowsePathsToNodeIdsRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST]);
 }
 
 /* CloseSessionResponse */
 static UA_INLINE void
 UA_CloseSessionResponse_init(UA_CloseSessionResponse *p) {
-    memset(p, 0, sizeof(UA_CloseSessionResponse));
+memset(p, 0, sizeof(UA_CloseSessionResponse));
 }
 
 static UA_INLINE UA_CloseSessionResponse *
 UA_CloseSessionResponse_new(void) {
-    return (UA_CloseSessionResponse*)UA_new(&UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
+return (UA_CloseSessionResponse*)UA_new(&UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CloseSessionResponse_copy(const UA_CloseSessionResponse *src, UA_CloseSessionResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CloseSessionResponse_deleteMembers(UA_CloseSessionResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CloseSessionResponse_delete(UA_CloseSessionResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CLOSESESSIONRESPONSE]);
 }
 
 /* ApplicationDescription */
 static UA_INLINE void
 UA_ApplicationDescription_init(UA_ApplicationDescription *p) {
-    memset(p, 0, sizeof(UA_ApplicationDescription));
+memset(p, 0, sizeof(UA_ApplicationDescription));
 }
 
 static UA_INLINE UA_ApplicationDescription *
 UA_ApplicationDescription_new(void) {
-    return (UA_ApplicationDescription*)UA_new(&UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
+return (UA_ApplicationDescription*)UA_new(&UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ApplicationDescription_copy(const UA_ApplicationDescription *src, UA_ApplicationDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_ApplicationDescription_deleteMembers(UA_ApplicationDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_ApplicationDescription_delete(UA_ApplicationDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_APPLICATIONDESCRIPTION]);
 }
 
 /* SessionDiagnosticsDataType */
 static UA_INLINE void
 UA_SessionDiagnosticsDataType_init(UA_SessionDiagnosticsDataType *p) {
-    memset(p, 0, sizeof(UA_SessionDiagnosticsDataType));
+memset(p, 0, sizeof(UA_SessionDiagnosticsDataType));
 }
 
 static UA_INLINE UA_SessionDiagnosticsDataType *
 UA_SessionDiagnosticsDataType_new(void) {
-    return (UA_SessionDiagnosticsDataType*)UA_new(&UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
+return (UA_SessionDiagnosticsDataType*)UA_new(&UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_SessionDiagnosticsDataType_copy(const UA_SessionDiagnosticsDataType *src, UA_SessionDiagnosticsDataType *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SessionDiagnosticsDataType_deleteMembers(UA_SessionDiagnosticsDataType *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
 }
 
 static UA_INLINE void
 UA_SessionDiagnosticsDataType_delete(UA_SessionDiagnosticsDataType *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SESSIONDIAGNOSTICSDATATYPE]);
 }
 
 /* ServiceFault */
 static UA_INLINE void
 UA_ServiceFault_init(UA_ServiceFault *p) {
-    memset(p, 0, sizeof(UA_ServiceFault));
+memset(p, 0, sizeof(UA_ServiceFault));
 }
 
 static UA_INLINE UA_ServiceFault *
 UA_ServiceFault_new(void) {
-    return (UA_ServiceFault*)UA_new(&UA_TYPES[UA_TYPES_SERVICEFAULT]);
+return (UA_ServiceFault*)UA_new(&UA_TYPES[UA_TYPES_SERVICEFAULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ServiceFault_copy(const UA_ServiceFault *src, UA_ServiceFault *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SERVICEFAULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_SERVICEFAULT]);
 }
 
 static UA_INLINE void
 UA_ServiceFault_deleteMembers(UA_ServiceFault *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SERVICEFAULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_SERVICEFAULT]);
 }
 
 static UA_INLINE void
 UA_ServiceFault_delete(UA_ServiceFault *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_SERVICEFAULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_SERVICEFAULT]);
 }
 
 /* RegisteredServer */
 static UA_INLINE void
 UA_RegisteredServer_init(UA_RegisteredServer *p) {
-    memset(p, 0, sizeof(UA_RegisteredServer));
+memset(p, 0, sizeof(UA_RegisteredServer));
 }
 
 static UA_INLINE UA_RegisteredServer *
 UA_RegisteredServer_new(void) {
-    return (UA_RegisteredServer*)UA_new(&UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
+return (UA_RegisteredServer*)UA_new(&UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisteredServer_copy(const UA_RegisteredServer *src, UA_RegisteredServer *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
 }
 
 static UA_INLINE void
 UA_RegisteredServer_deleteMembers(UA_RegisteredServer *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
 }
 
 static UA_INLINE void
 UA_RegisteredServer_delete(UA_RegisteredServer *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTEREDSERVER]);
 }
 
 /* AggregateFilter */
 static UA_INLINE void
 UA_AggregateFilter_init(UA_AggregateFilter *p) {
-    memset(p, 0, sizeof(UA_AggregateFilter));
+memset(p, 0, sizeof(UA_AggregateFilter));
 }
 
 static UA_INLINE UA_AggregateFilter *
 UA_AggregateFilter_new(void) {
-    return (UA_AggregateFilter*)UA_new(&UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
+return (UA_AggregateFilter*)UA_new(&UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AggregateFilter_copy(const UA_AggregateFilter *src, UA_AggregateFilter *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
 }
 
 static UA_INLINE void
 UA_AggregateFilter_deleteMembers(UA_AggregateFilter *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
 }
 
 static UA_INLINE void
 UA_AggregateFilter_delete(UA_AggregateFilter *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_AGGREGATEFILTER]);
 }
 
 /* RegisterServerRequest */
 static UA_INLINE void
 UA_RegisterServerRequest_init(UA_RegisterServerRequest *p) {
-    memset(p, 0, sizeof(UA_RegisterServerRequest));
+memset(p, 0, sizeof(UA_RegisterServerRequest));
 }
 
 static UA_INLINE UA_RegisterServerRequest *
 UA_RegisterServerRequest_new(void) {
-    return (UA_RegisterServerRequest*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
+return (UA_RegisterServerRequest*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisterServerRequest_copy(const UA_RegisterServerRequest *src, UA_RegisterServerRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
 }
 
 static UA_INLINE void
 UA_RegisterServerRequest_deleteMembers(UA_RegisterServerRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
 }
 
 static UA_INLINE void
 UA_RegisterServerRequest_delete(UA_RegisterServerRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVERREQUEST]);
 }
 
 /* EndpointDescription */
 static UA_INLINE void
 UA_EndpointDescription_init(UA_EndpointDescription *p) {
-    memset(p, 0, sizeof(UA_EndpointDescription));
+memset(p, 0, sizeof(UA_EndpointDescription));
 }
 
 static UA_INLINE UA_EndpointDescription *
 UA_EndpointDescription_new(void) {
-    return (UA_EndpointDescription*)UA_new(&UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
+return (UA_EndpointDescription*)UA_new(&UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_EndpointDescription_copy(const UA_EndpointDescription *src, UA_EndpointDescription *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_EndpointDescription_deleteMembers(UA_EndpointDescription *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
 }
 
 static UA_INLINE void
 UA_EndpointDescription_delete(UA_EndpointDescription *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ENDPOINTDESCRIPTION]);
 }
 
 /* CreateMonitoredItemsRequest */
 static UA_INLINE void
 UA_CreateMonitoredItemsRequest_init(UA_CreateMonitoredItemsRequest *p) {
-    memset(p, 0, sizeof(UA_CreateMonitoredItemsRequest));
+memset(p, 0, sizeof(UA_CreateMonitoredItemsRequest));
 }
 
 static UA_INLINE UA_CreateMonitoredItemsRequest *
 UA_CreateMonitoredItemsRequest_new(void) {
-    return (UA_CreateMonitoredItemsRequest*)UA_new(&UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
+return (UA_CreateMonitoredItemsRequest*)UA_new(&UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CreateMonitoredItemsRequest_copy(const UA_CreateMonitoredItemsRequest *src, UA_CreateMonitoredItemsRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE void
 UA_CreateMonitoredItemsRequest_deleteMembers(UA_CreateMonitoredItemsRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
 }
 
 static UA_INLINE void
 UA_CreateMonitoredItemsRequest_delete(UA_CreateMonitoredItemsRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CREATEMONITOREDITEMSREQUEST]);
 }
 
 /* ContentFilter */
 static UA_INLINE void
 UA_ContentFilter_init(UA_ContentFilter *p) {
-    memset(p, 0, sizeof(UA_ContentFilter));
+memset(p, 0, sizeof(UA_ContentFilter));
 }
 
 static UA_INLINE UA_ContentFilter *
 UA_ContentFilter_new(void) {
-    return (UA_ContentFilter*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTER]);
+return (UA_ContentFilter*)UA_new(&UA_TYPES[UA_TYPES_CONTENTFILTER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_ContentFilter_copy(const UA_ContentFilter *src, UA_ContentFilter *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTER]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CONTENTFILTER]);
 }
 
 static UA_INLINE void
 UA_ContentFilter_deleteMembers(UA_ContentFilter *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTER]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CONTENTFILTER]);
 }
 
 static UA_INLINE void
 UA_ContentFilter_delete(UA_ContentFilter *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CONTENTFILTER]);
 }
 
 /* QueryFirstResponse */
 static UA_INLINE void
 UA_QueryFirstResponse_init(UA_QueryFirstResponse *p) {
-    memset(p, 0, sizeof(UA_QueryFirstResponse));
+memset(p, 0, sizeof(UA_QueryFirstResponse));
 }
 
 static UA_INLINE UA_QueryFirstResponse *
 UA_QueryFirstResponse_new(void) {
-    return (UA_QueryFirstResponse*)UA_new(&UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
+return (UA_QueryFirstResponse*)UA_new(&UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QueryFirstResponse_copy(const UA_QueryFirstResponse *src, UA_QueryFirstResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
 }
 
 static UA_INLINE void
 UA_QueryFirstResponse_deleteMembers(UA_QueryFirstResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
 }
 
 static UA_INLINE void
 UA_QueryFirstResponse_delete(UA_QueryFirstResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
 }
 
 /* AddNodesRequest */
 static UA_INLINE void
 UA_AddNodesRequest_init(UA_AddNodesRequest *p) {
-    memset(p, 0, sizeof(UA_AddNodesRequest));
+memset(p, 0, sizeof(UA_AddNodesRequest));
 }
 
 static UA_INLINE UA_AddNodesRequest *
 UA_AddNodesRequest_new(void) {
-    return (UA_AddNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
+return (UA_AddNodesRequest*)UA_new(&UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_AddNodesRequest_copy(const UA_AddNodesRequest *src, UA_AddNodesRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_AddNodesRequest_deleteMembers(UA_AddNodesRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
 }
 
 static UA_INLINE void
 UA_AddNodesRequest_delete(UA_AddNodesRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_ADDNODESREQUEST]);
 }
 
 /* BrowseRequest */
 static UA_INLINE void
 UA_BrowseRequest_init(UA_BrowseRequest *p) {
-    memset(p, 0, sizeof(UA_BrowseRequest));
+memset(p, 0, sizeof(UA_BrowseRequest));
 }
 
 static UA_INLINE UA_BrowseRequest *
 UA_BrowseRequest_new(void) {
-    return (UA_BrowseRequest*)UA_new(&UA_TYPES[UA_TYPES_BROWSEREQUEST]);
+return (UA_BrowseRequest*)UA_new(&UA_TYPES[UA_TYPES_BROWSEREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseRequest_copy(const UA_BrowseRequest *src, UA_BrowseRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSEREQUEST]);
 }
 
 static UA_INLINE void
 UA_BrowseRequest_deleteMembers(UA_BrowseRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSEREQUEST]);
 }
 
 static UA_INLINE void
 UA_BrowseRequest_delete(UA_BrowseRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSEREQUEST]);
 }
 
 /* BrowseResult */
 static UA_INLINE void
 UA_BrowseResult_init(UA_BrowseResult *p) {
-    memset(p, 0, sizeof(UA_BrowseResult));
+memset(p, 0, sizeof(UA_BrowseResult));
 }
 
 static UA_INLINE UA_BrowseResult *
 UA_BrowseResult_new(void) {
-    return (UA_BrowseResult*)UA_new(&UA_TYPES[UA_TYPES_BROWSERESULT]);
+return (UA_BrowseResult*)UA_new(&UA_TYPES[UA_TYPES_BROWSERESULT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseResult_copy(const UA_BrowseResult *src, UA_BrowseResult *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSERESULT]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSERESULT]);
 }
 
 static UA_INLINE void
 UA_BrowseResult_deleteMembers(UA_BrowseResult *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSERESULT]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSERESULT]);
 }
 
 static UA_INLINE void
 UA_BrowseResult_delete(UA_BrowseResult *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSERESULT]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSERESULT]);
 }
 
 /* RegisterServer2Request */
 static UA_INLINE void
 UA_RegisterServer2Request_init(UA_RegisterServer2Request *p) {
-    memset(p, 0, sizeof(UA_RegisterServer2Request));
+memset(p, 0, sizeof(UA_RegisterServer2Request));
 }
 
 static UA_INLINE UA_RegisterServer2Request *
 UA_RegisterServer2Request_new(void) {
-    return (UA_RegisterServer2Request*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
+return (UA_RegisterServer2Request*)UA_new(&UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_RegisterServer2Request_copy(const UA_RegisterServer2Request *src, UA_RegisterServer2Request *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
 }
 
 static UA_INLINE void
 UA_RegisterServer2Request_deleteMembers(UA_RegisterServer2Request *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
 }
 
 static UA_INLINE void
 UA_RegisterServer2Request_delete(UA_RegisterServer2Request *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_REGISTERSERVER2REQUEST]);
 }
 
 /* CreateSessionRequest */
 static UA_INLINE void
 UA_CreateSessionRequest_init(UA_CreateSessionRequest *p) {
-    memset(p, 0, sizeof(UA_CreateSessionRequest));
+memset(p, 0, sizeof(UA_CreateSessionRequest));
 }
 
 static UA_INLINE UA_CreateSessionRequest *
 UA_CreateSessionRequest_new(void) {
-    return (UA_CreateSessionRequest*)UA_new(&UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
+return (UA_CreateSessionRequest*)UA_new(&UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CreateSessionRequest_copy(const UA_CreateSessionRequest *src, UA_CreateSessionRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_CreateSessionRequest_deleteMembers(UA_CreateSessionRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
 }
 
 static UA_INLINE void
 UA_CreateSessionRequest_delete(UA_CreateSessionRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CREATESESSIONREQUEST]);
 }
 
 /* EventFilter */
 static UA_INLINE void
 UA_EventFilter_init(UA_EventFilter *p) {
-    memset(p, 0, sizeof(UA_EventFilter));
+memset(p, 0, sizeof(UA_EventFilter));
 }
 
 static UA_INLINE UA_EventFilter *
 UA_EventFilter_new(void) {
-    return (UA_EventFilter*)UA_new(&UA_TYPES[UA_TYPES_EVENTFILTER]);
+return (UA_EventFilter*)UA_new(&UA_TYPES[UA_TYPES_EVENTFILTER]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_EventFilter_copy(const UA_EventFilter *src, UA_EventFilter *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTFILTER]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_EVENTFILTER]);
 }
 
 static UA_INLINE void
 UA_EventFilter_deleteMembers(UA_EventFilter *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTFILTER]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_EVENTFILTER]);
 }
 
 static UA_INLINE void
 UA_EventFilter_delete(UA_EventFilter *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_EVENTFILTER]);
+UA_delete(p, &UA_TYPES[UA_TYPES_EVENTFILTER]);
 }
 
 /* GetEndpointsResponse */
 static UA_INLINE void
 UA_GetEndpointsResponse_init(UA_GetEndpointsResponse *p) {
-    memset(p, 0, sizeof(UA_GetEndpointsResponse));
+memset(p, 0, sizeof(UA_GetEndpointsResponse));
 }
 
 static UA_INLINE UA_GetEndpointsResponse *
 UA_GetEndpointsResponse_new(void) {
-    return (UA_GetEndpointsResponse*)UA_new(&UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
+return (UA_GetEndpointsResponse*)UA_new(&UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_GetEndpointsResponse_copy(const UA_GetEndpointsResponse *src, UA_GetEndpointsResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_GetEndpointsResponse_deleteMembers(UA_GetEndpointsResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_GetEndpointsResponse_delete(UA_GetEndpointsResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_GETENDPOINTSRESPONSE]);
 }
 
 /* FindServersResponse */
 static UA_INLINE void
 UA_FindServersResponse_init(UA_FindServersResponse *p) {
-    memset(p, 0, sizeof(UA_FindServersResponse));
+memset(p, 0, sizeof(UA_FindServersResponse));
 }
 
 static UA_INLINE UA_FindServersResponse *
 UA_FindServersResponse_new(void) {
-    return (UA_FindServersResponse*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
+return (UA_FindServersResponse*)UA_new(&UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_FindServersResponse_copy(const UA_FindServersResponse *src, UA_FindServersResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_FindServersResponse_deleteMembers(UA_FindServersResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
 }
 
 static UA_INLINE void
 UA_FindServersResponse_delete(UA_FindServersResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_FINDSERVERSRESPONSE]);
 }
 
 /* BrowseNextResponse */
 static UA_INLINE void
 UA_BrowseNextResponse_init(UA_BrowseNextResponse *p) {
-    memset(p, 0, sizeof(UA_BrowseNextResponse));
+memset(p, 0, sizeof(UA_BrowseNextResponse));
 }
 
 static UA_INLINE UA_BrowseNextResponse *
 UA_BrowseNextResponse_new(void) {
-    return (UA_BrowseNextResponse*)UA_new(&UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
+return (UA_BrowseNextResponse*)UA_new(&UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseNextResponse_copy(const UA_BrowseNextResponse *src, UA_BrowseNextResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
 }
 
 static UA_INLINE void
 UA_BrowseNextResponse_deleteMembers(UA_BrowseNextResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
 }
 
 static UA_INLINE void
 UA_BrowseNextResponse_delete(UA_BrowseNextResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
 }
 
 /* BrowseResponse */
 static UA_INLINE void
 UA_BrowseResponse_init(UA_BrowseResponse *p) {
-    memset(p, 0, sizeof(UA_BrowseResponse));
+memset(p, 0, sizeof(UA_BrowseResponse));
 }
 
 static UA_INLINE UA_BrowseResponse *
 UA_BrowseResponse_new(void) {
-    return (UA_BrowseResponse*)UA_new(&UA_TYPES[UA_TYPES_BROWSERESPONSE]);
+return (UA_BrowseResponse*)UA_new(&UA_TYPES[UA_TYPES_BROWSERESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_BrowseResponse_copy(const UA_BrowseResponse *src, UA_BrowseResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
 }
 
 static UA_INLINE void
 UA_BrowseResponse_deleteMembers(UA_BrowseResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
 }
 
 static UA_INLINE void
 UA_BrowseResponse_delete(UA_BrowseResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
 }
 
 /* CreateSessionResponse */
 static UA_INLINE void
 UA_CreateSessionResponse_init(UA_CreateSessionResponse *p) {
-    memset(p, 0, sizeof(UA_CreateSessionResponse));
+memset(p, 0, sizeof(UA_CreateSessionResponse));
 }
 
 static UA_INLINE UA_CreateSessionResponse *
 UA_CreateSessionResponse_new(void) {
-    return (UA_CreateSessionResponse*)UA_new(&UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
+return (UA_CreateSessionResponse*)UA_new(&UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_CreateSessionResponse_copy(const UA_CreateSessionResponse *src, UA_CreateSessionResponse *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CreateSessionResponse_deleteMembers(UA_CreateSessionResponse *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
 }
 
 static UA_INLINE void
 UA_CreateSessionResponse_delete(UA_CreateSessionResponse *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
+UA_delete(p, &UA_TYPES[UA_TYPES_CREATESESSIONRESPONSE]);
 }
 
 /* QueryFirstRequest */
 static UA_INLINE void
 UA_QueryFirstRequest_init(UA_QueryFirstRequest *p) {
-    memset(p, 0, sizeof(UA_QueryFirstRequest));
+memset(p, 0, sizeof(UA_QueryFirstRequest));
 }
 
 static UA_INLINE UA_QueryFirstRequest *
 UA_QueryFirstRequest_new(void) {
-    return (UA_QueryFirstRequest*)UA_new(&UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
+return (UA_QueryFirstRequest*)UA_new(&UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_QueryFirstRequest_copy(const UA_QueryFirstRequest *src, UA_QueryFirstRequest *dst) {
-    return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
+return UA_copy(src, dst, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
 }
 
 static UA_INLINE void
 UA_QueryFirstRequest_deleteMembers(UA_QueryFirstRequest *p) {
-    UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
+UA_deleteMembers(p, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
 }
 
 static UA_INLINE void
 UA_QueryFirstRequest_delete(UA_QueryFirstRequest *p) {
-    UA_delete(p, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
+UA_delete(p, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST]);
 }
 
 #if defined(__GNUC__) && __GNUC__ >= 4 && __GNUC_MINOR__ >= 6
@@ -11080,7 +11080,7 @@ UA_QueryFirstRequest_delete(UA_QueryFirstRequest *p) {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2014-2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2015-2016 (c) Sten Grüner
@@ -11169,11 +11169,11 @@ typedef void (*UA_ServerCallback)(UA_Server *server, void *data);
  *         An error code otherwise. */
 UA_StatusCode UA_EXPORT
 UA_Server_addRepeatedCallback(UA_Server *server, UA_ServerCallback callback,
-                              void *data, UA_UInt32 interval, UA_UInt64 *callbackId);
+void *data, UA_UInt32 interval, UA_UInt64 *callbackId);
 
 UA_StatusCode UA_EXPORT
 UA_Server_changeRepeatedCallbackInterval(UA_Server *server, UA_UInt64 callbackId,
-                                         UA_UInt32 interval);
+UA_UInt32 interval);
 
 /* Remove a repeated callback.
  *
@@ -11209,145 +11209,145 @@ UA_Server_removeRepeatedCallback(UA_Server *server, UA_UInt64 callbackId);
  *         with the attribute value and the timestamps. */
 UA_DataValue UA_EXPORT
 UA_Server_read(UA_Server *server, const UA_ReadValueId *item,
-               UA_TimestampsToReturn timestamps);
+UA_TimestampsToReturn timestamps);
 
 /* Don't use this function. There are typed versions for every supported
  * attribute. */
 UA_StatusCode UA_EXPORT
 __UA_Server_read(UA_Server *server, const UA_NodeId *nodeId,
-                 UA_AttributeId attributeId, void *v);
+UA_AttributeId attributeId, void *v);
 
 static UA_INLINE UA_StatusCode
 UA_Server_readNodeId(UA_Server *server, const UA_NodeId nodeId,
-                     UA_NodeId *outNodeId) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_NODEID, outNodeId);
+UA_NodeId *outNodeId) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_NODEID, outNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readNodeClass(UA_Server *server, const UA_NodeId nodeId,
-                        UA_NodeClass *outNodeClass) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_NODECLASS,
-                            outNodeClass);
+UA_NodeClass *outNodeClass) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_NODECLASS,
+outNodeClass);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readBrowseName(UA_Server *server, const UA_NodeId nodeId,
-                         UA_QualifiedName *outBrowseName) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
-                            outBrowseName);
+UA_QualifiedName *outBrowseName) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
+outBrowseName);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readDisplayName(UA_Server *server, const UA_NodeId nodeId,
-                          UA_LocalizedText *outDisplayName) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
-                            outDisplayName);
+UA_LocalizedText *outDisplayName) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
+outDisplayName);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readDescription(UA_Server *server, const UA_NodeId nodeId,
-                          UA_LocalizedText *outDescription) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
-                            outDescription);
+UA_LocalizedText *outDescription) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
+outDescription);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readWriteMask(UA_Server *server, const UA_NodeId nodeId,
-                        UA_UInt32 *outWriteMask) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
-                            outWriteMask);
+UA_UInt32 *outWriteMask) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
+outWriteMask);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readIsAbstract(UA_Server *server, const UA_NodeId nodeId,
-                         UA_Boolean *outIsAbstract) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
-                            outIsAbstract);
+UA_Boolean *outIsAbstract) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
+outIsAbstract);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readSymmetric(UA_Server *server, const UA_NodeId nodeId,
-                        UA_Boolean *outSymmetric) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_SYMMETRIC,
-                            outSymmetric);
+UA_Boolean *outSymmetric) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_SYMMETRIC,
+outSymmetric);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readInverseName(UA_Server *server, const UA_NodeId nodeId,
-                          UA_LocalizedText *outInverseName) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
-                            outInverseName);
+UA_LocalizedText *outInverseName) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
+outInverseName);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readContainsNoLoop(UA_Server *server, const UA_NodeId nodeId,
-                             UA_Boolean *outContainsNoLoops) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_CONTAINSNOLOOPS,
-                            outContainsNoLoops);
+UA_Boolean *outContainsNoLoops) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_CONTAINSNOLOOPS,
+outContainsNoLoops);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readEventNotifier(UA_Server *server, const UA_NodeId nodeId,
-                            UA_Byte *outEventNotifier) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_EVENTNOTIFIER,
-                            outEventNotifier);
+UA_Byte *outEventNotifier) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_EVENTNOTIFIER,
+outEventNotifier);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readValue(UA_Server *server, const UA_NodeId nodeId,
-                    UA_Variant *outValue) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_VALUE, outValue);
+UA_Variant *outValue) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_VALUE, outValue);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readDataType(UA_Server *server, const UA_NodeId nodeId,
-                       UA_NodeId *outDataType) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_DATATYPE,
-                            outDataType);
+UA_NodeId *outDataType) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_DATATYPE,
+outDataType);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readValueRank(UA_Server *server, const UA_NodeId nodeId,
-                        UA_Int32 *outValueRank) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_VALUERANK,
-                            outValueRank);
+UA_Int32 *outValueRank) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_VALUERANK,
+outValueRank);
 }
 
 /* Returns a variant with an int32 array */
 static UA_INLINE UA_StatusCode
 UA_Server_readArrayDimensions(UA_Server *server, const UA_NodeId nodeId,
-                              UA_Variant *outArrayDimensions) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_ARRAYDIMENSIONS,
-                            outArrayDimensions);
+UA_Variant *outArrayDimensions) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_ARRAYDIMENSIONS,
+outArrayDimensions);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readAccessLevel(UA_Server *server, const UA_NodeId nodeId,
-                          UA_Byte *outAccessLevel) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
-                            outAccessLevel);
+UA_Byte *outAccessLevel) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
+outAccessLevel);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readMinimumSamplingInterval(UA_Server *server, const UA_NodeId nodeId,
-                                      UA_Double *outMinimumSamplingInterval) {
-    return __UA_Server_read(server, &nodeId,
-                            UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
-                            outMinimumSamplingInterval);
+UA_Double *outMinimumSamplingInterval) {
+return __UA_Server_read(server, &nodeId,
+UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
+outMinimumSamplingInterval);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readHistorizing(UA_Server *server, const UA_NodeId nodeId,
-                          UA_Boolean *outHistorizing) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_HISTORIZING,
-                            outHistorizing);
+UA_Boolean *outHistorizing) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_HISTORIZING,
+outHistorizing);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_readExecutable(UA_Server *server, const UA_NodeId nodeId,
-                         UA_Boolean *outExecutable) {
-    return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
-                            outExecutable);
+UA_Boolean *outExecutable) {
+return __UA_Server_read(server, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
+outExecutable);
 }
 
 /**
@@ -11384,122 +11384,122 @@ UA_Server_write(UA_Server *server, const UA_WriteValue *value);
  * overhead. */
 UA_StatusCode UA_EXPORT
 __UA_Server_write(UA_Server *server, const UA_NodeId *nodeId,
-                  const UA_AttributeId attributeId,
-                  const UA_DataType *attr_type, const void *attr);
+const UA_AttributeId attributeId,
+const UA_DataType *attr_type, const void *attr);
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeBrowseName(UA_Server *server, const UA_NodeId nodeId,
-                          const UA_QualifiedName browseName) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
-                             &UA_TYPES[UA_TYPES_QUALIFIEDNAME], &browseName);
+const UA_QualifiedName browseName) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
+&UA_TYPES[UA_TYPES_QUALIFIEDNAME], &browseName);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeDisplayName(UA_Server *server, const UA_NodeId nodeId,
-                           const UA_LocalizedText displayName) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
-                             &UA_TYPES[UA_TYPES_LOCALIZEDTEXT], &displayName);
+const UA_LocalizedText displayName) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT], &displayName);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeDescription(UA_Server *server, const UA_NodeId nodeId,
-                           const UA_LocalizedText description) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
-                             &UA_TYPES[UA_TYPES_LOCALIZEDTEXT], &description);
+const UA_LocalizedText description) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT], &description);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeWriteMask(UA_Server *server, const UA_NodeId nodeId,
-                         const UA_UInt32 writeMask) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
-                             &UA_TYPES[UA_TYPES_UINT32], &writeMask);
+const UA_UInt32 writeMask) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
+&UA_TYPES[UA_TYPES_UINT32], &writeMask);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeIsAbstract(UA_Server *server, const UA_NodeId nodeId,
-                          const UA_Boolean isAbstract) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
-                             &UA_TYPES[UA_TYPES_BOOLEAN], &isAbstract);
+const UA_Boolean isAbstract) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
+&UA_TYPES[UA_TYPES_BOOLEAN], &isAbstract);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeInverseName(UA_Server *server, const UA_NodeId nodeId,
-                           const UA_LocalizedText inverseName) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
-                             &UA_TYPES[UA_TYPES_LOCALIZEDTEXT], &inverseName);
+const UA_LocalizedText inverseName) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT], &inverseName);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeEventNotifier(UA_Server *server, const UA_NodeId nodeId,
-                             const UA_Byte eventNotifier) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_EVENTNOTIFIER,
-                             &UA_TYPES[UA_TYPES_BYTE], &eventNotifier);
+const UA_Byte eventNotifier) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_EVENTNOTIFIER,
+&UA_TYPES[UA_TYPES_BYTE], &eventNotifier);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeValue(UA_Server *server, const UA_NodeId nodeId,
-                     const UA_Variant value) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_VALUE,
-                             &UA_TYPES[UA_TYPES_VARIANT], &value);
+const UA_Variant value) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_VALUE,
+&UA_TYPES[UA_TYPES_VARIANT], &value);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeDataType(UA_Server *server, const UA_NodeId nodeId,
-                        const UA_NodeId dataType) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_DATATYPE,
-                             &UA_TYPES[UA_TYPES_NODEID], &dataType);
+const UA_NodeId dataType) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_DATATYPE,
+&UA_TYPES[UA_TYPES_NODEID], &dataType);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeValueRank(UA_Server *server, const UA_NodeId nodeId,
-                         const UA_Int32 valueRank) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_VALUERANK,
-                             &UA_TYPES[UA_TYPES_INT32], &valueRank);
+const UA_Int32 valueRank) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_VALUERANK,
+&UA_TYPES[UA_TYPES_INT32], &valueRank);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeArrayDimensions(UA_Server *server, const UA_NodeId nodeId,
-                               const UA_Variant arrayDimensions) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_VALUE,
-                             &UA_TYPES[UA_TYPES_VARIANT], &arrayDimensions);
+const UA_Variant arrayDimensions) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_VALUE,
+&UA_TYPES[UA_TYPES_VARIANT], &arrayDimensions);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeAccessLevel(UA_Server *server, const UA_NodeId nodeId,
-                           const UA_Byte accessLevel) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
-                             &UA_TYPES[UA_TYPES_BYTE], &accessLevel);
+const UA_Byte accessLevel) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
+&UA_TYPES[UA_TYPES_BYTE], &accessLevel);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeMinimumSamplingInterval(UA_Server *server, const UA_NodeId nodeId,
-                                       const UA_Double miniumSamplingInterval) {
-    return __UA_Server_write(server, &nodeId,
-                             UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
-                             &UA_TYPES[UA_TYPES_DOUBLE],
-                             &miniumSamplingInterval);
+const UA_Double miniumSamplingInterval) {
+return __UA_Server_write(server, &nodeId,
+UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
+&UA_TYPES[UA_TYPES_DOUBLE],
+&miniumSamplingInterval);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_writeExecutable(UA_Server *server, const UA_NodeId nodeId,
-                          const UA_Boolean executable) {
-    return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
-                             &UA_TYPES[UA_TYPES_BOOLEAN], &executable); }
+const UA_Boolean executable) {
+return __UA_Server_write(server, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
+&UA_TYPES[UA_TYPES_BOOLEAN], &executable); }
 
 /**
  * Browsing
  * -------- */
 UA_BrowseResult UA_EXPORT
 UA_Server_browse(UA_Server *server, UA_UInt32 maxrefs,
-                 const UA_BrowseDescription *descr);
+const UA_BrowseDescription *descr);
 
 UA_BrowseResult UA_EXPORT
 UA_Server_browseNext(UA_Server *server, UA_Boolean releaseContinuationPoint,
-                     const UA_ByteString *continuationPoint);
+const UA_ByteString *continuationPoint);
 
 UA_BrowsePathResult UA_EXPORT
 UA_Server_translateBrowsePathToNodeIds(UA_Server *server,
-                                       const UA_BrowsePath *browsePath);
+const UA_BrowsePath *browsePath);
 
 #ifndef HAVE_NODEITER_CALLBACK
 #define HAVE_NODEITER_CALLBACK
@@ -11508,12 +11508,12 @@ UA_Server_translateBrowsePathToNodeIds(UA_Server *server,
  * differently) */
 typedef UA_StatusCode
 (*UA_NodeIteratorCallback)(UA_NodeId childId, UA_Boolean isInverse,
-                           UA_NodeId referenceTypeId, void *handle);
+UA_NodeId referenceTypeId, void *handle);
 #endif
 
 UA_StatusCode UA_EXPORT
 UA_Server_forEachChildNodeCall(UA_Server *server, UA_NodeId parentNodeId,
-                               UA_NodeIteratorCallback callback, void *handle);
+UA_NodeIteratorCallback callback, void *handle);
 
 #ifdef UA_ENABLE_DISCOVERY
 
@@ -11534,7 +11534,7 @@ UA_Server_forEachChildNodeCall(UA_Server *server, UA_NodeId parentNodeId,
  * @param semaphoreFilePath optional parameter pointing to semaphore file. */
 UA_StatusCode UA_EXPORT
 UA_Server_register_discovery(UA_Server *server, const char* discoveryServerUrl,
-                             const char* semaphoreFilePath);
+const char* semaphoreFilePath);
 
 /* Unregister the given server instance from the discovery server.
  * This should only be called when the server is shutting down.
@@ -11544,7 +11544,7 @@ UA_Server_register_discovery(UA_Server *server, const char* discoveryServerUrl,
 UA_StatusCode UA_EXPORT
 UA_Server_unregister_discovery(UA_Server *server, const char* discoveryServerUrl);
 
- /* Adds a periodic callback to register the server with the LDS (local discovery server)
+/* Adds a periodic callback to register the server with the LDS (local discovery server)
   * periodically. The interval between each register call is given as second parameter.
   * It should be 10 minutes by default (= 10*60*1000).
   *
@@ -11566,13 +11566,13 @@ UA_Server_unregister_discovery(UA_Server *server, const char* discoveryServerUrl
   * @param periodicCallbackId */
 UA_StatusCode UA_EXPORT
 UA_Server_addPeriodicServerRegisterCallback(UA_Server *server, const char* discoveryServerUrl,
-                                            UA_UInt32 intervalMs,
-                                            UA_UInt32 delayFirstRegisterMs,
-                                            UA_UInt64 *periodicCallbackId);
+UA_UInt32 intervalMs,
+UA_UInt32 delayFirstRegisterMs,
+UA_UInt64 *periodicCallbackId);
 
 /* Callback for RegisterServer. Data is passed from the register call */
 typedef void (*UA_Server_registerServerCallback)(const UA_RegisteredServer *registeredServer,
-                                                 void* data);
+void* data);
 
 /* Set the callback which is called if another server registeres or unregisters
  * with this instance. If called multiple times, previous data will be
@@ -11584,7 +11584,7 @@ typedef void (*UA_Server_registerServerCallback)(const UA_RegisteredServer *regi
  * @return UA_STATUSCODE_SUCCESS on success */
 void UA_EXPORT
 UA_Server_setRegisterServerCallback(UA_Server *server, UA_Server_registerServerCallback cb,
-                                    void* data);
+void* data);
 
 #ifdef UA_ENABLE_DISCOVERY_MULTICAST
 
@@ -11596,8 +11596,8 @@ UA_Server_setRegisterServerCallback(UA_Server *server, UA_Server_registerServerC
  * @param isTxtReceived indicates if we already received the corresponding TXT
  *        record with the path and caps data */
 typedef void (*UA_Server_serverOnNetworkCallback)(const UA_ServerOnNetwork *serverOnNetwork,
-                                                  UA_Boolean isServerAnnounce,
-                                                  UA_Boolean isTxtReceived, void* data);
+UA_Boolean isServerAnnounce,
+UA_Boolean isTxtReceived, void* data);
 
 /* Set the callback which is called if another server is found through mDNS or
  * deleted. It will be called for any mDNS message from the remote server, thus
@@ -11612,8 +11612,8 @@ typedef void (*UA_Server_serverOnNetworkCallback)(const UA_ServerOnNetwork *serv
  * @return UA_STATUSCODE_SUCCESS on success */
 void UA_EXPORT
 UA_Server_setServerOnNetworkCallback(UA_Server *server,
-                                     UA_Server_serverOnNetworkCallback cb,
-                                     void* data);
+UA_Server_serverOnNetworkCallback cb,
+void* data);
 
 #endif /* UA_ENABLE_DISCOVERY_MULTICAST */
 
@@ -11670,44 +11670,44 @@ UA_Server_setServerOnNetworkCallback(UA_Server *server,
 
 /* To be set in the server config. */
 typedef struct {
-    /* Can be NULL. May replace the nodeContext */
-    UA_StatusCode (*constructor)(UA_Server *server,
-                                 const UA_NodeId *sessionId, void *sessionContext,
-                                 const UA_NodeId *nodeId, void **nodeContext);
+/* Can be NULL. May replace the nodeContext */
+UA_StatusCode (*constructor)(UA_Server *server,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *nodeId, void **nodeContext);
 
-    /* Can be NULL. The context cannot be replaced since the node is destroyed
+/* Can be NULL. The context cannot be replaced since the node is destroyed
      * immediately afterwards anyway. */
-    void (*destructor)(UA_Server *server,
-                       const UA_NodeId *sessionId, void *sessionContext,
-                       const UA_NodeId *nodeId, void *nodeContext);
+void (*destructor)(UA_Server *server,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *nodeId, void *nodeContext);
 } UA_GlobalNodeLifecycle;
 
 typedef struct {
-    /* Can be NULL. May replace the nodeContext */
-    UA_StatusCode (*constructor)(UA_Server *server,
-                                 const UA_NodeId *sessionId, void *sessionContext,
-                                 const UA_NodeId *typeNodeId, void *typeNodeContext,
-                                 const UA_NodeId *nodeId, void **nodeContext);
+/* Can be NULL. May replace the nodeContext */
+UA_StatusCode (*constructor)(UA_Server *server,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *typeNodeId, void *typeNodeContext,
+const UA_NodeId *nodeId, void **nodeContext);
 
-    /* Can be NULL. May replace the nodeContext. */
-    void (*destructor)(UA_Server *server,
-                       const UA_NodeId *sessionId, void *sessionContext,
-                       const UA_NodeId *typeNodeId, void *typeNodeContext,
-                       const UA_NodeId *nodeId, void **nodeContext);
+/* Can be NULL. May replace the nodeContext. */
+void (*destructor)(UA_Server *server,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *typeNodeId, void *typeNodeContext,
+const UA_NodeId *nodeId, void **nodeContext);
 } UA_NodeTypeLifecycle;
 
 UA_StatusCode UA_EXPORT
 UA_Server_setNodeTypeLifecycle(UA_Server *server, UA_NodeId nodeId,
-                               UA_NodeTypeLifecycle lifecycle);
+UA_NodeTypeLifecycle lifecycle);
 
 UA_StatusCode UA_EXPORT
 UA_Server_getNodeContext(UA_Server *server, UA_NodeId nodeId,
-                         void **nodeContext);
+void **nodeContext);
 
 /* Careful! The user has to ensure that the destructor callbacks still work. */
 UA_StatusCode UA_EXPORT
 UA_Server_setNodeContext(UA_Server *server, UA_NodeId nodeId,
-                         void *nodeContext);
+void *nodeContext);
 
 /**
  * .. _datasource:
@@ -11724,7 +11724,7 @@ UA_Server_setNodeContext(UA_Server *server, UA_NodeId nodeId,
  * It is expected that the read callback is implemented. The write callback can
  * be set to a null-pointer. */
 typedef struct {
-    /* Copies the data from the source into the provided value.
+/* Copies the data from the source into the provided value.
      *
      * !! ZERO-COPY OPERATIONS POSSIBLE !!
      * It is not required to return a copy of the actual content data. You can
@@ -11753,12 +11753,12 @@ typedef struct {
      * @return Returns a status code for logging. Error codes intended for the
      *         original caller are set in the value. If an error is returned,
      *         then no releasing of the value is done. */
-    UA_StatusCode (*read)(UA_Server *server, const UA_NodeId *sessionId,
-                          void *sessionContext, const UA_NodeId *nodeId,
-                          void *nodeContext, UA_Boolean includeSourceTimeStamp,
-                          const UA_NumericRange *range, UA_DataValue *value);
+UA_StatusCode (*read)(UA_Server *server, const UA_NodeId *sessionId,
+void *sessionContext, const UA_NodeId *nodeId,
+void *nodeContext, UA_Boolean includeSourceTimeStamp,
+const UA_NumericRange *range, UA_DataValue *value);
 
-    /* Write into a data source. This method pointer can be NULL if the
+/* Write into a data source. This method pointer can be NULL if the
      * operation is unsupported.
      *
      * @param handle An optional pointer to user-defined data for the
@@ -11768,15 +11768,15 @@ typedef struct {
      * @param range An optional data range. If the data source is scalar or does
      *        not support writing of ranges, then an error code is returned.
      * @return Returns a status code that is returned to the user */
-    UA_StatusCode (*write)(UA_Server *server, const UA_NodeId *sessionId,
-                           void *sessionContext, const UA_NodeId *nodeId,
-                           void *nodeContext, const UA_NumericRange *range,
-                           const UA_DataValue *value);
+UA_StatusCode (*write)(UA_Server *server, const UA_NodeId *sessionId,
+void *sessionContext, const UA_NodeId *nodeId,
+void *nodeContext, const UA_NumericRange *range,
+const UA_DataValue *value);
 } UA_DataSource;
 
 UA_StatusCode UA_EXPORT
 UA_Server_setVariableNode_dataSource(UA_Server *server, const UA_NodeId nodeId,
-                                     const UA_DataSource dataSource);
+const UA_DataSource dataSource);
 
 /**
  * .. _value-callback:
@@ -11786,7 +11786,7 @@ UA_Server_setVariableNode_dataSource(UA_Server *server, const UA_NodeId nodeId,
  * Value Callbacks can be attached to variable and variable type nodes. If
  * not ``NULL``, they are called before reading and after writing respectively. */
 typedef struct {
-    /* Called before the value attribute is read. It is possible to write into the
+/* Called before the value attribute is read. It is possible to write into the
      * value attribute during onRead (using the write service). The node is
      * re-opened afterwards so that changes are considered in the following read
      * operation.
@@ -11796,12 +11796,12 @@ typedef struct {
      * @param data Points to the current node value.
      * @param range Points to the numeric range the client wants to read from
      *        (or NULL). */
-    void (*onRead)(UA_Server *server, const UA_NodeId *sessionId,
-                   void *sessionContext, const UA_NodeId *nodeid,
-                   void *nodeContext, const UA_NumericRange *range,
-                   const UA_DataValue *value);
+void (*onRead)(UA_Server *server, const UA_NodeId *sessionId,
+void *sessionContext, const UA_NodeId *nodeid,
+void *nodeContext, const UA_NumericRange *range,
+const UA_DataValue *value);
 
-    /* Called after writing the value attribute. The node is re-opened after
+/* Called after writing the value attribute. The node is re-opened after
      * writing so that the new value is visible in the callback.
      *
      * @param server The server executing the callback
@@ -11815,16 +11815,16 @@ typedef struct {
      *        by the type constructor(s).
      * @param range Points to the numeric range the client wants to write to (or
      *        NULL). */
-    void (*onWrite)(UA_Server *server, const UA_NodeId *sessionId,
-                    void *sessionContext, const UA_NodeId *nodeId,
-                    void *nodeContext, const UA_NumericRange *range,
-                    const UA_DataValue *data);
+void (*onWrite)(UA_Server *server, const UA_NodeId *sessionId,
+void *sessionContext, const UA_NodeId *nodeId,
+void *nodeContext, const UA_NumericRange *range,
+const UA_DataValue *data);
 } UA_ValueCallback;
 
 UA_StatusCode UA_EXPORT
 UA_Server_setVariableNode_valueCallback(UA_Server *server,
-                                        const UA_NodeId nodeId,
-                                        const UA_ValueCallback callback);
+const UA_NodeId nodeId,
+const UA_ValueCallback callback);
 
 /**
  * Method Callbacks
@@ -11836,18 +11836,18 @@ UA_Server_setVariableNode_valueCallback(UA_Server *server,
 
 typedef UA_StatusCode
 (*UA_MethodCallback)(UA_Server *server, const UA_NodeId *sessionId,
-                     void *sessionContext, const UA_NodeId *methodId,
-                     void *methodContext, const UA_NodeId *objectId,
-                     void *objectContext, size_t inputSize,
-                     const UA_Variant *input, size_t outputSize,
-                     UA_Variant *output);
+void *sessionContext, const UA_NodeId *methodId,
+void *methodContext, const UA_NodeId *objectId,
+void *objectContext, size_t inputSize,
+const UA_Variant *input, size_t outputSize,
+UA_Variant *output);
 
 #ifdef UA_ENABLE_METHODCALLS
 
 UA_StatusCode UA_EXPORT
 UA_Server_setMethodNode_callback(UA_Server *server,
-                                 const UA_NodeId methodNodeId,
-                                 UA_MethodCallback methodCallback);
+const UA_NodeId methodNodeId,
+UA_MethodCallback methodCallback);
 UA_CallMethodResult UA_EXPORT
 UA_Server_call(UA_Server *server, const UA_CallMethodRequest *request);
 
@@ -11898,159 +11898,159 @@ UA_EXPORT extern const UA_ViewAttributes UA_ViewAttributes_default;
 /* Don't use this function. There are typed versions as inline functions. */
 UA_StatusCode UA_EXPORT
 __UA_Server_addNode(UA_Server *server, const UA_NodeClass nodeClass,
-                    const UA_NodeId *requestedNewNodeId,
-                    const UA_NodeId *parentNodeId,
-                    const UA_NodeId *referenceTypeId,
-                    const UA_QualifiedName browseName,
-                    const UA_NodeId *typeDefinition,
-                    const UA_NodeAttributes *attr,
-                    const UA_DataType *attributeType,
-                    void *nodeContext, UA_NodeId *outNewNodeId);
+const UA_NodeId *requestedNewNodeId,
+const UA_NodeId *parentNodeId,
+const UA_NodeId *referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId *typeDefinition,
+const UA_NodeAttributes *attr,
+const UA_DataType *attributeType,
+void *nodeContext, UA_NodeId *outNewNodeId);
 
 static UA_INLINE UA_StatusCode
 UA_Server_addVariableNode(UA_Server *server, const UA_NodeId requestedNewNodeId,
-                          const UA_NodeId parentNodeId,
-                          const UA_NodeId referenceTypeId,
-                          const UA_QualifiedName browseName,
-                          const UA_NodeId typeDefinition,
-                          const UA_VariableAttributes attr,
-                          void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_VARIABLE, &requestedNewNodeId,
-                               &parentNodeId, &referenceTypeId, browseName,
-                               &typeDefinition, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const UA_VariableAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_VARIABLE, &requestedNewNodeId,
+&parentNodeId, &referenceTypeId, browseName,
+&typeDefinition, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_addVariableTypeNode(UA_Server *server,
-                              const UA_NodeId requestedNewNodeId,
-                              const UA_NodeId parentNodeId,
-                              const UA_NodeId referenceTypeId,
-                              const UA_QualifiedName browseName,
-                              const UA_NodeId typeDefinition,
-                              const UA_VariableTypeAttributes attr,
-                              void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_VARIABLETYPE,
-                               &requestedNewNodeId, &parentNodeId, &referenceTypeId,
-                               browseName, &typeDefinition,
-                               (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const UA_VariableTypeAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_VARIABLETYPE,
+&requestedNewNodeId, &parentNodeId, &referenceTypeId,
+browseName, &typeDefinition,
+(const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_addObjectNode(UA_Server *server, const UA_NodeId requestedNewNodeId,
-                        const UA_NodeId parentNodeId,
-                        const UA_NodeId referenceTypeId,
-                        const UA_QualifiedName browseName,
-                        const UA_NodeId typeDefinition,
-                        const UA_ObjectAttributes attr,
-                        void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_OBJECT, &requestedNewNodeId,
-                               &parentNodeId, &referenceTypeId, browseName,
-                               &typeDefinition, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const UA_ObjectAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_OBJECT, &requestedNewNodeId,
+&parentNodeId, &referenceTypeId, browseName,
+&typeDefinition, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_OBJECTATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_addObjectTypeNode(UA_Server *server, const UA_NodeId requestedNewNodeId,
-                            const UA_NodeId parentNodeId,
-                            const UA_NodeId referenceTypeId,
-                            const UA_QualifiedName browseName,
-                            const UA_ObjectTypeAttributes attr,
-                            void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_OBJECTTYPE, &requestedNewNodeId,
-                               &parentNodeId, &referenceTypeId, browseName,
-                               &UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_ObjectTypeAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_OBJECTTYPE, &requestedNewNodeId,
+&parentNodeId, &referenceTypeId, browseName,
+&UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_addViewNode(UA_Server *server, const UA_NodeId requestedNewNodeId,
-                      const UA_NodeId parentNodeId,
-                      const UA_NodeId referenceTypeId,
-                      const UA_QualifiedName browseName,
-                      const UA_ViewAttributes attr,
-                      void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_VIEW, &requestedNewNodeId,
-                               &parentNodeId, &referenceTypeId, browseName,
-                               &UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_VIEWATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_ViewAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_VIEW, &requestedNewNodeId,
+&parentNodeId, &referenceTypeId, browseName,
+&UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_VIEWATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_addReferenceTypeNode(UA_Server *server,
-                               const UA_NodeId requestedNewNodeId,
-                               const UA_NodeId parentNodeId,
-                               const UA_NodeId referenceTypeId,
-                               const UA_QualifiedName browseName,
-                               const UA_ReferenceTypeAttributes attr,
-                               void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_REFERENCETYPE,
-                               &requestedNewNodeId, &parentNodeId, &referenceTypeId,
-                               browseName, &UA_NODEID_NULL,
-                               (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_ReferenceTypeAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_REFERENCETYPE,
+&requestedNewNodeId, &parentNodeId, &referenceTypeId,
+browseName, &UA_NODEID_NULL,
+(const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Server_addDataTypeNode(UA_Server *server,
-                          const UA_NodeId requestedNewNodeId,
-                          const UA_NodeId parentNodeId,
-                          const UA_NodeId referenceTypeId,
-                          const UA_QualifiedName browseName,
-                          const UA_DataTypeAttributes attr,
-                          void *nodeContext, UA_NodeId *outNewNodeId) {
-    return __UA_Server_addNode(server, UA_NODECLASS_DATATYPE, &requestedNewNodeId,
-                               &parentNodeId, &referenceTypeId, browseName,
-                               &UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES],
-                               nodeContext, outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_DataTypeAttributes attr,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return __UA_Server_addNode(server, UA_NODECLASS_DATATYPE, &requestedNewNodeId,
+&parentNodeId, &referenceTypeId, browseName,
+&UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES],
+nodeContext, outNewNodeId);
 }
 
 UA_StatusCode UA_EXPORT
 UA_Server_addDataSourceVariableNode(UA_Server *server,
-                                    const UA_NodeId requestedNewNodeId,
-                                    const UA_NodeId parentNodeId,
-                                    const UA_NodeId referenceTypeId,
-                                    const UA_QualifiedName browseName,
-                                    const UA_NodeId typeDefinition,
-                                    const UA_VariableAttributes attr,
-                                    const UA_DataSource dataSource,
-                                    void *nodeContext, UA_NodeId *outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const UA_VariableAttributes attr,
+const UA_DataSource dataSource,
+void *nodeContext, UA_NodeId *outNewNodeId);
 
 UA_StatusCode UA_EXPORT
 UA_Server_addMethodNodeEx(UA_Server *server, const UA_NodeId requestedNewNodeId,
-                          const UA_NodeId parentNodeId,
-                          const UA_NodeId referenceTypeId,
-                          const UA_QualifiedName browseName,
-                          const UA_MethodAttributes attr, UA_MethodCallback method,
-                          size_t inputArgumentsSize, const UA_Argument *inputArguments,
-                          const UA_NodeId inputArgumentsRequestedNewNodeId,
-                          UA_NodeId *inputArgumentsOutNewNodeId,
-                          size_t outputArgumentsSize, const UA_Argument *outputArguments,
-                          const UA_NodeId outputArgumentsRequestedNewNodeId,
-                          UA_NodeId *outputArgumentsOutNewNodeId,
-                          void *nodeContext, UA_NodeId *outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_MethodAttributes attr, UA_MethodCallback method,
+size_t inputArgumentsSize, const UA_Argument *inputArguments,
+const UA_NodeId inputArgumentsRequestedNewNodeId,
+UA_NodeId *inputArgumentsOutNewNodeId,
+size_t outputArgumentsSize, const UA_Argument *outputArguments,
+const UA_NodeId outputArgumentsRequestedNewNodeId,
+UA_NodeId *outputArgumentsOutNewNodeId,
+void *nodeContext, UA_NodeId *outNewNodeId);
 
 static UA_INLINE UA_StatusCode
 UA_Server_addMethodNode(UA_Server *server, const UA_NodeId requestedNewNodeId,
-                        const UA_NodeId parentNodeId, const UA_NodeId referenceTypeId,
-                        const UA_QualifiedName browseName, const UA_MethodAttributes attr,
-                        UA_MethodCallback method,
-                        size_t inputArgumentsSize, const UA_Argument *inputArguments,
-                        size_t outputArgumentsSize, const UA_Argument *outputArguments,
-                        void *nodeContext, UA_NodeId *outNewNodeId) {
-    return UA_Server_addMethodNodeEx(server, requestedNewNodeId,  parentNodeId,
-                                     referenceTypeId, browseName, attr, method,
-                                     inputArgumentsSize, inputArguments, UA_NODEID_NULL, NULL,
-                                     outputArgumentsSize, outputArguments, UA_NODEID_NULL, NULL,
-                                     nodeContext, outNewNodeId);
+const UA_NodeId parentNodeId, const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName, const UA_MethodAttributes attr,
+UA_MethodCallback method,
+size_t inputArgumentsSize, const UA_Argument *inputArguments,
+size_t outputArgumentsSize, const UA_Argument *outputArguments,
+void *nodeContext, UA_NodeId *outNewNodeId) {
+return UA_Server_addMethodNodeEx(server, requestedNewNodeId,  parentNodeId,
+referenceTypeId, browseName, attr, method,
+inputArgumentsSize, inputArguments, UA_NODEID_NULL, NULL,
+outputArgumentsSize, outputArguments, UA_NODEID_NULL, NULL,
+nodeContext, outNewNodeId);
 }
 
 
@@ -12089,41 +12089,41 @@ UA_Server_addMethodNode(UA_Server *server, const UA_NodeId requestedNewNodeId,
  * applicable. */
 UA_StatusCode UA_EXPORT
 UA_Server_addNode_begin(UA_Server *server, const UA_NodeClass nodeClass,
-                        const UA_NodeId requestedNewNodeId,
-                        const UA_NodeId parentNodeId,
-                        const UA_NodeId referenceTypeId,
-                        const UA_QualifiedName browseName,
-                        const UA_NodeId typeDefinition,
-                        const void *attr, const UA_DataType *attributeType,
-                        void *nodeContext, UA_NodeId *outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const void *attr, const UA_DataType *attributeType,
+void *nodeContext, UA_NodeId *outNewNodeId);
 
 UA_StatusCode UA_EXPORT
 UA_Server_addNode_finish(UA_Server *server, const UA_NodeId nodeId);
 
 UA_StatusCode UA_EXPORT
 UA_Server_addMethodNode_finish(UA_Server *server, const UA_NodeId nodeId,
-                         UA_MethodCallback method,
-                         size_t inputArgumentsSize, const UA_Argument* inputArguments,
-                         size_t outputArgumentsSize, const UA_Argument* outputArguments);
+UA_MethodCallback method,
+size_t inputArgumentsSize, const UA_Argument* inputArguments,
+size_t outputArgumentsSize, const UA_Argument* outputArguments);
 
 /* Deletes a node and optionally all references leading to the node. */
 UA_StatusCode UA_EXPORT
 UA_Server_deleteNode(UA_Server *server, const UA_NodeId nodeId,
-                     UA_Boolean deleteReferences);
+UA_Boolean deleteReferences);
 
 /**
  * Reference Management
  * -------------------- */
 UA_StatusCode UA_EXPORT
 UA_Server_addReference(UA_Server *server, const UA_NodeId sourceId,
-                       const UA_NodeId refTypeId,
-                       const UA_ExpandedNodeId targetId, UA_Boolean isForward);
+const UA_NodeId refTypeId,
+const UA_ExpandedNodeId targetId, UA_Boolean isForward);
 
 UA_StatusCode UA_EXPORT
 UA_Server_deleteReference(UA_Server *server, const UA_NodeId sourceNodeId,
-                          const UA_NodeId referenceTypeId, UA_Boolean isForward,
-                          const UA_ExpandedNodeId targetNodeId,
-                          UA_Boolean deleteBidirectional);
+const UA_NodeId referenceTypeId, UA_Boolean isForward,
+const UA_ExpandedNodeId targetNodeId,
+UA_Boolean deleteBidirectional);
 
 /**
  * Utility Functions
@@ -12146,31 +12146,31 @@ UA_UInt16 UA_EXPORT UA_Server_addNamespace(UA_Server *server, const char* name);
  * to end-users. */
 
 typedef enum {
-    UA_JOBTYPE_METHODCALL
+UA_JOBTYPE_METHODCALL
 } UA_JobType;
 
 typedef struct {
-    UA_JobType type;
-    union {
-        struct {
-            void *data;
-            UA_ServerCallback method;
-        } methodCall;
-    } job;
+UA_JobType type;
+union {
+struct {
+void *data;
+UA_ServerCallback method;
+} methodCall;
+} job;
 } UA_Job;
 
 UA_DEPRECATED static UA_INLINE UA_StatusCode
 UA_Server_addRepeatedJob(UA_Server *server, UA_Job job,
-                         UA_UInt32 interval, UA_Guid *jobId) {
-    return UA_Server_addRepeatedCallback(server, job.job.methodCall.method,
-                                         job.job.methodCall.data, interval,
-                                         (UA_UInt64*)(uintptr_t)jobId);
+UA_UInt32 interval, UA_Guid *jobId) {
+return UA_Server_addRepeatedCallback(server, job.job.methodCall.method,
+job.job.methodCall.data, interval,
+(UA_UInt64*)(uintptr_t)jobId);
 }
 
 UA_DEPRECATED static UA_INLINE UA_StatusCode
 UA_Server_removeRepeatedJob(UA_Server *server, UA_Guid jobId) {
-    return UA_Server_removeRepeatedCallback(server,
-                                            *(UA_UInt64*)(uintptr_t)&jobId);
+return UA_Server_removeRepeatedCallback(server,
+*(UA_UInt64*)(uintptr_t)&jobId);
 }
 
 #ifdef __cplusplus
@@ -12181,8 +12181,8 @@ UA_Server_removeRepeatedJob(UA_Server *server, UA_Guid jobId) {
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/include/ua_plugin_log.h" ***********************************/
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this 
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -12205,22 +12205,22 @@ extern "C" {
  * is created within the logger. */
 
 typedef enum {
-    UA_LOGLEVEL_TRACE,
-    UA_LOGLEVEL_DEBUG,
-    UA_LOGLEVEL_INFO,
-    UA_LOGLEVEL_WARNING,
-    UA_LOGLEVEL_ERROR,
-    UA_LOGLEVEL_FATAL
+UA_LOGLEVEL_TRACE,
+UA_LOGLEVEL_DEBUG,
+UA_LOGLEVEL_INFO,
+UA_LOGLEVEL_WARNING,
+UA_LOGLEVEL_ERROR,
+UA_LOGLEVEL_FATAL
 } UA_LogLevel;
 
 typedef enum {
-    UA_LOGCATEGORY_NETWORK,
-    UA_LOGCATEGORY_SECURECHANNEL,
-    UA_LOGCATEGORY_SESSION,
-    UA_LOGCATEGORY_SERVER,
-    UA_LOGCATEGORY_CLIENT,
-    UA_LOGCATEGORY_USERLAND,
-    UA_LOGCATEGORY_SECURITYPOLICY
+UA_LOGCATEGORY_NETWORK,
+UA_LOGCATEGORY_SECURECHANNEL,
+UA_LOGCATEGORY_SESSION,
+UA_LOGCATEGORY_SERVER,
+UA_LOGCATEGORY_CLIENT,
+UA_LOGCATEGORY_USERLAND,
+UA_LOGCATEGORY_SECURITYPOLICY
 } UA_LogCategory;
 
 /**
@@ -12230,59 +12230,59 @@ typedef enum {
  * into account. */
 
 typedef void (*UA_Logger)(UA_LogLevel level, UA_LogCategory category,
-                          const char *msg, va_list args);
+const char *msg, va_list args);
 
 static UA_INLINE UA_FORMAT(3,4) void
 UA_LOG_TRACE(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 #if UA_LOGLEVEL <= 100
-    va_list args; va_start(args, msg);
-    logger(UA_LOGLEVEL_TRACE, category, msg, args);
-    va_end(args);
+va_list args; va_start(args, msg);
+logger(UA_LOGLEVEL_TRACE, category, msg, args);
+va_end(args);
 #endif
 }
 
 static UA_INLINE UA_FORMAT(3,4) void
 UA_LOG_DEBUG(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 #if UA_LOGLEVEL <= 200
-    va_list args; va_start(args, msg);
-    logger(UA_LOGLEVEL_DEBUG, category, msg, args);
-    va_end(args);
+va_list args; va_start(args, msg);
+logger(UA_LOGLEVEL_DEBUG, category, msg, args);
+va_end(args);
 #endif
 }
 
 static UA_INLINE UA_FORMAT(3,4) void
 UA_LOG_INFO(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 #if UA_LOGLEVEL <= 300
-    va_list args; va_start(args, msg);
-    logger(UA_LOGLEVEL_INFO, category, msg, args);
-    va_end(args);
+va_list args; va_start(args, msg);
+logger(UA_LOGLEVEL_INFO, category, msg, args);
+va_end(args);
 #endif
 }
 
 static UA_INLINE UA_FORMAT(3,4) void
 UA_LOG_WARNING(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 #if UA_LOGLEVEL <= 400
-    va_list args; va_start(args, msg);
-    logger(UA_LOGLEVEL_WARNING, category, msg, args);
-    va_end(args);
+va_list args; va_start(args, msg);
+logger(UA_LOGLEVEL_WARNING, category, msg, args);
+va_end(args);
 #endif
 }
 
 static UA_INLINE UA_FORMAT(3,4) void
 UA_LOG_ERROR(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 #if UA_LOGLEVEL <= 500
-    va_list args; va_start(args, msg);
-    logger(UA_LOGLEVEL_ERROR, category, msg, args);
-    va_end(args);
+va_list args; va_start(args, msg);
+logger(UA_LOGLEVEL_ERROR, category, msg, args);
+va_end(args);
 #endif
 }
 
 static UA_INLINE UA_FORMAT(3,4) void
 UA_LOG_FATAL(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 #if UA_LOGLEVEL <= 600
-    va_list args; va_start(args, msg);
-    logger(UA_LOGLEVEL_FATAL, category, msg, args);
-    va_end(args);
+va_list args; va_start(args, msg);
+logger(UA_LOGLEVEL_FATAL, category, msg, args);
+va_end(args);
 #endif
 }
 
@@ -12307,7 +12307,7 @@ UA_LOG_FATAL(UA_Logger logger, UA_LogCategory category, const char *msg, ...) {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -12331,7 +12331,7 @@ typedef struct UA_ServerNetworkLayer UA_ServerNetworkLayer;
 
 /**
  * .. _networking:
- * 
+ *
  * Networking Plugin API
  * =====================
  *
@@ -12346,52 +12346,52 @@ typedef struct UA_ServerNetworkLayer UA_ServerNetworkLayer;
  * networking plugins with a clear interface to the main open62541 library. */
 
 typedef struct {
-    UA_UInt32 protocolVersion;
-    UA_UInt32 sendBufferSize;
-    UA_UInt32 recvBufferSize;
-    UA_UInt32 maxMessageSize;
-    UA_UInt32 maxChunkCount;
+UA_UInt32 protocolVersion;
+UA_UInt32 sendBufferSize;
+UA_UInt32 recvBufferSize;
+UA_UInt32 maxMessageSize;
+UA_UInt32 maxChunkCount;
 } UA_ConnectionConfig;
 
 typedef enum {
-    UA_CONNECTION_CLOSED,      /* The socket has been closed and the connection
+UA_CONNECTION_CLOSED,      /* The socket has been closed and the connection
                                 * will be deleted */
-    UA_CONNECTION_OPENING,     /* The socket is open, but the HEL/ACK handshake
+UA_CONNECTION_OPENING,     /* The socket is open, but the HEL/ACK handshake
                                 * is not done */
-    UA_CONNECTION_ESTABLISHED  /* The socket is open and the connection
+UA_CONNECTION_ESTABLISHED  /* The socket is open and the connection
                                 * configured */
 } UA_ConnectionState;
 
 struct UA_Connection {
-    UA_ConnectionState state;
-    UA_ConnectionConfig localConf;
-    UA_ConnectionConfig remoteConf;
-    UA_SecureChannel *channel;       /* The securechannel that is attached to
+UA_ConnectionState state;
+UA_ConnectionConfig localConf;
+UA_ConnectionConfig remoteConf;
+UA_SecureChannel *channel;       /* The securechannel that is attached to
                                       * this connection */
-    UA_Int32 sockfd;                 /* Most connectivity solutions run on
+UA_Int32 sockfd;                 /* Most connectivity solutions run on
                                       * sockets. Having the socket id here
                                       * simplifies the design. */
-    UA_DateTime openingDate;         /* The date the connection was created */
-    void *handle;                    /* A pointer to internal data */
-    UA_ByteString incompleteMessage; /* A half-received chunk (TCP is a
+UA_DateTime openingDate;         /* The date the connection was created */
+void *handle;                    /* A pointer to internal data */
+UA_ByteString incompleteMessage; /* A half-received chunk (TCP is a
                                       * streaming protocol) is stored here */
 
-    /* Get a buffer for sending */
-    UA_StatusCode (*getSendBuffer)(UA_Connection *connection, size_t length,
-                                   UA_ByteString *buf);
+/* Get a buffer for sending */
+UA_StatusCode (*getSendBuffer)(UA_Connection *connection, size_t length,
+UA_ByteString *buf);
 
-    /* Release the send buffer manually */
-    void (*releaseSendBuffer)(UA_Connection *connection, UA_ByteString *buf);
+/* Release the send buffer manually */
+void (*releaseSendBuffer)(UA_Connection *connection, UA_ByteString *buf);
 
-    /* Sends a message over the connection. The message buffer is always freed,
+/* Sends a message over the connection. The message buffer is always freed,
      * even if sending fails.
      *
      * @param connection The connection
      * @param buf The message buffer
      * @return Returns an error code or UA_STATUSCODE_GOOD. */
-    UA_StatusCode (*send)(UA_Connection *connection, UA_ByteString *buf);
+UA_StatusCode (*send)(UA_Connection *connection, UA_ByteString *buf);
 
-    /* Receive a message from the remote connection
+/* Receive a message from the remote connection
      *
      * @param connection The connection
      * @param response The response string. It is allocated by the connection
@@ -12401,23 +12401,23 @@ struct UA_Connection {
      *         can be repeated, UA_STATUSCODE_GOOD if it succeeded and
      *         UA_STATUSCODE_BADCONNECTIONCLOSED if the connection was
      *         closed. */
-    UA_StatusCode (*recv)(UA_Connection *connection, UA_ByteString *response,
-                          UA_UInt32 timeout);
+UA_StatusCode (*recv)(UA_Connection *connection, UA_ByteString *response,
+UA_UInt32 timeout);
 
-    /* Release the buffer of a received message */
-    void (*releaseRecvBuffer)(UA_Connection *connection, UA_ByteString *buf);
+/* Release the buffer of a received message */
+void (*releaseRecvBuffer)(UA_Connection *connection, UA_ByteString *buf);
 
-    /* Close the connection. The network layer closes the socket. This is picked
+/* Close the connection. The network layer closes the socket. This is picked
      * up during the next 'listen' and the connection is freed in the network
      * layer. */
-    void (*close)(UA_Connection *connection);
+void (*close)(UA_Connection *connection);
 
-    /* To be called only from within the server (and not the network layer).
+/* To be called only from within the server (and not the network layer).
      * Frees up the connection's memory. */
-    void (*free)(UA_Connection *connection);
+void (*free)(UA_Connection *connection);
 
-    /* A message has not been processed yet */
-    UA_Boolean pendingMessage;
+/* A message has not been processed yet */
+UA_Boolean pendingMessage;
 };
 
 /* Cleans up half-received messages, and so on. Called from connection->free. */
@@ -12448,7 +12448,7 @@ UA_Connection_deleteMembers(UA_Connection *connection);
  * connection->releaseRecvBuffer. */
 void UA_EXPORT
 UA_Server_processBinaryMessage(UA_Server *server, UA_Connection *connection,
-                               UA_ByteString *message);
+UA_ByteString *message);
 
 /* The server internally cleans up the connection and then calls
  * connection->free. */
@@ -12456,40 +12456,40 @@ void UA_EXPORT
 UA_Server_removeConnection(UA_Server *server, UA_Connection *connection);
 
 struct UA_ServerNetworkLayer {
-    void *handle; /* Internal data */
-    UA_String discoveryUrl;
+void *handle; /* Internal data */
+UA_String discoveryUrl;
 
-    /* Start listening on the networklayer.
+/* Start listening on the networklayer.
      *
      * @param nl The network layer
      * @return Returns UA_STATUSCODE_GOOD or an error code. */
-    UA_StatusCode (*start)(UA_ServerNetworkLayer *nl, const UA_String *customHostname);
+UA_StatusCode (*start)(UA_ServerNetworkLayer *nl, const UA_String *customHostname);
 
-    /* Listen for new and closed connections and arriving packets. Calls
+/* Listen for new and closed connections and arriving packets. Calls
      * UA_Server_processBinaryMessage for the arriving packets. Closed
      * connections are picked up here and forwarded to
      * UA_Server_removeConnection where they are cleaned up and freed.
      *
      * @param nl The network layer
      * @param server The server for processing the incoming packets and for
-     *               closing connections. 
+     *               closing connections.
      * @param timeout The timeout during which an event must arrive in
      *                milliseconds
      * @return A statuscode for the status of the network layer. */
-    UA_StatusCode (*listen)(UA_ServerNetworkLayer *nl, UA_Server *server,
-                            UA_UInt16 timeout);
+UA_StatusCode (*listen)(UA_ServerNetworkLayer *nl, UA_Server *server,
+UA_UInt16 timeout);
 
-    /* Close the network socket and all open connections. Afterwards, the
+/* Close the network socket and all open connections. Afterwards, the
      * network layer can be safely deleted.
      *
      * @param nl The network layer
      * @param server The server that processes the incoming packets and for
      *               closing connections before deleting them.
      * @return A statuscode for the status of the closing operation. */
-    void (*stop)(UA_ServerNetworkLayer *nl, UA_Server *server);
+void (*stop)(UA_ServerNetworkLayer *nl, UA_Server *server);
 
-    /* Deletes the network layer context. Call only after stopping. */
-    void (*deleteMembers)(UA_ServerNetworkLayer *nl);
+/* Deletes the network layer context. Call only after stopping. */
+void (*deleteMembers)(UA_ServerNetworkLayer *nl);
 };
 
 /**
@@ -12504,7 +12504,7 @@ struct UA_ServerNetworkLayer {
  * @param logger the logger to use */
 typedef UA_Connection
 (*UA_ConnectClientConnection)(UA_ConnectionConfig localConf, const char *endpointUrl,
-                              const UA_UInt32 timeout, UA_Logger logger);
+const UA_UInt32 timeout, UA_Logger logger);
 
 /**
  * Endpoint URL Parser
@@ -12527,7 +12527,7 @@ typedef UA_Connection
  * @return Returns UA_STATUSCODE_BADTCPENDPOINTURLINVALID if parsing failed. */
 UA_StatusCode UA_EXPORT
 UA_parseEndpointUrl(const UA_String *endpointUrl, UA_String *outHostname,
-                    UA_UInt16 *outPort, UA_String *outPath);
+UA_UInt16 *outPort, UA_String *outPath);
 
 #ifdef __cplusplus
 } // extern "C"
@@ -12538,7 +12538,7 @@ UA_parseEndpointUrl(const UA_String *endpointUrl, UA_String *outHostname,
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -12562,65 +12562,65 @@ struct UA_AccessControl;
 typedef struct UA_AccessControl UA_AccessControl;
 
 struct UA_AccessControl {
-    void *context;
-    void (*deleteMembers)(UA_AccessControl *ac);
+void *context;
+void (*deleteMembers)(UA_AccessControl *ac);
 
-    /* Supported login mechanisms. The server endpoints are created from here. */
-    size_t userTokenPoliciesSize;
-    UA_UserTokenPolicy *userTokenPolicies;
-    
-    /* Authenticate a session. The session context is attached to the session and
+/* Supported login mechanisms. The server endpoints are created from here. */
+size_t userTokenPoliciesSize;
+UA_UserTokenPolicy *userTokenPolicies;
+
+/* Authenticate a session. The session context is attached to the session and
      * later passed into the node-based access control callbacks. */
-    UA_StatusCode (*activateSession)(UA_Server *server, UA_AccessControl *ac,
-                                     const UA_NodeId *sessionId,
-                                     const UA_ExtensionObject *userIdentityToken,
-                                     void **sessionContext);
+UA_StatusCode (*activateSession)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId,
+const UA_ExtensionObject *userIdentityToken,
+void **sessionContext);
 
-    /* Deauthenticate a session and cleanup */
-    void (*closeSession)(UA_Server *server, UA_AccessControl *ac,
-                         const UA_NodeId *sessionId, void *sessionContext);
+/* Deauthenticate a session and cleanup */
+void (*closeSession)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext);
 
-    /* Access control for all nodes*/
-    UA_UInt32 (*getUserRightsMask)(UA_Server *server, UA_AccessControl *ac,
-                                   const UA_NodeId *sessionId, void *sessionContext,
-                                   const UA_NodeId *nodeId, void *nodeContext);
+/* Access control for all nodes*/
+UA_UInt32 (*getUserRightsMask)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *nodeId, void *nodeContext);
 
-    /* Additional access control for variable nodes */
-    UA_Byte (*getUserAccessLevel)(UA_Server *server, UA_AccessControl *ac,
-                                  const UA_NodeId *sessionId, void *sessionContext,
-                                  const UA_NodeId *nodeId, void *nodeContext);
+/* Additional access control for variable nodes */
+UA_Byte (*getUserAccessLevel)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *nodeId, void *nodeContext);
 
-    /* Additional access control for method nodes */
-    UA_Boolean (*getUserExecutable)(UA_Server *server, UA_AccessControl *ac,
-                                    const UA_NodeId *sessionId, void *sessionContext,
-                                    const UA_NodeId *methodId, void *methodContext);
+/* Additional access control for method nodes */
+UA_Boolean (*getUserExecutable)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *methodId, void *methodContext);
 
-    /* Additional access control for calling a method node in the context of a
+/* Additional access control for calling a method node in the context of a
      * specific object */
-    UA_Boolean (*getUserExecutableOnObject)(UA_Server *server, UA_AccessControl *ac,
-                                            const UA_NodeId *sessionId, void *sessionContext,
-                                            const UA_NodeId *methodId, void *methodContext,
-                                            const UA_NodeId *objectId, void *objectContext);
+UA_Boolean (*getUserExecutableOnObject)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_NodeId *methodId, void *methodContext,
+const UA_NodeId *objectId, void *objectContext);
 
-    /* Allow adding a node */
-    UA_Boolean (*allowAddNode)(UA_Server *server, UA_AccessControl *ac,
-                               const UA_NodeId *sessionId, void *sessionContext,
-                               const UA_AddNodesItem *item);
+/* Allow adding a node */
+UA_Boolean (*allowAddNode)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_AddNodesItem *item);
 
-    /* Allow adding a reference */
-    UA_Boolean (*allowAddReference)(UA_Server *server, UA_AccessControl *ac,
-                                    const UA_NodeId *sessionId, void *sessionContext,
-                                    const UA_AddReferencesItem *item);
+/* Allow adding a reference */
+UA_Boolean (*allowAddReference)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_AddReferencesItem *item);
 
-    /* Allow deleting a node */
-    UA_Boolean (*allowDeleteNode)(UA_Server *server, UA_AccessControl *ac,
-                                  const UA_NodeId *sessionId, void *sessionContext,
-                                  const UA_DeleteNodesItem *item);
+/* Allow deleting a node */
+UA_Boolean (*allowDeleteNode)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_DeleteNodesItem *item);
 
-    /* Allow deleting a reference */
-    UA_Boolean (*allowDeleteReference)(UA_Server *server, UA_AccessControl *ac,
-                                       const UA_NodeId *sessionId, void *sessionContext,
-                                       const UA_DeleteReferencesItem *item);
+/* Allow deleting a reference */
+UA_Boolean (*allowDeleteReference)(UA_Server *server, UA_AccessControl *ac,
+const UA_NodeId *sessionId, void *sessionContext,
+const UA_DeleteReferencesItem *item);
 };
 
 #ifdef __cplusplus
@@ -12632,7 +12632,7 @@ struct UA_AccessControl {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2018 (c) Mark Giraud, Fraunhofer IOSB
  */
@@ -12664,19 +12664,19 @@ struct UA_CertificateVerification;
 typedef struct UA_CertificateVerification UA_CertificateVerification;
 
 struct UA_CertificateVerification {
-    void *context;
+void *context;
 
-    /* Verify the certificate against the configured policies and trust chain. */
-    UA_StatusCode (*verifyCertificate)(void *verificationContext,
-                                       const UA_ByteString *certificate);
+/* Verify the certificate against the configured policies and trust chain. */
+UA_StatusCode (*verifyCertificate)(void *verificationContext,
+const UA_ByteString *certificate);
 
-    /* Verify that the certificate has the applicationURI in the subject name. */
-    UA_StatusCode (*verifyApplicationURI)(void *verificationContext,
-                                          const UA_ByteString *certificate,
-                                          const UA_String *applicationURI);
+/* Verify that the certificate has the applicationURI in the subject name. */
+UA_StatusCode (*verifyApplicationURI)(void *verificationContext,
+const UA_ByteString *certificate,
+const UA_String *applicationURI);
 
-    /* Delete the certificate verification context */
-    void (*deleteMembers)(UA_CertificateVerification *cv);
+/* Delete the certificate verification context */
+void (*deleteMembers)(UA_CertificateVerification *cv);
 };
 
 #ifdef __cplusplus
@@ -12688,7 +12688,7 @@ struct UA_CertificateVerification {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2017-2018 (c) Mark Giraud, Fraunhofer IOSB
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
@@ -12707,20 +12707,20 @@ struct UA_SecurityPolicy;
 typedef struct UA_SecurityPolicy UA_SecurityPolicy;
 
 typedef struct {
-    UA_String uri;
+UA_String uri;
 
-    /* Verifies the signature of the message using the provided keys in the context.
+/* Verifies the signature of the message using the provided keys in the context.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the channelContext that contains the key to verify
      *                       the supplied message with.
      * @param message the message to which the signature is supposed to belong.
      * @param signature the signature of the message, that should be verified. */
-    UA_StatusCode (*verify)(const UA_SecurityPolicy *securityPolicy,
-                            void *channelContext, const UA_ByteString *message,
-                            const UA_ByteString *signature) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*verify)(const UA_SecurityPolicy *securityPolicy,
+void *channelContext, const UA_ByteString *message,
+const UA_ByteString *signature) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Signs the given message using this policys signing algorithm and the
+/* Signs the given message using this policys signing algorithm and the
      * provided keys in the context.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
@@ -12731,155 +12731,155 @@ typedef struct {
      *                  buffer needs to be allocated by the caller. The
      *                  necessary size can be acquired with the signatureSize
      *                  attribute of this module. */
-    UA_StatusCode (*sign)(const UA_SecurityPolicy *securityPolicy,
-                          void *channelContext, const UA_ByteString *message,
-                          UA_ByteString *signature) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*sign)(const UA_SecurityPolicy *securityPolicy,
+void *channelContext, const UA_ByteString *message,
+UA_ByteString *signature) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Gets the signature size that depends on the local (private) key.
+/* Gets the signature size that depends on the local (private) key.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the channelContext that contains the
      *                       certificate/key.
      * @return the size of the local signature. Returns 0 if no local
      *         certificate was set. */
-    size_t (*getLocalSignatureSize)(const UA_SecurityPolicy *securityPolicy,
-                                    const void *channelContext);
+size_t (*getLocalSignatureSize)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Gets the signature size that depends on the remote (public) key.
+/* Gets the signature size that depends on the remote (public) key.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the size of the remote signature. Returns 0 if no
      *         remote certificate was set previousely. */
-    size_t (*getRemoteSignatureSize)(const UA_SecurityPolicy *securityPolicy,
-                                     const void *channelContext);
+size_t (*getRemoteSignatureSize)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Gets the local signing key length.
+/* Gets the local signing key length.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the length of the signing key in bytes. Returns 0 if no length can be found.
      */
-    size_t (*getLocalKeyLength)(const UA_SecurityPolicy *securityPolicy,
-                                const void *channelContext);
+size_t (*getLocalKeyLength)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Gets the local signing key length.
+/* Gets the local signing key length.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the length of the signing key in bytes. Returns 0 if no length can be found.
      */
-    size_t (*getRemoteKeyLength)(const UA_SecurityPolicy *securityPolicy,
-                                 const void *channelContext);
+size_t (*getRemoteKeyLength)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 } UA_SecurityPolicySignatureAlgorithm;
 
 typedef struct {
-    UA_String uri;
+UA_String uri;
 
-    /* Encrypt the given data in place using an asymmetric algorithm and keys.
+/* Encrypt the given data in place using an asymmetric algorithm and keys.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the channelContext which contains information about
      *                       the keys to encrypt data.
      * @param data the data that is encrypted. The encrypted data will overwrite
      *             the data that was supplied. */
-    UA_StatusCode (*encrypt)(const UA_SecurityPolicy *securityPolicy,
-                             void *channelContext,
-                             UA_ByteString *data) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*encrypt)(const UA_SecurityPolicy *securityPolicy,
+void *channelContext,
+UA_ByteString *data) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Decrypts the given ciphertext in place using an asymmetric algorithm and
+/* Decrypts the given ciphertext in place using an asymmetric algorithm and
      * key.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the channelContext which contains information about
      *                       the keys needed to decrypt the message.
      * @param data the data to decrypt. The decryption is done in place. */
-    UA_StatusCode (*decrypt)(const UA_SecurityPolicy *securityPolicy,
-                             void *channelContext,
-                             UA_ByteString *data) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*decrypt)(const UA_SecurityPolicy *securityPolicy,
+void *channelContext,
+UA_ByteString *data) UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Returns the length of the key used locally to encrypt messages in bits
+/* Returns the length of the key used locally to encrypt messages in bits
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the length of the local key. Returns 0 if no
      *         key length is known. */
-    size_t (*getLocalKeyLength)(const UA_SecurityPolicy *securityPolicy,
-                                const void *channelContext);
+size_t (*getLocalKeyLength)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Returns the length of the key used remotely to encrypt messages in bits
+/* Returns the length of the key used remotely to encrypt messages in bits
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the length of the remote key. Returns 0 if no
      *         key length is known. */
-    size_t (*getRemoteKeyLength)(const UA_SecurityPolicy *securityPolicy,
-                                 const void *channelContext);
+size_t (*getRemoteKeyLength)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Returns the size of encrypted blocks used by the local encryption algorithm.
+/* Returns the size of encrypted blocks used by the local encryption algorithm.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the size of encrypted blocks in bytes. Returns 0 if no key length is known.
      */
-    size_t (*getLocalBlockSize)(const UA_SecurityPolicy *securityPolicy,
-                                const void *channelContext);
+size_t (*getLocalBlockSize)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Returns the size of encrypted blocks used by the remote encryption algorithm.
+/* Returns the size of encrypted blocks used by the remote encryption algorithm.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the size of encrypted blocks in bytes. Returns 0 if no key length is known.
      */
-    size_t (*getRemoteBlockSize)(const UA_SecurityPolicy *securityPolicy,
-                                 const void *channelContext);
+size_t (*getRemoteBlockSize)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Returns the size of plaintext blocks used by the local encryption algorithm.
+/* Returns the size of plaintext blocks used by the local encryption algorithm.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the size of plaintext blocks in bytes. Returns 0 if no key length is known.
      */
-    size_t (*getLocalPlainTextBlockSize)(const UA_SecurityPolicy *securityPolicy,
-                                         const void *channelContext);
+size_t (*getLocalPlainTextBlockSize)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 
-    /* Returns the size of plaintext blocks used by the remote encryption algorithm.
+/* Returns the size of plaintext blocks used by the remote encryption algorithm.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param channelContext the context to retrieve data from.
      * @return the size of plaintext blocks in bytes. Returns 0 if no key length is known.
      */
-    size_t (*getRemotePlainTextBlockSize)(const UA_SecurityPolicy *securityPolicy,
-                                          const void *channelContext);
+size_t (*getRemotePlainTextBlockSize)(const UA_SecurityPolicy *securityPolicy,
+const void *channelContext);
 } UA_SecurityPolicyEncryptionAlgorithm;
 
 typedef struct {
-    /*
+/*
      * The algorithm used to sign and verify certificates.
      */
-    UA_SecurityPolicySignatureAlgorithm signatureAlgorithm;
+UA_SecurityPolicySignatureAlgorithm signatureAlgorithm;
 
-    /*
+/*
      * The algorithm used to encrypt and decrypt messages.
      */
-    UA_SecurityPolicyEncryptionAlgorithm encryptionAlgorithm;
+UA_SecurityPolicyEncryptionAlgorithm encryptionAlgorithm;
 
 } UA_SecurityPolicyCryptoModule;
 
 typedef struct {
-    /* Generates a thumbprint for the specified certificate.
+/* Generates a thumbprint for the specified certificate.
      *
      * @param securityPolicy the securityPolicy the function is invoked on.
      * @param certificate the certificate to make a thumbprint of.
      * @param thumbprint an output buffer for the resulting thumbprint. Always
      *                   has the length specified in the thumbprintLength in the
      *                   asymmetricModule. */
-    UA_StatusCode (*makeCertificateThumbprint)(const UA_SecurityPolicy *securityPolicy,
-                                               const UA_ByteString *certificate,
-                                               UA_ByteString *thumbprint)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*makeCertificateThumbprint)(const UA_SecurityPolicy *securityPolicy,
+const UA_ByteString *certificate,
+UA_ByteString *thumbprint)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Compares the supplied certificate with the certificate in the endpoit context.
+/* Compares the supplied certificate with the certificate in the endpoit context.
      *
      * @param securityPolicy the policy data that contains the certificate
      *                       to compare to.
@@ -12887,15 +12887,15 @@ typedef struct {
      *                              one stored in the context.
      * @return if the thumbprints match UA_STATUSCODE_GOOD is returned. If they
      *         don't match or an error occurred an error code is returned. */
-    UA_StatusCode (*compareCertificateThumbprint)(const UA_SecurityPolicy *securityPolicy,
-                                                  const UA_ByteString *certificateThumbprint)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*compareCertificateThumbprint)(const UA_SecurityPolicy *securityPolicy,
+const UA_ByteString *certificateThumbprint)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    UA_SecurityPolicyCryptoModule cryptoModule;
+UA_SecurityPolicyCryptoModule cryptoModule;
 } UA_SecurityPolicyAsymmetricModule;
 
 typedef struct {
-    /* Pseudo random function that is used to generate the symmetric keys.
+/* Pseudo random function that is used to generate the symmetric keys.
      *
      * For information on what parameters this function receives in what situation,
      * refer to the OPC UA specification 1.03 Part6 Table 33
@@ -12905,12 +12905,12 @@ typedef struct {
      * @param seed
      * @param out an output to write the data to. The length defines the maximum
      *            number of output bytes that are produced. */
-    UA_StatusCode (*generateKey)(const UA_SecurityPolicy *securityPolicy,
-                                 const UA_ByteString *secret,
-                                 const UA_ByteString *seed, UA_ByteString *out)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*generateKey)(const UA_SecurityPolicy *securityPolicy,
+const UA_ByteString *secret,
+const UA_ByteString *seed, UA_ByteString *out)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Random generator for generating nonces.
+/* Random generator for generating nonces.
      *
      * @param securityPolicy the securityPolicy this function is invoked on.
      *                       Example: myPolicy->generateNonce(myPolicy,
@@ -12918,20 +12918,20 @@ typedef struct {
      * @param out pointer to a buffer to store the nonce in. Needs to be
      *            allocated by the caller. The buffer is filled with random
      *            data. */
-    UA_StatusCode (*generateNonce)(const UA_SecurityPolicy *securityPolicy,
-                                   UA_ByteString *out)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*generateNonce)(const UA_SecurityPolicy *securityPolicy,
+UA_ByteString *out)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /*
+/*
      * The length of the nonce used in the SecureChannel as specified in the standard.
      */
-    size_t secureChannelNonceLength;
+size_t secureChannelNonceLength;
 
-    UA_SecurityPolicyCryptoModule cryptoModule;
+UA_SecurityPolicyCryptoModule cryptoModule;
 } UA_SecurityPolicySymmetricModule;
 
 typedef struct {
-    /* This method creates a new context data object.
+/* This method creates a new context data object.
      *
      * The caller needs to call delete on the received object to free allocated
      * memory. Memory is only allocated if the function succeeds so there is no
@@ -12947,63 +12947,63 @@ typedef struct {
      *                          details may be accessed.
      * @param channelContext the initialized channelContext that is passed to
      *                       functions that work on a context. */
-    UA_StatusCode (*newContext)(const UA_SecurityPolicy *securityPolicy,
-                                const UA_ByteString *remoteCertificate,
-                                void **channelContext)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*newContext)(const UA_SecurityPolicy *securityPolicy,
+const UA_ByteString *remoteCertificate,
+void **channelContext)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Deletes the the security context. */
-    void (*deleteContext)(void *channelContext);
+/* Deletes the the security context. */
+void (*deleteContext)(void *channelContext);
 
-    /* Sets the local encrypting key in the supplied context.
+/* Sets the local encrypting key in the supplied context.
      *
      * @param channelContext the context to work on.
      * @param key the local encrypting key to store in the context. */
-    UA_StatusCode (*setLocalSymEncryptingKey)(void *channelContext,
-                                              const UA_ByteString *key)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*setLocalSymEncryptingKey)(void *channelContext,
+const UA_ByteString *key)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Sets the local signing key in the supplied context.
+/* Sets the local signing key in the supplied context.
      *
      * @param channelContext the context to work on.
      * @param key the local signing key to store in the context. */
-    UA_StatusCode (*setLocalSymSigningKey)(void *channelContext,
-                                           const UA_ByteString *key)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*setLocalSymSigningKey)(void *channelContext,
+const UA_ByteString *key)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Sets the local initialization vector in the supplied context.
+/* Sets the local initialization vector in the supplied context.
      *
      * @param channelContext the context to work on.
      * @param iv the local initialization vector to store in the context. */
-    UA_StatusCode (*setLocalSymIv)(void *channelContext,
-                                   const UA_ByteString *iv)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*setLocalSymIv)(void *channelContext,
+const UA_ByteString *iv)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Sets the remote encrypting key in the supplied context.
+/* Sets the remote encrypting key in the supplied context.
      *
      * @param channelContext the context to work on.
      * @param key the remote encrypting key to store in the context. */
-    UA_StatusCode (*setRemoteSymEncryptingKey)(void *channelContext,
-                                               const UA_ByteString *key)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*setRemoteSymEncryptingKey)(void *channelContext,
+const UA_ByteString *key)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Sets the remote signing key in the supplied context.
+/* Sets the remote signing key in the supplied context.
      *
      * @param channelContext the context to work on.
      * @param key the remote signing key to store in the context. */
-    UA_StatusCode (*setRemoteSymSigningKey)(void *channelContext,
-                                            const UA_ByteString *key)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*setRemoteSymSigningKey)(void *channelContext,
+const UA_ByteString *key)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Sets the remote initialization vector in the supplied context.
+/* Sets the remote initialization vector in the supplied context.
      *
      * @param channelContext the context to work on.
      * @param iv the remote initialization vector to store in the context. */
-    UA_StatusCode (*setRemoteSymIv)(void *channelContext,
-                                    const UA_ByteString *iv)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*setRemoteSymIv)(void *channelContext,
+const UA_ByteString *iv)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 
-    /* Compares the supplied certificate with the certificate in the channel
+/* Compares the supplied certificate with the certificate in the channel
      * context.
      *
      * @param channelContext the channel context data that contains the
@@ -13011,38 +13011,38 @@ typedef struct {
      * @param certificate the certificate to compare to the one stored in the context.
      * @return if the certificates match UA_STATUSCODE_GOOD is returned. If they
      *         don't match or an errror occurred an error code is returned. */
-    UA_StatusCode (*compareCertificate)(const void *channelContext,
-                                        const UA_ByteString *certificate)
-    UA_FUNC_ATTR_WARN_UNUSED_RESULT;
+UA_StatusCode (*compareCertificate)(const void *channelContext,
+const UA_ByteString *certificate)
+UA_FUNC_ATTR_WARN_UNUSED_RESULT;
 } UA_SecurityPolicyChannelModule;
 
 struct UA_SecurityPolicy {
-    /* Additional data */
-    void *policyContext;
+/* Additional data */
+void *policyContext;
 
-    /* The policy uri that identifies the implemented algorithms */
-    UA_ByteString policyUri;
+/* The policy uri that identifies the implemented algorithms */
+UA_ByteString policyUri;
 
-    /* The local certificate is specific for each SecurityPolicy since it
+/* The local certificate is specific for each SecurityPolicy since it
      * depends on the used key length. */
-    UA_ByteString localCertificate;
+UA_ByteString localCertificate;
 
-    /* Function pointers grouped into modules */
-    UA_SecurityPolicyAsymmetricModule asymmetricModule;
-    UA_SecurityPolicySymmetricModule symmetricModule;
-    UA_SecurityPolicySignatureAlgorithm certificateSigningAlgorithm;
-    UA_SecurityPolicyChannelModule channelModule;
-    UA_CertificateVerification *certificateVerification;
+/* Function pointers grouped into modules */
+UA_SecurityPolicyAsymmetricModule asymmetricModule;
+UA_SecurityPolicySymmetricModule symmetricModule;
+UA_SecurityPolicySignatureAlgorithm certificateSigningAlgorithm;
+UA_SecurityPolicyChannelModule channelModule;
+UA_CertificateVerification *certificateVerification;
 
-    UA_Logger logger;
+UA_Logger logger;
 
-    /* Deletes the dynamic content of the policy */
-    void (*deleteMembers)(UA_SecurityPolicy *policy);
+/* Deletes the dynamic content of the policy */
+void (*deleteMembers)(UA_SecurityPolicy *policy);
 };
 
 typedef struct {
-    UA_SecurityPolicy securityPolicy;
-    UA_EndpointDescription endpointDescription;
+UA_SecurityPolicy securityPolicy;
+UA_EndpointDescription endpointDescription;
 } UA_Endpoint;
 
 /* Gets the number of bytes that are needed by the encryption function in
@@ -13057,8 +13057,8 @@ typedef struct {
  *                            encrypt can be. */
 size_t
 UA_SecurityPolicy_getRemoteAsymEncryptionBufferLengthOverhead(const UA_SecurityPolicy *securityPolicy,
-                                                              const void *channelContext,
-                                                              size_t maxEncryptionLength);
+const void *channelContext,
+size_t maxEncryptionLength);
 
 #ifdef __cplusplus
 }
@@ -13069,7 +13069,7 @@ UA_SecurityPolicy_getRemoteAsymEncryptionBufferLengthOverhead(const UA_SecurityP
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Julian Grothoff
@@ -13130,10 +13130,10 @@ extern "C" {
 
 /* List of reference targets with the same reference type and direction */
 typedef struct {
-    UA_NodeId referenceTypeId;
-    UA_Boolean isInverse;
-    size_t targetIdsSize;
-    UA_ExpandedNodeId *targetIds;
+UA_NodeId referenceTypeId;
+UA_Boolean isInverse;
+size_t targetIdsSize;
+UA_ExpandedNodeId *targetIds;
 } UA_NodeReferenceKind;
 
 #define UA_NODE_BASEATTRIBUTES                  \
@@ -13150,7 +13150,7 @@ typedef struct {
     void *context;
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
+UA_NODE_BASEATTRIBUTES
 } UA_Node;
 
 /**
@@ -13222,8 +13222,8 @@ typedef struct {
 /* Indicates whether a variable contains data inline or whether it points to an
  * external data source */
 typedef enum {
-    UA_VALUESOURCE_DATA,
-    UA_VALUESOURCE_DATASOURCE
+UA_VALUESOURCE_DATA,
+UA_VALUESOURCE_DATASOURCE
 } UA_ValueSource;
 
 #define UA_NODE_VARIABLEATTRIBUTES                                      \
@@ -13244,11 +13244,11 @@ typedef enum {
     } value;
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_NODE_VARIABLEATTRIBUTES
-    UA_Byte accessLevel;
-    UA_Double minimumSamplingInterval;
-    UA_Boolean historizing; /* currently unsupported */
+UA_NODE_BASEATTRIBUTES
+UA_NODE_VARIABLEATTRIBUTES
+UA_Byte accessLevel;
+UA_Double minimumSamplingInterval;
+UA_Boolean historizing; /* currently unsupported */
 } UA_VariableNode;
 
 /**
@@ -13265,12 +13265,12 @@ typedef struct {
  * instantiated from ``BaseDataVariable``. */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_NODE_VARIABLEATTRIBUTES
-    UA_Boolean isAbstract;
+UA_NODE_BASEATTRIBUTES
+UA_NODE_VARIABLEATTRIBUTES
+UA_Boolean isAbstract;
 
-    /* Members specific to open62541 */
-    UA_NodeTypeLifecycle lifecycle;
+/* Members specific to open62541 */
+UA_NodeTypeLifecycle lifecycle;
 } UA_VariableTypeNode;
 
 /**
@@ -13292,11 +13292,11 @@ typedef struct {
  * providing context* is part of a Call request message. */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_Boolean executable;
+UA_NODE_BASEATTRIBUTES
+UA_Boolean executable;
 
-    /* Members specific to open62541 */
-    UA_MethodCallback method;
+/* Members specific to open62541 */
+UA_MethodCallback method;
 } UA_MethodNode;
 
 /**
@@ -13309,8 +13309,8 @@ typedef struct {
  * objects. */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_Byte eventNotifier;
+UA_NODE_BASEATTRIBUTES
+UA_Byte eventNotifier;
 } UA_ObjectNode;
 
 /**
@@ -13324,11 +13324,11 @@ typedef struct {
  * destructor callbacks. */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_Boolean isAbstract;
+UA_NODE_BASEATTRIBUTES
+UA_Boolean isAbstract;
 
-    /* Members specific to open62541 */
-    UA_NodeTypeLifecycle lifecycle;
+/* Members specific to open62541 */
+UA_NodeTypeLifecycle lifecycle;
 } UA_ObjectTypeNode;
 
 /**
@@ -13435,10 +13435,10 @@ typedef struct {
  * based on a common understanding of just two custom reference types. */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_Boolean isAbstract;
-    UA_Boolean symmetric;
-    UA_LocalizedText inverseName;
+UA_NODE_BASEATTRIBUTES
+UA_Boolean isAbstract;
+UA_Boolean symmetric;
+UA_LocalizedText inverseName;
 } UA_ReferenceTypeNode;
 
 /**
@@ -13457,8 +13457,8 @@ typedef struct {
  * ``UInt32``). */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_Boolean isAbstract;
+UA_NODE_BASEATTRIBUTES
+UA_Boolean isAbstract;
 } UA_DataTypeNode;
 
 /**
@@ -13472,9 +13472,9 @@ typedef struct {
  * open62541. */
 
 typedef struct {
-    UA_NODE_BASEATTRIBUTES
-    UA_Byte eventNotifier;
-    UA_Boolean containsNoLoops;
+UA_NODE_BASEATTRIBUTES
+UA_Byte eventNotifier;
+UA_Boolean containsNoLoops;
 } UA_ViewNode;
 
 /**
@@ -13491,54 +13491,54 @@ typedef struct {
 typedef void (*UA_NodestoreVisitor)(void *visitorContext, const UA_Node *node);
 
 typedef struct {
-    /* Nodestore context and lifecycle */
-    void *context;
-    void (*deleteNodestore)(void *nodestoreContext);
+/* Nodestore context and lifecycle */
+void *context;
+void (*deleteNodestore)(void *nodestoreContext);
 
-    /* For non-multithreaded access, some nodestores allow that nodes are edited
+/* For non-multithreaded access, some nodestores allow that nodes are edited
      * without a copy/replace. This is not possible when the node is only an
      * intermediate representation and stored e.g. in a database backend. */
-    UA_Boolean inPlaceEditAllowed;
+UA_Boolean inPlaceEditAllowed;
 
-    /* The following definitions are used to create empty nodes of the different
+/* The following definitions are used to create empty nodes of the different
      * node types. The memory is managed by the nodestore. Therefore, the node
      * has to be removed via a special deleteNode function. (If the new node is
      * not added to the nodestore.) */
-    UA_Node * (*newNode)(void *nodestoreContext, UA_NodeClass nodeClass);
+UA_Node * (*newNode)(void *nodestoreContext, UA_NodeClass nodeClass);
 
-    void (*deleteNode)(void *nodestoreContext, UA_Node *node);
+void (*deleteNode)(void *nodestoreContext, UA_Node *node);
 
-    /* ``Get`` returns a pointer to an immutable node. ``Release`` indicates
+/* ``Get`` returns a pointer to an immutable node. ``Release`` indicates
      * that the pointer is no longer accessed afterwards. */
 
-    const UA_Node * (*getNode)(void *nodestoreContext, const UA_NodeId *nodeId);
+const UA_Node * (*getNode)(void *nodestoreContext, const UA_NodeId *nodeId);
 
-    void (*releaseNode)(void *nodestoreContext, const UA_Node *node);
+void (*releaseNode)(void *nodestoreContext, const UA_Node *node);
 
-    /* Returns an editable copy of a node (needs to be deleted with the
+/* Returns an editable copy of a node (needs to be deleted with the
      * deleteNode function or inserted / replaced into the nodestore). */
-    UA_StatusCode (*getNodeCopy)(void *nodestoreContext, const UA_NodeId *nodeId,
-                                 UA_Node **outNode);
+UA_StatusCode (*getNodeCopy)(void *nodestoreContext, const UA_NodeId *nodeId,
+UA_Node **outNode);
 
-    /* Inserts a new node into the nodestore. If the NodeId is zero, then a
+/* Inserts a new node into the nodestore. If the NodeId is zero, then a
      * fresh numeric NodeId is assigned. If insertion fails, the node is
      * deleted. */
-    UA_StatusCode (*insertNode)(void *nodestoreContext, UA_Node *node,
-                                UA_NodeId *addedNodeId);
+UA_StatusCode (*insertNode)(void *nodestoreContext, UA_Node *node,
+UA_NodeId *addedNodeId);
 
-    /* To replace a node, get an editable copy of the node, edit and replace
+/* To replace a node, get an editable copy of the node, edit and replace
      * with this function. If the node was already replaced since the copy was
      * made, UA_STATUSCODE_BADINTERNALERROR is returned. If the NodeId is not
      * found, UA_STATUSCODE_BADNODEIDUNKNOWN is returned. In both error cases,
      * the editable node is deleted. */
-    UA_StatusCode (*replaceNode)(void *nodestoreContext, UA_Node *node);
+UA_StatusCode (*replaceNode)(void *nodestoreContext, UA_Node *node);
 
-    /* Removes a node from the nodestore. */
-    UA_StatusCode (*removeNode)(void *nodestoreContext, const UA_NodeId *nodeId);
+/* Removes a node from the nodestore. */
+UA_StatusCode (*removeNode)(void *nodestoreContext, const UA_NodeId *nodeId);
 
-    /* Execute a callback for every node in the nodestore. */
-    void (*iterate)(void *nodestoreContext, void* visitorContext,
-                    UA_NodestoreVisitor visitor);
+/* Execute a callback for every node in the nodestore. */
+void (*iterate)(void *nodestoreContext, void* visitorContext,
+UA_NodestoreVisitor visitor);
 } UA_Nodestore;
 
 /**
@@ -13552,7 +13552,7 @@ typedef struct {
  * called on the node when an error occurs internally. */
 UA_StatusCode UA_EXPORT
 UA_Node_setAttributes(UA_Node *node, const void *attributes,
-                      const UA_DataType *attributeType);
+const UA_DataType *attributeType);
 
 /* Reset the destination node and copy the content of the source */
 UA_StatusCode UA_EXPORT
@@ -13587,7 +13587,7 @@ UA_Node_deleteMembers(UA_Node *node);
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -13623,112 +13623,112 @@ extern "C" {
  * The :ref:`tutorials` provide a good starting point for this. */
 
 typedef struct {
-    UA_UInt32 min;
-    UA_UInt32 max;
+UA_UInt32 min;
+UA_UInt32 max;
 } UA_UInt32Range;
 
 typedef struct {
-    UA_Duration min;
-    UA_Duration max;
+UA_Duration min;
+UA_Duration max;
 } UA_DurationRange;
 
 struct UA_ServerConfig {
-    UA_UInt16 nThreads; /* only if multithreading is enabled */
-    UA_Logger logger;
+UA_UInt16 nThreads; /* only if multithreading is enabled */
+UA_Logger logger;
 
-    /* Server Description */
-    UA_BuildInfo buildInfo;
-    UA_ApplicationDescription applicationDescription;
-    UA_ByteString serverCertificate;
+/* Server Description */
+UA_BuildInfo buildInfo;
+UA_ApplicationDescription applicationDescription;
+UA_ByteString serverCertificate;
 
-    /* MDNS Discovery */
+/* MDNS Discovery */
 #ifdef UA_ENABLE_DISCOVERY
-    UA_String mdnsServerName;
-    size_t serverCapabilitiesSize;
-    UA_String *serverCapabilities;
+UA_String mdnsServerName;
+size_t serverCapabilitiesSize;
+UA_String *serverCapabilities;
 #endif
 
-    /* Custom DataTypes */
-    size_t customDataTypesSize;
-    UA_DataType *customDataTypes;
-    /**
+/* Custom DataTypes */
+size_t customDataTypesSize;
+UA_DataType *customDataTypes;
+/**
      * .. note:: See the section on :ref:`generic-types`. Examples for working
      *    with custom data types are provided in
      *    ``/examples/custom_datatype/``. */
 
-    /* Nodestore */
-    UA_Nodestore nodestore;
+/* Nodestore */
+UA_Nodestore nodestore;
 
-    /* Networking */
-    size_t networkLayersSize;
-    UA_ServerNetworkLayer *networkLayers;
-    UA_String customHostname;
+/* Networking */
+size_t networkLayersSize;
+UA_ServerNetworkLayer *networkLayers;
+UA_String customHostname;
 
-    /* Available endpoints */
-    size_t endpointsSize;
-    UA_Endpoint *endpoints;
+/* Available endpoints */
+size_t endpointsSize;
+UA_Endpoint *endpoints;
 
-    /* Node Lifecycle callbacks */
-    UA_GlobalNodeLifecycle nodeLifecycle;
-    /**
+/* Node Lifecycle callbacks */
+UA_GlobalNodeLifecycle nodeLifecycle;
+/**
      * .. note:: See the section for :ref:`node lifecycle
      *    handling<node-lifecycle>`. */
 
-    /* Access Control */
-    UA_AccessControl accessControl;
-    /**
+/* Access Control */
+UA_AccessControl accessControl;
+/**
      * .. note:: See the section for :ref:`access-control
      *    handling<access-control>`. */
 
-    /* Certificate Verification */
-    UA_CertificateVerification certificateVerification;
+/* Certificate Verification */
+UA_CertificateVerification certificateVerification;
 
-    /* Limits for SecureChannels */
-    UA_UInt16 maxSecureChannels;
-    UA_UInt32 maxSecurityTokenLifetime; /* in ms */
+/* Limits for SecureChannels */
+UA_UInt16 maxSecureChannels;
+UA_UInt32 maxSecurityTokenLifetime; /* in ms */
 
-    /* Limits for Sessions */
-    UA_UInt16 maxSessions;
-    UA_Double maxSessionTimeout; /* in ms */
+/* Limits for Sessions */
+UA_UInt16 maxSessions;
+UA_Double maxSessionTimeout; /* in ms */
 
-    /* Operation limits */
-    UA_UInt32 maxNodesPerRead;
-    UA_UInt32 maxNodesPerWrite;
-    UA_UInt32 maxNodesPerMethodCall;
-    UA_UInt32 maxNodesPerBrowse;
-    UA_UInt32 maxNodesPerRegisterNodes;
-    UA_UInt32 maxNodesPerTranslateBrowsePathsToNodeIds;
-    UA_UInt32 maxNodesPerNodeManagement;
-    UA_UInt32 maxMonitoredItemsPerCall;
+/* Operation limits */
+UA_UInt32 maxNodesPerRead;
+UA_UInt32 maxNodesPerWrite;
+UA_UInt32 maxNodesPerMethodCall;
+UA_UInt32 maxNodesPerBrowse;
+UA_UInt32 maxNodesPerRegisterNodes;
+UA_UInt32 maxNodesPerTranslateBrowsePathsToNodeIds;
+UA_UInt32 maxNodesPerNodeManagement;
+UA_UInt32 maxMonitoredItemsPerCall;
 
-    /* Limits for Requests */
-    UA_UInt32 maxReferencesPerNode;
+/* Limits for Requests */
+UA_UInt32 maxReferencesPerNode;
 
-    /* Limits for Subscriptions */
-    UA_UInt32 maxSubscriptionsPerSession;
-    UA_DurationRange publishingIntervalLimits; /* in ms (must not be less than 5) */
-    UA_UInt32Range lifeTimeCountLimits;
-    UA_UInt32Range keepAliveCountLimits;
-    UA_UInt32 maxNotificationsPerPublish;
-    UA_UInt32 maxRetransmissionQueueSize; /* 0 -> unlimited size */
+/* Limits for Subscriptions */
+UA_UInt32 maxSubscriptionsPerSession;
+UA_DurationRange publishingIntervalLimits; /* in ms (must not be less than 5) */
+UA_UInt32Range lifeTimeCountLimits;
+UA_UInt32Range keepAliveCountLimits;
+UA_UInt32 maxNotificationsPerPublish;
+UA_UInt32 maxRetransmissionQueueSize; /* 0 -> unlimited size */
 
-    /* Limits for MonitoredItems */
-    UA_UInt32 maxMonitoredItemsPerSubscription;
-    UA_DurationRange samplingIntervalLimits; /* in ms (must not be less than 5) */
-    UA_UInt32Range queueSizeLimits; /* Negotiated with the client */
+/* Limits for MonitoredItems */
+UA_UInt32 maxMonitoredItemsPerSubscription;
+UA_DurationRange samplingIntervalLimits; /* in ms (must not be less than 5) */
+UA_UInt32Range queueSizeLimits; /* Negotiated with the client */
 
-    /* Limits for PublishRequests */
-    UA_UInt32 maxPublishReqPerSession;
+/* Limits for PublishRequests */
+UA_UInt32 maxPublishReqPerSession;
 
-    /* Discovery */
+/* Discovery */
 #ifdef UA_ENABLE_DISCOVERY
-    /* Timeout in seconds when to automatically remove a registered server from
+/* Timeout in seconds when to automatically remove a registered server from
      * the list, if it doesn't re-register within the given time frame. A value
      * of 0 disables automatic removal. Default is 60 Minutes (60*60). Must be
      * bigger than 10 seconds, because cleanup is only triggered approximately
      * ervery 10 seconds. The server will still be removed depending on the
      * state of the semaphore file. */
-    UA_UInt32 discoveryCleanupTimeout;
+UA_UInt32 discoveryCleanupTimeout;
 #endif
 };
 
@@ -13777,11 +13777,11 @@ extern "C" {
  * The :ref:`tutorials` provide a good starting point for this. */
 
 typedef enum {
-    UA_CLIENTSTATE_DISCONNECTED,        /* The client is disconnected */
-    UA_CLIENTSTATE_CONNECTED,           /* A TCP connection to the server is open */
-    UA_CLIENTSTATE_SECURECHANNEL,       /* A SecureChannel to the server is open */
-    UA_CLIENTSTATE_SESSION,             /* A session with the server is open */
-    UA_CLIENTSTATE_SESSION_RENEWED      /* A session with the server is open (renewed) */
+UA_CLIENTSTATE_DISCONNECTED,        /* The client is disconnected */
+UA_CLIENTSTATE_CONNECTED,           /* A TCP connection to the server is open */
+UA_CLIENTSTATE_SECURECHANNEL,       /* A SecureChannel to the server is open */
+UA_CLIENTSTATE_SESSION,             /* A session with the server is open */
+UA_CLIENTSTATE_SESSION_RENEWED      /* A session with the server is open (renewed) */
 } UA_ClientState;
 
 
@@ -13813,21 +13813,21 @@ typedef void (*UA_InactivityCallback)(UA_Client *client);
  * ^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 typedef struct UA_ClientConfig {
-    UA_UInt32 timeout;               /* ASync + Sync response timeout in ms */
-    UA_UInt32 secureChannelLifeTime; /* Lifetime in ms (then the channel needs
+UA_UInt32 timeout;               /* ASync + Sync response timeout in ms */
+UA_UInt32 secureChannelLifeTime; /* Lifetime in ms (then the channel needs
                                         to be renewed) */
-    UA_Logger logger;
-    UA_ConnectionConfig localConnectionConfig;
-    UA_ConnectClientConnection connectionFunc;
+UA_Logger logger;
+UA_ConnectionConfig localConnectionConfig;
+UA_ConnectClientConnection connectionFunc;
 
-    /* Custom DataTypes */
-    size_t customDataTypesSize;
-    const UA_DataType *customDataTypes;
+/* Custom DataTypes */
+size_t customDataTypesSize;
+const UA_DataType *customDataTypes;
 
-    /* Callback function */
-    UA_ClientStateCallback stateCallback;
+/* Callback function */
+UA_ClientStateCallback stateCallback;
 #ifdef UA_ENABLE_SUBSCRIPTIONS
-    /* When outStandingPublishRequests is greater than 0,
+/* When outStandingPublishRequests is greater than 0,
      * the server automatically create publishRequest when
      * UA_Client_runAsync is called. If the client don't receive
      * a publishResponse after :
@@ -13836,27 +13836,27 @@ typedef struct UA_ClientConfig {
      * then, the client call subscriptionInactivityCallback
      * The connection can be closed, this in an attempt to
      * recreate a healthy connection. */
-    UA_SubscriptionInactivityCallback subscriptionInactivityCallback;
+UA_SubscriptionInactivityCallback subscriptionInactivityCallback;
 #endif
 
-    /* When connectivityCheckInterval is greater than 0,
+/* When connectivityCheckInterval is greater than 0,
      * every connectivityCheckInterval (in ms), a async read request
      * is performed on the server. inactivityCallback is called
      * when the client receive no response for this read request
      * The connection can be closed, this in an attempt to
      * recreate a healthy connection. */
-    UA_InactivityCallback inactivityCallback;
+UA_InactivityCallback inactivityCallback;
 
-    void *clientContext;
+void *clientContext;
 
 #ifdef UA_ENABLE_SUBSCRIPTIONS
-    /* number of PublishResponse standing in the sever
+/* number of PublishResponse standing in the sever
      * 0 = background task disabled                    */
-    UA_UInt16 outStandingPublishRequests;
+UA_UInt16 outStandingPublishRequests;
 #endif
-    /* connectivity check interval in ms
+/* connectivity check interval in ms
      * 0 = background task disabled */
-    UA_UInt32 connectivityCheckInterval;
+UA_UInt32 connectivityCheckInterval;
 } UA_ClientConfig;
 
 
@@ -13879,7 +13879,7 @@ UA_Server_getClientConfig(void);
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2015-2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2015-2016 (c) Sten Grüner
@@ -13962,7 +13962,7 @@ UA_Client_connect(UA_Client *client, const char *endpointUrl);
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Client_connect_username(UA_Client *client, const char *endpointUrl,
-                           const char *username, const char *password);
+const char *username, const char *password);
 
 /* Disconnect and close a connection to the selected server */
 UA_StatusCode UA_EXPORT
@@ -13991,8 +13991,8 @@ UA_Client_manuallyRenewSecureChannel(UA_Client *client);
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Client_getEndpoints(UA_Client *client, const char *serverUrl,
-                       size_t* endpointDescriptionsSize,
-                       UA_EndpointDescription** endpointDescriptions);
+size_t* endpointDescriptionsSize,
+UA_EndpointDescription** endpointDescriptions);
 
 /* Gets a list of all registered servers at the given server.
  *
@@ -14016,10 +14016,10 @@ UA_Client_getEndpoints(UA_Client *client, const char *serverUrl,
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Client_findServers(UA_Client *client, const char *serverUrl,
-                      size_t serverUrisSize, UA_String *serverUris,
-                      size_t localeIdsSize, UA_String *localeIds,
-                      size_t *registeredServersSize,
-                      UA_ApplicationDescription **registeredServers);
+size_t serverUrisSize, UA_String *serverUris,
+size_t localeIdsSize, UA_String *localeIds,
+size_t *registeredServersSize,
+UA_ApplicationDescription **registeredServers);
 
 /* Get a list of all known server in the network. Only supported by LDS servers.
  *
@@ -14041,9 +14041,9 @@ UA_Client_findServers(UA_Client *client, const char *serverUrl,
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Client_findServersOnNetwork(UA_Client *client, const char *serverUrl,
-                               UA_UInt32 startingRecordId, UA_UInt32 maxRecordsToReturn,
-                               size_t serverCapabilityFilterSize, UA_String *serverCapabilityFilter,
-                               size_t *serverOnNetworkSize, UA_ServerOnNetwork **serverOnNetwork);
+UA_UInt32 startingRecordId, UA_UInt32 maxRecordsToReturn,
+size_t serverCapabilityFilterSize, UA_String *serverCapabilityFilter,
+size_t *serverOnNetworkSize, UA_ServerOnNetwork **serverOnNetwork);
 
 /**
  * .. _client-services:
@@ -14057,26 +14057,26 @@ UA_Client_findServersOnNetwork(UA_Client *client, const char *serverUrl,
 /* Don't use this function. Use the type versions below instead. */
 void UA_EXPORT
 __UA_Client_Service(UA_Client *client, const void *request,
-                    const UA_DataType *requestType, void *response,
-                    const UA_DataType *responseType);
+const UA_DataType *requestType, void *response,
+const UA_DataType *responseType);
 
 /*
  * Attribute Service Set
  * ^^^^^^^^^^^^^^^^^^^^^ */
 static UA_INLINE UA_ReadResponse
 UA_Client_Service_read(UA_Client *client, const UA_ReadRequest request) {
-    UA_ReadResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_READREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_READRESPONSE]);
-    return response;
+UA_ReadResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_READREQUEST],
+&response, &UA_TYPES[UA_TYPES_READRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_WriteResponse
 UA_Client_Service_write(UA_Client *client, const UA_WriteRequest request) {
-    UA_WriteResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_WRITEREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
-    return response;
+UA_WriteResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_WRITEREQUEST],
+&response, &UA_TYPES[UA_TYPES_WRITERESPONSE]);
+return response;
 }
 
 /*
@@ -14085,10 +14085,10 @@ UA_Client_Service_write(UA_Client *client, const UA_WriteRequest request) {
 #ifdef UA_ENABLE_METHODCALLS
 static UA_INLINE UA_CallResponse
 UA_Client_Service_call(UA_Client *client, const UA_CallRequest request) {
-    UA_CallResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_CALLREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
-    return response;
+UA_CallResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_CALLREQUEST],
+&response, &UA_TYPES[UA_TYPES_CALLRESPONSE]);
+return response;
 }
 #endif
 
@@ -14097,37 +14097,37 @@ UA_Client_Service_call(UA_Client *client, const UA_CallRequest request) {
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 static UA_INLINE UA_AddNodesResponse
 UA_Client_Service_addNodes(UA_Client *client, const UA_AddNodesRequest request) {
-    UA_AddNodesResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_ADDNODESREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
-    return response;
+UA_AddNodesResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_ADDNODESREQUEST],
+&response, &UA_TYPES[UA_TYPES_ADDNODESRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_AddReferencesResponse
 UA_Client_Service_addReferences(UA_Client *client,
-                                const UA_AddReferencesRequest request) {
-    UA_AddReferencesResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
-    return response;
+const UA_AddReferencesRequest request) {
+UA_AddReferencesResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_ADDREFERENCESREQUEST],
+&response, &UA_TYPES[UA_TYPES_ADDREFERENCESRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_DeleteNodesResponse
 UA_Client_Service_deleteNodes(UA_Client *client,
-                              const UA_DeleteNodesRequest request) {
-    UA_DeleteNodesResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_DELETENODESREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
-    return response;
+const UA_DeleteNodesRequest request) {
+UA_DeleteNodesResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_DELETENODESREQUEST],
+&response, &UA_TYPES[UA_TYPES_DELETENODESRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_DeleteReferencesResponse
 UA_Client_Service_deleteReferences(UA_Client *client,
-                                   const UA_DeleteReferencesRequest request) {
-    UA_DeleteReferencesResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
-    return response;
+const UA_DeleteReferencesRequest request) {
+UA_DeleteReferencesResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_DELETEREFERENCESREQUEST],
+&response, &UA_TYPES[UA_TYPES_DELETEREFERENCESRESPONSE]);
+return response;
 }
 
 /*
@@ -14135,49 +14135,49 @@ UA_Client_Service_deleteReferences(UA_Client *client,
  * ^^^^^^^^^^^^^^^^ */
 static UA_INLINE UA_BrowseResponse
 UA_Client_Service_browse(UA_Client *client, const UA_BrowseRequest request) {
-    UA_BrowseResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_BROWSEREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
-    return response;
+UA_BrowseResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_BROWSEREQUEST],
+&response, &UA_TYPES[UA_TYPES_BROWSERESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_BrowseNextResponse
 UA_Client_Service_browseNext(UA_Client *client,
-                             const UA_BrowseNextRequest request) {
-    UA_BrowseNextResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
-    return response;
+const UA_BrowseNextRequest request) {
+UA_BrowseNextResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_BROWSENEXTREQUEST],
+&response, &UA_TYPES[UA_TYPES_BROWSENEXTRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_TranslateBrowsePathsToNodeIdsResponse
 UA_Client_Service_translateBrowsePathsToNodeIds(UA_Client *client,
-                        const UA_TranslateBrowsePathsToNodeIdsRequest request) {
-    UA_TranslateBrowsePathsToNodeIdsResponse response;
-    __UA_Client_Service(client, &request,
-                        &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST],
-                        &response,
-                        &UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
-    return response;
+const UA_TranslateBrowsePathsToNodeIdsRequest request) {
+UA_TranslateBrowsePathsToNodeIdsResponse response;
+__UA_Client_Service(client, &request,
+&UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSREQUEST],
+&response,
+&UA_TYPES[UA_TYPES_TRANSLATEBROWSEPATHSTONODEIDSRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_RegisterNodesResponse
 UA_Client_Service_registerNodes(UA_Client *client,
-                                const UA_RegisterNodesRequest request) {
-    UA_RegisterNodesResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
-    return response;
+const UA_RegisterNodesRequest request) {
+UA_RegisterNodesResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_REGISTERNODESREQUEST],
+&response, &UA_TYPES[UA_TYPES_REGISTERNODESRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_UnregisterNodesResponse
 UA_Client_Service_unregisterNodes(UA_Client *client,
-                                  const UA_UnregisterNodesRequest request) {
-    UA_UnregisterNodesResponse response;
-    __UA_Client_Service(client, &request,
-                        &UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
-    return response;
+const UA_UnregisterNodesRequest request) {
+UA_UnregisterNodesResponse response;
+__UA_Client_Service(client, &request,
+&UA_TYPES[UA_TYPES_UNREGISTERNODESREQUEST],
+&response, &UA_TYPES[UA_TYPES_UNREGISTERNODESRESPONSE]);
+return response;
 }
 
 /*
@@ -14185,20 +14185,20 @@ UA_Client_Service_unregisterNodes(UA_Client *client,
  * ^^^^^^^^^^^^^^^^^ */
 static UA_INLINE UA_QueryFirstResponse
 UA_Client_Service_queryFirst(UA_Client *client,
-                             const UA_QueryFirstRequest request) {
-    UA_QueryFirstResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
-    return response;
+const UA_QueryFirstRequest request) {
+UA_QueryFirstResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST],
+&response, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_QueryNextResponse
 UA_Client_Service_queryNext(UA_Client *client,
-                            const UA_QueryNextRequest request) {
-    UA_QueryNextResponse response;
-    __UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
-    return response;
+const UA_QueryNextRequest request) {
+UA_QueryNextResponse response;
+__UA_Client_Service(client, &request, &UA_TYPES[UA_TYPES_QUERYFIRSTREQUEST],
+&response, &UA_TYPES[UA_TYPES_QUERYFIRSTRESPONSE]);
+return response;
 }
 
 /**
@@ -14218,8 +14218,8 @@ UA_Client_runAsync(UA_Client *client, UA_UInt16 timeout);
 
 typedef void
 (*UA_ClientAsyncServiceCallback)(UA_Client *client, void *userdata,
-                                 UA_UInt32 requestId, void *response,
-                                 const UA_DataType *responseType);
+UA_UInt32 requestId, void *response,
+const UA_DataType *responseType);
 
 /* Use the type versions of this method. See below. However, the general
  * mechanism of async service calls is explained here.
@@ -14243,10 +14243,10 @@ typedef void
  * The userdata and requestId arguments can be NULL. */
 UA_StatusCode UA_EXPORT
 __UA_Client_AsyncService(UA_Client *client, const void *request,
-                         const UA_DataType *requestType,
-                         UA_ClientAsyncServiceCallback callback,
-                         const UA_DataType *responseType,
-                         void *userdata, UA_UInt32 *requestId);
+const UA_DataType *requestType,
+UA_ClientAsyncServiceCallback callback,
+const UA_DataType *responseType,
+void *userdata, UA_UInt32 *requestId);
 
 /* Use the type versions of this method. See below. However, the general
  * mechanism of async service calls is explained here.
@@ -14269,50 +14269,50 @@ __UA_Client_AsyncService(UA_Client *client, const void *request,
  * The userdata and requestId arguments can be NULL. */
 UA_StatusCode UA_EXPORT
 __UA_Client_AsyncServiceEx(UA_Client *client, const void *request,
-                           const UA_DataType *requestType,
-                           UA_ClientAsyncServiceCallback callback,
-                           const UA_DataType *responseType,
-                           void *userdata, UA_UInt32 *requestId,
-                           UA_UInt32 timeout);
+const UA_DataType *requestType,
+UA_ClientAsyncServiceCallback callback,
+const UA_DataType *responseType,
+void *userdata, UA_UInt32 *requestId,
+UA_UInt32 timeout);
 
 static UA_INLINE UA_StatusCode
 UA_Client_AsyncService_read(UA_Client *client, const UA_ReadRequest *request,
-                            UA_ClientAsyncServiceCallback callback,
-                            void *userdata, UA_UInt32 *requestId) {
-    return __UA_Client_AsyncService(client, (const void*)request,
-                                    &UA_TYPES[UA_TYPES_READREQUEST], callback,
-                                    &UA_TYPES[UA_TYPES_READRESPONSE],
-                                    userdata, requestId);
+UA_ClientAsyncServiceCallback callback,
+void *userdata, UA_UInt32 *requestId) {
+return __UA_Client_AsyncService(client, (const void*)request,
+&UA_TYPES[UA_TYPES_READREQUEST], callback,
+&UA_TYPES[UA_TYPES_READRESPONSE],
+userdata, requestId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_AsyncService_write(UA_Client *client, const UA_WriteRequest *request,
-                             UA_ClientAsyncServiceCallback callback,
-                             void *userdata, UA_UInt32 *requestId) {
-    return __UA_Client_AsyncService(client, (const void*)request,
-                                    &UA_TYPES[UA_TYPES_WRITEREQUEST], callback, 
-                                    &UA_TYPES[UA_TYPES_WRITERESPONSE],
-                                    userdata, requestId);
+UA_ClientAsyncServiceCallback callback,
+void *userdata, UA_UInt32 *requestId) {
+return __UA_Client_AsyncService(client, (const void*)request,
+&UA_TYPES[UA_TYPES_WRITEREQUEST], callback,
+&UA_TYPES[UA_TYPES_WRITERESPONSE],
+userdata, requestId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_AsyncService_call(UA_Client *client, const UA_CallRequest *request,
-                            UA_ClientAsyncServiceCallback callback,
-                            void *userdata, UA_UInt32 *requestId) {
-    return __UA_Client_AsyncService(client, (const void*)request,
-                                    &UA_TYPES[UA_TYPES_CALLREQUEST], callback,
-                                    &UA_TYPES[UA_TYPES_CALLRESPONSE],
-                                    userdata, requestId);
+UA_ClientAsyncServiceCallback callback,
+void *userdata, UA_UInt32 *requestId) {
+return __UA_Client_AsyncService(client, (const void*)request,
+&UA_TYPES[UA_TYPES_CALLREQUEST], callback,
+&UA_TYPES[UA_TYPES_CALLRESPONSE],
+userdata, requestId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_AsyncService_browse(UA_Client *client, const UA_BrowseRequest *request,
-                              UA_ClientAsyncServiceCallback callback,
-                              void *userdata, UA_UInt32 *requestId) {
-    return __UA_Client_AsyncService(client, (const void*)request,
-                                    &UA_TYPES[UA_TYPES_BROWSEREQUEST], callback,
-                                    &UA_TYPES[UA_TYPES_BROWSERESPONSE],
-                                    userdata, requestId);
+UA_ClientAsyncServiceCallback callback,
+void *userdata, UA_UInt32 *requestId) {
+return __UA_Client_AsyncService(client, (const void*)request,
+&UA_TYPES[UA_TYPES_BROWSEREQUEST], callback,
+&UA_TYPES[UA_TYPES_BROWSERESPONSE],
+userdata, requestId);
 }
 
 /**
@@ -14330,7 +14330,7 @@ UA_Client_AsyncService_browse(UA_Client *client, const UA_BrowseRequest *request
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2015-2018 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2015 (c) Oleksiy Vasylyev
@@ -14369,174 +14369,174 @@ extern "C" {
 /* Don't call this function, use the typed versions */
 UA_StatusCode UA_EXPORT
 __UA_Client_readAttribute(UA_Client *client, const UA_NodeId *nodeId,
-                          UA_AttributeId attributeId, void *out,
-                          const UA_DataType *outDataType);
+UA_AttributeId attributeId, void *out,
+const UA_DataType *outDataType);
 
 static UA_INLINE UA_StatusCode
 UA_Client_readNodeIdAttribute(UA_Client *client, const UA_NodeId nodeId,
-                              UA_NodeId *outNodeId) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_NODEID,
-                                     outNodeId, &UA_TYPES[UA_TYPES_NODEID]);
+UA_NodeId *outNodeId) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_NODEID,
+outNodeId, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readNodeClassAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                 UA_NodeClass *outNodeClass) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_NODECLASS,
-                                     outNodeClass, &UA_TYPES[UA_TYPES_NODECLASS]);
+UA_NodeClass *outNodeClass) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_NODECLASS,
+outNodeClass, &UA_TYPES[UA_TYPES_NODECLASS]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readBrowseNameAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  UA_QualifiedName *outBrowseName) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
-                                     outBrowseName,
-                                     &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
+UA_QualifiedName *outBrowseName) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
+outBrowseName,
+&UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readDisplayNameAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   UA_LocalizedText *outDisplayName) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
-                                     outDisplayName,
-                                     &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+UA_LocalizedText *outDisplayName) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
+outDisplayName,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readDescriptionAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   UA_LocalizedText *outDescription) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
-                                     outDescription,
-                                     &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+UA_LocalizedText *outDescription) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
+outDescription,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readWriteMaskAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                 UA_UInt32 *outWriteMask) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
-                                     outWriteMask, &UA_TYPES[UA_TYPES_UINT32]);
+UA_UInt32 *outWriteMask) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
+outWriteMask, &UA_TYPES[UA_TYPES_UINT32]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readUserWriteMaskAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                     UA_UInt32 *outUserWriteMask) {
-    return __UA_Client_readAttribute(client, &nodeId,
-                                     UA_ATTRIBUTEID_USERWRITEMASK,
-                                     outUserWriteMask,
-                                     &UA_TYPES[UA_TYPES_UINT32]);
+UA_UInt32 *outUserWriteMask) {
+return __UA_Client_readAttribute(client, &nodeId,
+UA_ATTRIBUTEID_USERWRITEMASK,
+outUserWriteMask,
+&UA_TYPES[UA_TYPES_UINT32]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readIsAbstractAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  UA_Boolean *outIsAbstract) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
-                                     outIsAbstract, &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_Boolean *outIsAbstract) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
+outIsAbstract, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readSymmetricAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                 UA_Boolean *outSymmetric) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_SYMMETRIC,
-                                     outSymmetric, &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_Boolean *outSymmetric) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_SYMMETRIC,
+outSymmetric, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readInverseNameAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   UA_LocalizedText *outInverseName) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
-                                     outInverseName,
-                                     &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+UA_LocalizedText *outInverseName) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
+outInverseName,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readContainsNoLoopsAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                       UA_Boolean *outContainsNoLoops) {
-    return __UA_Client_readAttribute(client, &nodeId,
-                                     UA_ATTRIBUTEID_CONTAINSNOLOOPS,
-                                     outContainsNoLoops,
-                                     &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_Boolean *outContainsNoLoops) {
+return __UA_Client_readAttribute(client, &nodeId,
+UA_ATTRIBUTEID_CONTAINSNOLOOPS,
+outContainsNoLoops,
+&UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readEventNotifierAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                     UA_Byte *outEventNotifier) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_EVENTNOTIFIER,
-                                     outEventNotifier, &UA_TYPES[UA_TYPES_BYTE]);
+UA_Byte *outEventNotifier) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_EVENTNOTIFIER,
+outEventNotifier, &UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readValueAttribute(UA_Client *client, const UA_NodeId nodeId,
-                             UA_Variant *outValue) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUE,
-                                     outValue, &UA_TYPES[UA_TYPES_VARIANT]);
+UA_Variant *outValue) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUE,
+outValue, &UA_TYPES[UA_TYPES_VARIANT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readDataTypeAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                UA_NodeId *outDataType) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_DATATYPE,
-                                     outDataType, &UA_TYPES[UA_TYPES_NODEID]);
+UA_NodeId *outDataType) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_DATATYPE,
+outDataType, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readValueRankAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                 UA_Int32 *outValueRank) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUERANK,
-                                     outValueRank, &UA_TYPES[UA_TYPES_INT32]);
+UA_Int32 *outValueRank) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUERANK,
+outValueRank, &UA_TYPES[UA_TYPES_INT32]);
 }
 
 UA_StatusCode UA_EXPORT
 UA_Client_readArrayDimensionsAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                       size_t *outArrayDimensionsSize,
-                                       UA_UInt32 **outArrayDimensions);
+size_t *outArrayDimensionsSize,
+UA_UInt32 **outArrayDimensions);
 
 static UA_INLINE UA_StatusCode
 UA_Client_readAccessLevelAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   UA_Byte *outAccessLevel) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
-                                     outAccessLevel, &UA_TYPES[UA_TYPES_BYTE]);
+UA_Byte *outAccessLevel) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
+outAccessLevel, &UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readUserAccessLevelAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                       UA_Byte *outUserAccessLevel) {
-    return __UA_Client_readAttribute(client, &nodeId,
-                                     UA_ATTRIBUTEID_USERACCESSLEVEL,
-                                     outUserAccessLevel,
-                                     &UA_TYPES[UA_TYPES_BYTE]);
+UA_Byte *outUserAccessLevel) {
+return __UA_Client_readAttribute(client, &nodeId,
+UA_ATTRIBUTEID_USERACCESSLEVEL,
+outUserAccessLevel,
+&UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readMinimumSamplingIntervalAttribute(UA_Client *client,
-                                               const UA_NodeId nodeId,
-                                               UA_Double *outMinSamplingInterval) {
-    return __UA_Client_readAttribute(client, &nodeId,
-                                     UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
-                                     outMinSamplingInterval,
-                                     &UA_TYPES[UA_TYPES_DOUBLE]);
+const UA_NodeId nodeId,
+UA_Double *outMinSamplingInterval) {
+return __UA_Client_readAttribute(client, &nodeId,
+UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
+outMinSamplingInterval,
+&UA_TYPES[UA_TYPES_DOUBLE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readHistorizingAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   UA_Boolean *outHistorizing) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_HISTORIZING,
-                                     outHistorizing, &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_Boolean *outHistorizing) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_HISTORIZING,
+outHistorizing, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readExecutableAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  UA_Boolean *outExecutable) {
-    return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
-                                     outExecutable, &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_Boolean *outExecutable) {
+return __UA_Client_readAttribute(client, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
+outExecutable, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_readUserExecutableAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                      UA_Boolean *outUserExecutable) {
-    return __UA_Client_readAttribute(client, &nodeId,
-                                     UA_ATTRIBUTEID_USEREXECUTABLE,
-                                     outUserExecutable,
-                                     &UA_TYPES[UA_TYPES_BOOLEAN]);
+UA_Boolean *outUserExecutable) {
+return __UA_Client_readAttribute(client, &nodeId,
+UA_ATTRIBUTEID_USEREXECUTABLE,
+outUserExecutable,
+&UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 /**
@@ -14548,175 +14548,175 @@ UA_Client_readUserExecutableAttribute(UA_Client *client, const UA_NodeId nodeId,
 /* Don't call this function, use the typed versions */
 UA_StatusCode UA_EXPORT
 __UA_Client_writeAttribute(UA_Client *client, const UA_NodeId *nodeId,
-                           UA_AttributeId attributeId, const void *in,
-                           const UA_DataType *inDataType);
+UA_AttributeId attributeId, const void *in,
+const UA_DataType *inDataType);
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeNodeIdAttribute(UA_Client *client, const UA_NodeId nodeId,
-                               const UA_NodeId *newNodeId) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_NODEID,
-                                      newNodeId, &UA_TYPES[UA_TYPES_NODEID]);
+const UA_NodeId *newNodeId) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_NODEID,
+newNodeId, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeNodeClassAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  const UA_NodeClass *newNodeClass) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_NODECLASS,
-                                      newNodeClass, &UA_TYPES[UA_TYPES_NODECLASS]);
+const UA_NodeClass *newNodeClass) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_NODECLASS,
+newNodeClass, &UA_TYPES[UA_TYPES_NODECLASS]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeBrowseNameAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   const UA_QualifiedName *newBrowseName) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
-                                      newBrowseName,
-                                      &UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
+const UA_QualifiedName *newBrowseName) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_BROWSENAME,
+newBrowseName,
+&UA_TYPES[UA_TYPES_QUALIFIEDNAME]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeDisplayNameAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                    const UA_LocalizedText *newDisplayName) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
-                                      newDisplayName,
-                                      &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+const UA_LocalizedText *newDisplayName) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_DISPLAYNAME,
+newDisplayName,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeDescriptionAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                    const UA_LocalizedText *newDescription) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
-                                      newDescription,
-                                      &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+const UA_LocalizedText *newDescription) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_DESCRIPTION,
+newDescription,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeWriteMaskAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  const UA_UInt32 *newWriteMask) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
-                                      newWriteMask, &UA_TYPES[UA_TYPES_UINT32]);
+const UA_UInt32 *newWriteMask) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_WRITEMASK,
+newWriteMask, &UA_TYPES[UA_TYPES_UINT32]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeUserWriteMaskAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                      const UA_UInt32 *newUserWriteMask) {
-    return __UA_Client_writeAttribute(client, &nodeId,
-                                      UA_ATTRIBUTEID_USERWRITEMASK,
-                                      newUserWriteMask,
-                                      &UA_TYPES[UA_TYPES_UINT32]);
+const UA_UInt32 *newUserWriteMask) {
+return __UA_Client_writeAttribute(client, &nodeId,
+UA_ATTRIBUTEID_USERWRITEMASK,
+newUserWriteMask,
+&UA_TYPES[UA_TYPES_UINT32]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeIsAbstractAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   const UA_Boolean *newIsAbstract) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
-                                      newIsAbstract, &UA_TYPES[UA_TYPES_BOOLEAN]);
+const UA_Boolean *newIsAbstract) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_ISABSTRACT,
+newIsAbstract, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeSymmetricAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  const UA_Boolean *newSymmetric) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_SYMMETRIC,
-                                      newSymmetric, &UA_TYPES[UA_TYPES_BOOLEAN]);
+const UA_Boolean *newSymmetric) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_SYMMETRIC,
+newSymmetric, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeInverseNameAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                    const UA_LocalizedText *newInverseName) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
-                                      newInverseName,
-                                      &UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
+const UA_LocalizedText *newInverseName) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_INVERSENAME,
+newInverseName,
+&UA_TYPES[UA_TYPES_LOCALIZEDTEXT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeContainsNoLoopsAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                        const UA_Boolean *newContainsNoLoops) {
-    return __UA_Client_writeAttribute(client, &nodeId,
-                                      UA_ATTRIBUTEID_CONTAINSNOLOOPS,
-                                      newContainsNoLoops,
-                                      &UA_TYPES[UA_TYPES_BOOLEAN]);
+const UA_Boolean *newContainsNoLoops) {
+return __UA_Client_writeAttribute(client, &nodeId,
+UA_ATTRIBUTEID_CONTAINSNOLOOPS,
+newContainsNoLoops,
+&UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeEventNotifierAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                      const UA_Byte *newEventNotifier) {
-    return __UA_Client_writeAttribute(client, &nodeId,
-                                      UA_ATTRIBUTEID_EVENTNOTIFIER,
-                                      newEventNotifier,
-                                      &UA_TYPES[UA_TYPES_BYTE]);
+const UA_Byte *newEventNotifier) {
+return __UA_Client_writeAttribute(client, &nodeId,
+UA_ATTRIBUTEID_EVENTNOTIFIER,
+newEventNotifier,
+&UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeValueAttribute(UA_Client *client, const UA_NodeId nodeId,
-                              const UA_Variant *newValue) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUE,
-                                      newValue, &UA_TYPES[UA_TYPES_VARIANT]);
+const UA_Variant *newValue) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUE,
+newValue, &UA_TYPES[UA_TYPES_VARIANT]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeDataTypeAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                 const UA_NodeId *newDataType) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_DATATYPE,
-                                      newDataType, &UA_TYPES[UA_TYPES_NODEID]);
+const UA_NodeId *newDataType) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_DATATYPE,
+newDataType, &UA_TYPES[UA_TYPES_NODEID]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeValueRankAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                  const UA_Int32 *newValueRank) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUERANK,
-                                      newValueRank, &UA_TYPES[UA_TYPES_INT32]);
+const UA_Int32 *newValueRank) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_VALUERANK,
+newValueRank, &UA_TYPES[UA_TYPES_INT32]);
 }
 
 UA_StatusCode UA_EXPORT
 UA_Client_writeArrayDimensionsAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                        size_t newArrayDimensionsSize,
-                                        const UA_UInt32 *newArrayDimensions);
+size_t newArrayDimensionsSize,
+const UA_UInt32 *newArrayDimensions);
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeAccessLevelAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                    const UA_Byte *newAccessLevel) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
-                                      newAccessLevel, &UA_TYPES[UA_TYPES_BYTE]);
+const UA_Byte *newAccessLevel) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_ACCESSLEVEL,
+newAccessLevel, &UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeUserAccessLevelAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                        const UA_Byte *newUserAccessLevel) {
-    return __UA_Client_writeAttribute(client, &nodeId,
-                                      UA_ATTRIBUTEID_USERACCESSLEVEL,
-                                      newUserAccessLevel,
-                                      &UA_TYPES[UA_TYPES_BYTE]);
+const UA_Byte *newUserAccessLevel) {
+return __UA_Client_writeAttribute(client, &nodeId,
+UA_ATTRIBUTEID_USERACCESSLEVEL,
+newUserAccessLevel,
+&UA_TYPES[UA_TYPES_BYTE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeMinimumSamplingIntervalAttribute(UA_Client *client,
-                                                const UA_NodeId nodeId,
-                                                const UA_Double *newMinInterval) {
-    return __UA_Client_writeAttribute(client, &nodeId,
-                                      UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
-                                      newMinInterval, &UA_TYPES[UA_TYPES_DOUBLE]);
+const UA_NodeId nodeId,
+const UA_Double *newMinInterval) {
+return __UA_Client_writeAttribute(client, &nodeId,
+UA_ATTRIBUTEID_MINIMUMSAMPLINGINTERVAL,
+newMinInterval, &UA_TYPES[UA_TYPES_DOUBLE]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeHistorizingAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                    const UA_Boolean *newHistorizing) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_HISTORIZING,
-                                      newHistorizing, &UA_TYPES[UA_TYPES_BOOLEAN]);
+const UA_Boolean *newHistorizing) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_HISTORIZING,
+newHistorizing, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeExecutableAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                   const UA_Boolean *newExecutable) {
-    return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
-                                      newExecutable, &UA_TYPES[UA_TYPES_BOOLEAN]);
+const UA_Boolean *newExecutable) {
+return __UA_Client_writeAttribute(client, &nodeId, UA_ATTRIBUTEID_EXECUTABLE,
+newExecutable, &UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_writeUserExecutableAttribute(UA_Client *client, const UA_NodeId nodeId,
-                                       const UA_Boolean *newUserExecutable) {
-    return __UA_Client_writeAttribute(client, &nodeId,
-                                      UA_ATTRIBUTEID_USEREXECUTABLE,
-                                      newUserExecutable,
-                                      &UA_TYPES[UA_TYPES_BOOLEAN]);
+const UA_Boolean *newUserExecutable) {
+return __UA_Client_writeAttribute(client, &nodeId,
+UA_ATTRIBUTEID_USEREXECUTABLE,
+newUserExecutable,
+&UA_TYPES[UA_TYPES_BOOLEAN]);
 }
 
 /**
@@ -14724,8 +14724,8 @@ UA_Client_writeUserExecutableAttribute(UA_Client *client, const UA_NodeId nodeId
  * ^^^^^^^^^^^^^^ */
 UA_StatusCode UA_EXPORT
 UA_Client_call(UA_Client *client, const UA_NodeId objectId,
-               const UA_NodeId methodId, size_t inputSize, const UA_Variant *input,
-               size_t *outputSize, UA_Variant **output);
+const UA_NodeId methodId, size_t inputSize, const UA_Variant *input,
+size_t *outputSize, UA_Variant **output);
 
 /**
  * Node Management
@@ -14733,20 +14733,20 @@ UA_Client_call(UA_Client *client, const UA_NodeId objectId,
  * See the section on :ref:`server-side node management <addnodes>`. */
 UA_StatusCode UA_EXPORT
 UA_Client_addReference(UA_Client *client, const UA_NodeId sourceNodeId,
-                       const UA_NodeId referenceTypeId, UA_Boolean isForward,
-                       const UA_String targetServerUri,
-                       const UA_ExpandedNodeId targetNodeId,
-                       UA_NodeClass targetNodeClass);
+const UA_NodeId referenceTypeId, UA_Boolean isForward,
+const UA_String targetServerUri,
+const UA_ExpandedNodeId targetNodeId,
+UA_NodeClass targetNodeClass);
 
 UA_StatusCode UA_EXPORT
 UA_Client_deleteReference(UA_Client *client, const UA_NodeId sourceNodeId,
-                          const UA_NodeId referenceTypeId, UA_Boolean isForward,
-                          const UA_ExpandedNodeId targetNodeId,
-                          UA_Boolean deleteBidirectional);
+const UA_NodeId referenceTypeId, UA_Boolean isForward,
+const UA_ExpandedNodeId targetNodeId,
+UA_Boolean deleteBidirectional);
 
 UA_StatusCode UA_EXPORT
 UA_Client_deleteNode(UA_Client *client, const UA_NodeId nodeId,
-                     UA_Boolean deleteTargetReferences);
+UA_Boolean deleteTargetReferences);
 
 /* Protect against redundant definitions for server/client */
 #ifndef UA_DEFAULT_ATTRIBUTES_DEFINED
@@ -14768,125 +14768,125 @@ UA_EXPORT extern const UA_ViewAttributes UA_ViewAttributes_default;
 /* Don't call this function, use the typed versions */
 UA_StatusCode UA_EXPORT
 __UA_Client_addNode(UA_Client *client, const UA_NodeClass nodeClass,
-                    const UA_NodeId requestedNewNodeId,
-                    const UA_NodeId parentNodeId,
-                    const UA_NodeId referenceTypeId,
-                    const UA_QualifiedName browseName,
-                    const UA_NodeId typeDefinition, const UA_NodeAttributes *attr,
-                    const UA_DataType *attributeType, UA_NodeId *outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition, const UA_NodeAttributes *attr,
+const UA_DataType *attributeType, UA_NodeId *outNewNodeId);
 
 static UA_INLINE UA_StatusCode
 UA_Client_addVariableNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
-                          const UA_NodeId parentNodeId,
-                          const UA_NodeId referenceTypeId,
-                          const UA_QualifiedName browseName,
-                          const UA_NodeId typeDefinition,
-                          const UA_VariableAttributes attr,
-                          UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_VARIABLE, requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               typeDefinition, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES],
-                               outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const UA_VariableAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_VARIABLE, requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+typeDefinition, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_VARIABLEATTRIBUTES],
+outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addVariableTypeNode(UA_Client *client,
-                              const UA_NodeId requestedNewNodeId,
-                              const UA_NodeId parentNodeId,
-                              const UA_NodeId referenceTypeId,
-                              const UA_QualifiedName browseName,
-                              const UA_VariableTypeAttributes attr,
-                              UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_VARIABLETYPE,
-                               requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES],
-                               outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_VariableTypeAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_VARIABLETYPE,
+requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_VARIABLETYPEATTRIBUTES],
+outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addObjectNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
-                        const UA_NodeId parentNodeId,
-                        const UA_NodeId referenceTypeId,
-                        const UA_QualifiedName browseName,
-                        const UA_NodeId typeDefinition,
-                        const UA_ObjectAttributes attr, UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_OBJECT, requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               typeDefinition, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_OBJECTATTRIBUTES], outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_NodeId typeDefinition,
+const UA_ObjectAttributes attr, UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_OBJECT, requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+typeDefinition, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_OBJECTATTRIBUTES], outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addObjectTypeNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
-                            const UA_NodeId parentNodeId,
-                            const UA_NodeId referenceTypeId,
-                            const UA_QualifiedName browseName,
-                            const UA_ObjectTypeAttributes attr,
-                            UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_OBJECTTYPE, requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES],
-                               outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_ObjectTypeAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_OBJECTTYPE, requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_OBJECTTYPEATTRIBUTES],
+outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addViewNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
-                      const UA_NodeId parentNodeId,
-                      const UA_NodeId referenceTypeId,
-                      const UA_QualifiedName browseName,
-                      const UA_ViewAttributes attr,
-                      UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_VIEW, requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_VIEWATTRIBUTES], outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_ViewAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_VIEW, requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_VIEWATTRIBUTES], outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addReferenceTypeNode(UA_Client *client,
-                               const UA_NodeId requestedNewNodeId,
-                               const UA_NodeId parentNodeId,
-                               const UA_NodeId referenceTypeId,
-                               const UA_QualifiedName browseName,
-                               const UA_ReferenceTypeAttributes attr,
-                               UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_REFERENCETYPE,
-                               requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES],
-                               outNewNodeId);
+const UA_NodeId requestedNewNodeId,
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_ReferenceTypeAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_REFERENCETYPE,
+requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_REFERENCETYPEATTRIBUTES],
+outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addDataTypeNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
-                          const UA_NodeId parentNodeId,
-                          const UA_NodeId referenceTypeId,
-                          const UA_QualifiedName browseName,
-                          const UA_DataTypeAttributes attr,
-                          UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_DATATYPE, requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES],
-                               outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_DataTypeAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_DATATYPE, requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_DATATYPEATTRIBUTES],
+outNewNodeId);
 }
 
 static UA_INLINE UA_StatusCode
 UA_Client_addMethodNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
-                        const UA_NodeId parentNodeId,
-                        const UA_NodeId referenceTypeId,
-                        const UA_QualifiedName browseName,
-                        const UA_MethodAttributes attr,
-                        UA_NodeId *outNewNodeId) {
-    return __UA_Client_addNode(client, UA_NODECLASS_METHOD, requestedNewNodeId,
-                               parentNodeId, referenceTypeId, browseName,
-                               UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
-                               &UA_TYPES[UA_TYPES_METHODATTRIBUTES], outNewNodeId);
+const UA_NodeId parentNodeId,
+const UA_NodeId referenceTypeId,
+const UA_QualifiedName browseName,
+const UA_MethodAttributes attr,
+UA_NodeId *outNewNodeId) {
+return __UA_Client_addNode(client, UA_NODECLASS_METHOD, requestedNewNodeId,
+parentNodeId, referenceTypeId, browseName,
+UA_NODEID_NULL, (const UA_NodeAttributes*)&attr,
+&UA_TYPES[UA_TYPES_METHODATTRIBUTES], outNewNodeId);
 }
 
 /**
@@ -14901,19 +14901,19 @@ UA_Client_addMethodNode(UA_Client *client, const UA_NodeId requestedNewNodeId,
  * @return Indicates whether the operation succeeded or returns an error code */
 UA_StatusCode UA_EXPORT
 UA_Client_NamespaceGetIndex(UA_Client *client, UA_String *namespaceUri,
-                            UA_UInt16 *namespaceIndex);
+UA_UInt16 *namespaceIndex);
 
 #ifndef HAVE_NODEITER_CALLBACK
 #define HAVE_NODEITER_CALLBACK
 /* Iterate over all nodes referenced by parentNodeId by calling the callback
    function for each child node */
 typedef UA_StatusCode (*UA_NodeIteratorCallback)(UA_NodeId childId, UA_Boolean isInverse,
-                                                 UA_NodeId referenceTypeId, void *handle);
+UA_NodeId referenceTypeId, void *handle);
 #endif
 
 UA_StatusCode UA_EXPORT
 UA_Client_forEachChildNodeCall(UA_Client *client, UA_NodeId parentNodeId,
-                               UA_NodeIteratorCallback callback, void *handle) ;
+UA_NodeIteratorCallback callback, void *handle) ;
 
 #ifdef __cplusplus
 } // extern "C"
@@ -14957,11 +14957,11 @@ extern "C" {
 
 /* Callbacks defined for Subscriptions */
 typedef void (*UA_Client_DeleteSubscriptionCallback)
-    (UA_Client *client, UA_UInt32 subId, void *subContext);
+(UA_Client *client, UA_UInt32 subId, void *subContext);
 
 typedef void (*UA_Client_StatusChangeNotificationCallback)
-    (UA_Client *client, UA_UInt32 subId, void *subContext,
-     UA_StatusChangeNotification *notification);
+(UA_Client *client, UA_UInt32 subId, void *subContext,
+UA_StatusChangeNotification *notification);
 
 /* Provides default values for a new subscription.
  *
@@ -14973,31 +14973,31 @@ typedef void (*UA_Client_StatusChangeNotificationCallback)
  * Priority: 0 */
 static UA_INLINE UA_CreateSubscriptionRequest
 UA_CreateSubscriptionRequest_default(void) {
-    UA_CreateSubscriptionRequest request;
-    UA_CreateSubscriptionRequest_init(&request);
+UA_CreateSubscriptionRequest request;
+UA_CreateSubscriptionRequest_init(&request);
 
-    request.requestedPublishingInterval = 500.0;
-    request.requestedLifetimeCount = 10000;
-    request.requestedMaxKeepAliveCount = 10;
-    request.maxNotificationsPerPublish = 0;
-    request.publishingEnabled = true;
-    request.priority = 0;
-    return request;
+request.requestedPublishingInterval = 500.0;
+request.requestedLifetimeCount = 10000;
+request.requestedMaxKeepAliveCount = 10;
+request.maxNotificationsPerPublish = 0;
+request.publishingEnabled = true;
+request.priority = 0;
+return request;
 }
 
 UA_CreateSubscriptionResponse UA_EXPORT
 UA_Client_Subscriptions_create(UA_Client *client,
-                               const UA_CreateSubscriptionRequest request,
-                               void *subscriptionContext,
-                               UA_Client_StatusChangeNotificationCallback statusChangeCallback,
-                               UA_Client_DeleteSubscriptionCallback deleteCallback);
+const UA_CreateSubscriptionRequest request,
+void *subscriptionContext,
+UA_Client_StatusChangeNotificationCallback statusChangeCallback,
+UA_Client_DeleteSubscriptionCallback deleteCallback);
 
 UA_ModifySubscriptionResponse UA_EXPORT
 UA_Client_Subscriptions_modify(UA_Client *client, const UA_ModifySubscriptionRequest request);
 
 UA_DeleteSubscriptionsResponse UA_EXPORT
 UA_Client_Subscriptions_delete(UA_Client *client,
-                               const UA_DeleteSubscriptionsRequest request);
+const UA_DeleteSubscriptionsRequest request);
 
 /* Delete a single subscription */
 UA_StatusCode UA_EXPORT
@@ -15005,12 +15005,12 @@ UA_Client_Subscriptions_deleteSingle(UA_Client *client, UA_UInt32 subscriptionId
 
 static UA_INLINE UA_SetPublishingModeResponse
 UA_Client_Subscriptions_setPublishingMode(UA_Client *client,
-                                          const UA_SetPublishingModeRequest request) {
-    UA_SetPublishingModeResponse response;
-    __UA_Client_Service(client, &request,
-                        &UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST], &response,
-                        &UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
-    return response;
+const UA_SetPublishingModeRequest request) {
+UA_SetPublishingModeResponse response;
+__UA_Client_Service(client, &request,
+&UA_TYPES[UA_TYPES_SETPUBLISHINGMODEREQUEST], &response,
+&UA_TYPES[UA_TYPES_SETPUBLISHINGMODERESPONSE]);
+return response;
 }
 
 /**
@@ -15028,59 +15028,59 @@ UA_Client_Subscriptions_setPublishingMode(UA_Client *client,
 /* Provides default values for a new monitored item. */
 static UA_INLINE UA_MonitoredItemCreateRequest
 UA_MonitoredItemCreateRequest_default(UA_NodeId nodeId) {
-    UA_MonitoredItemCreateRequest request;
-    UA_MonitoredItemCreateRequest_init(&request);
-    request.itemToMonitor.nodeId = nodeId;
-    request.itemToMonitor.attributeId = UA_ATTRIBUTEID_VALUE;
-    request.monitoringMode = UA_MONITORINGMODE_REPORTING;
-    request.requestedParameters.samplingInterval = 250;
-    request.requestedParameters.discardOldest = true;
-    request.requestedParameters.queueSize = 1;
-    return request;
+UA_MonitoredItemCreateRequest request;
+UA_MonitoredItemCreateRequest_init(&request);
+request.itemToMonitor.nodeId = nodeId;
+request.itemToMonitor.attributeId = UA_ATTRIBUTEID_VALUE;
+request.monitoringMode = UA_MONITORINGMODE_REPORTING;
+request.requestedParameters.samplingInterval = 250;
+request.requestedParameters.discardOldest = true;
+request.requestedParameters.queueSize = 1;
+return request;
 }
 
 /* Callback for the deletion of a MonitoredItem */
 typedef void (*UA_Client_DeleteMonitoredItemCallback)
-    (UA_Client *client, UA_UInt32 subId, void *subContext,
-     UA_UInt32 monId, void *monContext);
+(UA_Client *client, UA_UInt32 subId, void *subContext,
+UA_UInt32 monId, void *monContext);
 
 /* Callback for DataChange notifications */
 typedef void (*UA_Client_DataChangeNotificationCallback)
-    (UA_Client *client, UA_UInt32 subId, void *subContext,
-     UA_UInt32 monId, void *monContext,
-     UA_DataValue *value);
+(UA_Client *client, UA_UInt32 subId, void *subContext,
+UA_UInt32 monId, void *monContext,
+UA_DataValue *value);
 
 /* Callback for Event notifications */
 typedef void (*UA_Client_EventNotificationCallback)
-    (UA_Client *client, UA_UInt32 subId, void *subContext,
-     UA_UInt32 monId, void *monContext,
-     size_t nEventFields, UA_Variant *eventFields);
+(UA_Client *client, UA_UInt32 subId, void *subContext,
+UA_UInt32 monId, void *monContext,
+size_t nEventFields, UA_Variant *eventFields);
 
 /* Don't use to monitor the EventNotifier attribute */
 UA_CreateMonitoredItemsResponse UA_EXPORT
 UA_Client_MonitoredItems_createDataChanges(UA_Client *client,
-            const UA_CreateMonitoredItemsRequest request, void **contexts,
-            UA_Client_DataChangeNotificationCallback *callbacks,
-            UA_Client_DeleteMonitoredItemCallback *deleteCallbacks);
+const UA_CreateMonitoredItemsRequest request, void **contexts,
+UA_Client_DataChangeNotificationCallback *callbacks,
+UA_Client_DeleteMonitoredItemCallback *deleteCallbacks);
 
 UA_MonitoredItemCreateResult UA_EXPORT
 UA_Client_MonitoredItems_createDataChange(UA_Client *client, UA_UInt32 subscriptionId,
-          UA_TimestampsToReturn timestampsToReturn, const UA_MonitoredItemCreateRequest item,
-          void *context, UA_Client_DataChangeNotificationCallback callback,
-          UA_Client_DeleteMonitoredItemCallback deleteCallback);
+UA_TimestampsToReturn timestampsToReturn, const UA_MonitoredItemCreateRequest item,
+void *context, UA_Client_DataChangeNotificationCallback callback,
+UA_Client_DeleteMonitoredItemCallback deleteCallback);
 
 /* Monitor the EventNotifier attribute only */
 UA_CreateMonitoredItemsResponse UA_EXPORT
 UA_Client_MonitoredItems_createEvents(UA_Client *client,
-            const UA_CreateMonitoredItemsRequest request, void **contexts,
-            UA_Client_EventNotificationCallback *callbacks,
-            UA_Client_DeleteMonitoredItemCallback *deleteCallback);
+const UA_CreateMonitoredItemsRequest request, void **contexts,
+UA_Client_EventNotificationCallback *callbacks,
+UA_Client_DeleteMonitoredItemCallback *deleteCallback);
 
 UA_MonitoredItemCreateResult UA_EXPORT
 UA_Client_MonitoredItems_createEvent(UA_Client *client, UA_UInt32 subscriptionId,
-          UA_TimestampsToReturn timestampsToReturn, const UA_MonitoredItemCreateRequest item,
-          void *context, UA_Client_EventNotificationCallback callback,
-          UA_Client_DeleteMonitoredItemCallback deleteCallback);
+UA_TimestampsToReturn timestampsToReturn, const UA_MonitoredItemCreateRequest item,
+void *context, UA_Client_EventNotificationCallback callback,
+UA_Client_DeleteMonitoredItemCallback deleteCallback);
 
 UA_DeleteMonitoredItemsResponse UA_EXPORT
 UA_Client_MonitoredItems_delete(UA_Client *client, const UA_DeleteMonitoredItemsRequest);
@@ -15094,32 +15094,32 @@ UA_Client_MonitoredItems_deleteSingle(UA_Client *client, UA_UInt32 subscriptionI
 
 static UA_INLINE UA_ModifyMonitoredItemsResponse
 UA_Client_MonitoredItems_modify(UA_Client *client,
-                                const UA_ModifyMonitoredItemsRequest request) {
-    UA_ModifyMonitoredItemsResponse response;
-    __UA_Client_Service(client,
-                        &request, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
-    return response;
+const UA_ModifyMonitoredItemsRequest request) {
+UA_ModifyMonitoredItemsResponse response;
+__UA_Client_Service(client,
+&request, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSREQUEST],
+&response, &UA_TYPES[UA_TYPES_MODIFYMONITOREDITEMSRESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_SetMonitoringModeResponse
 UA_Client_MonitoredItems_setMonitoringMode(UA_Client *client,
-                                           const UA_SetMonitoringModeRequest request) {
-    UA_SetMonitoringModeResponse response;
-    __UA_Client_Service(client,
-                        &request, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
-    return response;
+const UA_SetMonitoringModeRequest request) {
+UA_SetMonitoringModeResponse response;
+__UA_Client_Service(client,
+&request, &UA_TYPES[UA_TYPES_SETMONITORINGMODEREQUEST],
+&response, &UA_TYPES[UA_TYPES_SETMONITORINGMODERESPONSE]);
+return response;
 }
 
 static UA_INLINE UA_SetTriggeringResponse
 UA_Client_MonitoredItems_setTriggering(UA_Client *client,
-                                       const UA_SetTriggeringRequest request) {
-    UA_SetTriggeringResponse response;
-    __UA_Client_Service(client,
-                        &request, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST],
-                        &response, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
-    return response;
+const UA_SetTriggeringRequest request) {
+UA_SetTriggeringResponse response;
+__UA_Client_Service(client,
+&request, &UA_TYPES[UA_TYPES_SETTRIGGERINGREQUEST],
+&response, &UA_TYPES[UA_TYPES_SETTRIGGERINGRESPONSE]);
+return response;
 }
 
 /**
@@ -15129,19 +15129,19 @@ UA_Client_MonitoredItems_setTriggering(UA_Client *client,
  * future releases. */
 
 typedef struct {
-    UA_Double requestedPublishingInterval;
-    UA_UInt32 requestedLifetimeCount;
-    UA_UInt32 requestedMaxKeepAliveCount;
-    UA_UInt32 maxNotificationsPerPublish;
-    UA_Boolean publishingEnabled;
-    UA_Byte priority;
+UA_Double requestedPublishingInterval;
+UA_UInt32 requestedLifetimeCount;
+UA_UInt32 requestedMaxKeepAliveCount;
+UA_UInt32 maxNotificationsPerPublish;
+UA_Boolean publishingEnabled;
+UA_Byte priority;
 } UA_SubscriptionSettings;
 
 extern const UA_EXPORT UA_SubscriptionSettings UA_SubscriptionSettings_default;
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_new(UA_Client *client, UA_SubscriptionSettings settings,
-                            UA_UInt32 *newSubscriptionId);
+UA_UInt32 *newSubscriptionId);
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_remove(UA_Client *client, UA_UInt32 subscriptionId);
@@ -15154,57 +15154,57 @@ UA_Client_Subscriptions_manuallySendPublishRequest(UA_Client *client);
 
 /* For monitoring DataChanges */
 typedef void (*UA_MonitoredItemHandlingFunction)(UA_Client *client, UA_UInt32 monId,
-                                                 UA_DataValue *value, void *context);
+UA_DataValue *value, void *context);
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_addMonitoredItems(UA_Client *client, const UA_UInt32 subscriptionId,
-                                          UA_MonitoredItemCreateRequest *items, size_t itemsSize,
-                                          UA_MonitoredItemHandlingFunction *hfs,
-                                          void **hfContexts, UA_StatusCode *itemResults,
-                                          UA_UInt32 *newMonitoredItemIds);
+UA_MonitoredItemCreateRequest *items, size_t itemsSize,
+UA_MonitoredItemHandlingFunction *hfs,
+void **hfContexts, UA_StatusCode *itemResults,
+UA_UInt32 *newMonitoredItemIds);
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_addMonitoredItem(UA_Client *client, UA_UInt32 subscriptionId,
-                                         UA_NodeId nodeId, UA_UInt32 attributeID,
-                                         UA_MonitoredItemHandlingFunction hf,
-                                         void *hfContext,
-                                         UA_UInt32 *newMonitoredItemId,
-                                         UA_Double samplingInterval);
+UA_NodeId nodeId, UA_UInt32 attributeID,
+UA_MonitoredItemHandlingFunction hf,
+void *hfContext,
+UA_UInt32 *newMonitoredItemId,
+UA_Double samplingInterval);
 
 /* Monitored Events have different payloads from DataChanges. So they use a
  * different callback method signature. */
 typedef void (*UA_MonitoredEventHandlingFunction)(UA_Client *client,
-                                                  const UA_UInt32 monId,
-                                                  const size_t nEventFields,
-                                                  const UA_Variant *eventFields,
-                                                  void *context);
+const UA_UInt32 monId,
+const size_t nEventFields,
+const UA_Variant *eventFields,
+void *context);
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_addMonitoredEvents(UA_Client *client, const UA_UInt32 subscriptionId,
-                                           UA_MonitoredItemCreateRequest *items, size_t itemsSize,
-                                           UA_MonitoredEventHandlingFunction *hfs,
-                                           void **hfContexts, UA_StatusCode *itemResults,
-                                           UA_UInt32 *newMonitoredItemIds);
+UA_MonitoredItemCreateRequest *items, size_t itemsSize,
+UA_MonitoredEventHandlingFunction *hfs,
+void **hfContexts, UA_StatusCode *itemResults,
+UA_UInt32 *newMonitoredItemIds);
 
 /* TODO for 0.4: attribute is fix for events. */
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_addMonitoredEvent(UA_Client *client, UA_UInt32 subscriptionId,
-                                          const UA_NodeId nodeId, UA_UInt32 attributeID,
-                                          const UA_SimpleAttributeOperand *selectClauses,
-                                          size_t selectClausesSize,
-                                          const UA_ContentFilterElement *whereClauses,
-                                          size_t whereClausesSize,
-                                          const UA_MonitoredEventHandlingFunction hf,
-                                          void *hfContext, UA_UInt32 *newMonitoredItemId);
+const UA_NodeId nodeId, UA_UInt32 attributeID,
+const UA_SimpleAttributeOperand *selectClauses,
+size_t selectClausesSize,
+const UA_ContentFilterElement *whereClauses,
+size_t whereClausesSize,
+const UA_MonitoredEventHandlingFunction hf,
+void *hfContext, UA_UInt32 *newMonitoredItemId);
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_removeMonitoredItem(UA_Client *client, UA_UInt32 subscriptionId,
-                                            UA_UInt32 monitoredItemId);
+UA_UInt32 monitoredItemId);
 
 UA_DEPRECATED UA_StatusCode UA_EXPORT
 UA_Client_Subscriptions_removeMonitoredItems(UA_Client *client, UA_UInt32 subscriptionId,
-                                             UA_UInt32 *monitoredItemIds, size_t itemsSize,
-                                             UA_StatusCode *itemResults);
+UA_UInt32 *monitoredItemIds, size_t itemsSize,
+UA_StatusCode *itemResults);
 
 #endif
 
@@ -15216,7 +15216,7 @@ UA_Client_Subscriptions_removeMonitoredItems(UA_Client *client, UA_UInt32 subscr
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_network_tcp.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2016 (c) Julius Pfrommer, Fraunhofer IOSB
  */
@@ -15241,7 +15241,7 @@ UA_ClientConnectionTCP(UA_ConnectionConfig conf, const char *endpointUrl, const 
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_accesscontrol_default.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2016-2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -15254,16 +15254,16 @@ extern "C" {
 #endif
 
 typedef struct {
-    UA_String username;
-    UA_String password;
+UA_String username;
+UA_String password;
 } UA_UsernamePasswordLogin;
 
 /* Default access control. The log-in can be anonymous or username-password. A
  * logged-in user has all access rights. */
 UA_EXPORT UA_AccessControl
 UA_AccessControl_default(UA_Boolean allowAnonymous,
-                         size_t usernamePasswordLoginSize,
-                         const UA_UsernamePasswordLogin *usernamePasswordLogin);
+size_t usernamePasswordLoginSize,
+const UA_UsernamePasswordLogin *usernamePasswordLogin);
 
 #ifdef __cplusplus
 }
@@ -15273,7 +15273,7 @@ UA_AccessControl_default(UA_Boolean allowAnonymous,
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_pki_certificate.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2018 (c) Mark Giraud, Fraunhofer IOSB
  */
@@ -15294,10 +15294,10 @@ UA_CertificateVerification_AcceptAll(UA_CertificateVerification *cv);
  * mbedTLS. */
 UA_EXPORT UA_StatusCode
 UA_CertificateVerification_Trustlist(UA_CertificateVerification *cv,
-                                     const UA_ByteString *certificateTrustList,
-                                     size_t certificateTrustListSize,
-                                     const UA_ByteString *certificateRevocationList,
-                                     size_t certificateRevocationListSize);
+const UA_ByteString *certificateTrustList,
+size_t certificateTrustListSize,
+const UA_ByteString *certificateRevocationList,
+size_t certificateRevocationListSize);
 
 #endif
 
@@ -15310,7 +15310,7 @@ UA_CertificateVerification_Trustlist(UA_CertificateVerification *cv,
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  *    Copyright 2018 (c) Mark Giraud, Fraunhofer IOSB
  */
@@ -15328,10 +15328,10 @@ extern "C" {
 
 UA_EXPORT UA_StatusCode
 UA_SecurityPolicy_Basic128Rsa15(UA_SecurityPolicy *policy,
-                                UA_CertificateVerification *certificateVerification,
-                                const UA_ByteString localCertificate,
-                                const UA_ByteString localPrivateKey,
-                                UA_Logger logger);
+UA_CertificateVerification *certificateVerification,
+const UA_ByteString localCertificate,
+const UA_ByteString localPrivateKey,
+UA_Logger logger);
 
 #ifdef __cplusplus
 }
@@ -15364,10 +15364,10 @@ extern "C" {
 
 UA_EXPORT UA_StatusCode
 UA_SecurityPolicy_Basic256Sha256(UA_SecurityPolicy *policy,
-                                 UA_CertificateVerification *certificateVerification,
-                                 const UA_ByteString localCertificate,
-                                 const UA_ByteString localPrivateKey,
-                                 UA_Logger logger);
+UA_CertificateVerification *certificateVerification,
+const UA_ByteString localCertificate,
+const UA_ByteString localPrivateKey,
+UA_Logger logger);
 
 #ifdef __cplusplus
 }
@@ -15380,7 +15380,7 @@ UA_SecurityPolicy_Basic256Sha256(UA_SecurityPolicy *policy,
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_log_stdout.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2016 (c) Julius Pfrommer, Fraunhofer IOSB
  */
@@ -15393,7 +15393,7 @@ extern "C" {
 
 void UA_EXPORT
 UA_Log_Stdout(UA_LogLevel level, UA_LogCategory category,
-              const char *msg, va_list args);
+const char *msg, va_list args);
 
 #ifdef __cplusplus
 }
@@ -15403,7 +15403,7 @@ UA_Log_Stdout(UA_LogLevel level, UA_LogCategory category,
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_nodestore_default.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2017 (c) Julian Grothoff
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -15427,7 +15427,7 @@ UA_Nodestore_default_new(UA_Nodestore *ns);
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_config_default.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2017 (c) Julius Pfrommer, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -15451,7 +15451,7 @@ extern const UA_EXPORT UA_ConnectionConfig UA_ConnectionConfig_default;
 /*************************/
 
 /* Creates a new server config with one endpoint.
- * 
+ *
  * The config will set the tcp network layer to the given port and adds a single
  * endpoint with the security policy ``SecurityPolicy#None`` to the server. A
  * server certificate may be supplied but is optional.
@@ -15466,30 +15466,30 @@ UA_ServerConfig_new_minimal(UA_UInt16 portNumber, const UA_ByteString *certifica
 
 UA_EXPORT UA_ServerConfig *
 UA_ServerConfig_new_basic128rsa15(UA_UInt16 portNumber,
-                                  const UA_ByteString *certificate,
-                                  const UA_ByteString *privateKey,
-                                  const UA_ByteString *trustList,
-                                  size_t trustListSize,
-                                  const UA_ByteString *revocationList,
-                                  size_t revocationListSize);
+const UA_ByteString *certificate,
+const UA_ByteString *privateKey,
+const UA_ByteString *trustList,
+size_t trustListSize,
+const UA_ByteString *revocationList,
+size_t revocationListSize);
 
 UA_EXPORT UA_ServerConfig *
 UA_ServerConfig_new_basic256sha256(UA_UInt16 portNumber,
-                                   const UA_ByteString *certificate,
-                                   const UA_ByteString *privateKey,
-                                   const UA_ByteString *trustList,
-                                   size_t trustListSize,
-                                   const UA_ByteString *revocationList,
-                                   size_t revocationListSize);
+const UA_ByteString *certificate,
+const UA_ByteString *privateKey,
+const UA_ByteString *trustList,
+size_t trustListSize,
+const UA_ByteString *revocationList,
+size_t revocationListSize);
 
 UA_EXPORT UA_ServerConfig *
 UA_ServerConfig_new_allSecurityPolicies(UA_UInt16 portNumber,
-                                        const UA_ByteString *certificate,
-                                        const UA_ByteString *privateKey,
-                                        const UA_ByteString *trustList,
-                                        size_t trustListSize,
-                                        const UA_ByteString *revocationList,
-                                        size_t revocationListSize);
+const UA_ByteString *certificate,
+const UA_ByteString *privateKey,
+const UA_ByteString *trustList,
+size_t trustListSize,
+const UA_ByteString *revocationList,
+size_t revocationListSize);
 
 #endif
 
@@ -15497,7 +15497,7 @@ UA_ServerConfig_new_allSecurityPolicies(UA_UInt16 portNumber,
  * certificate. */
 static UA_INLINE UA_ServerConfig *
 UA_ServerConfig_new_default(void) {
-    return UA_ServerConfig_new_minimal(4840, NULL);
+return UA_ServerConfig_new_minimal(4840, NULL);
 }
 
 /* Set a custom hostname in server configuration
@@ -15507,7 +15507,7 @@ UA_ServerConfig_new_default(void) {
 
 UA_EXPORT void
 UA_ServerConfig_set_customHostname(UA_ServerConfig *config,
-                                   const UA_String customHostname);
+const UA_String customHostname);
 
 /* Frees allocated memory in the server config */
 UA_EXPORT void
@@ -15527,7 +15527,7 @@ extern const UA_EXPORT UA_ClientConfig UA_ClientConfig_default;
 /*********************************** amalgamated original file "/home/travis/build/open62541/open62541/plugins/ua_securitypolicy_none.h" ***********************************/
 
 /* This work is licensed under a Creative Commons CCZero 1.0 Universal License.
- * See http://creativecommons.org/publicdomain/zero/1.0/ for more information. 
+ * See http://creativecommons.org/publicdomain/zero/1.0/ for more information.
  *
  *    Copyright 2017 (c) Mark Giraud, Fraunhofer IOSB
  *    Copyright 2017 (c) Stefan Profanter, fortiss GmbH
@@ -15541,7 +15541,7 @@ extern "C" {
 
 UA_StatusCode UA_EXPORT
 UA_SecurityPolicy_None(UA_SecurityPolicy *policy, UA_CertificateVerification *certificateVerification,
-                       const UA_ByteString localCertificate, UA_Logger logger);
+const UA_ByteString localCertificate, UA_Logger logger);
 
 #ifdef __cplusplus
 }

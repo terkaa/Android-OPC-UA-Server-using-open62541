@@ -23,7 +23,8 @@ add_library(
 add_library(
         simple-client-lib
         SHARED
-        simple_client.c
+        simple_server.c
+        robot.c
 )
 
 
@@ -35,15 +36,26 @@ add_library(
 
 find_library( # Sets the name of the path variable.
         log-lib
-
         # Specifies the name of the NDK library that
         # you want CMake to locate.
         log)
 
+
 target_link_libraries( # Specifies the target library.
         simple-client-lib
         open62541-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib} )
 
+target_link_libraries( # Specifies the target library.
+        simple-client-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib} )
+
+target_link_libraries( # Specifies the target library.
+        open62541-lib
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib} )

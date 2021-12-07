@@ -14,7 +14,7 @@
  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  * A PARTICULAR PURPOSE.
  */
-
+#include <android/log.h>
 #ifndef UA_DYNAMIC_LINKING_EXPORT
 # define UA_DYNAMIC_LINKING_EXPORT
 # define MDNSD_DYNAMIC_LINKING
@@ -39072,6 +39072,7 @@ uint32_t pcg32_random_r(pcg32_random_t* rng) {
 
 #include <stdio.h> // snprintf
 #include <string.h> // memset
+//#include <android/log.h>
 
 #if !defined(UA_FREERTOS)
 # include <errno.h>
@@ -40194,7 +40195,11 @@ UA_Log_Stdout(UA_LogLevel level, UA_LogCategory category,
            dts.year, dts.month, dts.day, dts.hour, dts.min, dts.sec, dts.milliSec,
            (int)(tOffset / UA_DATETIME_SEC / 36), logLevelNames[level], logCategoryNames[category]);
     vprintf(msg, args);
+    char mesitsi[256];
+    vsprintf(mesitsi,msg,args);
     printf("\n");
+    __android_log_print(ANDROID_LOG_INFO, "OPC_Server", "[%04u-%02u-%02u %02u:%02u:%02u.%03u (UTC%+05d)] %s/%s %s",dts.year, dts.month, dts.day, dts.hour, dts.min, dts.sec, dts.milliSec,
+    (int)(tOffset / UA_DATETIME_SEC / 36), logLevelNames[level], logCategoryNames[category],mesitsi);
     fflush(stdout);
 
 #ifdef UA_ENABLE_MULTITHREADING
