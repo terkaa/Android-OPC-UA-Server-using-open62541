@@ -1,0 +1,1 @@
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/CMakeLists.txt

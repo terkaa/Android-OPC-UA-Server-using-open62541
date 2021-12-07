@@ -1,0 +1,4 @@
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/simple-client-lib.dir
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/open62541-lib.dir

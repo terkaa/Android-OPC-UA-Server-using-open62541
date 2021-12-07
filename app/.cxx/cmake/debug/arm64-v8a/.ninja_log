@@ -1,0 +1,20 @@
+# ninja log v5
+0	69	1638734562	CMakeFiles/simple-client-lib.dir/simple_client.c.o	95079835e3fb9d8f
+1599	1612	1638868434	/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/arm64-v8a/libsimple-client-lib.so	2f87c9818e4a5757
+0	89	1638868433	CMakeFiles/simple-client-lib.dir/simple_server.c.o	54fa708f1a6b4d23
+0	14	1638737128	build.ninja	650cfd1db24e8371
+0	1552	1638868434	CMakeFiles/open62541-lib.dir/open62541.c.o	1c206d07b30aeb66
+1552	1598	1638868434	/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/arm64-v8a/libopen62541-lib.so	8abd3b24030df6b4
+0	177	1638868433	CMakeFiles/simple-client-lib.dir/robot.c.o	a951357d0cc509e1
+0	2	0	clean	4cd617ebb1943722
+1	84	1638894377	CMakeFiles/simple-client-lib.dir/simple_server.c.o	54fa708f1a6b4d23
+1	169	1638894377	CMakeFiles/simple-client-lib.dir/robot.c.o	a951357d0cc509e1
+1	1530	1638894378	CMakeFiles/open62541-lib.dir/open62541.c.o	1c206d07b30aeb66
+1530	1575	1638894378	/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/arm64-v8a/libopen62541-lib.so	8abd3b24030df6b4
+1575	1586	1638894378	/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/arm64-v8a/libsimple-client-lib.so	2f87c9818e4a5757
+0	3	0	clean	4cd617ebb1943722
+0	80	1638895643	CMakeFiles/simple-client-lib.dir/simple_server.c.o	54fa708f1a6b4d23
+1	162	1638895643	CMakeFiles/simple-client-lib.dir/robot.c.o	a951357d0cc509e1
+1	1507	1638895644	CMakeFiles/open62541-lib.dir/open62541.c.o	1c206d07b30aeb66
+1507	1550	1638895644	/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/arm64-v8a/libopen62541-lib.so	8abd3b24030df6b4
+1550	1562	1638895644	/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/arm64-v8a/libsimple-client-lib.so	2f87c9818e4a5757

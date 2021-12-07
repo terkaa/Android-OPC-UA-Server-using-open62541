@@ -1,0 +1,4 @@
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/debug/x86/CMakeFiles/simple-client-lib.dir
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/debug/x86/CMakeFiles/open62541-lib.dir

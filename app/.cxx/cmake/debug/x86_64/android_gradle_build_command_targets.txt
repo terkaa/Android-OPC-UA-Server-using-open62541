@@ -1,0 +1,8 @@
+Executable : /home/tero/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/debug/x86_64
+open62541-lib
+simple-client-lib
+jvmArgs : 
+

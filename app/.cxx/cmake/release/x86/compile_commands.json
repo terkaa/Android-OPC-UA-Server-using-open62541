@@ -1,0 +1,19 @@
+[
+{
+  "directory": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/x86",
+  "command": "/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=i686-none-linux-android16 --gcc-toolchain=/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dsimple_client_lib_EXPORTS -I/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/src/main/cpp  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -o CMakeFiles/simple-client-lib.dir/simple_server.c.o   -c /home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/simple_server.c",
+  "file": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/simple_server.c"
+},
+
+{
+  "directory": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/x86",
+  "command": "/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=i686-none-linux-android16 --gcc-toolchain=/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dsimple_client_lib_EXPORTS -I/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/src/main/cpp  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -o CMakeFiles/simple-client-lib.dir/robot.c.o   -c /home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/robot.c",
+  "file": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/robot.c"
+},
+
+{
+  "directory": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/x86",
+  "command": "/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=i686-none-linux-android16 --gcc-toolchain=/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tero/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dopen62541_lib_EXPORTS -I/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/src/main/cpp  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -o CMakeFiles/open62541-lib.dir/open62541.c.o   -c /home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/open62541.c",
+  "file": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/open62541.c"
+}
+]

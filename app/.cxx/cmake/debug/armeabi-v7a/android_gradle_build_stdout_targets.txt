@@ -1,0 +1,14 @@
+ninja: Entering directory `/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/debug/armeabi-v7a'
+[1/5] Building C object CMakeFiles/simple-client-lib.dir/simple_server.c.o
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/simple_server.c:32:5: warning: implicit declaration of function 'robot' is invalid in C99 [-Wimplicit-function-declaration]
+    robot(server);
+    ^
+1 warning generated.
+[2/5] Building C object CMakeFiles/simple-client-lib.dir/robot.c.o
+[3/5] Building C object CMakeFiles/open62541-lib.dir/open62541.c.o
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/open62541.c:7038:9: warning: No native IEEE 754 format detected. Use slow generic encoding. [-W#pragma-messages]
+#pragma message "No native IEEE 754 format detected. Use slow generic encoding."
+        ^
+1 warning generated.
+[4/5] Linking C shared library /home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libopen62541-lib.so
+[5/5] Linking C shared library /home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libsimple-client-lib.so

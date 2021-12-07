@@ -1,0 +1,55 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/tero/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/tero/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "simple-client-lib-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/home/tero/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/arm64-v8a",
+        "simple-client-lib"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "simple-client-lib",
+      "output": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/release/obj/arm64-v8a/libsimple-client-lib.so",
+      "runtimeFiles": [
+        "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/release/obj/arm64-v8a/libopen62541-lib.so"
+      ]
+    },
+    "open62541-lib-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/home/tero/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/.cxx/cmake/release/arm64-v8a",
+        "open62541-lib"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "open62541-lib",
+      "output": "/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/release/obj/arm64-v8a/libopen62541-lib.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

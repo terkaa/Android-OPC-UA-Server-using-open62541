@@ -1,0 +1,1 @@
+/home/tero/android_projects/Android-OPC-UA-Client-using-open62541/app/build/intermediates/cmake/debug/obj/armeabi-v7a
