@@ -1,4 +1,4 @@
-# Android-OPC-UA-Client-using-open62541
+# Android-OPC-UA-Server-using-open62541
 An introduction on how to use the open62541 implementation for creating an OPC UA client with Android Studio. 
 
 ### Prerequisites
@@ -35,6 +35,7 @@ If you want to create an open62541 Android-OPC-UA-Client on your own, here are s
 ## Authors & Contact
 
 * **Lars Kintscher** -*Ostfalia University of Applied Sciences*- (la.kintscher@ostfalia.de)
+* **Tero Kaarlela** - "Centria University of Applied Sciences*- (ter.kaarlela@centria.fi)
 
 ## License
 
@@ -49,3 +50,5 @@ This project is based on two User guides:
 * The open62541 Tutorial (https://open62541.org/doc/0.3/tutorials.html)
 
 The development of an Android OPC UA Client using open62541 was supported by the research project  “Recycling   4.0” (digitalizationas the key to the Advanced Circular Economy using the example of innovative vehicle systems) which is funded by the European Regional Development Fund (EFRE | ZW 6-85017297) and managed by the Project Management Agency NBank. 
+
+The development of an Android OPC UA Server using open62541 has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement n\textdegree{} 825196).
